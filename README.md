@@ -1,13 +1,13 @@
 # SwiftFortuneWheel
 
-<img align="right" src="./Images/layout.gif" width="320"/>
-
 [![Version](https://img.shields.io/cocoapods/v/SwiftFortuneWheel.svg?label=version)](https://cocoapods.org/pods/SwiftFortuneWheel)
 ![Support](https://img.shields.io/badge/supports-SPM%2C%20CocoaPods-green.svg)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftFortuneWheel.svg?style=flat)](https://cocoapods.org/pods/SwiftFortuneWheel)
 ![Documentation](./docs/badge.svg?style=flat&sanitize=true)
 
 Fortune spinning wheel that supports dynamic content and rich customization.
+
+<img src="./Images/layout.gif" width="320"/>
 
 | | Main Features |
 |---|---|
@@ -26,7 +26,7 @@ When you are ready to install, follow the [**Installation Guide**](/Documentatio
 
 ## Documentation
 
-You can find <a href="https://sh-khashimov.github.io/SwiftFortuneWheel/“ target="_blank">**the docs here**</a>. Documentation is generated with [jazzy](https://github.com/realm/jazzy) and hosted on [GitHub-Pages](https://pages.github.com/).
+You can find <a href="https://sh-khashimov.github.io/SwiftFortuneWheel/" target="_blank">**the docs here**</a>. Documentation is generated with [jazzy](https://github.com/realm/jazzy) and hosted on [GitHub-Pages](https://pages.github.com/).
 
 <a name="h_requirements"></a>
 ## Requirements
