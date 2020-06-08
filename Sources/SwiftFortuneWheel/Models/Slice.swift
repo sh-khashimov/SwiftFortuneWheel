@@ -20,8 +20,8 @@ public struct Slice {
     }
 }
 
-/// Slice content type, currently image or text
 extension Slice {
+    /// Slice content type, currently image or text
     public enum ContentType {
         case image(name: String, preferenes: ImagePreferences)
         case text(text: String, preferenes: TextPreferences)

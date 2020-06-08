@@ -53,6 +53,14 @@ let configuration: SwiftFortuneWheelConfiguration = .myWheelConfiguration
 	fortuneWheel.slices = slices
 ```
 
+- To start spin animation:
+
+``` Swift
+fortuneWheel.startAnimating(fullRotationTimeInSeconds: 1, finishIndex: 0) { (finished) in
+            print(finished)
+        }
+```
+
 </br>
 
 ## Visual diagram
