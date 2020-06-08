@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SwiftFortuneWheel Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/SwiftFortuneWheel" class="dashAnchor"></a>
+    <a title="SwiftFortuneWheel Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SwiftFortuneWheel Docs</a> (78% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SwiftFortuneWheel Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SwiftFortuneWheel Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/PinImageView.html">PinImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SpinButton.html">SpinButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SpinningWheelAnimator.html">SpinningWheelAnimator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SwiftFortuneWheel.html">SwiftFortuneWheel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TTUtils.html">TTUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WheelLayer.html">WheelLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WheelView.html">WheelView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CGSize.html">CGSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIFont.html">UIFont</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CurveTextDrawing.html">CurveTextDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SliceCalculating.html">SliceCalculating</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SliceDrawing.html">SliceDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SpinningAnimatable.html">SpinningAnimatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SpinningAnimatorProtocol.html">SpinningAnimatorProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/WheelMathCalculating.html">WheelMathCalculating</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ImagePreferences.html">ImagePreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Slice.html">Slice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Slice/ContentType.html">– ContentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration.html">SwiftFortuneWheelConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/WheelPreferences.html">– WheelPreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/CirclePreferences.html">– CirclePreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/SlicePreferences.html">– SlicePreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/SpinButtonPreferences.html">– SpinButtonPreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/PinImageViewPreferences.html">– PinImageViewPreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/Position.html">– Position</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/Margins.html">– Margins</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/ColorType.html">– ColorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/AnchorImage.html">– AnchorImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TextPreferences.html">TextPreferences</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SwiftFortuneWheel</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@IBDesignable</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">SwiftFortuneWheel</span> <span class="p">:</span> <span class="kt">UIControl</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC15onSpinButtonTapyycSgvp"></a>
+                    <a name="//apple_ref/swift/Property/onSpinButtonTap" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC15onSpinButtonTapyycSgvp">onSpinButtonTap</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when spin button tapped</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">onSpinButtonTap</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC13configurationAA0abC13ConfigurationVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/configuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC13configurationAA0abC13ConfigurationVSgvp">configuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Customizable configuration.
+Required in order to draw properly.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Structs/SwiftFortuneWheelConfiguration.html">SwiftFortuneWheelConfiguration</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC6slicesSayAA5SliceVGvp"></a>
+                    <a name="//apple_ref/swift/Property/slices" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC6slicesSayAA5SliceVGvp">slices</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>List of Slice objects.
+Used to draw content.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">slices</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Slice.html">Slice</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC5frame6slices13configurationABSo6CGRectV_SayAA5SliceVGAA0abC13ConfigurationVSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(frame:slices:configuration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC5frame6slices13configurationABSo6CGRectV_SayAA5SliceVGAA0abC13ConfigurationVSgtcfc">init(frame:slices:configuration:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initiates without IB.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">,</span> <span class="nv">slices</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Slice.html">Slice</a></span><span class="p">],</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Structs/SwiftFortuneWheelConfiguration.html">SwiftFortuneWheelConfiguration</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frame</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Frame</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>slices</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>List of Slices</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Customizable configuration</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(im)layoutSubviews"></a>
+                    <a name="//apple_ref/swift/Method/layoutSubviews()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(im)layoutSubviews">layoutSubviews()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">layoutSubviews</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(im)initWithCoder:"></a>
+                    <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(im)initWithCoder:">init(coder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">?(</span><span class="n">coder</span> <span class="nv">aDecoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC14layerToAnimateAA18SpinningAnimatable_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/layerToAnimate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC14layerToAnimateAA18SpinningAnimatable_pSgvp">layerToAnimate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>/ Animation conformance</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">internal</span> <span class="k">var</span> <span class="nv">layerToAnimate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SpinningAnimatable.html">SpinningAnimatable</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC14startAnimating24rotationCompletionOffset_y12CoreGraphics7CGFloatV_ySbcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/startAnimating(rotationCompletionOffset:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC14startAnimating24rotationCompletionOffset_y12CoreGraphics7CGFloatV_ySbcSgtF">startAnimating(rotationCompletionOffset:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start animating</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">startAnimating</span><span class="p">(</span><span class="nv">rotationCompletionOffset</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rotationCompletionOffset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>rotationCompletionOffset</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC14startAnimating11finishIndex_ySi_ySbcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/startAnimating(finishIndex:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC14startAnimating11finishIndex_ySi_ySbcSgtF">startAnimating(finishIndex:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start animating</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">startAnimating</span><span class="p">(</span><span class="nv">finishIndex</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>finishIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>finished at index</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC14startAnimating25fullRotationTimeInSeconds11finishIndex_ySi_SiySbcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/startAnimating(fullRotationTimeInSeconds:finishIndex:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC14startAnimating25fullRotationTimeInSeconds11finishIndex_ySi_SiySbcSgtF">startAnimating(fullRotationTimeInSeconds:finishIndex:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start animating</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">startAnimating</span><span class="p">(</span><span class="nv">fullRotationTimeInSeconds</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">finishIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fullRotationTimeInSeconds</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>full rotation time in seconds before stops</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>finishIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>finished at index</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC14startAnimatingyyF"></a>
+                    <a name="//apple_ref/swift/Method/startAnimating()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC14startAnimatingyyF">startAnimating()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start indefinite rotation animating</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">startAnimating</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC13stopAnimatingyyF"></a>
+                    <a name="//apple_ref/swift/Method/stopAnimating()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC13stopAnimatingyyF">stopAnimating()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stop animating</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">stopAnimating</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC14startAnimating11finishIndex6offset_ySi_12CoreGraphics7CGFloatVySbcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/startAnimating(finishIndex:offset:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC14startAnimating11finishIndex6offset_ySi_12CoreGraphics7CGFloatVySbcSgtF">startAnimating(finishIndex:offset:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start animating</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">startAnimating</span><span class="p">(</span><span class="nv">finishIndex</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>finishIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>finished at index</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>degree offset</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(py)pinImage"></a>
+                    <a name="//apple_ref/swift/Property/pinImage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(py)pinImage">pinImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pin image name from assets catalog</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBInspectable</span>
+<span class="k">var</span> <span class="nv">pinImage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(py)isPinHidden"></a>
+                    <a name="//apple_ref/swift/Property/isPinHidden" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(py)isPinHidden">isPinHidden</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pin image is hidden</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBInspectable</span>
+<span class="k">var</span> <span class="nv">isPinHidden</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(py)spinImage"></a>
+                    <a name="//apple_ref/swift/Property/spinImage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(py)spinImage">spinImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Spin button image name from assets catalog</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBInspectable</span>
+<span class="k">var</span> <span class="nv">spinImage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(py)spinBackgroundImage"></a>
+                    <a name="//apple_ref/swift/Property/spinBackgroundImage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(py)spinBackgroundImage">spinBackgroundImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Spin button background image from assets catalog</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBInspectable</span>
+<span class="k">var</span> <span class="nv">spinBackgroundImage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(py)spinTitle"></a>
+                    <a name="//apple_ref/swift/Property/spinTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(py)spinTitle">spinTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Spin button title text</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBInspectable</span>
+<span class="k">var</span> <span class="nv">spinTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(py)isSpinHidden"></a>
+                    <a name="//apple_ref/swift/Property/isSpinHidden" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(py)isSpinHidden">isSpinHidden</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Spin button is hidden</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBInspectable</span>
+<span class="k">var</span> <span class="nv">isSpinHidden</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(py)isSpinEnabled"></a>
+                    <a name="//apple_ref/swift/Property/isSpinEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel(py)isSpinEnabled">isSpinEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Spin button is enabled</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBInspectable</span>
+<span class="k">var</span> <span class="nv">isSpinEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-06-08)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
