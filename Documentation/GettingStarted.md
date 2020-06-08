@@ -30,18 +30,18 @@ import SwiftFortuneWheel
 - Create slice content list:
 
 ``` Swift
-	var slices: [Slice] = []
-	let imagePreferences = ImagePreferences(preferredSize: CGSize(width: 40, height: 40), verticalOffset: 40)
-	let imageSliceContent = Slice.ContentType.image(name: "crown", preferenes: imagePreferences)
-	let slice = Slice(contents: [imageSliceContent])
+var slices: [Slice] = []
+let imagePreferences = ImagePreferences(preferredSize: CGSize(width: 40, height: 40), verticalOffset: 40)
+let imageSliceContent = Slice.ContentType.image(name: "crown", preferenes: imagePreferences)
+let slice = Slice(contents: [imageSliceContent])
 slices.append(slice)
 ```
 
-- Create a SwiftFortuneWheel configuration:
+- Create a `SwiftFortuneWheel` configuration:
 
 
 ``` Swift
-	let configuration: SwiftFortuneWheelConfiguration = .myWheelConfiguration
+let configuration: SwiftFortuneWheelConfiguration = .myWheelConfiguration
 ```
 
 > _For detail information, how to create a configuration object, please see a **SwiftFortuneWheelDemoiOS** project,  `SwiftFortuneWheelConfiguration+Example.swift` file._

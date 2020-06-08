@@ -12,7 +12,7 @@ To remove the dependency, select the project and open **Swift Packages** (which 
 
 ### CocoaPods
 
-`Name` is available through [CocoaPods](http://cocoapods.org). To install
+`SwiftFortuneWheel ` is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```
