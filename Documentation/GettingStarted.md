@@ -49,8 +49,8 @@ let configuration: SwiftFortuneWheelConfiguration = .myWheelConfiguration
 - Pass slices and configuration to the `SwiftFortuneWheel`:
 
 ``` Swift
-	fortuneWheel.configuration = configuration
-	fortuneWheel.slices = slices
+fortuneWheel.configuration = configuration
+fortuneWheel.slices = slices
 ```
 
 - To start spin animation:
