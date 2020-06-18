@@ -65,7 +65,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hKR-QZ-bJF">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hKR-QZ-bJF">
                                 <rect key="frame" x="10" y="103" width="394" height="744"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kck-RA-QdL">
@@ -90,16 +90,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13H-a0-QhX">
-                                        <rect key="frame" x="0.0" y="45" width="394" height="60"/>
+                                        <rect key="frame" x="0.0" y="40" width="394" height="60"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J32-LM-JsG">
-                                                <rect key="frame" x="78" y="10" width="238" height="40"/>
+                                                <rect key="frame" x="79" y="10" width="236" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bf-R4-Lzx">
-                                                        <rect key="frame" x="0.0" y="6" width="114" height="28"/>
+                                                        <rect key="frame" x="0.0" y="6" width="113" height="28"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
-                                                        <state key="normal" title="Add Price">
+                                                        <state key="normal" title="Add Prize">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -108,14 +108,14 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="addPriceAction:" destination="uOf-zF-lNR" eventType="touchUpInside" id="JQ3-xS-I36"/>
+                                                            <action selector="addPrizeAction:" destination="uOf-zF-lNR" eventType="touchUpInside" id="JQ3-xS-I36"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veH-1V-PQe">
-                                                        <rect key="frame" x="124" y="6" width="114" height="28"/>
+                                                        <rect key="frame" x="123" y="6" width="113" height="28"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
-                                                        <state key="normal" title="Remove Price">
+                                                        <state key="normal" title="Remove Prize">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -124,7 +124,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="removePriceAction:" destination="uOf-zF-lNR" eventType="touchUpInside" id="BAO-nZ-5sN"/>
+                                                            <action selector="removePrizeAction:" destination="uOf-zF-lNR" eventType="touchUpInside" id="BAO-nZ-5sN"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -139,7 +139,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1tF-2P-yEk">
-                                        <rect key="frame" x="0.0" y="110" width="394" height="40"/>
+                                        <rect key="frame" x="0.0" y="100" width="394" height="40"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UUV-nP-POx">
                                                 <rect key="frame" x="62.5" y="0.0" width="269" height="40"/>
@@ -172,8 +172,40 @@
                                             <constraint firstItem="UUV-nP-POx" firstAttribute="centerX" secondItem="1tF-2P-yEk" secondAttribute="centerX" id="nkS-FT-uIL"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Zp-6b-udk">
+                                        <rect key="frame" x="0.0" y="140" width="394" height="40"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4YP-0W-Cjm">
+                                                <rect key="frame" x="65" y="0.0" width="264" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Draw curved line:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPm-84-pqL">
+                                                        <rect key="frame" x="0.0" y="10" width="200" height="20.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="ceq-Ia-Z8X"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mrM-IU-qDK">
+                                                        <rect key="frame" x="215" y="4.5" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="drawCurverLineSwitchChanged:" destination="uOf-zF-lNR" eventType="valueChanged" id="4D3-rS-qu9"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="4YP-0W-Cjm" firstAttribute="top" secondItem="8Zp-6b-udk" secondAttribute="top" id="HnQ-dH-9vi"/>
+                                            <constraint firstItem="4YP-0W-Cjm" firstAttribute="centerX" secondItem="8Zp-6b-udk" secondAttribute="centerX" id="ON6-Lc-cyk"/>
+                                            <constraint firstAttribute="bottom" secondItem="4YP-0W-Cjm" secondAttribute="bottom" id="Ue7-gy-pdl"/>
+                                            <constraint firstAttribute="height" constant="40" id="dab-Tb-jOb"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdz-4n-Q3b">
-                                        <rect key="frame" x="0.0" y="155" width="394" height="414"/>
+                                        <rect key="frame" x="0.0" y="180" width="394" height="414"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wrs-PJ-1Pe" customClass="SwiftFortuneWheel" customModule="SwiftFortuneWheel">
                                                 <rect key="frame" x="0.0" y="10" width="394" height="394"/>
@@ -195,7 +227,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZ2-7a-0DG">
-                                        <rect key="frame" x="0.0" y="574" width="394" height="170"/>
+                                        <rect key="frame" x="0.0" y="594" width="394" height="150"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
                                 </subviews>
@@ -213,6 +245,7 @@
                     <navigationItem key="navigationItem" id="cAS-1j-A7G"/>
                     <connections>
                         <outlet property="colorsTypeSegment" destination="tVp-MG-bzR" id="z7v-vh-Nbg"/>
+                        <outlet property="drawCurvedLineSwitch" destination="mrM-IU-qDK" id="AkJ-3f-PQc"/>
                         <outlet property="fortuneWheel" destination="Wrs-PJ-1Pe" id="Moc-ND-yHC"/>
                         <outlet property="keyboardToolbar" destination="sar-cH-9sz" id="rHt-lP-Qjk"/>
                         <outlet property="selectedIndexTextField" destination="JiW-tK-GjQ" id="4Xd-zw-xr7"/>

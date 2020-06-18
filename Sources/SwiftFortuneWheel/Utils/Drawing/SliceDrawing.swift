@@ -35,6 +35,12 @@ extension SliceDrawing {
         self.preferences?.contentMargins.top ?? 0
     }
 
+
+    /// Context position correction offset degree
+    var contextPositionCorrectionOffsetDegree: CGFloat {
+        return -90
+    }
+
     /// Width for Y postion
     /// - Parameter yPosition: Y position
     /// - Returns: new width
@@ -62,7 +68,7 @@ extension SliceDrawing {
         context.translateBy(x: rotationOffset, y: rotationOffset)
 
         // Draws slice path and background
-        self.drawPath(in: context, start: start, and: end, rotation: rotation, index: index)
+        self.drawPath(in: context, backgroundColor: slice.backgroundColor, start: start, and: end, rotation: rotation, index: index)
 
         var topOffset: CGFloat = 0
 
@@ -79,6 +85,9 @@ extension SliceDrawing {
             case .image(let name, let preferenes):
                 self.drawImage(in: context, imageName: name, preferences: preferenes, rotation: rotation, index: index, topOffset: topOffset)
                 topOffset += preferenes.preferredSize.height + preferenes.verticalOffset
+            case .line(let preferenes):
+                self.drawLine(in: context, preferences: preferenes, start: start, and: end, rotation: rotation, index: index, topOffset: topOffset)
+                topOffset += preferenes.height
             }
         }
 
@@ -92,22 +101,22 @@ extension SliceDrawing {
     ///   - end: end degree
     ///   - rotation: rotation degree
     ///   - index: index
-    private func drawPath(in context: CGContext, start: CGFloat, and end: CGFloat, rotation:CGFloat, index: Int) {
-
-        let contextPositionCorrectionOffsetDegree: CGFloat = -90
+    private func drawPath(in context: CGContext, backgroundColor: UIColor?, start: CGFloat, and end: CGFloat, rotation:CGFloat, index: Int) {
 
         context.saveGState()
         context.rotate(by: (rotation + contextPositionCorrectionOffsetDegree) * CGFloat.pi/180)
 
-        var backgroundColor: UIColor = .clear
+        var pathBackgroundColor = backgroundColor
 
-        switch preferences?.slicePreferences.backgroundColorType {
-        case .some(.evenOddColors(let evenColor, let oddColor)):
-            backgroundColor = index % 2 == 0 ? evenColor : oddColor
-        case .customPatternColors(let colors, let defaultColor):
-            backgroundColor = colors?[index, default: defaultColor] ?? defaultColor
-        case .none:
-            break
+        if pathBackgroundColor == nil {
+            switch preferences?.slicePreferences.backgroundColorType {
+            case .some(.evenOddColors(let evenColor, let oddColor)):
+                pathBackgroundColor = index % 2 == 0 ? evenColor : oddColor
+            case .customPatternColors(let colors, let defaultColor):
+                pathBackgroundColor = colors?[index, default: defaultColor] ?? defaultColor
+            case .none:
+                break
+            }
         }
 
         let strokeColor = preferences?.slicePreferences.strokeColor
@@ -117,7 +126,7 @@ extension SliceDrawing {
         let center = CGPoint(x: 0, y: 0)
         path.move(to: center)
         path.addArc(withCenter: center, radius: radius, startAngle: torad(start), endAngle: torad(end), clockwise: true)
-        backgroundColor.setFill()
+        pathBackgroundColor?.setFill()
         path.fill()
         strokeColor?.setStroke()
         path.lineWidth = strokeWidth ?? 0
@@ -190,8 +199,6 @@ extension SliceDrawing {
         let width = self.width(forYPosition: bottomYPosition)
         let textRect = CGRect(x: 0, y: 0, width: width, height: preferences.preferedFontSize)
         let yPosition = -(radius - preferences.verticalOffset - topOffset - topMargin) + textRect.height / 2
-
-        let contextPositionCorrectionOffsetDegree: CGFloat = -90
 
         context.saveGState()
 
@@ -268,13 +275,52 @@ extension SliceDrawing {
         context.restoreGState()
     }
 
+    /// Draws curved line
+    /// - Parameters:
+    ///   - context: context where to draw
+    ///   - preferences: Line preferences
+    ///   - start: start degree
+    ///   - end: end degree
+    ///   - rotation: rotation degree
+    ///   - index: index
+    ///   - topOffset: top offset
+    func drawLine(in context: CGContext, preferences: LinePreferences, start: CGFloat, and end: CGFloat, rotation: CGFloat, index: Int, topOffset: CGFloat) {
+
+        context.saveGState()
+        context.rotate(by: (rotation - contextPositionCorrectionOffsetDegree) * CGFloat.pi/180)
+
+        var strokeColor = UIColor.clear
+
+        switch preferences.colorType {
+        case .evenOddColors(let evenColor, let oddColor):
+            strokeColor = index % 2 == 0 ? evenColor : oddColor
+        case .customPatternColors(let colors, let defaultColor):
+            strokeColor = colors?[index, default: defaultColor] ?? defaultColor
+        }
+
+        let strokeWidth = preferences.height
+
+        let yPosition = radius - preferences.verticalOffset - topOffset
+
+        let path = UIBezierPath()
+        let center = CGPoint(x: 0, y: 0)
+//        path.move(to: center)
+        path.addArc(withCenter: center, radius: -yPosition, startAngle: torad(start), endAngle: torad(end), clockwise: true)
+        UIColor.clear.setFill()
+        path.fill()
+        strokeColor.setStroke()
+        path.lineWidth = strokeWidth
+        path.stroke()
+        context.restoreGState()
+    }
+
     /// Draws anchor image
     /// - Parameters:
     ///   - context: context where to draw
     ///   - imageAnchor: anchor image
     ///   - rotation: rotation degree
     ///   - index: index
-    func drawAnchorImage(in context: CGContext, imageAnchor: SwiftFortuneWheelConfiguration.AnchorImage, rotation: CGFloat, index: Int) {
+    func drawAnchorImage(in context: CGContext, imageAnchor: SwiftFortuneWheelConfiguration.AnchorImage, isCentered: Bool, rotation: CGFloat, index: Int) {
 
         //// Context setup
         context.saveGState()
@@ -292,7 +338,8 @@ extension SliceDrawing {
             }
         }
 
-        let contextPositionCorrectionOffsetDegree: CGFloat = -sliceDegree / 2 + imageAnchor.rotationDegreeOffset
+        let centeredOffset: CGFloat = isCentered ? sliceDegree / 2 : 0
+        let contextPositionCorrectionOffsetDegree: CGFloat = -sliceDegree / 2 + imageAnchor.rotationDegreeOffset + centeredOffset
 
         context.saveGState()
         context.rotate(by: (rotation + contextPositionCorrectionOffsetDegree) * CGFloat.pi/180)

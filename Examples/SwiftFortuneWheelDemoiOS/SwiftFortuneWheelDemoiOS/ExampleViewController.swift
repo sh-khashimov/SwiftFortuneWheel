@@ -11,6 +11,7 @@ import SwiftFortuneWheel
 
 class ExampleViewController: UIViewController {
 
+    @IBOutlet weak var drawCurvedLineSwitch: UISwitch!
     @IBOutlet weak var colorsTypeSegment: UISegmentedControl!
 
     @IBOutlet weak var fortuneWheel: SwiftFortuneWheel! {
@@ -24,6 +25,12 @@ class ExampleViewController: UIViewController {
     @IBOutlet weak var keyboardToolbar: UIToolbar!
 
     var prizes: [Prize] = []
+
+    var drawCurvedLine: Bool = false {
+        didSet {
+            updateSlices()
+        }
+    }
 
     var minimumPrize: Int {
         return 4
@@ -50,6 +57,8 @@ class ExampleViewController: UIViewController {
 
         selectedIndexTextField.inputAccessoryView = keyboardToolbar
 
+        drawCurvedLine = drawCurvedLineSwitch.isOn
+
         prizes.append(Prize(amount: 100, description: "Prize".uppercased(), priceType: .money))
         prizes.append(Prize(amount: 200, description: "Prize".uppercased(), priceType: .money))
         prizes.append(Prize(amount: 300, description: "Prize".uppercased(), priceType: .money))
@@ -70,7 +79,7 @@ class ExampleViewController: UIViewController {
         updateSlices()
     }
 
-    @IBAction func addPriceAction(_ sender: Any) {
+    @IBAction func addPrizeAction(_ sender: Any) {
         guard prizes.count < maximumPrize - 1 else { return }
         let price = Prize(amount: (prizes.count + 1) * 100, description: "Prize".uppercased(), priceType: .money)
         prizes.append(price)
@@ -78,11 +87,15 @@ class ExampleViewController: UIViewController {
         updateSlices()
     }
 
-    @IBAction func removePriceAction(_ sender: Any) {
+    @IBAction func removePrizeAction(_ sender: Any) {
         guard prizes.count > minimumPrize else { return }
         _ = prizes.popLast()
 
         updateSlices()
+    }
+
+    @IBAction func drawCurverLineSwitchChanged(_ sender: UISwitch) {
+        drawCurvedLine = sender.isOn
     }
 
     @IBAction func selectedIndexValueChange(_ sender: Any) {
@@ -95,13 +108,18 @@ class ExampleViewController: UIViewController {
 
 
     func updateSlices() {
-        let slices: [Slice] = prizes.map({ Slice(contents: $0.sliceContentTypes(isMonotone: colorsTypeSegment.selectedSegmentIndex == 1)) })
+        let slices: [Slice] = prizes.map({ Slice(contents: $0.sliceContentTypes(isMonotone: colorsTypeSegment.selectedSegmentIndex == 1, withLine: drawCurvedLine)) })
 
         fortuneWheel.slices = slices
 
         if prizes.count == maximumPrize - 1 {
             let imageSliceContent = Slice.ContentType.image(name: "crown", preferenes: ImagePreferences(preferredSize: CGSize(width: 40, height: 40), verticalOffset: 40))
-            let slice = Slice(contents: [imageSliceContent])
+            var slice = Slice(contents: [imageSliceContent])
+            if drawCurvedLine {
+                let linePreferences = LinePreferences(colorType: .customPatternColors(colors: nil, defaultColor: .black), height: 2, verticalOffset: 35)
+                let line = Slice.ContentType.line(preferenes: linePreferences)
+                slice.contents.append(line)
+            }
             fortuneWheel.slices.append(slice)
         }
     }

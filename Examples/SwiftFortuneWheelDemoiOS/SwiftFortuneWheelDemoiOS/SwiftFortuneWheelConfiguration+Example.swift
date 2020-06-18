@@ -65,13 +65,13 @@ extension SwiftFortuneWheelConfiguration.WheelPreferences {
     }
 
     static var exampleRainbowWheelPreferences: SwiftFortuneWheelConfiguration.WheelPreferences {
-        let imageAnchor = SwiftFortuneWheelConfiguration.AnchorImage(imageName: "filled-circle",
+        let centerImageAnchor = SwiftFortuneWheelConfiguration.AnchorImage(imageName: "filled-circle",
                                                                 size: CGSize(width: 10, height: 10),
                                                                 verticalOffset: -circleStrokeWidth / 2,
                                                                 tintColor: .white)
         let preferences = SwiftFortuneWheelConfiguration.WheelPreferences(circlePreferences: .exampleCirclePreferences,
                                                                      slicePreferences: .exampleRainbowSlicePreferenes,
-                                                                     imageAnchor: imageAnchor)
+                                                                     centerImageAnchor: centerImageAnchor)
         return preferences
     }
 }
@@ -160,5 +160,14 @@ extension TextPreferences {
                                           flipUpsideDown: true,
                                           isCurved: true)
         return prefenreces
+    }
+}
+
+
+extension LinePreferences {
+    static var defaultPreferences: LinePreferences {
+        let colorType = SwiftFortuneWheelConfiguration.ColorType.customPatternColors(colors: [.orange, .purple, .yellow, .blue, .brown, .green, .systemPink, .systemTeal, .brown, .green, .white, .black, .magenta], defaultColor: .red)
+        let preferences = LinePreferences(colorType: colorType, height: 2, verticalOffset: 0)
+        return preferences
     }
 }

@@ -81,12 +81,21 @@ class WheelLayer: CALayer {
         circleFrame.lineWidth = preferences?.circlePreferences.strokeWidth ?? 0
         circleFrame.stroke()
 
-        // Optional, draws anchors around the wheel
+        // Optional, draws image anchor for each slice, located at the wheel's border
         if let imageAnchor = preferences?.imageAnchor {
             var _rotation: CGFloat = -sliceDegree + startPositionOffsetDegree
             for index in 0..<slices.count {
                 _rotation += sliceDegree
-                self.drawAnchorImage(in: context, imageAnchor: imageAnchor, rotation: _rotation, index: index)
+                self.drawAnchorImage(in: context, imageAnchor: imageAnchor, isCentered: false, rotation: _rotation, index: index)
+            }
+        }
+
+        // Optional, draws image anchor for each slice, located at the center of wheel's border
+        if let imageAnchor = preferences?.centerImageAnchor {
+            var _rotation: CGFloat = -sliceDegree + startPositionOffsetDegree
+            for index in 0..<slices.count {
+                _rotation += sliceDegree
+                self.drawAnchorImage(in: context, imageAnchor: imageAnchor, isCentered: true, rotation: _rotation, index: index)
             }
         }
 

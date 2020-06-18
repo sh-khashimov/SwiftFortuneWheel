@@ -54,8 +54,11 @@ public extension SwiftFortuneWheelConfiguration {
         /// Margins for content inside a slide
         public var contentMargins: Margins
 
-        /// Image anchor around the wheel
+        /// Image anchor for each slice, located at the wheel's border
         public var imageAnchor: AnchorImage?
+
+        /// Image anchor for each slice, located at the center of wheel's border
+        public var centerImageAnchor: AnchorImage?
 
         /// Start position, should be equal to FortuneWheelConfiguration.pinPreferences.position
         var startPosition: Position
@@ -66,17 +69,20 @@ public extension SwiftFortuneWheelConfiguration {
         ///   - slicePreferences: Slice preferences
         ///   - layerInsets: Layer insets, default value is `UIEdgeInsets(top: -50, left: -50, bottom: -50, right: -50)`
         ///   - contentMargins: Margins for content inside a slide
-        ///   - imageAnchor: Image anchor around the wheel, `optional`
+        ///   - imageAnchor: Image anchor for each slice, located at the wheel's border, `optional`
+        ///   - centerImageAnchor: Image anchor for each slice, located at the center of wheel's border, `optional`
         public init(circlePreferences: CirclePreferences,
                     slicePreferences: SlicePreferences,
                     layerInsets: UIEdgeInsets = UIEdgeInsets(top: -50, left: -50, bottom: -50, right: -50),
                     contentMargins: Margins = Margins(),
-                    imageAnchor: AnchorImage? = nil) {
+                    imageAnchor: AnchorImage? = nil,
+                    centerImageAnchor: AnchorImage? = nil) {
             self.circlePreferences = circlePreferences
             self.slicePreferences = slicePreferences
             self.layerInsets = layerInsets
             self.startPosition = .top
             self.imageAnchor = imageAnchor
+            self.centerImageAnchor = centerImageAnchor
             self.contentMargins = contentMargins
         }
     }

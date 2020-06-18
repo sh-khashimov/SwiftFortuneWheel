@@ -7,16 +7,23 @@
 //
 
 import Foundation
+import UIKit
 
 /// Slice object that will be drawn as a custom content
 public struct Slice {
     /// Contents in vertical align order
-    var contents: [ContentType]
+    public var contents: [ContentType]
+
+    /// Background color, `optional`
+    public var backgroundColor: UIColor?
 
     /// Initiates a slice object
     /// - Parameter contents: Contents in vertical align order
-    public init(contents: [ContentType]) {
+    /// - Parameter backgroundColor: Background color, `optional`
+    public init(contents: [ContentType],
+                backgroundColor: UIColor? = nil) {
         self.contents = contents
+        self.backgroundColor = backgroundColor
     }
 }
 
@@ -25,5 +32,6 @@ extension Slice {
     public enum ContentType {
         case image(name: String, preferenes: ImagePreferences)
         case text(text: String, preferenes: TextPreferences)
+        case line(preferenes: LinePreferences)
     }
 }
