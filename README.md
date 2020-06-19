@@ -33,7 +33,7 @@ You can find <a href="https://sh-khashimov.github.io/SwiftFortuneWheel/" target=
 ## Requirements
 
 
-| App name | Swif | Xcode | Platforms |
+| App name | Swift | Xcode | Platforms |
 |---|---|---|---|
 | current version | Swift 5.0 | Xcode 11 | iOS 9.0 |
 
