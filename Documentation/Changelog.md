@@ -2,7 +2,7 @@
 
 ### v0.6.1
 
-- `func startAnimating(fullRotationTimeInSeconds: Int, finishIndex: Int, _ completion:((Bool) -> Void)?)` - completion fix
+- `startAnimating(fullRotationTimeInSeconds: Int, finishIndex: Int, _ completion:((Bool) -> Void)?)` - completion fix
 
 ### v0.6.0
 - added `line` to `Slice.ContentType` and `LinePreferences`. Now supports a curved line inside a slice;
