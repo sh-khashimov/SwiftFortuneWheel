@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### v0.6.1
+
+- `func startAnimating(fullRotationTimeInSeconds: Int, finishIndex: Int, _ completion:((Bool) -> Void)?)` - completion fix
+
 ### v0.6.0
 - added `line` to `Slice.ContentType` and `LinePreferences`. Now supports a curved line inside a slice;
 - Optional `backgroundColor` added to `Slice`. You can now override a background color for specified `Slice`, during `Slice` initialization;

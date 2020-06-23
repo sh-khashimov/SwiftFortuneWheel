@@ -172,7 +172,7 @@ extension SwiftFortuneWheel: SpinningAnimatorProtocol {
         let deadline = DispatchTime.now() + DispatchTimeInterval.seconds(fullRotationTimeInSeconds)
         DispatchQueue.main.asyncAfter(deadline: deadline) {
             self.startAnimating(finishIndex: finishIndex) { (finished) in
-                print(finished)
+                completion?(finished)
             }
         }
     }
