@@ -67,6 +67,7 @@
 		2710566D248D4C93006C0181 /* SpinButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinButton.swift; sourceTree = "<group>"; };
 		2710566E248D4C93006C0181 /* WheelLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelLayer.swift; sourceTree = "<group>"; };
 		2710566F248D4C93006C0181 /* WheelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
+		272B62C524A46FED00F19E41 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		277A6EBD249A9B450066C807 /* LinePreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinePreferences.swift; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* SwiftFortuneWheel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftFortuneWheel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* SwiftFortuneWheel-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftFortuneWheel-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,9 +189,18 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		272B62C224A46DBB00F19E41 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				272B62C524A46FED00F19E41 /* MyPlayground.playground */,
+			);
+			path = Playgrounds;
+			sourceTree = "<group>";
+		};
 		52D6D9721BEFF229002C0205 = {
 			isa = PBXGroup;
 			children = (
+				272B62C224A46DBB00F19E41 /* Playgrounds */,
 				8933C7811EB5B7E0000D00A4 /* Sources */,
 				8933C7831EB5B7EB000D00A4 /* Tests */,
 				52D6D99C1BEFF38C002C0205 /* Configs */,

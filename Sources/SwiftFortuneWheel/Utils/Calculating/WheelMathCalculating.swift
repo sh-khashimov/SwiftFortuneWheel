@@ -62,6 +62,15 @@ extension WheelMathCalculating {
         return 2 * radius * sin(degree / 2.0 * CGFloat.pi / 180)
     }
 
+    /// Radius calculation
+    /// - Parameters:
+    ///   - circularSegmentHeight: Circular segment height
+    ///   - degree: degree
+    /// - Returns: radius
+    func radius(circularSegmentHeight: CGFloat, from degree: CGFloat) -> CGFloat {
+        return circularSegmentHeight / (2 * sin(degree / 2.0 * CGFloat.pi / 180))
+    }
+
     /// Updates frame sizes
     func updateSizes(updateFrame: Bool = true) {
         if let layerInsets = preferences?.layerInsets {

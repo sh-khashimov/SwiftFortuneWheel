@@ -16,7 +16,7 @@ extension Prize {
 
     func sliceContentTypes(isMonotone: Bool, withLine: Bool = false) -> [Slice.ContentType] {
         var sliceContentTypes = [Slice.ContentType.text(text: amountFormatted, preferenes: isMonotone ? .amountTextWithBlackColorPreferences : .amountTextWithWhiteBlackColorsPreferences),
-        Slice.ContentType.text(text: description, preferenes: isMonotone ? .descriptionTextWhiteBlackColorPreferences : .descriptionTextWithWhiteBlackColorsPreferences),
+        Slice.ContentType.text(text: description, preferenes: isMonotone ? .descriptionTextWithBlackColorPreferences : .descriptionTextWithWhiteBlackColorsPreferences),
         Slice.ContentType.image(name: priceType.imageName, preferenes: .prizeImagePreferences)]
         if withLine {
             sliceContentTypes.append(Slice.ContentType.line(preferenes: .defaultPreferences))

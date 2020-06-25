@@ -33,13 +33,13 @@ public struct ImagePreferences {
     /// Initiates a image preferences
     /// - Parameters:
     ///   - preferredSize: Prefered image size, required
-    ///   - verticalOffset: Vertical offset in slice from the center
+    ///   - verticalOffset: Vertical offset in slice from the center, default value is `0`
     ///   - horizontalOffset: Horizontal offset in slice from the center, default value is `0`
     ///   - flipUpsideDown: Flip the text upside down, default value is `false`
     ///   - tintColor: Tint color, `optional`
     ///   - backgroundColor: Background color, `optional`
     public init(preferredSize: CGSize,
-                verticalOffset: CGFloat,
+                verticalOffset: CGFloat = 0,
                 horizontalOffset: CGFloat = 0,
                 flipUpsideDown: Bool = false,
                 tintColor: UIColor? = nil,

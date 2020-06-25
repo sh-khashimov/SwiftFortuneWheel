@@ -29,4 +29,14 @@ extension String {
 
         return croppedText
     }
+
+    func width(by font: UIFont) -> CGFloat {
+        var textWidth: CGFloat = 0
+        for element in self {
+            let characterString = String(element)
+            let letterSize = characterString.size(withAttributes: [.font: font])
+            textWidth += letterSize.width
+        }
+        return textWidth + 1
+    }
 }

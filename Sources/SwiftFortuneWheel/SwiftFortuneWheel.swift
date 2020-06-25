@@ -76,6 +76,7 @@ public class SwiftFortuneWheel: UIControl {
         setupWheelView()
         setupPinImageView()
         setupSpinButton()
+        self.wheelView?.slices = slices
     }
 
     /// Adds pin image view to superview.

@@ -20,6 +20,7 @@
 		2710568C248D53EF006C0181 /* SwiftFortuneWheelConfiguration+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710568A248D53EF006C0181 /* SwiftFortuneWheelConfiguration+Example.swift */; };
 		2710568D248D53EF006C0181 /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710568B248D53EF006C0181 /* Prize.swift */; };
 		2710568F248D541B006C0181 /* Prize+SliceContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710568E248D541B006C0181 /* Prize+SliceContentType.swift */; };
+		2720252124A36FB700240E4E /* SwiftFortuneWheelConfiguration+RainbowColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720252024A36FB700240E4E /* SwiftFortuneWheelConfiguration+RainbowColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +52,7 @@
 		2710568A248D53EF006C0181 /* SwiftFortuneWheelConfiguration+Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftFortuneWheelConfiguration+Example.swift"; sourceTree = "<group>"; };
 		2710568B248D53EF006C0181 /* Prize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
 		2710568E248D541B006C0181 /* Prize+SliceContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Prize+SliceContentType.swift"; sourceTree = "<group>"; };
+		2720252024A36FB700240E4E /* SwiftFortuneWheelConfiguration+RainbowColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftFortuneWheelConfiguration+RainbowColors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,8 @@
 		2710562C248D3C9D006C0181 /* SwiftFortuneWheelDemoiOS */ = {
 			isa = PBXGroup;
 			children = (
+				2720251F24A36F8900240E4E /* Example2ViewController */,
+				2720251E24A36F6300240E4E /* ExampleViewController */,
 				2710562D248D3C9D006C0181 /* AppDelegate.swift */,
 				2710562F248D3C9D006C0181 /* SceneDelegate.swift */,
 				27105633248D3C9D006C0181 /* Main.storyboard */,
@@ -92,8 +96,6 @@
 				27105638248D3C9F006C0181 /* LaunchScreen.storyboard */,
 				2710563B248D3C9F006C0181 /* Info.plist */,
 				27105686248D4E49006C0181 /* ExamplesViewController.swift */,
-				27105688248D4EC8006C0181 /* ExampleViewController.swift */,
-				2710568A248D53EF006C0181 /* SwiftFortuneWheelConfiguration+Example.swift */,
 				2710568B248D53EF006C0181 /* Prize.swift */,
 				2710568E248D541B006C0181 /* Prize+SliceContentType.swift */,
 				2703B4F5248E2A9500FB50F9 /* UIView+CornerRadius.swift */,
@@ -107,6 +109,23 @@
 				2710564B248D4BD4006C0181 /* SwiftFortuneWheel.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2720251E24A36F6300240E4E /* ExampleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27105688248D4EC8006C0181 /* ExampleViewController.swift */,
+				2710568A248D53EF006C0181 /* SwiftFortuneWheelConfiguration+Example.swift */,
+				2720252024A36FB700240E4E /* SwiftFortuneWheelConfiguration+RainbowColors.swift */,
+			);
+			path = ExampleViewController;
+			sourceTree = "<group>";
+		};
+		2720251F24A36F8900240E4E /* Example2ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Example2ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +206,7 @@
 				27105687248D4E49006C0181 /* ExamplesViewController.swift in Sources */,
 				2710562E248D3C9D006C0181 /* AppDelegate.swift in Sources */,
 				27105630248D3C9D006C0181 /* SceneDelegate.swift in Sources */,
+				2720252124A36FB700240E4E /* SwiftFortuneWheelConfiguration+RainbowColors.swift in Sources */,
 				2710568C248D53EF006C0181 /* SwiftFortuneWheelConfiguration+Example.swift in Sources */,
 				27105689248D4EC8006C0181 /* ExampleViewController.swift in Sources */,
 			);

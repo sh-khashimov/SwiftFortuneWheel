@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+### v0.6.2
+- fixed bug during init process;
+- in `TextPreferences`, `flipUpsideDown` now default value is `true`;
+- Playground added to `SwiftFortuneWheel` project;
+
+
 ### v0.6.1
 
 - `startAnimating(fullRotationTimeInSeconds: Int, finishIndex: Int, _ completion:((Bool) -> Void)?)` - completion fix

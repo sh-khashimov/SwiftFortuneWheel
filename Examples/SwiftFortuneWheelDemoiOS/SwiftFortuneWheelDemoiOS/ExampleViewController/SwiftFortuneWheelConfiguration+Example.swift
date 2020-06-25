@@ -22,14 +22,6 @@ extension SwiftFortuneWheelConfiguration {
 
         return configuration
     }
-
-    static var exampleWithRainbowColorsConfiguration: SwiftFortuneWheelConfiguration {
-        let configuration = SwiftFortuneWheelConfiguration(spinButtonPreferences: .exampleSpinButtonPreferences,
-                                                      pinPreferences: .examplePinPreferences,
-                                                      wheelPreferences: .exampleRainbowWheelPreferences)
-
-        return configuration
-    }
 }
 
 extension SwiftFortuneWheelConfiguration.SpinButtonPreferences {
@@ -63,17 +55,6 @@ extension SwiftFortuneWheelConfiguration.WheelPreferences {
                                                                      imageAnchor: imageAnchor)
         return preferences
     }
-
-    static var exampleRainbowWheelPreferences: SwiftFortuneWheelConfiguration.WheelPreferences {
-        let centerImageAnchor = SwiftFortuneWheelConfiguration.AnchorImage(imageName: "filled-circle",
-                                                                size: CGSize(width: 10, height: 10),
-                                                                verticalOffset: -circleStrokeWidth / 2,
-                                                                tintColor: .white)
-        let preferences = SwiftFortuneWheelConfiguration.WheelPreferences(circlePreferences: .exampleCirclePreferences,
-                                                                     slicePreferences: .exampleRainbowSlicePreferenes,
-                                                                     centerImageAnchor: centerImageAnchor)
-        return preferences
-    }
 }
 
 extension SwiftFortuneWheelConfiguration.CirclePreferences {
@@ -87,14 +68,6 @@ extension SwiftFortuneWheelConfiguration.CirclePreferences {
 extension SwiftFortuneWheelConfiguration.SlicePreferences {
     static var exampleBlackCyanSlicePreferenes: SwiftFortuneWheelConfiguration.SlicePreferences {
         let backgroundColorType = SwiftFortuneWheelConfiguration.ColorType.evenOddColors(evenColor: blackColor, oddColor: cyanColor)
-        let preferences = SwiftFortuneWheelConfiguration.SlicePreferences(backgroundColorType: backgroundColorType,
-                                                                            strokeWidth: 1,
-                                                                            strokeColor: blackColor)
-        return preferences
-    }
-
-    static var exampleRainbowSlicePreferenes: SwiftFortuneWheelConfiguration.SlicePreferences {
-        let backgroundColorType = SwiftFortuneWheelConfiguration.ColorType.customPatternColors(colors: [.blue, .brown, .green, .cyan, .magenta, .orange, .purple, .yellow, .systemPink, .systemTeal, .brown, .green, .cyan], defaultColor: .red)
         let preferences = SwiftFortuneWheelConfiguration.SlicePreferences(backgroundColorType: backgroundColorType,
                                                                             strokeWidth: 1,
                                                                             strokeColor: blackColor)
@@ -132,6 +105,7 @@ extension TextPreferences {
                                           font: font,
                                           preferedFontSize: 10,
                                           verticalOffset: 10,
+                                          orientation: .horizontal,
                                           flipUpsideDown: true,
                                           isCurved: true)
         return prefenreces
@@ -150,13 +124,14 @@ extension TextPreferences {
         return prefenreces
     }
 
-    static var descriptionTextWhiteBlackColorPreferences: TextPreferences {
+    static var descriptionTextWithBlackColorPreferences: TextPreferences {
         let textColorType = SwiftFortuneWheelConfiguration.ColorType.customPatternColors(colors: nil, defaultColor: .black)
         let font = UIFont.systemFont(ofSize: 10, weight: .bold)
         let prefenreces = TextPreferences(textColorType: textColorType,
                                           font: font,
                                           preferedFontSize: 10,
                                           verticalOffset: 10,
+                                          orientation: .horizontal,
                                           flipUpsideDown: true,
                                           isCurved: true)
         return prefenreces
