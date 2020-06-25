@@ -55,5 +55,9 @@ Please make sure to update tests as appropriate.
 
 Sherzod Khashimov
 
+## Changelog
+
+See [**changelog here**](/Documentation/Changelog.md)
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
