@@ -8,15 +8,19 @@
 
 Fortune spinning wheel that supports dynamic content and rich customization.
 
-<img src="./Images/layout.gif" width="320"/>
-
 | | Main Features |
 |---|---|
-| 🏵 | Dynamic content, support image, and text |
+| 🏵 | Dynamic content, supports texts, images, and lines |
+| 🎛 | Supports vertical and horizontal text orientation |
 | 🌈 | Appearance customization |
 | 🎨 | Drawn and animated using CoreGraphics |
 | 🧮 | Dynamic layout  |
 | 🚀 | Written in Swift |
+
+## Preview
+
+<img src="./Images/layout.gif" width="320"/>
+<img src="./Images/rotation.gif" width="320"/>
 
 ## Getting Started
 - [**Getting started guide**](/Documentation/GettingStarted.md)
@@ -33,7 +37,7 @@ You can find <a href="https://sh-khashimov.github.io/SwiftFortuneWheel/" target=
 ## Requirements
 
 
-| App version | Swift | Xcode | Platforms |
+| App name | Swif | Xcode | Platforms |
 |---|---|---|---|
 | current version | Swift 5.0 | Xcode 11 | iOS 9.0 |
 
@@ -50,10 +54,6 @@ Please make sure to update tests as appropriate.
 ## Author
 
 Sherzod Khashimov
-
-## Changelog
-
-See [**changelog here**](/Documentation/Changelog.md)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

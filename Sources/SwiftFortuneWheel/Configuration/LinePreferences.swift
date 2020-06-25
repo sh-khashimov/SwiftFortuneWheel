@@ -33,3 +33,17 @@ public struct LinePreferences {
         self.verticalOffset = verticalOffset
     }
 }
+
+extension LinePreferences {
+    func strokeColor(for index: Int) -> UIColor {
+        var strokeColor = UIColor.clear
+
+        switch self.colorType {
+        case .evenOddColors(let evenColor, let oddColor):
+            strokeColor = index % 2 == 0 ? evenColor : oddColor
+        case .customPatternColors(let colors, let defaultColor):
+            strokeColor = colors?[index, default: defaultColor] ?? defaultColor
+        }
+        return strokeColor
+    }
+}

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SwiftFortuneWheel"
-  s.version      = "0.6.2"
+  s.version      = "0.7.0"
   s.summary      = "Fortune spinning wheel that supports dynamic content and rich customization."
   s.description  = <<-DESC
   Fortune spinning wheel that supports dynamic content and rich customization. Main Features: Dynamic content, support image, and text; Appearance customization; Drawn and animated using CoreGraphics; Dynamic layout.

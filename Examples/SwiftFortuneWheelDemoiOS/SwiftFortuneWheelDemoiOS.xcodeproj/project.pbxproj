@@ -21,6 +21,8 @@
 		2710568D248D53EF006C0181 /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710568B248D53EF006C0181 /* Prize.swift */; };
 		2710568F248D541B006C0181 /* Prize+SliceContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710568E248D541B006C0181 /* Prize+SliceContentType.swift */; };
 		2720252124A36FB700240E4E /* SwiftFortuneWheelConfiguration+RainbowColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720252024A36FB700240E4E /* SwiftFortuneWheelConfiguration+RainbowColors.swift */; };
+		27F7D5B924A51C5D004BEE19 /* Example2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7D5B824A51C5D004BEE19 /* Example2ViewController.swift */; };
+		27F7D5BB24A51D01004BEE19 /* SwiftFortuneWheelConfiguration+Example2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7D5BA24A51D01004BEE19 /* SwiftFortuneWheelConfiguration+Example2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +55,8 @@
 		2710568B248D53EF006C0181 /* Prize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
 		2710568E248D541B006C0181 /* Prize+SliceContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Prize+SliceContentType.swift"; sourceTree = "<group>"; };
 		2720252024A36FB700240E4E /* SwiftFortuneWheelConfiguration+RainbowColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftFortuneWheelConfiguration+RainbowColors.swift"; sourceTree = "<group>"; };
+		27F7D5B824A51C5D004BEE19 /* Example2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example2ViewController.swift; sourceTree = "<group>"; };
+		27F7D5BA24A51D01004BEE19 /* SwiftFortuneWheelConfiguration+Example2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftFortuneWheelConfiguration+Example2.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 		2720251F24A36F8900240E4E /* Example2ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				27F7D5B824A51C5D004BEE19 /* Example2ViewController.swift */,
+				27F7D5BA24A51D01004BEE19 /* SwiftFortuneWheelConfiguration+Example2.swift */,
 			);
 			path = Example2ViewController;
 			sourceTree = "<group>";
@@ -202,8 +208,10 @@
 			files = (
 				2710568D248D53EF006C0181 /* Prize.swift in Sources */,
 				2703B4F6248E2A9500FB50F9 /* UIView+CornerRadius.swift in Sources */,
+				27F7D5B924A51C5D004BEE19 /* Example2ViewController.swift in Sources */,
 				2710568F248D541B006C0181 /* Prize+SliceContentType.swift in Sources */,
 				27105687248D4E49006C0181 /* ExamplesViewController.swift in Sources */,
+				27F7D5BB24A51D01004BEE19 /* SwiftFortuneWheelConfiguration+Example2.swift in Sources */,
 				2710562E248D3C9D006C0181 /* AppDelegate.swift in Sources */,
 				27105630248D3C9D006C0181 /* SceneDelegate.swift in Sources */,
 				2720252124A36FB700240E4E /* SwiftFortuneWheelConfiguration+RainbowColors.swift in Sources */,

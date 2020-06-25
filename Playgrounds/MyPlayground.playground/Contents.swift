@@ -13,7 +13,7 @@ class MyViewController : UIViewController {
 
         for index in 1...4 {
             let headerContent = Slice.ContentType.text(text: "\(index)", preferenes: .amountTextPreferences)
-            let descriptionContent = Slice.ContentType.text(text: "Description", preferenes: .descriptionTextPreferences)
+            let descriptionContent = Slice.ContentType.text(text: "DESCRIPTION", preferenes: .descriptionTextPreferences)
             let slice = Slice(contents: [headerContent, descriptionContent])
             slices.append(slice)
         }

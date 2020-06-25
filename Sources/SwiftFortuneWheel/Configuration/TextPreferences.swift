@@ -24,9 +24,6 @@ public struct TextPreferences {
     /// Text font
     public var font: UIFont
 
-    /// Prefered font size, requared to calculate a size
-    public var preferedFontSize: CGFloat
-
     /// Text color type
     public var textColorType: SwiftFortuneWheelConfiguration.ColorType
     
@@ -47,7 +44,6 @@ public struct TextPreferences {
     ///   - isCurved: Is text curved or not, works only with orientation equal to horizontal, default value is `true`
     public init(textColorType: SwiftFortuneWheelConfiguration.ColorType,
                 font: UIFont,
-                preferedFontSize: CGFloat,
                 verticalOffset: CGFloat = 0,
                 horizontalOffset: CGFloat = 0,
                 orientation: Orientation = .horizontal,
@@ -58,7 +54,6 @@ public struct TextPreferences {
         self.verticalOffset = verticalOffset
         self.flipUpsideDown = flipUpsideDown
         self.font = font
-        self.preferedFontSize = preferedFontSize
         self.isCurved = isCurved
         self.orientation = orientation
     }
@@ -69,5 +64,31 @@ public extension TextPreferences {
     enum Orientation {
         case horizontal
         case vertical
+    }
+}
+
+extension TextPreferences {
+    func color(for index: Int) -> UIColor {
+        var color: UIColor = .clear
+
+        switch self.textColorType {
+        case .evenOddColors(let evenColor, let oddColor):
+            color = index % 2 == 0 ? evenColor : oddColor
+        case .customPatternColors(let colors, let defaultColor):
+            color = colors?[index, default: defaultColor] ?? defaultColor
+        }
+        return color
+    }
+
+    func textFontAttributes(for index: Int) -> [NSAttributedString.Key:Any] {
+        let textColor = self.color(for: index)
+
+        let textStyle = NSMutableParagraphStyle()
+        textStyle.alignment = .center
+        let deafultAttributes:[NSAttributedString.Key: Any] =
+            [.font: self.font,
+             .foregroundColor: textColor,
+             .paragraphStyle: textStyle ]
+        return deafultAttributes
     }
 }

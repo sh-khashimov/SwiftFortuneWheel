@@ -43,6 +43,31 @@
                                             <segue destination="uOf-zF-lNR" kind="show" id="n7U-nY-Ona"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="cXc-rf-PCr">
+                                        <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cXc-rf-PCr" id="mae-of-eYx">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTi-MZ-oBb">
+                                                    <rect key="frame" x="15" y="0.0" width="353" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="cTi-MZ-oBb" secondAttribute="trailing" constant="15" id="4Iv-gx-gLi"/>
+                                                <constraint firstItem="cTi-MZ-oBb" firstAttribute="leading" secondItem="mae-of-eYx" secondAttribute="leading" constant="15" id="8BD-Gv-6Py"/>
+                                                <constraint firstItem="cTi-MZ-oBb" firstAttribute="top" secondItem="mae-of-eYx" secondAttribute="top" id="Uvg-h3-Ynt"/>
+                                                <constraint firstAttribute="bottom" secondItem="cTi-MZ-oBb" secondAttribute="bottom" id="Xj7-a5-78I"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="JsW-zt-FSX" kind="show" id="eC5-px-ySG"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -266,6 +291,22 @@
                 </toolbar>
             </objects>
             <point key="canvasLocation" x="1097.1014492753625" y="137.94642857142856"/>
+        </scene>
+        <!--Example2 View Controller-->
+        <scene sceneID="qda-aq-Ly8">
+            <objects>
+                <viewController storyboardIdentifier="Example2ViewController" id="JsW-zt-FSX" customClass="Example2ViewController" customModule="SwiftFortuneWheelDemoiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VNL-N5-dnK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="D14-MA-7SS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xjr-rD-pIf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XPr-om-LL9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1097" y="867"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AVk-El-Bh6">

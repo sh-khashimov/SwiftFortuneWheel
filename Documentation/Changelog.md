@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+### 0.7.0
+- added text orientation to `TextPreferences`;
+- `preferedFontSize` removed from `TextPreferences`;
+- `flipUpsideDown` fixed;
+
+
 ### v0.6.2
 - fixed bug during init process;
 - in `TextPreferences`, `flipUpsideDown` now default value is `true`;
