@@ -11,16 +11,15 @@ Fortune spinning wheel that supports dynamic content and rich customization.
 | | Main Features |
 |---|---|
 | 🏵 | Dynamic content, supports texts, images, and lines |
-| 🎛 | Supports vertical and horizontal text orientation |
+| 🎯 | Adaptive text size with support multiline, alignment and line break mode |
+| 🧮 | Supports vertical and horizontal text orientation |
 | 🌈 | Appearance customization |
-| 🎨 | Drawn and animated using CoreGraphics |
-| 🧮 | Dynamic layout  |
+| 🎨 | Drawn and animated using CoreGraphics 
 | 🚀 | Written in Swift |
 
 ## Preview
 
-<img src="./Images/layout.gif" width="250"/>
-<img src="./Images/rotation.gif" width="250"/>
+<img src="./Images/layout.gif" width="250"/><img src="./Images/rotation.gif" width="250"/>
 
 ## Getting Started
 - [**Getting started guide**](/Documentation/GettingStarted.md)
