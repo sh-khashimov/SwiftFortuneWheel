@@ -1,4 +1,6 @@
 //: A UIKit based Playground for presenting user interface
+
+// This playground used for development and testing purpose only
   
 import UIKit
 import PlaygroundSupport
@@ -11,10 +13,15 @@ class MyViewController : UIViewController {
 
         var slices: [Slice] = []
 
+        let label = UILabel()
+        label.numberOfLines = 2
+        label.textAlignment
+
         for index in 1...4 {
             let headerContent = Slice.ContentType.text(text: "\(index)", preferenes: .amountTextPreferences)
-            let descriptionContent = Slice.ContentType.text(text: "DESCRIPTION", preferenes: .descriptionTextPreferences)
-            let slice = Slice(contents: [headerContent, descriptionContent])
+            let descriptionContent = Slice.ContentType.text(text: "1qwewew 2qwewe 3qwewewew", preferenes: .descriptionTextPreferences)
+            let slice = Slice(contents: [headerContent,
+                                         descriptionContent, headerContent])
             slices.append(slice)
         }
 
@@ -24,6 +31,8 @@ class MyViewController : UIViewController {
 
         fortuneWheel.isPinHidden = true
         fortuneWheel.isSpinHidden = true
+
+        fortuneWheel.configuration?.wheelPreferences.circlePreferences.strokeWidth
         
         view.addSubview(fortuneWheel)
         self.view = view

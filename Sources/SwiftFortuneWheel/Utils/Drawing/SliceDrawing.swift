@@ -53,6 +53,40 @@ extension SliceDrawing {
         let width = circularSegmentHeight(radius: -yPosition, from: sliceDegree) - leftMargin - rightMargin
         return width
     }
+
+    /// Available text rectangles for the specified position
+    /// - Parameters:
+    ///   - yPosition: Y Position
+    ///   - preferences: Text preferences
+    ///   - topOffset: Top offset
+    /// - Returns: Available text rectangles
+    func availableTextRect(yPosition: CGFloat, preferences: TextPreferences, topOffset: CGFloat) -> [CGRect] {
+
+        /// Max. available height from Y position
+        let maxHeight = radius - abs(yPosition) - bottomMargin
+
+        /// Max. available lines for String
+        let maxLines = preferences.numberOfLines == 0 ? Int((maxHeight / preferences.font.pointSize).rounded(.towardZero)) : preferences.numberOfLines
+
+        /// Text rectangles
+        var textRects: [CGRect] = []
+
+        /// Creates rectangle for each line
+        for line in 1...maxLines {
+            /// Height offset
+            let heightOffset = preferences.font.pointSize * CGFloat(line)
+            /// Spacing
+            let spacing = line == 1 ? 0 : preferences.spacing * CGFloat(line)
+            /// Y position of the rectangle bottoms
+            let bottomYPosition = -(radius - preferences.verticalOffset - topOffset - heightOffset - spacing)
+            /// Width
+            let width = self.width(forYPosition: bottomYPosition)
+            /// Text rectangle
+            let textRect = CGRect(x: 0, y: 0, width: width, height: preferences.font.pointSize)
+            textRects.append(textRect)
+        }
+        return textRects
+    }
 }
 
 extension SliceDrawing {
@@ -206,24 +240,46 @@ extension SliceDrawing {
     ///   - rotation: rotation degree
     ///   - index: index
     ///   - topOffset: top offset
+    /// - Returns: Height of the drawn text
     private func drawCurved(text: String, in context:CGContext, preferences: TextPreferences, rotation: CGFloat, index: Int, topOffset: CGFloat) -> CGFloat {
 
         let textColor = preferences.color(for: index)
 
-        let bottomYPosition = -(radius - preferences.verticalOffset - topOffset - preferences.font.pointSize)
-        let width = self.width(forYPosition: bottomYPosition)
-        let textRect = CGRect(x: 0, y: 0, width: width, height: preferences.font.pointSize)
-        let yPosition = -(radius - preferences.verticalOffset - topOffset - topMargin) + textRect.height / 2
+        /// Y start position
+        let yPosition = -(radius - preferences.verticalOffset - topOffset - topMargin) + preferences.font.pointSize / 2
 
-        context.saveGState()
+        /// Text rectangles for multiline text
+        let textRects = availableTextRect(yPosition: yPosition, preferences: preferences, topOffset: topOffset)
 
-        let angleRotation = -(rotation + contextPositionCorrectionOffsetDegree) * CGFloat.pi/180
+        /// String with multiline
+        let multilineString = text.split(font: preferences.font, lineWidths: textRects.map({ $0.width }), lineBreak: preferences.lineBreakMode)
 
-        self.centreArcPerpendicular(text: text, context: context, radius: -yPosition, angle: angleRotation, colour: textColor, font: preferences.font, clockwise: preferences.flipUpsideDown, preferedSize: textRect.size)
 
-        context.restoreGState()
+        /// Height for al text lines
+        let height = preferences.font.pointSize * CGFloat(multilineString.count) + preferences.spacing * max(0, CGFloat(multilineString.count - 1))
 
-        return preferences.font.pointSize + preferences.verticalOffset
+        for index in 0..<multilineString.count {
+
+            /// The string that will be drawn
+            let string = multilineString[index]
+            /// Space between lines
+            let spacing = index == 0 ? 0 : preferences.spacing * CGFloat(index)
+
+            /// Current text rectangle
+            let textRect = textRects[index]
+
+            /// Y position of the current line
+            let yPos = yPosition + textRect.height * CGFloat(index) + spacing
+            context.saveGState()
+
+            let angleRotation = -(rotation + contextPositionCorrectionOffsetDegree) * CGFloat.pi/180
+
+            self.centreArcPerpendicular(text: string, context: context, radius: -yPos, angle: angleRotation, colour: textColor, font: preferences.font, clockwise: preferences.flipUpsideDown, preferedSize: textRect.size)
+
+            context.restoreGState()
+        }
+
+        return height + preferences.verticalOffset
 
     }
 
@@ -235,31 +291,66 @@ extension SliceDrawing {
     ///   - rotation: rotation degree
     ///   - index: index
     ///   - topOffset: top offset
+    /// - Returns: Height of the drawn text
     private func drawHorizontal(text: String, in context:CGContext, preferences: TextPreferences, rotation: CGFloat, index: Int, topOffset: CGFloat) -> CGFloat {
 
-        let textFontAttributes = preferences.textFontAttributes(for: index)
+        /// Text attributes
+        let textFontAttributes = preferences.textAttributes(for: index)
 
-        let bottomYPosition = -(radius - preferences.verticalOffset - topOffset - preferences.font.pointSize)
-        let width = self.width(forYPosition: bottomYPosition)
-        let textRect = CGRect(x: 0, y: 0, width: width, height: preferences.font.pointSize)
+        /// Y start position
         let yPosition = -(radius - preferences.verticalOffset - topOffset - topMargin)
-        let xPos = -(textRect.width / 2) - preferences.horizontalOffset
 
-        context.saveGState()
-        context.rotate(by: rotation * CGFloat.pi/180)
+        /// Text rectangles for multiline text
+        var textRects = availableTextRect(yPosition: yPosition, preferences: preferences, topOffset: topOffset)
 
-        context.translateBy(x: xPos, y: yPosition)
-
+        /// If text not flipped, reverse text rectangle to start crop from the bottom
         if !preferences.flipUpsideDown {
-            context.rotate(by: flipRotation)
-            context.translateBy(x: -textRect.width, y: -textRect.height)
+            textRects.reverse()
         }
 
-        text.draw(in: CGRect(x: 0, y: 0, width: textRect.width, height: textRect.height), withAttributes: textFontAttributes)
+        /// String with multiline
+        var multilineString = text.split(font: preferences.font, lineWidths: textRects.map({ $0.width }), lineBreak: preferences.lineBreakMode)
 
-        context.restoreGState()
+        /// Height for al textl lines
+        let height = preferences.font.pointSize * CGFloat(multilineString.count) + preferences.spacing * max(0, CGFloat(multilineString.count - 1))
 
-        return preferences.font.pointSize + preferences.verticalOffset
+        /// If text not flipped, reverse text and text rectangle
+        if !preferences.flipUpsideDown {
+            multilineString.reverse()
+            textRects.reverse()
+        }
+
+        /// Start draw each string line
+        for index in 0..<multilineString.count {
+
+            /// The string that will be drawn
+            let string = multilineString[index]
+            /// Space between lines
+            let spacing = index == 0 ? 0 : preferences.spacing * CGFloat(index)
+
+            /// Current text rectangle
+            let textRect = textRects[index]
+            /// X position of the current line
+            let xPos = -(textRect.width / 2) - preferences.horizontalOffset
+            /// Y position of the current line
+            let yPos = yPosition + textRect.height * CGFloat(index) + spacing
+
+            context.saveGState()
+            context.rotate(by: rotation * CGFloat.pi/180)
+
+            context.translateBy(x: xPos, y: yPos)
+
+            if !preferences.flipUpsideDown {
+                context.rotate(by: flipRotation)
+                context.translateBy(x: -textRect.width, y: -textRect.height)
+            }
+
+            string.draw(in: CGRect(x: 0, y: 0, width: textRect.width, height: CGFloat.infinity), withAttributes: textFontAttributes)
+
+            context.restoreGState()
+        }
+
+        return height + preferences.verticalOffset
 
     }
 
@@ -271,46 +362,142 @@ extension SliceDrawing {
     ///   - rotation: rotation degree
     ///   - index: index
     ///   - topOffset: top offset
+    /// - Returns: Height of the drawn text
     private func drawVertical(text: String, in context: CGContext, preferences: TextPreferences, rotation: CGFloat, index: Int, topOffset: CGFloat) -> CGFloat {
 
-        let textFontAttributes = preferences.textFontAttributes(for: index)
+        /// Text attributes
+        let textAttributes = preferences.textAttributes(for: index)
 
-        let textWidth: CGFloat = text.width(by: preferences.font)
+        /// Available words
+        let wordsCount = text.split(separator: " ".first!).count
 
-        let maxAvailableBottomRadiusOffsetCircularSegmentHeight = self.leftMargin + self.rightMargin + preferences.font.pointSize
-        let bottomRadiusOffset = max(self.bottomMargin, radius(circularSegmentHeight: maxAvailableBottomRadiusOffsetCircularSegmentHeight, from: sliceDegree))
+        /// Maximum available width in slice
+        let maxWidth = circularSegmentHeight(radius: radius - preferences.verticalOffset - topOffset, from: sliceDegree)
 
-        let availableHeightInSlice: CGFloat = radius - preferences.verticalOffset - topOffset - bottomRadiusOffset
-        let textRectWidth = min(textWidth, availableHeightInSlice)
-        let croppedText = text.crop(by: textRectWidth, font: preferences.font)
+        /// Maximum available lines in slice
+        let maxLinesInSlice = (maxWidth / (preferences.font.pointSize + preferences.spacing)).rounded(.down)
 
-        let textRect = CGRect(x: 0, y: 0, width: textRectWidth, height: preferences.font.pointSize)
-        let yPosition = -(radius - preferences.verticalOffset - topOffset - topMargin)
-        let xPos = -(textRect.height / 2) - preferences.horizontalOffset
+        /// Available text rectangles
+        var availableTextRects: [CGRect] = []
 
-        context.saveGState()
-        context.rotate(by: rotation * CGFloat.pi/180)
+        /// Counts max available vertical lines and create for each line a max text rectangle
+        for line in 1...Int(maxLinesInSlice - 1) {
+            /// Spacing between lines
+            let spacing = line > 1 ? preferences.spacing : 0
 
-        context.translateBy(x: -xPos, y: yPosition)
-        context.rotate(by: 90 * CGFloat.pi/180)
+            /// Height of text rectangle
+            let _height = preferences.font.pointSize * CGFloat(line) + preferences.spacing * (CGFloat(line) - 1)
+            /// Maximum circular segment height (chord) for current line (rectangle)
+            let _maxCircularSegmentHeight = self.leftMargin + self.rightMargin + _height
+            /// Bottom radius offset
+            let _bottomRadiusOffset = max(self.bottomMargin, radius(circularSegmentHeight: _maxCircularSegmentHeight, from: sliceDegree))
+            /// Available width in slice
+            let _availableWidthInSlice = radius - preferences.verticalOffset - topOffset - _bottomRadiusOffset
+            /// Current line space
+            let _currentLineSpace = (_availableWidthInSlice * _height)
 
+            /// Height of the next text rectangle
+            let _nextHeight = preferences.font.pointSize * CGFloat(line + 1) + preferences.spacing * (CGFloat(line))
+            /// Maximum circular segment height (chord) for current line (rectangle)
+            let _nextMaxCircularSegmentHeight = self.leftMargin + self.rightMargin + _nextHeight + spacing
+            /// Bottom radius offset for next line
+            let _nextBottomRadiusOffset = max(self.bottomMargin, radius(circularSegmentHeight: _nextMaxCircularSegmentHeight, from: sliceDegree))
+            /// Available width in slice for next line
+            let _nextAvailableWidthInSlice = radius - preferences.verticalOffset - topOffset - _nextBottomRadiusOffset
+            /// Next line space
+            let _nextLineSpace = (_nextAvailableWidthInSlice * _nextHeight)
 
-        if preferences.flipUpsideDown {
-            context.rotate(by: flipRotation)
-            context.translateBy(x: -textRectWidth, y: -textRect.height)
+            availableTextRects.append(CGRect(x: 0, y: 0, width: _availableWidthInSlice, height: _height))
+
+            if _currentLineSpace > _nextLineSpace {
+                break
+            }
+        }
+
+        /// String with multiline
+        var multilineString: [String] = []
+
+        /// Text rectangles for multiline text
+        var textRects: [CGRect] = []
+
+        /// creates text rectangles from available max text rectangle
+        for index in 0..<availableTextRects.count {
+            textRects = []
+            multilineString = []
+
+            /// Text rectangle
+            let textRect = availableTextRects[index]
+            /// Current line
+            let line = index + 1
+
+            /// split the availableTextRect to the text rectangles
+            textRects = Array(repeating: CGRect(x: 0, y: 0, width: textRect.width, height: preferences.font.pointSize), count: line)
+            multilineString = text.split(font: preferences.font, lineWidths: textRects.map({ $0.width }), lineBreak: preferences.lineBreakMode)
+
+            /// Word count for text in the current line
+            let _wordCount = max(multilineString.joined().split(separator: " ".first!).count, line)
+
+            if wordsCount == _wordCount {
+                break
+            }
         }
 
 
-        // For Debugging purposes
-        //        context.addRect(textRect)
-        //        UIColor.red.setStroke()
-        //        context.drawPath(using: .fillStroke)
+        /// Line count
+        let lineCount = multilineString.count
 
-        croppedText.draw(in: CGRect(x: 0, y: 0, width: textRect.width, height: textRect.height), withAttributes: textFontAttributes)
+        /// Spacing between lines
+        let spacing = lineCount > 1 ? preferences.spacing : 0
 
-        context.restoreGState()
+        /// Context widths
+        let contextWidth = preferences.font.pointSize * CGFloat(lineCount) + spacing * max(0, (CGFloat(lineCount) - 1))
 
-        return textRectWidth + preferences.verticalOffset
+        /// Context height
+        let contextHeight = textRects.first?.width ?? 0
+
+        /// Y start position
+        let yPosition = -(radius - preferences.verticalOffset - topOffset - topMargin)
+
+        /// If text not flipped, reverse text
+        if !preferences.flipUpsideDown {
+            multilineString.reverse()
+        }
+
+        /// Start draw each string line
+        for index in 0..<multilineString.count {
+
+            /// The string that will be drawn
+            let string = multilineString[index]
+            /// Space between lines
+            let spacing = index == 0 ? 0 : preferences.spacing * CGFloat(index)
+
+            /// Current text rectangle
+            let textRect = textRects[index]
+            /// X position of the current line
+            let xPos = textRect.height * CGFloat(index + 1) + spacing - contextWidth / 2
+
+            context.saveGState()
+            context.rotate(by: rotation * CGFloat.pi/180)
+
+            context.translateBy(x: xPos, y: yPosition)
+            context.rotate(by: 90 * CGFloat.pi/180)
+
+            if preferences.flipUpsideDown {
+                context.rotate(by: flipRotation)
+                context.translateBy(x: -textRect.width, y: -textRect.height)
+            }
+
+            //         For Debugging purposes
+//            context.addRect(textRect)
+//            UIColor.red.setStroke()
+//            context.drawPath(using: .fillStroke)
+
+            string.draw(in: CGRect(x: 0, y: 0, width: textRect.width, height: CGFloat.infinity), withAttributes: textAttributes)
+
+            context.restoreGState()
+        }
+
+        return contextHeight + preferences.verticalOffset
 
     }
 }

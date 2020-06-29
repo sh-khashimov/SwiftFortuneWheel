@@ -106,6 +106,9 @@
                 <a href="../Structs/ImagePreferences.html">ImagePreferences</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/LinePreferences.html">LinePreferences</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/Slice.html">Slice</a>
               </li>
               <li class="nav-group-task">
@@ -143,6 +146,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/TextPreferences.html">TextPreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TextPreferences/Orientation.html">– Orientation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TextPreferences/LineBreakMode.html">– LineBreakMode</a>
               </li>
             </ul>
           </li>
@@ -275,33 +284,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SwiftFortuneWheel15TextPreferencesV16preferedFontSize12CoreGraphics7CGFloatVvp"></a>
-                    <a name="//apple_ref/swift/Property/preferedFontSize" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel15TextPreferencesV16preferedFontSize12CoreGraphics7CGFloatVvp">preferedFontSize</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Prefered font size, requared to calculate a size</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">preferedFontSize</span><span class="p">:</span> <span class="kt">CGFloat</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:17SwiftFortuneWheel15TextPreferencesV13textColorTypeAA0abC13ConfigurationV0gH0Ovp"></a>
                     <a name="//apple_ref/swift/Property/textColorType" class="dashAnchor"></a>
                     <a class="token" href="#/s:17SwiftFortuneWheel15TextPreferencesV13textColorTypeAA0abC13ConfigurationV0gH0Ovp">textColorType</a>
@@ -339,7 +321,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Is text curved or not</p>
+                        <p>Is text curved or not, works only with orientation equal to horizontal</p>
 
                       </div>
                       <div class="declaration">
@@ -356,9 +338,144 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SwiftFortuneWheel15TextPreferencesV13textColorType4font16preferedFontSize14verticalOffset010horizontalN014flipUpsideDown8isCurvedAcA0abC13ConfigurationV0gH0O_So6UIFontC12CoreGraphics7CGFloatVA2SS2btcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(textColorType:font:preferedFontSize:verticalOffset:horizontalOffset:flipUpsideDown:isCurved:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel15TextPreferencesV13textColorType4font16preferedFontSize14verticalOffset010horizontalN014flipUpsideDown8isCurvedAcA0abC13ConfigurationV0gH0O_So6UIFontC12CoreGraphics7CGFloatVA2SS2btcfc">init(textColorType:font:preferedFontSize:verticalOffset:horizontalOffset:flipUpsideDown:isCurved:)</a>
+                    <a name="/s:17SwiftFortuneWheel15TextPreferencesV11orientationAC11OrientationOvp"></a>
+                    <a name="//apple_ref/swift/Property/orientation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel15TextPreferencesV11orientationAC11OrientationOvp">orientation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Text orientation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">orientation</span><span class="p">:</span> <span class="kt"><a href="../Structs/TextPreferences/Orientation.html">Orientation</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel15TextPreferencesV13lineBreakModeAC04LinegH0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/lineBreakMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel15TextPreferencesV13lineBreakModeAC04LinegH0Ovp">lineBreakMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The technique to use for wrapping and truncating the label’s text</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lineBreakMode</span><span class="p">:</span> <span class="kt"><a href="../Structs/TextPreferences/LineBreakMode.html">LineBreakMode</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel15TextPreferencesV13numberOfLinesSivp"></a>
+                    <a name="//apple_ref/swift/Property/numberOfLines" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel15TextPreferencesV13numberOfLinesSivp">numberOfLines</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum number of lines to use for rendering text.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">numberOfLines</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel15TextPreferencesV7spacing12CoreGraphics7CGFloatVvp"></a>
+                    <a name="//apple_ref/swift/Property/spacing" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel15TextPreferencesV7spacing12CoreGraphics7CGFloatVvp">spacing</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Spacing between lines</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">spacing</span><span class="p">:</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel15TextPreferencesV9alignmentSo15NSTextAlignmentVvp"></a>
+                    <a name="//apple_ref/swift/Property/alignment" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel15TextPreferencesV9alignmentSo15NSTextAlignmentVvp">alignment</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The technique to use for aligning the text.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">alignment</span><span class="p">:</span> <span class="kt">NSTextAlignment</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel15TextPreferencesV13textColorType4font14verticalOffset010horizontalK011orientation9lineBreak9alignment5lines7spacing14flipUpsideDown8isCurvedAcA0abC13ConfigurationV0gH0O_So6UIFontC12CoreGraphics7CGFloatVAwC11OrientationOAC04LineO4ModeOSo15NSTextAlignmentVSiAWS2btcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(textColorType:font:verticalOffset:horizontalOffset:orientation:lineBreak:alignment:lines:spacing:flipUpsideDown:isCurved:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel15TextPreferencesV13textColorType4font14verticalOffset010horizontalK011orientation9lineBreak9alignment5lines7spacing14flipUpsideDown8isCurvedAcA0abC13ConfigurationV0gH0O_So6UIFontC12CoreGraphics7CGFloatVAwC11OrientationOAC04LineO4ModeOSo15NSTextAlignmentVSiAWS2btcfc">init(textColorType:font:verticalOffset:horizontalOffset:orientation:lineBreak:alignment:lines:spacing:flipUpsideDown:isCurved:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -375,10 +492,14 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">textColorType</span><span class="p">:</span> <span class="kt"><a href="../Structs/SwiftFortuneWheelConfiguration.html">SwiftFortuneWheelConfiguration</a></span><span class="o">.</span><span class="kt">ColorType</span><span class="p">,</span>
             <span class="nv">font</span><span class="p">:</span> <span class="kt">UIFont</span><span class="p">,</span>
-            <span class="nv">preferedFontSize</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
-            <span class="nv">verticalOffset</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
+            <span class="nv">verticalOffset</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
             <span class="nv">horizontalOffset</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="nv">flipUpsideDown</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nv">orientation</span><span class="p">:</span> <span class="kt"><a href="../Structs/TextPreferences/Orientation.html">Orientation</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">horizontal</span><span class="p">,</span>
+            <span class="nv">lineBreak</span><span class="p">:</span> <span class="kt"><a href="../Structs/TextPreferences/LineBreakMode.html">LineBreakMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">clip</span><span class="p">,</span>
+            <span class="nv">alignment</span><span class="p">:</span> <span class="kt">NSTextAlignment</span> <span class="o">=</span> <span class="o">.</span><span class="n">center</span><span class="p">,</span>
+            <span class="nv">lines</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nv">spacing</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="nv">flipUpsideDown</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
             <span class="nv">isCurved</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span></code></pre>
 
                         </div>
@@ -431,7 +552,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Vertical offset in slice from the center</p>
+                                  <p>Vertical offset in slice from the center, default value is <code>0</code></p>
                                 </div>
                               </td>
                             </tr>
@@ -444,6 +565,66 @@
                               <td>
                                 <div>
                                   <p>Horizontal offset in slice from the center, default value is <code>0</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>orientation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text orientation, default value is <code>.horizontal</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>alignment</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The technique to use for aligning the text, default value is <code>.left</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lineBreakMode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The technique to use for wrapping and truncating the label’s text, default value is <code>.clip</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>numberOfLines</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The maximum number of lines to use for rendering text., default valie is <code>1</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>spacing</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Spacing between lines, default value is <code>3</code></p>
                                 </div>
                               </td>
                             </tr>
@@ -467,7 +648,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Is text curved or not, default value is <code>true</code></p>
+                                  <p>Is text curved or not, works only with orientation equal to horizontal, default value is <code>true</code></p>
                                 </div>
                               </td>
                             </tr>
@@ -479,10 +660,178 @@
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel15TextPreferencesV11OrientationO"></a>
+                    <a name="//apple_ref/swift/Enum/Orientation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel15TextPreferencesV11OrientationO">Orientation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Text orientation, horizontal or vertical</p>
+
+                        <a href="../Structs/TextPreferences/Orientation.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Orientation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel15TextPreferencesV13LineBreakModeO"></a>
+                    <a name="//apple_ref/swift/Enum/LineBreakMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel15TextPreferencesV13LineBreakModeO">LineBreakMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The technique to use for wrapping and truncating the label’s text</p>
+
+                        <a href="../Structs/TextPreferences/LineBreakMode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">LineBreakMode</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel15TextPreferencesV5color3forSo7UIColorCSi_tF"></a>
+                    <a name="//apple_ref/swift/Method/color(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel15TextPreferencesV5color3forSo7UIColorCSi_tF">color(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a color for text, relative to slice index position</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">color</span><span class="p">(</span><span class="k">for</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Slice index</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Color</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel15TextPreferencesV14textAttributes3forSDySo21NSAttributedStringKeyaypGSi_tF"></a>
+                    <a name="//apple_ref/swift/Method/textAttributes(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel15TextPreferencesV14textAttributes3forSDySo21NSAttributedStringKeyaypGSi_tF">textAttributes(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates text attributes, relative to slice index position</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">textAttributes</span><span class="p">(</span><span class="k">for</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">NSAttributedString</span><span class="o">.</span><span class="kt">Key</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Slice index</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Text attributes</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-06-08)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-06-29)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

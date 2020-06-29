@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+### 0.8.0
+- Text now can be separated into `lines`;
+- Added `line break mode` to the text preferences;
+- Added `spacing` between lines to the text preferences;
+- Added `alignment` to the text preferences;
+
 ### 0.7.0
 - added text orientation to `TextPreferences`;
 - `preferedFontSize` removed from `TextPreferences`;

@@ -32,4 +32,11 @@ extension SliceCalculating {
     func computeRadian(from finishIndex:Int) -> CGFloat {
         return CGFloat(finishIndex) * sliceDegree
     }
+
+    /// Segment height
+    /// - Parameter radius: Radius
+    /// - Returns: Segment height
+    func segmentHeight(radius: CGFloat) -> CGFloat {
+        return radius * (1 - cos(sliceDegree / 2 * CGFloat.pi / 180))
+    }
 }

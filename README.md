@@ -19,8 +19,8 @@ Fortune spinning wheel that supports dynamic content and rich customization.
 
 ## Preview
 
-<img src="./Images/layout.gif" width="320"/>
-<img src="./Images/rotation.gif" width="320"/>
+<img src="./Images/layout.gif" width="250"/>
+<img src="./Images/rotation.gif" width="250"/>
 
 ## Getting Started
 - [**Getting started guide**](/Documentation/GettingStarted.md)
@@ -45,11 +45,6 @@ You can find <a href="https://sh-khashimov.github.io/SwiftFortuneWheel/" target=
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
-
-
-## Inspiration
-
-- [TTFortuneWheel-iOS](https://github.com/tapptitude/TTFortuneWheel-iOS)
 
 ## Author
 

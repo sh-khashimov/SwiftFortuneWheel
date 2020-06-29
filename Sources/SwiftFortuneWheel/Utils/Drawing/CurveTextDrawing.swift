@@ -21,9 +21,7 @@ extension CurveTextDrawing {
 
         context.scaleBy(x: 1, y: -1)
 
-        let croppedText = str.crop(by: preferedSize.width, font: font)
-
-        let characters: [String] = croppedText.map { String($0) } // An array of single character strings, each character in str
+        let characters: [String] = str.map { String($0) } // An array of single character strings, each character in str
         let l = characters.count
         let attributes = [NSAttributedString.Key.font: font]
 

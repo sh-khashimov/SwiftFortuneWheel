@@ -51,13 +51,6 @@
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/Slice.swift",
-      "line": 25,
-      "symbol": "Slice.ContentType",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/Slice.swift",
       "line": 26,
       "symbol": "Slice.ContentType.image(name:preferenes:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",

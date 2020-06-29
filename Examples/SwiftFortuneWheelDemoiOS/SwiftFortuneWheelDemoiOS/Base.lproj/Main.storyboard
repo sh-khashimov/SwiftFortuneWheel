@@ -233,8 +233,11 @@
                                         <rect key="frame" x="0.0" y="180" width="394" height="414"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wrs-PJ-1Pe" customClass="SwiftFortuneWheel" customModule="SwiftFortuneWheel">
-                                                <rect key="frame" x="0.0" y="10" width="394" height="394"/>
+                                                <rect key="frame" x="10" y="20" width="374" height="374"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Wrs-PJ-1Pe" secondAttribute="height" multiplier="1:1" id="T5t-aC-5Ym"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSpinEnabled" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="spinTitle" value="SPIN"/>
@@ -244,10 +247,12 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Wrs-PJ-1Pe" secondAttribute="trailing" id="7Ya-pF-0by"/>
-                                            <constraint firstItem="Wrs-PJ-1Pe" firstAttribute="top" secondItem="sdz-4n-Q3b" secondAttribute="top" constant="10" id="Aku-lE-VDK"/>
-                                            <constraint firstAttribute="bottom" secondItem="Wrs-PJ-1Pe" secondAttribute="bottom" constant="10" id="oCs-An-1x9"/>
-                                            <constraint firstItem="Wrs-PJ-1Pe" firstAttribute="leading" secondItem="sdz-4n-Q3b" secondAttribute="leading" id="u5S-5D-xVc"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Wrs-PJ-1Pe" secondAttribute="trailing" id="7Ya-pF-0by"/>
+                                            <constraint firstItem="Wrs-PJ-1Pe" firstAttribute="top" secondItem="sdz-4n-Q3b" secondAttribute="top" constant="20" id="Aku-lE-VDK"/>
+                                            <constraint firstItem="Wrs-PJ-1Pe" firstAttribute="centerY" secondItem="sdz-4n-Q3b" secondAttribute="centerY" id="BZb-Zr-MPJ"/>
+                                            <constraint firstItem="Wrs-PJ-1Pe" firstAttribute="centerX" secondItem="sdz-4n-Q3b" secondAttribute="centerX" id="Yk4-hD-UC8"/>
+                                            <constraint firstAttribute="bottom" secondItem="Wrs-PJ-1Pe" secondAttribute="bottom" constant="20" id="oCs-An-1x9"/>
+                                            <constraint firstItem="Wrs-PJ-1Pe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sdz-4n-Q3b" secondAttribute="leading" id="u5S-5D-xVc"/>
                                             <constraint firstAttribute="width" secondItem="sdz-4n-Q3b" secondAttribute="height" multiplier="1:1" constant="-20" id="zuH-k1-bRL"/>
                                         </constraints>
                                     </view>
@@ -263,7 +268,7 @@
                             <constraint firstItem="hKR-QZ-bJF" firstAttribute="top" secondItem="AgV-NF-z7z" secondAttribute="top" constant="15" id="7bY-pB-Wq7"/>
                             <constraint firstItem="hKR-QZ-bJF" firstAttribute="leading" secondItem="AgV-NF-z7z" secondAttribute="leading" constant="10" id="GM6-NG-qat"/>
                             <constraint firstItem="AgV-NF-z7z" firstAttribute="trailing" secondItem="hKR-QZ-bJF" secondAttribute="trailing" constant="10" id="l42-2N-O1n"/>
-                            <constraint firstItem="AgV-NF-z7z" firstAttribute="bottom" secondItem="hKR-QZ-bJF" secondAttribute="bottom" constant="15" id="xer-CV-lqg"/>
+                            <constraint firstItem="AgV-NF-z7z" firstAttribute="bottom" secondItem="hKR-QZ-bJF" secondAttribute="bottom" priority="750" constant="15" id="xer-CV-lqg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AgV-NF-z7z"/>
                     </view>

@@ -89,8 +89,13 @@ public extension TextPreferences {
         let prefenreces = TextPreferences(textColorType: textColorType,
                                           font: font,
                                           verticalOffset: 10,
-                                          orientation: .vertical,
-                                          isCurved: false)
+                                          orientation: .horizontal,
+                                          lineBreak: .truncateTail,
+                                          alignment: . center,
+                                          lines: 0,
+                                          spacing: 5,
+                                          flipUpsideDown: true,
+                                          isCurved: true)
         return prefenreces
     }
 }
