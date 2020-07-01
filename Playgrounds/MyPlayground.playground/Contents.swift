@@ -7,6 +7,9 @@ import PlaygroundSupport
 import SwiftFortuneWheel
 
 class MyViewController : UIViewController {
+
+    var fortuneWheel: SwiftFortuneWheel!
+
     override func loadView() {
         let view = UIView()
         view.backgroundColor = .white
@@ -27,7 +30,7 @@ class MyViewController : UIViewController {
 
         let frame = CGRect(x: 35, y: 100, width: 300, height: 300)
 
-        let fortuneWheel = SwiftFortuneWheel(frame: frame, slices: slices, configuration: .defaultConfiguration)
+        fortuneWheel = SwiftFortuneWheel(frame: frame, slices: slices, configuration: .defaultConfiguration)
 
         fortuneWheel.isPinHidden = true
         fortuneWheel.isSpinHidden = true
@@ -36,6 +39,10 @@ class MyViewController : UIViewController {
         
         view.addSubview(fortuneWheel)
         self.view = view
+
+        fortuneWheel.startAnimating(finishIndex: 3) { (success) in
+            //
+        }
     }
 }
 // Present the view controller in the Live View window

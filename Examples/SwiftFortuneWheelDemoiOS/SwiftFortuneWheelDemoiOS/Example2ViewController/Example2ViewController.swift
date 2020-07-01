@@ -27,6 +27,11 @@ class Example2ViewController: UIViewController {
 
         fortuneWheel.isPinHidden = true
         fortuneWheel.isSpinHidden = true
+
+        fortuneWheel.onSpinButtonTap = { [weak self] in
+            self?.rotate()
+        }
+
         return fortuneWheel
     }()
 
@@ -47,6 +52,12 @@ class Example2ViewController: UIViewController {
         fortuneWheel.heightAnchor.constraint(equalToConstant: 300).isActive = true
         fortuneWheel.centerYAnchor.constraint(equalTo: superview.centerYAnchor).isActive = true
         fortuneWheel.centerXAnchor.constraint(equalTo: superview.centerXAnchor).isActive = true
+    }
+
+    func rotate() {
+        fortuneWheel.startAnimating(finishIndex: fortuneWheel.slices.count - 1) { (success) in
+            //
+        }
     }
 
 }

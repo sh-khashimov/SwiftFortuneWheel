@@ -71,12 +71,12 @@ public class SwiftFortuneWheel: UIControl {
     ///   - configuration: Customizable configuration
     public init(frame: CGRect, slices: [Slice], configuration: SwiftFortuneWheelConfiguration?) {
         self.configuration = configuration
+        self.slices = slices
         self.wheelView = WheelView(frame: frame, slices: self.slices, preferences: self.configuration?.wheelPreferences)
         super.init(frame: frame)
         setupWheelView()
         setupPinImageView()
         setupSpinButton()
-        self.wheelView?.slices = slices
     }
 
     /// Adds pin image view to superview.
