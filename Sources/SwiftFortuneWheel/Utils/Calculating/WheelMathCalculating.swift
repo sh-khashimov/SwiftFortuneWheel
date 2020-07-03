@@ -34,41 +34,11 @@ extension WheelMathCalculating {
         return (mainFrame.width) / 2 + abs(preferences?.layerInsets.top ?? 0)
     }
 
-    /// Flip rotation
-    var flipRotation: CGFloat {
-        return CGFloat.pi
-    }
-
-    /// to rad.
-    /// - Parameter f: degree
-    /// - Returns: postion
-    func torad(_ f: CGFloat) -> CGFloat {
-        return f * .pi / 180.0
-    }
-
     /// Circular segment height for degree
     /// - Parameter degree: degree
     /// - Returns: height
     func circularSegmentHeight(from degree: CGFloat) -> CGFloat {
-        return circularSegmentHeight(radius: radius, from: degree)
-    }
-
-    /// Circular segment height for radius and degree
-    /// - Parameters:
-    ///   - radius: degree
-    ///   - degree: radius
-    /// - Returns: height
-    func circularSegmentHeight(radius: CGFloat, from degree: CGFloat) -> CGFloat {
-        return 2 * radius * sin(degree / 2.0 * CGFloat.pi / 180)
-    }
-
-    /// Radius calculation
-    /// - Parameters:
-    ///   - circularSegmentHeight: Circular segment height
-    ///   - degree: degree
-    /// - Returns: radius
-    func radius(circularSegmentHeight: CGFloat, from degree: CGFloat) -> CGFloat {
-        return circularSegmentHeight / (2 * sin(degree / 2.0 * CGFloat.pi / 180))
+        return Calc.circularSegmentHeight(radius: radius, from: degree)
     }
 
     /// Updates frame sizes

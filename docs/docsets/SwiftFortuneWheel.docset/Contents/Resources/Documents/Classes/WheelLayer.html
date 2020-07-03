@@ -14,7 +14,7 @@
     <a title="WheelLayer Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SwiftFortuneWheel Docs</a> (79% documented)</p>
+        <p><a href="../index.html">SwiftFortuneWheel 0.8.1 Docs</a> (85% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -83,6 +83,12 @@
                 <a href="../Protocols/CurveTextDrawing.html">CurveTextDrawing</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/ImageDrawing.html">ImageDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ShapeDrawing.html">ShapeDrawing</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/SliceCalculating.html">SliceCalculating</a>
               </li>
               <li class="nav-group-task">
@@ -95,6 +101,9 @@
                 <a href="../Protocols/SpinningAnimatorProtocol.html">SpinningAnimatorProtocol</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/TextDrawing.html">TextDrawing</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/WheelMathCalculating.html">WheelMathCalculating</a>
               </li>
             </ul>
@@ -102,6 +111,9 @@
           <li class="nav-group-name">
             <a href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Calc.html">Calc</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Structs/ImagePreferences.html">ImagePreferences</a>
               </li>
@@ -164,6 +176,8 @@
               <div class="declaration">
                 <div class="language">
                   <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">WheelLayer</span> <span class="p">:</span> <span class="kt">CALayer</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">WheelLayer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SliceDrawing.html">SliceDrawing</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">WheelLayer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SpinningAnimatable.html">SpinningAnimatable</a></span></code></pre>
 
                 </div>
               </div>
@@ -261,7 +275,7 @@ Used to draw content.</p>
                     <code>
                     <a name="/s:17SwiftFortuneWheel0C5LayerC5frame6slices11preferencesACSo6CGRectV_SayAA5SliceVGAA0abC13ConfigurationV0C11PreferencesVSgtcfc"></a>
                     <a name="//apple_ref/swift/Method/init(frame:slices:preferences:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel0C5LayerC5frame6slices11preferencesACSo6CGRectV_SayAA5SliceVGAA0abC13ConfigurationV0C11PreferencesVSgtcfc">init(frame:slices:preferences:)</a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel0C5LayerC5frame6slices11preferencesACSo6CGRectV_SayAA5SliceVGAA0abC13ConfigurationV0C11PreferencesVSgtcfc">init(frame:<wbr>slices:<wbr>preferences:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -329,9 +343,36 @@ Used to draw content.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@M@SwiftFortuneWheel@objc(cs)WheelLayer(im)initWithLayer:"></a>
+                    <a name="//apple_ref/swift/Method/init(layer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftFortuneWheel@objc(cs)WheelLayer(im)initWithLayer:">init(layer:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="nv">layer</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:@M@SwiftFortuneWheel@objc(cs)WheelLayer(im)initWithCoder:"></a>
                     <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SwiftFortuneWheel@objc(cs)WheelLayer(im)initWithCoder:">init(coder:)</a>
+                    <a class="token" href="#/c:@M@SwiftFortuneWheel@objc(cs)WheelLayer(im)initWithCoder:">init(coder:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -358,7 +399,7 @@ Used to draw content.</p>
                     <code>
                     <a name="/c:@M@SwiftFortuneWheel@objc(cs)WheelLayer(im)drawInContext:"></a>
                     <a name="//apple_ref/swift/Method/draw(in:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SwiftFortuneWheel@objc(cs)WheelLayer(im)drawInContext:">draw(in:)</a>
+                    <a class="token" href="#/c:@M@SwiftFortuneWheel@objc(cs)WheelLayer(im)drawInContext:">draw(in:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -385,7 +426,7 @@ Used to draw content.</p>
                     <code>
                     <a name="/s:17SwiftFortuneWheel0C5LayerC10drawCanvas4withySo6CGRectV_tF"></a>
                     <a name="//apple_ref/swift/Method/drawCanvas(with:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel0C5LayerC10drawCanvas4withySo6CGRectV_tF">drawCanvas(with:)</a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel0C5LayerC10drawCanvas4withySo6CGRectV_tF">drawCanvas(with:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -431,8 +472,8 @@ Used to draw content.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-06-29)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-07-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

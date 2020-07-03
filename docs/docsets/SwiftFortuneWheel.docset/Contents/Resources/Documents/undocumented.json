@@ -1,44 +1,86 @@
 {
   "warnings": [
     {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/LinePreferences.swift",
+      "line": 38,
+      "symbol": "LinePreferences.strokeColor(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/SwiftFortuneWheelConfiguration.swift",
-      "line": 249,
+      "line": 255,
       "symbol": "SwiftFortuneWheelConfiguration.Position.top",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/SwiftFortuneWheelConfiguration.swift",
-      "line": 250,
+      "line": 256,
       "symbol": "SwiftFortuneWheelConfiguration.Position.bottom",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/SwiftFortuneWheelConfiguration.swift",
-      "line": 251,
+      "line": 257,
       "symbol": "SwiftFortuneWheelConfiguration.Position.left",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/SwiftFortuneWheelConfiguration.swift",
-      "line": 252,
+      "line": 258,
       "symbol": "SwiftFortuneWheelConfiguration.Position.right",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/SwiftFortuneWheelConfiguration.swift",
-      "line": 319,
+      "line": 325,
       "symbol": "SwiftFortuneWheelConfiguration.ColorType.evenOddColors(evenColor:oddColor:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/SwiftFortuneWheelConfiguration.swift",
-      "line": 320,
+      "line": 326,
       "symbol": "SwiftFortuneWheelConfiguration.ColorType.customPatternColors(colors:defaultColor:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/TextPreferences.swift",
+      "line": 90,
+      "symbol": "TextPreferences.Orientation.horizontal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/TextPreferences.swift",
+      "line": 91,
+      "symbol": "TextPreferences.Orientation.vertical",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/TextPreferences.swift",
+      "line": 98,
+      "symbol": "TextPreferences.LineBreakMode.clip",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/TextPreferences.swift",
+      "line": 99,
+      "symbol": "TextPreferences.LineBreakMode.truncateTail",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/TextPreferences.swift",
+      "line": 100,
+      "symbol": "TextPreferences.LineBreakMode.wordWrap",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
@@ -51,15 +93,22 @@
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/Slice.swift",
-      "line": 26,
+      "line": 33,
       "symbol": "Slice.ContentType.image(name:preferenes:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/Slice.swift",
-      "line": 27,
+      "line": 34,
       "symbol": "Slice.ContentType.text(text:preferenes:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/Slice.swift",
+      "line": 35,
+      "symbol": "Slice.ContentType.line(preferenes:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
@@ -72,28 +121,28 @@
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 114,
+      "line": 115,
       "symbol": "SwiftFortuneWheel.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 119,
+      "line": 120,
       "symbol": "SwiftFortuneWheel.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 139,
+      "line": 140,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 202,
+      "line": 203,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
@@ -275,14 +324,14 @@
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Drawing/CurveTextDrawing.swift",
-      "line": 63,
+      "line": 61,
       "symbol": "CurveTextDrawing.chordToArc(_:radius:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Drawing/CurveTextDrawing.swift",
-      "line": 70,
+      "line": 68,
       "symbol": "CurveTextDrawing.centre(text:context:radius:angle:colour:font:slantAngle:preferedWidth:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

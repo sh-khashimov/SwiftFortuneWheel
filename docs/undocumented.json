@@ -135,6 +135,13 @@
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
+      "line": 138,
+      "symbol": "SwiftFortuneWheel",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
       "line": 140,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
@@ -142,128 +149,23 @@
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 203,
+      "line": 253,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningAnimatable.swift",
-      "line": 12,
-      "symbol": "SpinningAnimatable",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningAnimatable.swift",
-      "line": 14,
-      "symbol": "SpinningAnimatable",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningAnimatable.swift",
-      "line": 15,
-      "symbol": "SpinningAnimatable.updateLayerValues(forAnimationId:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningAnimatable.swift",
-      "line": 21,
-      "symbol": "SpinningAnimatable.removeAnimations(forAnimationId:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningAnimatable.swift",
-      "line": 27,
-      "symbol": "SpinningAnimatable.removeIndefiniteAnimation()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 13,
-      "symbol": "SpinningAnimatorProtocol",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 14,
-      "symbol": "SpinningAnimatorProtocol.layerToAnimate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 18,
-      "symbol": "SpinningWheelAnimator",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 20,
-      "symbol": "SpinningWheelAnimator.animationObject",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 22,
+      "line": 26,
       "symbol": "SpinningWheelAnimator.completionBlocks",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 23,
+      "line": 27,
       "symbol": "SpinningWheelAnimator.updateLayerValueForCompletedAnimation",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 26,
-      "symbol": "SpinningWheelAnimator.fullRotationsUntilFinish",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 27,
-      "symbol": "SpinningWheelAnimator.rotationTime",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 29,
-      "symbol": "SpinningWheelAnimator.init(withObjectToAnimate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 34,
-      "symbol": "SpinningWheelAnimator.addIndefiniteRotationAnimation()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 47,
-      "symbol": "SpinningWheelAnimator.addRotationAnimation(completionBlock:rotationOffset:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 78,
-      "symbol": "SpinningWheelAnimator.animationDidStop(_:finished:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -316,6 +218,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Calculating/Calc.swift",
+      "line": 12,
+      "symbol": "Calc",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Drawing/CurveTextDrawing.swift",
       "line": 16,
       "symbol": "CurveTextDrawing.centreArcPerpendicular(text:context:radius:angle:colour:font:clockwise:preferedSize:)",
@@ -339,13 +248,20 @@
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Views/WheelLayer.swift",
       "line": 41,
+      "symbol": "WheelLayer.init(layer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Views/WheelLayer.swift",
+      "line": 45,
       "symbol": "WheelLayer.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Views/WheelLayer.swift",
-      "line": 46,
+      "line": 50,
       "symbol": "WheelLayer.draw(in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

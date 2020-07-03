@@ -1,5 +1,14 @@
 ## CHANGELOG
 
+### 0.9.0
+- Added rotation API: `rotate(toIndex index: Int)`, `rotate(rotationOffset: CGFloat)`;
+- Added parameters *full rotations until start deceleration* and *animation duration* to animation API;
+- `startAnimating(fullRotationTimeInSeconds: Int, finishIndex: Int)` changed to `startAnimating(indefiniteRotationTimeInSeconds: Int, finishIndex: Int)`
+- Internal code refactoring;
+
+### 0.8.1
+- Issue #2 fix;
+
 ### 0.8.0
 - Text now can be separated into `lines`;
 - Added `line break mode` to the text preferences;

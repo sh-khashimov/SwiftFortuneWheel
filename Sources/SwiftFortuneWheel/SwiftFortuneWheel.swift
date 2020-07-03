@@ -143,34 +143,78 @@ extension SwiftFortuneWheel: SpinningAnimatorProtocol {
     internal var layerToAnimate: SpinningAnimatable? {
         return self.wheelView?.wheelLayer
     }
-
-    /// Start animating
+    
+    
+    /// Rotates to the specified index
     /// - Parameters:
-    ///   - rotationCompletionOffset: rotationCompletionOffset
-    ///   - completion: completion
-    open func startAnimating(rotationCompletionOffset:CGFloat = 0.0, _ completion:((Bool) -> Void)?) {
+    ///   - index: Index
+    ///   - animationDuration: Animation duration
+    open func rotate(toIndex index: Int, animationDuration: CFTimeInterval = 0.00001) {
+        let _index = index < self.slices.count ? index : self.slices.count - 1
+        let rotation = 360.0 - computeRadian(from: _index)
+        guard animator.currentRotationPosition != rotation else { return }
         self.stopAnimating()
-        self.animator.addRotationAnimation(completionBlock: completion,rotationOffset:rotationCompletionOffset)
+        self.animator.addRotationAnimation(fullRotationsUntilFinish: 0,
+                                           animationDuration: animationDuration,
+                                           rotationOffset: rotation,
+                                           completionBlock: nil)
+    }
+    
+    
+    /// Rotates to the specified index
+    /// - Parameters:
+    ///   - rotationOffset: Rotation offset
+    ///   - animationDuration: Animation duration
+    open func rotate(rotationOffset: CGFloat, animationDuration: CFTimeInterval = 0.00001) {
+        guard animator.currentRotationPosition != rotationOffset else { return }
+        self.stopAnimating()
+        self.animator.addRotationAnimation(fullRotationsUntilFinish: 0,
+                                           animationDuration: animationDuration,
+                                           rotationOffset: rotationOffset,
+                                           completionBlock: nil)
+    }
+    
+
+    /// Start animating
+    /// - Parameters:
+    ///   - rotationOffset: Rotation offset
+    ///   - fullRotationsUntilFinish: Full rotations until start deceleration
+    ///   - animationDuration: Animation duration
+    ///   - completion: Completion handler
+    open func startAnimating(rotationOffset: CGFloat = 0.0, fullRotationsUntilFinish: Int = 13, animationDuration: CFTimeInterval = 5.000, _ completion:((Bool) -> Void)?) {
+        
+        self.stopAnimating()
+        self.animator.addRotationAnimation(fullRotationsUntilFinish: fullRotationsUntilFinish,
+                                           animationDuration: animationDuration,
+                                           rotationOffset: rotationOffset,
+                                           completionBlock: completion)
     }
 
     /// Start animating
     /// - Parameters:
-    ///   - finishIndex: finished at index
-    ///   - completion: completion
-    open func startAnimating(finishIndex:Int = 0, _ completion:((Bool) -> Void)?) {
+    ///   - finishIndex: Finish at index
+    ///   - fullRotationsUntilFinish: Full rotations until start deceleration
+    ///   - animationDuration: Animation duration
+    ///   - completion: Completion handler
+    open func startAnimating(finishIndex:Int = 0, fullRotationsUntilFinish: Int = 13, animationDuration: CFTimeInterval = 5.000, _ completion:((Bool) -> Void)?) {
+        
         let rotation = 360.0 - computeRadian(from: finishIndex)
-        self.startAnimating(rotationCompletionOffset: rotation, completion)
+        self.startAnimating(rotationOffset: rotation,
+                            fullRotationsUntilFinish: fullRotationsUntilFinish,
+                            animationDuration: animationDuration,
+                            completion)
     }
 
 
     /// Start animating
     /// - Parameters:
-    ///   - fullRotationTimeInSeconds: full rotation time in seconds before stops
+    ///   - indefiniteRotationTimeInSeconds: full rotation time in seconds before stops
     ///   - finishIndex: finished at index
     ///   - completion: completion
-    open func startAnimating(fullRotationTimeInSeconds: Int, finishIndex: Int, _ completion:((Bool) -> Void)?) {
+    open func startAnimating(indefiniteRotationTimeInSeconds: Int, finishIndex: Int, _ completion:((Bool) -> Void)?) {
+        
         self.startAnimating()
-        let deadline = DispatchTime.now() + DispatchTimeInterval.seconds(fullRotationTimeInSeconds)
+        let deadline = DispatchTime.now() + DispatchTimeInterval.seconds(indefiniteRotationTimeInSeconds)
         DispatchQueue.main.asyncAfter(deadline: deadline) {
             self.startAnimating(finishIndex: finishIndex) { (finished) in
                 completion?(finished)
@@ -191,11 +235,17 @@ extension SwiftFortuneWheel: SpinningAnimatorProtocol {
     /// Start animating
     /// - Parameters:
     ///   - finishIndex: finished at index
-    ///   - offset: degree offset
+    ///   - rotationOffset: Rotation offset
+    ///   - fullRotationsUntilFinish: Full rotations until start deceleration
+    ///   - animationDuration: Animation duration
     ///   - completion: completion
-    open func startAnimating(finishIndex:Int = 0, offset:CGFloat, _ completion:((Bool) -> Void)?) {
-        let rotation = 360.0 - computeRadian(from: finishIndex) + offset
-        self.startAnimating(rotationCompletionOffset: rotation, completion)
+    open func startAnimating(finishIndex:Int = 0, rotationOffset:CGFloat, fullRotationsUntilFinish: Int = 13, animationDuration: CFTimeInterval = 5.000, _ completion:((Bool) -> Void)?) {
+        
+        let rotation = 360.0 - computeRadian(from: finishIndex) + rotationOffset
+        self.startAnimating(rotationOffset: rotation,
+                            fullRotationsUntilFinish: fullRotationsUntilFinish,
+                            animationDuration: animationDuration,
+                            completion)
     }
 }
 

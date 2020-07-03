@@ -27,6 +27,8 @@ class Example2ViewController: UIViewController {
 
         fortuneWheel.isPinHidden = true
         fortuneWheel.isSpinHidden = true
+        
+        fortuneWheel.pinImage = "long-arrow-up"
 
         fortuneWheel.onSpinButtonTap = { [weak self] in
             self?.rotate()
@@ -55,9 +57,6 @@ class Example2ViewController: UIViewController {
     }
 
     func rotate() {
-        fortuneWheel.startAnimating(finishIndex: fortuneWheel.slices.count - 1) { (success) in
-            //
-        }
+        fortuneWheel.rotate(toIndex: 1)
     }
-
 }

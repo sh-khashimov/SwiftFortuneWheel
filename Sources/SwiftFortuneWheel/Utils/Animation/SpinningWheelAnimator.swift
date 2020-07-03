@@ -10,28 +10,34 @@ import Foundation
 import UIKit
 import CoreGraphics
 
+/// Spinning animator protocol
 protocol SpinningAnimatorProtocol: class  {
+    /// Layer that animates
     var layerToAnimate: SpinningAnimatable? { get }
 }
 
 
+/// Spinning wheel animator
 class SpinningWheelAnimator : NSObject, CAAnimationDelegate {
-
-    weak var animationObject:SpinningAnimatorProtocol!
+    
+    /// Animation object
+    weak var animationObject: SpinningAnimatorProtocol!
 
     internal var completionBlocks = [CAAnimation: (Bool) -> Void]()
     internal var updateLayerValueForCompletedAnimation : Bool = false
-
-    //Configuration properties
-    var fullRotationsUntilFinish:Int = 13
-    var rotationTime: CFTimeInterval = 5.000
-
+    
+    /// Current rotation position used to know where is last time rotation stopped
+    var currentRotationPosition: CGFloat?
+    
+    /// Initialize spinning wheel animator
+    /// - Parameter animationObject: Animation object
     init(withObjectToAnimate animationObject:SpinningAnimatorProtocol) {
         self.animationObject = animationObject
     }
-
-
-    func addIndefiniteRotationAnimation() {
+    
+    /// Start indefinite rotation animation
+    /// - Parameter rotationTime: Rotation time
+    func addIndefiniteRotationAnimation(rotationTime: CFTimeInterval = 5.000) {
 
         let fillMode : String = CAMediaTimingFillMode.forwards.rawValue
         let starTransformAnim      = CAKeyframeAnimation(keyPath:"transform.rotation.z")
@@ -43,22 +49,30 @@ class SpinningWheelAnimator : NSObject, CAAnimationDelegate {
         starRotationAnim.repeatCount = Float.infinity
         animationObject.layerToAnimate?.add(starRotationAnim, forKey:"starRotationIndefiniteAnim")
     }
-
-    func addRotationAnimation(completionBlock: ((_ finished: Bool) -> Void)? = nil, rotationOffset:CGFloat = 0.0){
-        if completionBlock != nil{
+    
+    /// Start rotation animation
+    /// - Parameters:
+    ///   - fullRotationsUntilFinish: Full rotations until start deceleration
+    ///   - animationDuration: Animation duration
+    ///   - rotationOffset: Rotation offset
+    ///   - completionBlock: Completion block
+    func addRotationAnimation(fullRotationsUntilFinish: Int, animationDuration: CFTimeInterval, rotationOffset: CGFloat = 0.0, completionBlock: ((_ finished: Bool) -> Void)? = nil){
+        if completionBlock != nil {
             let completionAnim = CABasicAnimation(keyPath:"completionAnim")
-            completionAnim.duration = rotationTime
+            completionAnim.duration = animationDuration
             completionAnim.delegate = self
             completionAnim.setValue("rotation", forKey:"animId")
             completionAnim.setValue(false, forKey:"needEndAnim")
             let layer = animationObject.layerToAnimate
             layer?.add(completionAnim, forKey:"rotation")
-            if let anim = layer?.animation(forKey: "rotation"){
+            if let anim = layer?.animation(forKey: "rotation") {
                 completionBlocks[anim] = completionBlock
             }
         }
 
         let fillMode : String = CAMediaTimingFillMode.forwards.rawValue
+        
+        currentRotationPosition = rotationOffset
 
         let rotation:CGFloat = CGFloat(fullRotationsUntilFinish) * 360.0 + rotationOffset
 
@@ -66,7 +80,7 @@ class SpinningWheelAnimator : NSObject, CAAnimationDelegate {
         let starTransformAnim            = CAKeyframeAnimation(keyPath:"transform.rotation.z")
         starTransformAnim.values         = [0, rotation * CGFloat.pi/180]
         starTransformAnim.keyTimes       = [0, 1]
-        starTransformAnim.duration       = 5
+        starTransformAnim.duration       = animationDuration
         starTransformAnim.timingFunction = CAMediaTimingFunction(controlPoints: 0.0256, 0.874, 0.675, 1)
 
         let starRotationAnim : CAAnimationGroup = TTUtils.group(animations: [starTransformAnim], fillMode:fillMode)
@@ -74,7 +88,11 @@ class SpinningWheelAnimator : NSObject, CAAnimationDelegate {
     }
 
     //MARK: - Animation Cleanup
-
+    
+    /// Animation did stop
+    /// - Parameters:
+    ///   - anim: animation
+    ///   - flag: flag
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool){
         if let completionBlock = completionBlocks[anim]{
             completionBlocks.removeValue(forKey: anim)

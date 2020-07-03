@@ -125,7 +125,7 @@ class ExampleViewController: UIViewController {
     }
 
     func startAnimating() {
-        fortuneWheel.startAnimating(fullRotationTimeInSeconds: 1, finishIndex: finishIndex) { (finished) in
+        fortuneWheel.startAnimating(indefiniteRotationTimeInSeconds: 1, finishIndex: finishIndex) { (finished) in
             print(finished)
         }
     }

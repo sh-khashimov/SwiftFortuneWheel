@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ShapeDrawing Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/ShapeDrawing" class="dashAnchor"></a>
+    <a title="ShapeDrawing Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SwiftFortuneWheel 0.8.1 Docs</a> (85% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SwiftFortuneWheel Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ShapeDrawing Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/PinImageView.html">PinImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SpinButton.html">SpinButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SpinningWheelAnimator.html">SpinningWheelAnimator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SwiftFortuneWheel.html">SwiftFortuneWheel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TTUtils.html">TTUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WheelLayer.html">WheelLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WheelView.html">WheelView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CGSize.html">CGSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIFont.html">UIFont</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CurveTextDrawing.html">CurveTextDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageDrawing.html">ImageDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ShapeDrawing.html">ShapeDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SliceCalculating.html">SliceCalculating</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SliceDrawing.html">SliceDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SpinningAnimatable.html">SpinningAnimatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SpinningAnimatorProtocol.html">SpinningAnimatorProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TextDrawing.html">TextDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/WheelMathCalculating.html">WheelMathCalculating</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Calc.html">Calc</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImagePreferences.html">ImagePreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LinePreferences.html">LinePreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Slice.html">Slice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Slice/ContentType.html">– ContentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration.html">SwiftFortuneWheelConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/WheelPreferences.html">– WheelPreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/CirclePreferences.html">– CirclePreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/SlicePreferences.html">– SlicePreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/SpinButtonPreferences.html">– SpinButtonPreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/PinImageViewPreferences.html">– PinImageViewPreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/Position.html">– Position</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/Margins.html">– Margins</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/ColorType.html">– ColorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SwiftFortuneWheelConfiguration/AnchorImage.html">– AnchorImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TextPreferences.html">TextPreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TextPreferences/Orientation.html">– Orientation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TextPreferences/LineBreakMode.html">– LineBreakMode</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ShapeDrawing</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ShapeDrawing</span></code></pre>
+
+                </div>
+              </div>
+            <p>Shape drawing protocol</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel12ShapeDrawingPAAE13drawRectangle2in8rotation6radiusySo12CGContextRefa_12CoreGraphics7CGFloatVALtF"></a>
+                    <a name="//apple_ref/swift/Method/drawRectangle(in:rotation:radius:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel12ShapeDrawingPAAE13drawRectangle2in8rotation6radiusySo12CGContextRefa_12CoreGraphics7CGFloatVALtF">drawRectangle(in:<wbr>rotation:<wbr>radius:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Draws rectangle</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">drawRectangle</span><span class="p">(</span><span class="k">in</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">CGContext</span><span class="p">,</span> <span class="nv">rotation</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>context</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>context where to draw</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rotation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>rotation degree</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>radius</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>radius</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel12ShapeDrawingPAAE8drawLine2in11preferences5start3and8rotation5index9topOffset6radius025contextPositionCorrectionO6DegreeySo12CGContextRefa_AA0G11PreferencesV12CoreGraphics7CGFloatVA2TSiA3TtF"></a>
+                    <a name="//apple_ref/swift/Method/drawLine(in:preferences:start:and:rotation:index:topOffset:radius:contextPositionCorrectionOffsetDegree:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel12ShapeDrawingPAAE8drawLine2in11preferences5start3and8rotation5index9topOffset6radius025contextPositionCorrectionO6DegreeySo12CGContextRefa_AA0G11PreferencesV12CoreGraphics7CGFloatVA2TSiA3TtF">drawLine(in:<wbr>preferences:<wbr>start:<wbr>and:<wbr>rotation:<wbr>index:<wbr>topOffset:<wbr>radius:<wbr>contextPositionCorrectionOffsetDegree:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Draws curved line</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">drawLine</span><span class="p">(</span><span class="k">in</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">CGContext</span><span class="p">,</span> <span class="nv">preferences</span><span class="p">:</span> <span class="kt"><a href="../Structs/LinePreferences.html">LinePreferences</a></span><span class="p">,</span> <span class="nv">start</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="n">and</span> <span class="nv">end</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">rotation</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">topOffset</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">contextPositionCorrectionOffsetDegree</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>context</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>context where to draw</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>preferences</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Line preferences</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>start</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>start degree</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>end</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>end degree</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rotation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>rotation degree</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>index</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>topOffset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>top offset</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>radius</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>radius</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contextPositionCorrectionOffsetDegree</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Context position correction offset degree</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-07-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

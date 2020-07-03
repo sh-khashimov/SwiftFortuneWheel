@@ -37,6 +37,10 @@ class WheelLayer: CALayer {
         self.contentsScale = UIScreen.main.scale
         updateSizes()
     }
+    
+    override init(layer: Any) {
+        super.init(layer: layer)
+    }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -72,7 +76,12 @@ class WheelLayer: CALayer {
         // Draws slices with content
         self.slices.enumerated().forEach { (index,element) in
             rotation += sliceDegree
-            self.drawSlice(withIndex: index, in: context, forSlice: element, rotation:rotation, start: start, end: end)
+            self.drawSlice(withIndex: index,
+                           in: context,
+                           forSlice: element,
+                           rotation:rotation,
+                           start: start,
+                           end: end)
         }
 
         //// Frame drawing
@@ -86,7 +95,14 @@ class WheelLayer: CALayer {
             var _rotation: CGFloat = -sliceDegree + startPositionOffsetDegree
             for index in 0..<slices.count {
                 _rotation += sliceDegree
-                self.drawAnchorImage(in: context, imageAnchor: imageAnchor, isCentered: false, rotation: _rotation, index: index)
+                self.drawAnchorImage(in: context,
+                                     imageAnchor: imageAnchor,
+                                     isCentered: false,
+                                     rotation: _rotation,
+                                     index: index,
+                                     radius: radius,
+                                     sliceDegree: sliceDegree,
+                                     rotationOffset: rotationOffset)
             }
         }
 
@@ -95,7 +111,14 @@ class WheelLayer: CALayer {
             var _rotation: CGFloat = -sliceDegree + startPositionOffsetDegree
             for index in 0..<slices.count {
                 _rotation += sliceDegree
-                self.drawAnchorImage(in: context, imageAnchor: imageAnchor, isCentered: true, rotation: _rotation, index: index)
+                self.drawAnchorImage(in: context,
+                                     imageAnchor: imageAnchor,
+                                     isCentered: true,
+                                     rotation: _rotation,
+                                     index: index,
+                                     radius: radius,
+                                     sliceDegree: sliceDegree,
+                                     rotationOffset: rotationOffset)
             }
         }
 

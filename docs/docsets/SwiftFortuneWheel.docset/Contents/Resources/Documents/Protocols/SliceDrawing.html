@@ -14,7 +14,7 @@
     <a title="SliceDrawing Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SwiftFortuneWheel Docs</a> (79% documented)</p>
+        <p><a href="../index.html">SwiftFortuneWheel 0.8.1 Docs</a> (85% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -83,6 +83,12 @@
                 <a href="../Protocols/CurveTextDrawing.html">CurveTextDrawing</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/ImageDrawing.html">ImageDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ShapeDrawing.html">ShapeDrawing</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/SliceCalculating.html">SliceCalculating</a>
               </li>
               <li class="nav-group-task">
@@ -95,6 +101,9 @@
                 <a href="../Protocols/SpinningAnimatorProtocol.html">SpinningAnimatorProtocol</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/TextDrawing.html">TextDrawing</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/WheelMathCalculating.html">WheelMathCalculating</a>
               </li>
             </ul>
@@ -102,6 +111,9 @@
           <li class="nav-group-name">
             <a href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Calc.html">Calc</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Structs/ImagePreferences.html">ImagePreferences</a>
               </li>
@@ -163,7 +175,7 @@
             <h1>SliceDrawing</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SliceDrawing</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/CurveTextDrawing.html">CurveTextDrawing</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/SliceCalculating.html">SliceCalculating</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/WheelMathCalculating.html">WheelMathCalculating</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SliceDrawing</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ImageDrawing.html">ImageDrawing</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/ShapeDrawing.html">ShapeDrawing</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/SliceCalculating.html">SliceCalculating</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/TextDrawing.html">TextDrawing</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/WheelMathCalculating.html">WheelMathCalculating</a></span></code></pre>
 
                 </div>
               </div>
@@ -206,9 +218,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SwiftFortuneWheel12SliceDrawingPAAE10leftMargin12CoreGraphics7CGFloatVvp"></a>
-                    <a name="//apple_ref/swift/Property/leftMargin" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel12SliceDrawingPAAE10leftMargin12CoreGraphics7CGFloatVvp">leftMargin</a>
+                    <a name="/s:17SwiftFortuneWheel12SliceDrawingPAAE7marginsAA0abC13ConfigurationV7MarginsVvp"></a>
+                    <a name="//apple_ref/swift/Property/margins" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel12SliceDrawingPAAE7marginsAA0abC13ConfigurationV7MarginsVvp">margins</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -219,104 +231,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Content left margin</p>
+                        <p>Content margins</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">leftMargin</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17SwiftFortuneWheel12SliceDrawingPAAE11rightMargin12CoreGraphics7CGFloatVvp"></a>
-                    <a name="//apple_ref/swift/Property/rightMargin" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel12SliceDrawingPAAE11rightMargin12CoreGraphics7CGFloatVvp">rightMargin</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Content right margin</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">rightMargin</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17SwiftFortuneWheel12SliceDrawingPAAE9topMargin12CoreGraphics7CGFloatVvp"></a>
-                    <a name="//apple_ref/swift/Property/topMargin" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel12SliceDrawingPAAE9topMargin12CoreGraphics7CGFloatVvp">topMargin</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Content top margin</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">topMargin</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17SwiftFortuneWheel12SliceDrawingPAAE12bottomMargin12CoreGraphics7CGFloatVvp"></a>
-                    <a name="//apple_ref/swift/Property/bottomMargin" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel12SliceDrawingPAAE12bottomMargin12CoreGraphics7CGFloatVvp">bottomMargin</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Content bottom margin</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">bottomMargin</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">margins</span><span class="p">:</span> <span class="kt"><a href="../Structs/SwiftFortuneWheelConfiguration.html">SwiftFortuneWheelConfiguration</a></span><span class="o">.</span><span class="kt">Margins</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -356,143 +278,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SwiftFortuneWheel12SliceDrawingPAAE5width12forYPosition12CoreGraphics7CGFloatVAH_tF"></a>
-                    <a name="//apple_ref/swift/Method/width(forYPosition:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel12SliceDrawingPAAE5width12forYPosition12CoreGraphics7CGFloatVAH_tF">width(forYPosition:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Width for Y postion</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">width</span><span class="p">(</span><span class="n">forYPosition</span> <span class="nv">yPosition</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>yPosition</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Y position</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>new width</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17SwiftFortuneWheel12SliceDrawingPAAE17availableTextRect9yPosition11preferences9topOffsetSaySo6CGRectVG12CoreGraphics7CGFloatV_AA0G11PreferencesVAMtF"></a>
-                    <a name="//apple_ref/swift/Method/availableTextRect(yPosition:preferences:topOffset:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel12SliceDrawingPAAE17availableTextRect9yPosition11preferences9topOffsetSaySo6CGRectVG12CoreGraphics7CGFloatV_AA0G11PreferencesVAMtF">availableTextRect(yPosition:preferences:topOffset:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Available text rectangles for the specified position</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">availableTextRect</span><span class="p">(</span><span class="nv">yPosition</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">preferences</span><span class="p">:</span> <span class="kt"><a href="../Structs/TextPreferences.html">TextPreferences</a></span><span class="p">,</span> <span class="nv">topOffset</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">CGRect</span><span class="p">]</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>yPosition</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Y Position</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>preferences</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Text preferences</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>topOffset</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Top offset</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Available text rectangles</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:17SwiftFortuneWheel12SliceDrawingPAAE04drawD09withIndex2in03forD08rotation5start3endySi_So12CGContextRefaAA0D0V12CoreGraphics7CGFloatVA2QtF"></a>
                     <a name="//apple_ref/swift/Method/drawSlice(withIndex:in:forSlice:rotation:start:end:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel12SliceDrawingPAAE04drawD09withIndex2in03forD08rotation5start3endySi_So12CGContextRefaAA0D0V12CoreGraphics7CGFloatVA2QtF">drawSlice(withIndex:in:forSlice:rotation:start:end:)</a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel12SliceDrawingPAAE04drawD09withIndex2in03forD08rotation5start3endySi_So12CGContextRefaAA0D0V12CoreGraphics7CGFloatVA2QtF">drawSlice(withIndex:<wbr>in:<wbr>forSlice:<wbr>rotation:<wbr>start:<wbr>end:<wbr>)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -601,7 +389,7 @@
                     <code>
                     <a name="/s:17SwiftFortuneWheel12SliceDrawingPAAE11prepareDraw4text2in11preferences8rotation5index9topOffset12CoreGraphics7CGFloatVSS_So12CGContextRefaAA15TextPreferencesVAMSiAMtF"></a>
                     <a name="//apple_ref/swift/Method/prepareDraw(text:in:preferences:rotation:index:topOffset:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel12SliceDrawingPAAE11prepareDraw4text2in11preferences8rotation5index9topOffset12CoreGraphics7CGFloatVSS_So12CGContextRefaAA15TextPreferencesVAMSiAMtF">prepareDraw(text:in:preferences:rotation:index:topOffset:)</a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel12SliceDrawingPAAE11prepareDraw4text2in11preferences8rotation5index9topOffset12CoreGraphics7CGFloatVSS_So12CGContextRefaAA15TextPreferencesVAMSiAMtF">prepareDraw(text:<wbr>in:<wbr>preferences:<wbr>rotation:<wbr>index:<wbr>topOffset:<wbr>)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -711,282 +499,11 @@
                 </li>
               </ul>
             </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17SwiftFortuneWheel12SliceDrawingPAAE13drawRectangle2in8rotationySo12CGContextRefa_12CoreGraphics7CGFloatVtF"></a>
-                    <a name="//apple_ref/swift/Method/drawRectangle(in:rotation:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel12SliceDrawingPAAE13drawRectangle2in8rotationySo12CGContextRefa_12CoreGraphics7CGFloatVtF">drawRectangle(in:rotation:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Draws rectangle</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">drawRectangle</span><span class="p">(</span><span class="k">in</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">CGContext</span><span class="p">,</span> <span class="nv">rotation</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>context</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>context where to draw</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>rotation</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>rotation degree</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17SwiftFortuneWheel12SliceDrawingPAAE8drawLine2in11preferences5start3and8rotation5index9topOffsetySo12CGContextRefa_AA0G11PreferencesV12CoreGraphics7CGFloatVA2RSiARtF"></a>
-                    <a name="//apple_ref/swift/Method/drawLine(in:preferences:start:and:rotation:index:topOffset:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel12SliceDrawingPAAE8drawLine2in11preferences5start3and8rotation5index9topOffsetySo12CGContextRefa_AA0G11PreferencesV12CoreGraphics7CGFloatVA2RSiARtF">drawLine(in:preferences:start:and:rotation:index:topOffset:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Draws curved line</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">drawLine</span><span class="p">(</span><span class="k">in</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">CGContext</span><span class="p">,</span> <span class="nv">preferences</span><span class="p">:</span> <span class="kt"><a href="../Structs/LinePreferences.html">LinePreferences</a></span><span class="p">,</span> <span class="nv">start</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="n">and</span> <span class="nv">end</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">rotation</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">topOffset</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>context</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>context where to draw</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>preferences</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Line preferences</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>start</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>start degree</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>end</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>end degree</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>rotation</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>rotation degree</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>index</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>index</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>topOffset</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>top offset</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17SwiftFortuneWheel12SliceDrawingPAAE15drawAnchorImage2in05imageG010isCentered8rotation5indexySo12CGContextRefa_AA0abC13ConfigurationV0gH0VSb12CoreGraphics7CGFloatVSitF"></a>
-                    <a name="//apple_ref/swift/Method/drawAnchorImage(in:imageAnchor:isCentered:rotation:index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel12SliceDrawingPAAE15drawAnchorImage2in05imageG010isCentered8rotation5indexySo12CGContextRefa_AA0abC13ConfigurationV0gH0VSb12CoreGraphics7CGFloatVSitF">drawAnchorImage(in:imageAnchor:isCentered:rotation:index:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Draws anchor image</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">drawAnchorImage</span><span class="p">(</span><span class="k">in</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">CGContext</span><span class="p">,</span> <span class="nv">imageAnchor</span><span class="p">:</span> <span class="kt"><a href="../Structs/SwiftFortuneWheelConfiguration.html">SwiftFortuneWheelConfiguration</a></span><span class="o">.</span><span class="kt">AnchorImage</span><span class="p">,</span> <span class="nv">isCentered</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">rotation</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>context</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>context where to draw</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>imageAnchor</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>anchor image</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>rotation</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>rotation degree</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>index</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>index</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-06-29)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-07-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
