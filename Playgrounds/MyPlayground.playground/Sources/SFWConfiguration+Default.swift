@@ -6,19 +6,19 @@ private let circleStrokeWidth: CGFloat = 2
 private let blackColor = UIColor(white: 51.0 / 255.0, alpha: 1.0)
 private let cyanColor = UIColor.cyan
 
-public extension SwiftFortuneWheelConfiguration {
-    static var defaultConfiguration: SwiftFortuneWheelConfiguration {
-        let configuration = SwiftFortuneWheelConfiguration(spinButtonPreferences: .defaultSpinButtonPreferences,
-                                                      pinPreferences: .defaultPinPreferences,
-                                                      wheelPreferences: .defaultWheelPreferences)
+public extension SFWConfiguration {
+    static var defaultConfiguration: SFWConfiguration {
+        let configuration = SFWConfiguration(wheelPreferences: .defaultWheelPreferences,
+                                             pinPreferences: .defaultPinPreferences,
+                                             spinButtonPreferences: .defaultSpinButtonPreferences)
 
         return configuration
     }
 }
 
-public extension SwiftFortuneWheelConfiguration.SpinButtonPreferences {
-    static var defaultSpinButtonPreferences: SwiftFortuneWheelConfiguration.SpinButtonPreferences {
-        let preferences = SwiftFortuneWheelConfiguration.SpinButtonPreferences(size: CGSize(width: 80, height: 80),
+public extension SFWConfiguration.SpinButtonPreferences {
+    static var defaultSpinButtonPreferences: SFWConfiguration.SpinButtonPreferences {
+        let preferences = SFWConfiguration.SpinButtonPreferences(size: CGSize(width: 80, height: 80),
                                                                                     cornerRadius: 40,
                                                                                     textColor: .white,
                                                                                     font: .systemFont(ofSize: 20, weight: .bold),
@@ -27,35 +27,36 @@ public extension SwiftFortuneWheelConfiguration.SpinButtonPreferences {
     }
 }
 
-public extension SwiftFortuneWheelConfiguration.PinImageViewPreferences {
-    static var defaultPinPreferences: SwiftFortuneWheelConfiguration.PinImageViewPreferences {
-        let preferences = SwiftFortuneWheelConfiguration.PinImageViewPreferences(size: CGSize(width: 12, height: 24),
+public extension SFWConfiguration.PinImageViewPreferences {
+    static var defaultPinPreferences: SFWConfiguration.PinImageViewPreferences {
+        let preferences = SFWConfiguration.PinImageViewPreferences(size: CGSize(width: 12, height: 24),
                                                                             position: .bottom,
                                                                             verticalOffset: 30)
         return preferences
     }
 }
 
-public extension SwiftFortuneWheelConfiguration.WheelPreferences {
-    static var defaultWheelPreferences: SwiftFortuneWheelConfiguration.WheelPreferences {
-        let preferences = SwiftFortuneWheelConfiguration.WheelPreferences(circlePreferences: .defaultCirclePreferences,
-                                                                     slicePreferences: .defaultSlicePreferenes)
+public extension SFWConfiguration.WheelPreferences {
+    static var defaultWheelPreferences: SFWConfiguration.WheelPreferences {
+        let preferences = SFWConfiguration.WheelPreferences(circlePreferences: .defaultCirclePreferences,
+                                                            slicePreferences: .defaultSlicePreferenes,
+                                                            startPosition: .bottom)
         return preferences
     }
 }
 
-public extension SwiftFortuneWheelConfiguration.CirclePreferences {
-    static var defaultCirclePreferences: SwiftFortuneWheelConfiguration.CirclePreferences {
-        let preferences = SwiftFortuneWheelConfiguration.CirclePreferences(strokeWidth: circleStrokeWidth,
+public extension SFWConfiguration.CirclePreferences {
+    static var defaultCirclePreferences: SFWConfiguration.CirclePreferences {
+        let preferences = SFWConfiguration.CirclePreferences(strokeWidth: circleStrokeWidth,
                                                                            strokeColor: blackColor)
         return preferences
     }
 }
 
-public extension SwiftFortuneWheelConfiguration.SlicePreferences {
-    static var defaultSlicePreferenes: SwiftFortuneWheelConfiguration.SlicePreferences {
-        let backgroundColorType = SwiftFortuneWheelConfiguration.ColorType.evenOddColors(evenColor: blackColor, oddColor: cyanColor)
-        let preferences = SwiftFortuneWheelConfiguration.SlicePreferences(backgroundColorType: backgroundColorType,
+public extension SFWConfiguration.SlicePreferences {
+    static var defaultSlicePreferenes: SFWConfiguration.SlicePreferences {
+        let backgroundColorType = SFWConfiguration.ColorType.evenOddColors(evenColor: blackColor, oddColor: cyanColor)
+        let preferences = SFWConfiguration.SlicePreferences(backgroundColorType: backgroundColorType,
                                                                             strokeWidth: 1,
                                                                             strokeColor: blackColor)
         return preferences
@@ -74,7 +75,7 @@ public extension ImagePreferences {
 
 public extension TextPreferences {
     static var amountTextPreferences: TextPreferences {
-        let textColorType = SwiftFortuneWheelConfiguration.ColorType.evenOddColors(evenColor: .white, oddColor: blackColor)
+        let textColorType = SFWConfiguration.ColorType.evenOddColors(evenColor: .white, oddColor: blackColor)
         let font = UIFont.systemFont(ofSize: 22, weight: .bold)
         let prefenreces = TextPreferences(textColorType: textColorType,
                                           font: font,
@@ -84,7 +85,7 @@ public extension TextPreferences {
     }
 
     static var descriptionTextPreferences: TextPreferences {
-        let textColorType = SwiftFortuneWheelConfiguration.ColorType.evenOddColors(evenColor: .white, oddColor: blackColor)
+        let textColorType = SFWConfiguration.ColorType.evenOddColors(evenColor: .white, oddColor: blackColor)
         let font = UIFont.systemFont(ofSize: 12, weight: .bold)
         let prefenreces = TextPreferences(textColorType: textColorType,
                                           font: font,

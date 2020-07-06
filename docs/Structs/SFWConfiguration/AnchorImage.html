@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AnchorImage Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../../js/jquery.min.js" defer></script>
+    <script src="../../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/AnchorImage" class="dashAnchor"></a>
+    <a title="AnchorImage Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../../index.html">SwiftFortuneWheel 0.9.0 Docs</a> (84% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../../index.html">SwiftFortuneWheel Reference</a>
+        <img id="carat" src="../../img/carat.png" />
+        AnchorImage Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Classes/PinImageView.html">PinImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/SpinButton.html">SpinButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/SpinningWheelAnimator.html">SpinningWheelAnimator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/SwiftFortuneWheel.html">SwiftFortuneWheel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/TTUtils.html">TTUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/WheelLayer.html">WheelLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/WheelView.html">WheelView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/CGSize.html">CGSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/UIFont.html">UIFont</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/UIImage.html">UIImage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Protocols/CurveTextDrawing.html">CurveTextDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/ImageDrawing.html">ImageDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/ShapeDrawing.html">ShapeDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/SliceCalculating.html">SliceCalculating</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/SliceDrawing.html">SliceDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/SpinningAnimatable.html">SpinningAnimatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/SpinningAnimatorProtocol.html">SpinningAnimatorProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/TextDrawing.html">TextDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/WheelMathCalculating.html">WheelMathCalculating</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Structs/Calc.html">Calc</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ImagePreferences.html">ImagePreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/LinePreferences.html">LinePreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/SFWConfiguration.html">SFWConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/SFWConfiguration/WheelPreferences.html">– WheelPreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/SFWConfiguration/CirclePreferences.html">– CirclePreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/SFWConfiguration/SlicePreferences.html">– SlicePreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/SFWConfiguration/SpinButtonPreferences.html">– SpinButtonPreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/SFWConfiguration/PinImageViewPreferences.html">– PinImageViewPreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/SFWConfiguration/Position.html">– Position</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/SFWConfiguration/Margins.html">– Margins</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/SFWConfiguration/ColorType.html">– ColorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/SFWConfiguration/AnchorImage.html">– AnchorImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/Slice.html">Slice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/Slice/ContentType.html">– ContentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/TextPreferences.html">TextPreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/TextPreferences/Orientation.html">– Orientation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/TextPreferences/LineBreakMode.html">– LineBreakMode</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>AnchorImage</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">AnchorImage</span></code></pre>
+
+                </div>
+              </div>
+            <p>Anchor image used  to add images around the wheel for each slice</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel16SFWConfigurationV11AnchorImageV4sizeSo6CGSizeVvp"></a>
+                    <a name="//apple_ref/swift/Property/size" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel16SFWConfigurationV11AnchorImageV4sizeSo6CGSizeVvp">size</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Size, required</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel16SFWConfigurationV11AnchorImageV9imageNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/imageName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel16SFWConfigurationV11AnchorImageV9imageNameSSvp">imageName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Image name from assets catalog</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">imageName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel16SFWConfigurationV11AnchorImageV20rotationDegreeOffset12CoreGraphics7CGFloatVvp"></a>
+                    <a name="//apple_ref/swift/Property/rotationDegreeOffset" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel16SFWConfigurationV11AnchorImageV20rotationDegreeOffset12CoreGraphics7CGFloatVvp">rotationDegreeOffset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Rotation degree offset</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rotationDegreeOffset</span><span class="p">:</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel16SFWConfigurationV11AnchorImageV14verticalOffset12CoreGraphics7CGFloatVvp"></a>
+                    <a name="//apple_ref/swift/Property/verticalOffset" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel16SFWConfigurationV11AnchorImageV14verticalOffset12CoreGraphics7CGFloatVvp">verticalOffset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Vertical offset</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">verticalOffset</span><span class="p">:</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel16SFWConfigurationV11AnchorImageV9tintColorSo7UIColorCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/tintColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel16SFWConfigurationV11AnchorImageV9tintColorSo7UIColorCSgvp">tintColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tint color</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">tintColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel16SFWConfigurationV11AnchorImageV9imageName4size14verticalOffset014rotationDegreeK09tintColorAESS_So6CGSizeV12CoreGraphics7CGFloatVAOSo7UIColorCSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(imageName:size:verticalOffset:rotationDegreeOffset:tintColor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel16SFWConfigurationV11AnchorImageV9imageName4size14verticalOffset014rotationDegreeK09tintColorAESS_So6CGSizeV12CoreGraphics7CGFloatVAOSo7UIColorCSgtcfc">init(imageName:<wbr>size:<wbr>verticalOffset:<wbr>rotationDegreeOffset:<wbr>tintColor:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initiates a anchor image object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">imageName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+            <span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">,</span>
+            <span class="nv">verticalOffset</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nv">rotationDegreeOffset</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nv">tintColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Image name from assets catalog</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>size</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Size, required</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>verticalOffset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical offset, default value is <code>0</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rotationDegreeOffset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Rotation degree offset, default value is <code>0</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tintColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Tint color, <code>optional</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-07-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

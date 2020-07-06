@@ -7,6 +7,8 @@ When you updating from 0.x.x to version 1.0.0, you have to consider next changes
 - The biggest changes were that long named `SwiftFortuneWheelConfiguration` was renamed to shorter `SFWConfiguration`;
 - `pinPreferences` and `spinButtonPreferences` inside `SFWConfiguration` now are optional;
 - When you initializing `WheelPreferences` now you have to specify `startPosition`;
+- `image(String, ImagePreferences)` renamed to `assetImage(String, ImagePreferences)` case at `Slice.ContentType`  
+- Added `image(UIImage, ImagePreferences)` case to `Slice.ContentType` 
 
 ### Other changes from 0.5.0 to 0.9.0
 

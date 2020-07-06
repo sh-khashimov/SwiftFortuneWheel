@@ -1,21 +1,20 @@
 //
-//  ExamplesViewController.swift
+//  LayoutExamplesViewController.swift
 //  SwiftFortuneWheelDemoiOS
 //
-//  Created by Sherzod Khashimov on 6/7/20.
+//  Created by Sherzod Khashimov on 7/6/20.
 //  Copyright © 2020 Sherzod Khashimov. All rights reserved.
 //
 
 import UIKit
 
-class ExamplesViewController: UITableViewController {
+class LayoutExamplesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "Various Layout Examples"
         // Do any additional setup after loading the view.
-
-        self.title = "SwiftFortuneWheel"
     }
     
 

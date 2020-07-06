@@ -210,11 +210,13 @@ extension SwiftFortuneWheel: SpinningAnimatorProtocol {
     ///   - completion: Completion handler
     open func startAnimating(rotationOffset: CGFloat, fullRotationsUntilFinish: Int = 13, animationDuration: CFTimeInterval = 5.000, _ completion: ((Bool) -> Void)?) {
         
-        self.stopAnimating()
-        self.animator.addRotationAnimation(fullRotationsUntilFinish: fullRotationsUntilFinish,
-                                           animationDuration: animationDuration,
-                                           rotationOffset: rotationOffset,
-                                           completionBlock: completion)
+        DispatchQueue.main.async {
+            self.stopAnimating()
+            self.animator.addRotationAnimation(fullRotationsUntilFinish: fullRotationsUntilFinish,
+                                               animationDuration: animationDuration,
+                                               rotationOffset: rotationOffset,
+                                               completionBlock: completion)
+        }
     }
 
     /// Starts rotation animation and stops rotation at the specified index

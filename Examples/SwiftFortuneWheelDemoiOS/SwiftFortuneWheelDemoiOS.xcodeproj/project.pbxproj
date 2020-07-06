@@ -15,14 +15,18 @@
 		2710563A248D3C9F006C0181 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27105638248D3C9F006C0181 /* LaunchScreen.storyboard */; };
 		2710564C248D4BD4006C0181 /* SwiftFortuneWheel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2710564B248D4BD4006C0181 /* SwiftFortuneWheel.framework */; };
 		2710564D248D4BD4006C0181 /* SwiftFortuneWheel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2710564B248D4BD4006C0181 /* SwiftFortuneWheel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		27105687248D4E49006C0181 /* ExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27105686248D4E49006C0181 /* ExamplesViewController.swift */; };
-		27105689248D4EC8006C0181 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27105688248D4EC8006C0181 /* ExampleViewController.swift */; };
-		2710568C248D53EF006C0181 /* SwiftFortuneWheelConfiguration+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710568A248D53EF006C0181 /* SwiftFortuneWheelConfiguration+Example.swift */; };
+		27105687248D4E49006C0181 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27105686248D4E49006C0181 /* MainViewController.swift */; };
+		27105689248D4EC8006C0181 /* DynamicContentViewExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27105688248D4EC8006C0181 /* DynamicContentViewExampleController.swift */; };
+		2710568C248D53EF006C0181 /* SFWConfiguration+DynamicContentExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710568A248D53EF006C0181 /* SFWConfiguration+DynamicContentExample.swift */; };
 		2710568D248D53EF006C0181 /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710568B248D53EF006C0181 /* Prize.swift */; };
 		2710568F248D541B006C0181 /* Prize+SliceContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710568E248D541B006C0181 /* Prize+SliceContentType.swift */; };
-		2720252124A36FB700240E4E /* SwiftFortuneWheelConfiguration+RainbowColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720252024A36FB700240E4E /* SwiftFortuneWheelConfiguration+RainbowColors.swift */; };
-		27F7D5B924A51C5D004BEE19 /* Example2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7D5B824A51C5D004BEE19 /* Example2ViewController.swift */; };
-		27F7D5BB24A51D01004BEE19 /* SwiftFortuneWheelConfiguration+Example2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7D5BA24A51D01004BEE19 /* SwiftFortuneWheelConfiguration+Example2.swift */; };
+		276E7FFF24B378E5004E9D82 /* AnimatedRotationExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E7FFE24B378E5004E9D82 /* AnimatedRotationExampleViewController.swift */; };
+		276E800224B37954004E9D82 /* LayoutExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E800124B37954004E9D82 /* LayoutExamplesViewController.swift */; };
+		2794D29C24B3977B00379B6A /* SFWConfiguration+RotationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2794D29B24B3977B00379B6A /* SFWConfiguration+RotationExample.swift */; };
+		279EEF8624B39D8000AD2AB2 /* RotationExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279EEF8524B39D8000AD2AB2 /* RotationExampleViewController.swift */; };
+		279EEF8824B39F5700AD2AB2 /* Various.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279EEF8724B39F5700AD2AB2 /* Various.storyboard */; };
+		27F7D5B924A51C5D004BEE19 /* WithoutStoryboardExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7D5B824A51C5D004BEE19 /* WithoutStoryboardExampleViewController.swift */; };
+		27F7D5BB24A51D01004BEE19 /* SFWConfiguration+WithoutStoryboardExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7D5BA24A51D01004BEE19 /* SFWConfiguration+WithoutStoryboardExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,14 +53,18 @@
 		27105639248D3C9F006C0181 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2710563B248D3C9F006C0181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2710564B248D4BD4006C0181 /* SwiftFortuneWheel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFortuneWheel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		27105686248D4E49006C0181 /* ExamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesViewController.swift; sourceTree = "<group>"; };
-		27105688248D4EC8006C0181 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
-		2710568A248D53EF006C0181 /* SwiftFortuneWheelConfiguration+Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftFortuneWheelConfiguration+Example.swift"; sourceTree = "<group>"; };
+		27105686248D4E49006C0181 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		27105688248D4EC8006C0181 /* DynamicContentViewExampleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicContentViewExampleController.swift; sourceTree = "<group>"; };
+		2710568A248D53EF006C0181 /* SFWConfiguration+DynamicContentExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+DynamicContentExample.swift"; sourceTree = "<group>"; };
 		2710568B248D53EF006C0181 /* Prize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
 		2710568E248D541B006C0181 /* Prize+SliceContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Prize+SliceContentType.swift"; sourceTree = "<group>"; };
-		2720252024A36FB700240E4E /* SwiftFortuneWheelConfiguration+RainbowColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftFortuneWheelConfiguration+RainbowColors.swift"; sourceTree = "<group>"; };
-		27F7D5B824A51C5D004BEE19 /* Example2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example2ViewController.swift; sourceTree = "<group>"; };
-		27F7D5BA24A51D01004BEE19 /* SwiftFortuneWheelConfiguration+Example2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftFortuneWheelConfiguration+Example2.swift"; sourceTree = "<group>"; };
+		276E7FFE24B378E5004E9D82 /* AnimatedRotationExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedRotationExampleViewController.swift; sourceTree = "<group>"; };
+		276E800124B37954004E9D82 /* LayoutExamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutExamplesViewController.swift; sourceTree = "<group>"; };
+		2794D29B24B3977B00379B6A /* SFWConfiguration+RotationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+RotationExample.swift"; sourceTree = "<group>"; };
+		279EEF8524B39D8000AD2AB2 /* RotationExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationExampleViewController.swift; sourceTree = "<group>"; };
+		279EEF8724B39F5700AD2AB2 /* Various.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Various.storyboard; sourceTree = "<group>"; };
+		27F7D5B824A51C5D004BEE19 /* WithoutStoryboardExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutStoryboardExampleViewController.swift; sourceTree = "<group>"; };
+		27F7D5BA24A51D01004BEE19 /* SFWConfiguration+WithoutStoryboardExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+WithoutStoryboardExample.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		270CCFDB24B3759100924FBF /* WithoutStoryboardExample */ = {
+			isa = PBXGroup;
+			children = (
+				27F7D5B824A51C5D004BEE19 /* WithoutStoryboardExampleViewController.swift */,
+				27F7D5BA24A51D01004BEE19 /* SFWConfiguration+WithoutStoryboardExample.swift */,
+			);
+			path = WithoutStoryboardExample;
+			sourceTree = "<group>";
+		};
+		270CCFDC24B375A600924FBF /* LayoutExamples */ = {
+			isa = PBXGroup;
+			children = (
+				276E800124B37954004E9D82 /* LayoutExamplesViewController.swift */,
+			);
+			path = LayoutExamples;
+			sourceTree = "<group>";
+		};
 		27105621248D3C9D006C0181 = {
 			isa = PBXGroup;
 			children = (
@@ -91,18 +116,16 @@
 		2710562C248D3C9D006C0181 /* SwiftFortuneWheelDemoiOS */ = {
 			isa = PBXGroup;
 			children = (
-				2720251F24A36F8900240E4E /* Example2ViewController */,
-				2720251E24A36F6300240E4E /* ExampleViewController */,
+				2780E81124B36E3F007BDE7B /* ViewControllers */,
+				2780E81024B36E28007BDE7B /* Extensions */,
+				2780E80F24B36E1D007BDE7B /* Models */,
 				2710562D248D3C9D006C0181 /* AppDelegate.swift */,
 				2710562F248D3C9D006C0181 /* SceneDelegate.swift */,
 				27105633248D3C9D006C0181 /* Main.storyboard */,
+				279EEF8724B39F5700AD2AB2 /* Various.storyboard */,
 				27105636248D3C9F006C0181 /* Assets.xcassets */,
 				27105638248D3C9F006C0181 /* LaunchScreen.storyboard */,
 				2710563B248D3C9F006C0181 /* Info.plist */,
-				27105686248D4E49006C0181 /* ExamplesViewController.swift */,
-				2710568B248D53EF006C0181 /* Prize.swift */,
-				2710568E248D541B006C0181 /* Prize+SliceContentType.swift */,
-				2703B4F5248E2A9500FB50F9 /* UIView+CornerRadius.swift */,
 			);
 			path = SwiftFortuneWheelDemoiOS;
 			sourceTree = "<group>";
@@ -115,23 +138,68 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2720251E24A36F6300240E4E /* ExampleViewController */ = {
+		2720251E24A36F6300240E4E /* DynamicContentExampleViewController */ = {
 			isa = PBXGroup;
 			children = (
-				27105688248D4EC8006C0181 /* ExampleViewController.swift */,
-				2710568A248D53EF006C0181 /* SwiftFortuneWheelConfiguration+Example.swift */,
-				2720252024A36FB700240E4E /* SwiftFortuneWheelConfiguration+RainbowColors.swift */,
+				27105688248D4EC8006C0181 /* DynamicContentViewExampleController.swift */,
+				2710568A248D53EF006C0181 /* SFWConfiguration+DynamicContentExample.swift */,
 			);
-			path = ExampleViewController;
+			path = DynamicContentExampleViewController;
 			sourceTree = "<group>";
 		};
-		2720251F24A36F8900240E4E /* Example2ViewController */ = {
+		276E7FFD24B378A0004E9D82 /* RotationExample */ = {
 			isa = PBXGroup;
 			children = (
-				27F7D5B824A51C5D004BEE19 /* Example2ViewController.swift */,
-				27F7D5BA24A51D01004BEE19 /* SwiftFortuneWheelConfiguration+Example2.swift */,
+				2794D29B24B3977B00379B6A /* SFWConfiguration+RotationExample.swift */,
+				279EEF8524B39D8000AD2AB2 /* RotationExampleViewController.swift */,
 			);
-			path = Example2ViewController;
+			path = RotationExample;
+			sourceTree = "<group>";
+		};
+		2780E80F24B36E1D007BDE7B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2710568B248D53EF006C0181 /* Prize.swift */,
+				2710568E248D541B006C0181 /* Prize+SliceContentType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2780E81024B36E28007BDE7B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2703B4F5248E2A9500FB50F9 /* UIView+CornerRadius.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2780E81124B36E3F007BDE7B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2720251E24A36F6300240E4E /* DynamicContentExampleViewController */,
+				276E7FFD24B378A0004E9D82 /* RotationExample */,
+				2794D29D24B39BDD00379B6A /* AnimatedRotationExample */,
+				270CCFDB24B3759100924FBF /* WithoutStoryboardExample */,
+				270CCFDC24B375A600924FBF /* LayoutExamples */,
+				279EEF8924B39F7C00AD2AB2 /* Various */,
+				27105686248D4E49006C0181 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2794D29D24B39BDD00379B6A /* AnimatedRotationExample */ = {
+			isa = PBXGroup;
+			children = (
+				276E7FFE24B378E5004E9D82 /* AnimatedRotationExampleViewController.swift */,
+			);
+			path = AnimatedRotationExample;
+			sourceTree = "<group>";
+		};
+		279EEF8924B39F7C00AD2AB2 /* Various */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Various;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +263,7 @@
 			files = (
 				2710563A248D3C9F006C0181 /* LaunchScreen.storyboard in Resources */,
 				27105637248D3C9F006C0181 /* Assets.xcassets in Resources */,
+				279EEF8824B39F5700AD2AB2 /* Various.storyboard in Resources */,
 				27105635248D3C9D006C0181 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,15 +277,18 @@
 			files = (
 				2710568D248D53EF006C0181 /* Prize.swift in Sources */,
 				2703B4F6248E2A9500FB50F9 /* UIView+CornerRadius.swift in Sources */,
-				27F7D5B924A51C5D004BEE19 /* Example2ViewController.swift in Sources */,
+				27F7D5B924A51C5D004BEE19 /* WithoutStoryboardExampleViewController.swift in Sources */,
 				2710568F248D541B006C0181 /* Prize+SliceContentType.swift in Sources */,
-				27105687248D4E49006C0181 /* ExamplesViewController.swift in Sources */,
-				27F7D5BB24A51D01004BEE19 /* SwiftFortuneWheelConfiguration+Example2.swift in Sources */,
+				279EEF8624B39D8000AD2AB2 /* RotationExampleViewController.swift in Sources */,
+				27105687248D4E49006C0181 /* MainViewController.swift in Sources */,
+				276E800224B37954004E9D82 /* LayoutExamplesViewController.swift in Sources */,
+				27F7D5BB24A51D01004BEE19 /* SFWConfiguration+WithoutStoryboardExample.swift in Sources */,
 				2710562E248D3C9D006C0181 /* AppDelegate.swift in Sources */,
+				276E7FFF24B378E5004E9D82 /* AnimatedRotationExampleViewController.swift in Sources */,
 				27105630248D3C9D006C0181 /* SceneDelegate.swift in Sources */,
-				2720252124A36FB700240E4E /* SwiftFortuneWheelConfiguration+RainbowColors.swift in Sources */,
-				2710568C248D53EF006C0181 /* SwiftFortuneWheelConfiguration+Example.swift in Sources */,
-				27105689248D4EC8006C0181 /* ExampleViewController.swift in Sources */,
+				2710568C248D53EF006C0181 /* SFWConfiguration+DynamicContentExample.swift in Sources */,
+				2794D29C24B3977B00379B6A /* SFWConfiguration+RotationExample.swift in Sources */,
+				27105689248D4EC8006C0181 /* DynamicContentViewExampleController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,8 +21,8 @@ class MyViewController : UIViewController {
         label.textAlignment
 
         for index in 1...4 {
-            let headerContent = Slice.ContentType.text(text: "\(index)", preferenes: .amountTextPreferences)
-            let descriptionContent = Slice.ContentType.text(text: "1qwewew 2qwewe 3qwewewew", preferenes: .descriptionTextPreferences)
+            let headerContent = Slice.ContentType.text(text: "\(index)", preferences: .amountTextPreferences)
+            let descriptionContent = Slice.ContentType.text(text: "1qwewew 2qwewe 3qwewewew", preferences: .descriptionTextPreferences)
             let slice = Slice(contents: [headerContent,
                                          descriptionContent, headerContent])
             slices.append(slice)
@@ -34,15 +34,9 @@ class MyViewController : UIViewController {
 
         fortuneWheel.isPinHidden = true
         fortuneWheel.isSpinHidden = true
-
-        fortuneWheel.configuration?.wheelPreferences.circlePreferences.strokeWidth
         
         view.addSubview(fortuneWheel)
         self.view = view
-
-        fortuneWheel.startAnimating(finishIndex: 3) { (success) in
-            //
-        }
     }
 }
 // Present the view controller in the Live View window

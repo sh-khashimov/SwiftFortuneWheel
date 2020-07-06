@@ -9,7 +9,7 @@
 import UIKit
 import SwiftFortuneWheel
 
-class ExampleViewController: UIViewController {
+class DynamicContentViewExampleController: UIViewController {
 
     @IBOutlet weak var drawCurvedLineSwitch: UISwitch!
     @IBOutlet weak var colorsTypeSegment: UISegmentedControl!
@@ -21,8 +21,6 @@ class ExampleViewController: UIViewController {
             }
         }
     }
-
-    @IBOutlet weak var keyboardToolbar: UIToolbar!
 
     var prizes: [Prize] = []
 
@@ -41,21 +39,15 @@ class ExampleViewController: UIViewController {
     }
 
     var finishIndex: Int {
-        guard let index = Int(selectedIndexTextField.text ?? "") else { return 0 }
-        guard index < fortuneWheel.slices.count else { return fortuneWheel.slices.count - 1 }
-        return index
+        return Int.random(in: 0..<fortuneWheel.slices.count)
     }
-
-    @IBOutlet weak var selectedIndexTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
 
-        self.title = "Example"
-
-        selectedIndexTextField.inputAccessoryView = keyboardToolbar
+        self.title = "Dynamic Content Example"
 
         drawCurvedLine = drawCurvedLineSwitch.isOn
 
@@ -66,15 +58,15 @@ class ExampleViewController: UIViewController {
 
         updateSlices()
 
-        fortuneWheel.configuration = .exampleWithBlackCyanColorsConfiguration
+        fortuneWheel.configuration = .blackCyanColorsConfiguration
     }
 
     @IBAction func colorsTypeValueChanged(_ sender: Any) {
         switch colorsTypeSegment.selectedSegmentIndex {
         case 1:
-            fortuneWheel.configuration = .exampleWithRainbowColorsConfiguration
+            fortuneWheel.configuration = .rainbowColorsConfiguration
         default:
-            fortuneWheel.configuration = .exampleWithBlackCyanColorsConfiguration
+            fortuneWheel.configuration = .blackCyanColorsConfiguration
         }
         updateSlices()
     }
@@ -96,14 +88,6 @@ class ExampleViewController: UIViewController {
 
     @IBAction func drawCurverLineSwitchChanged(_ sender: UISwitch) {
         drawCurvedLine = sender.isOn
-    }
-
-    @IBAction func selectedIndexValueChange(_ sender: Any) {
-        selectedIndexTextField.text = "\(finishIndex)"
-    }
-
-    @IBAction func closeKeyboard(_ sender: Any) {
-        view.endEditing(true)
     }
 
 
