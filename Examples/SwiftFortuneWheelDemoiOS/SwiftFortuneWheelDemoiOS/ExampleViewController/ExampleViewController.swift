@@ -113,11 +113,11 @@ class ExampleViewController: UIViewController {
         fortuneWheel.slices = slices
 
         if prizes.count == maximumPrize - 1 {
-            let imageSliceContent = Slice.ContentType.image(name: "crown", preferenes: ImagePreferences(preferredSize: CGSize(width: 40, height: 40), verticalOffset: 40))
+            let imageSliceContent = Slice.ContentType.assetImage(name: "crown", preferences: ImagePreferences(preferredSize: CGSize(width: 40, height: 40), verticalOffset: 40))
             var slice = Slice(contents: [imageSliceContent])
             if drawCurvedLine {
                 let linePreferences = LinePreferences(colorType: .customPatternColors(colors: nil, defaultColor: .black), height: 2, verticalOffset: 35)
-                let line = Slice.ContentType.line(preferenes: linePreferences)
+                let line = Slice.ContentType.line(preferences: linePreferences)
                 slice.contents.append(line)
             }
             fortuneWheel.slices.append(slice)
