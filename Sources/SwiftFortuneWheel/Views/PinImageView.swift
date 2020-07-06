@@ -25,7 +25,7 @@ extension PinImageView {
 
     /// Setups auto layouts with preferences
     /// - Parameter preferences: Spin button preferences, that contains layouts preference variables.
-    func setupAutoLayout(with preferences: SwiftFortuneWheelConfiguration.PinImageViewPreferences?) {
+    func setupAutoLayout(with preferences: SFWConfiguration.PinImageViewPreferences?) {
         guard let superView = self.superview else { return }
         guard let preferences = preferences else { return }
         self.removeConstraints(self.constraints)
@@ -58,5 +58,12 @@ extension PinImageView {
     func image(name: String?) {
         guard let imageName = name else { return }
         self.image = UIImage(named: imageName)
+    }
+
+    /// Updates pin image view background color and layer
+    /// - Parameter preferences: Preferences that contains appearance preference variables.
+    func configure(with preferences: SFWConfiguration.PinImageViewPreferences?) {
+        self.backgroundColor = preferences?.backgroundColor
+        self.tintColor = preferences?.tintColor
     }
 }

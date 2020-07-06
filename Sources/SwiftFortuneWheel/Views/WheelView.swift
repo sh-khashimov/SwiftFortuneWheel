@@ -16,7 +16,7 @@ class WheelView: UIView {
 
     /// Customizable preferences.
     /// Required in order to draw properly.
-    var preferences: SwiftFortuneWheelConfiguration.WheelPreferences? {
+    var preferences: SFWConfiguration.WheelPreferences? {
         didSet {
             wheelLayer = nil
             addWheelLayer()
@@ -37,7 +37,7 @@ class WheelView: UIView {
     ///   - frame: Frame
     ///   - slices: List of Slices
     ///   - configuration: Customizable configuration   
-    init(frame: CGRect, slices: [Slice], preferences: SwiftFortuneWheelConfiguration.WheelPreferences?) {
+    init(frame: CGRect, slices: [Slice], preferences: SFWConfiguration.WheelPreferences?) {
         self.preferences = preferences
         self.slices = slices
         super.init(frame: frame)

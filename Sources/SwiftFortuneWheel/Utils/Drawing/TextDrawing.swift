@@ -22,7 +22,7 @@ extension TextDrawing {
     ///   - sliceDegree: slice degree
     ///   - margins: content margins
     /// - Returns: Available text rectangles
-    private func availableTextRect(yPosition: CGFloat, preferences: TextPreferences, topOffset: CGFloat, radius: CGFloat, sliceDegree: CGFloat, margins: SwiftFortuneWheelConfiguration.Margins) -> [CGRect] {
+    private func availableTextRect(yPosition: CGFloat, preferences: TextPreferences, topOffset: CGFloat, radius: CGFloat, sliceDegree: CGFloat, margins: SFWConfiguration.Margins) -> [CGRect] {
         
         /// Max. available height from Y position
         let maxHeight = radius - abs(yPosition) - margins.bottom
@@ -77,7 +77,7 @@ extension TextDrawing {
     ///   - contextPositionCorrectionOffsetDegree: Context position correction offset degree
     ///   - margins: content margins
     /// - Returns: Height of the drawn text
-    func drawCurved(text: String, in context:CGContext, preferences: TextPreferences, rotation: CGFloat, index: Int, topOffset: CGFloat, radius: CGFloat, sliceDegree: CGFloat, contextPositionCorrectionOffsetDegree: CGFloat, margins: SwiftFortuneWheelConfiguration.Margins) -> CGFloat {
+    func drawCurved(text: String, in context:CGContext, preferences: TextPreferences, rotation: CGFloat, index: Int, topOffset: CGFloat, radius: CGFloat, sliceDegree: CGFloat, contextPositionCorrectionOffsetDegree: CGFloat, margins: SFWConfiguration.Margins) -> CGFloat {
         
         let textColor = preferences.color(for: index)
         
@@ -143,7 +143,7 @@ extension TextDrawing {
     ///   - sliceDegree: slice degree
     ///   - margins: content margins
     /// - Returns: Height of the drawn text
-    func drawHorizontal(text: String, in context:CGContext, preferences: TextPreferences, rotation: CGFloat, index: Int, topOffset: CGFloat, radius: CGFloat, sliceDegree: CGFloat, margins: SwiftFortuneWheelConfiguration.Margins) -> CGFloat {
+    func drawHorizontal(text: String, in context:CGContext, preferences: TextPreferences, rotation: CGFloat, index: Int, topOffset: CGFloat, radius: CGFloat, sliceDegree: CGFloat, margins: SFWConfiguration.Margins) -> CGFloat {
         
         /// Text attributes
         let textFontAttributes = preferences.textAttributes(for: index)
@@ -222,7 +222,7 @@ extension TextDrawing {
     ///   - sliceDegree: slice degree
     ///   - margins: content margins
     /// - Returns: Height of the drawn text
-    func drawVertical(text: String, in context: CGContext, preferences: TextPreferences, rotation: CGFloat, index: Int, topOffset: CGFloat, radius: CGFloat, sliceDegree: CGFloat, margins: SwiftFortuneWheelConfiguration.Margins) -> CGFloat {
+    func drawVertical(text: String, in context: CGContext, preferences: TextPreferences, rotation: CGFloat, index: Int, topOffset: CGFloat, radius: CGFloat, sliceDegree: CGFloat, margins: SFWConfiguration.Margins) -> CGFloat {
         
         /// Text attributes
         let textAttributes = preferences.textAttributes(for: index)

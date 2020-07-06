@@ -66,7 +66,7 @@ extension ImageDrawing {
     ///   - radius: radius
     ///   - sliceDegree: Slice degree
     ///   - rotationOffset: Rotation offset
-    func drawAnchorImage(in context: CGContext, imageAnchor: SwiftFortuneWheelConfiguration.AnchorImage, isCentered: Bool, rotation: CGFloat, index: Int, radius: CGFloat, sliceDegree: CGFloat, rotationOffset: CGFloat) {
+    func drawAnchorImage(in context: CGContext, imageAnchor: SFWConfiguration.AnchorImage, isCentered: Bool, rotation: CGFloat, index: Int, radius: CGFloat, sliceDegree: CGFloat, rotationOffset: CGFloat) {
 
         //// Context setup
         context.saveGState()

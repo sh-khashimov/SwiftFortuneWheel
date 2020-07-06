@@ -22,6 +22,8 @@ import SwiftFortuneWheel
 
 <img src="../Images/ibpreferences.png" width="300"/>
 
+> **For more information, see the [API Overview](/API_Overview.md)**.
+
 ``` Swift
 /// Fortune Wheel
 @IBOutlet weak var fortuneWheel: SwiftFortuneWheel!
@@ -41,10 +43,10 @@ slices.append(slice)
 
 
 ``` Swift
-let configuration: SwiftFortuneWheelConfiguration = .myWheelConfiguration
+let configuration: SFWConfiguration = .myWheelConfiguration
 ```
 
-> _For detail information, how to create a configuration object, please see a **SwiftFortuneWheelDemoiOS** project,  `SwiftFortuneWheelConfiguration+Example.swift` file._
+> **For detail information, how to create a configuration object, see the [Configuration In-Depth](/Configuration_indepth.md)**.
 
 - Pass slices and configuration to the `SwiftFortuneWheel`:
 
@@ -56,10 +58,12 @@ fortuneWheel.slices = slices
 - To start spin animation:
 
 ``` Swift
-fortuneWheel.startAnimating(fullRotationTimeInSeconds: 1, finishIndex: 0) { (finished) in
+fortuneWheel.startAnimating(indefiniteRotationTimeInSeconds: 1, finishIndex: 0) { (finished) in
             print(finished)
         }
 ```
+
+> **For more information, see the [API Overview](/API_Overview.md)**.
 
 </br>
 
@@ -67,13 +71,13 @@ fortuneWheel.startAnimating(fullRotationTimeInSeconds: 1, finishIndex: 0) { (fin
 
 <img src="../Images/diagram.jpg" width="420"/>
 
-1. **`WheelView`** (configures with `WheelPrefereces`)
+1. **`WheelView`** (configures with `SFWConfiguration.WheelPrefereces`)
 
-2. **`SwiftFortuneWheelConfiguration.AnchorImage`**, optional
+2. **`SFWConfiguration.AnchorImage`**, optional
 
-3. **`SpinButton`** (configures with `SpinButtonPreferences`)
+3. **`SpinButton`** (configures with `SFWConfiguration.SpinButtonPreferences`)
 
-4. **`PinImageView`** (configures with `PinImageViewPreferences`). `PinImageView` could be set to hidden, however, `PinImageViewPreferences` with the `Position` is required to be set properly in configuration.
+4. **`PinImageView`** (configures with `SFWConfiguration.PinImageViewPreferences`).
 
 5. **`Slice`** (configures with `SlicePreferences`)
 
@@ -83,14 +87,13 @@ fortuneWheel.startAnimating(fullRotationTimeInSeconds: 1, finishIndex: 0) { (fin
 
 8. **`Slice.ContentType.text`** (configures with `TextPreferences`)
 
-
-> _All `Preference`, expect `ImagePreferences` and `TextPreferences`, are part of `SwiftFortuneWheelConfiguration`._
-
 </br>
 
 ## Necessarily note
 
-> _Please note that in order to properly draw objects, `SwiftFortuneWheel` is rellies on `SwiftFortuneWheelConfiguration`. It’s up to you how to configure but without configuration, `SwiftFortuneWheel` won’t work properly._
+> _Please note that in order to properly draw objects, `SwiftFortuneWheel` is rellies on `SFWConfiguration`. It’s up to you how to configure but without configuration, `SwiftFortuneWheel` won’t work properly._
+
+> **For detail information, how to create a configuration object, see the [Configuration In-Depth](/Configuration_indepth.md)**.
 
 
 

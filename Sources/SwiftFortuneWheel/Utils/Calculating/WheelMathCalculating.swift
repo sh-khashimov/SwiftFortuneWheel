@@ -19,7 +19,7 @@ protocol WheelMathCalculating: class {
     var mainFrame: CGRect! { get set }
 
     /// Wheel preferences
-    var preferences: SwiftFortuneWheelConfiguration.WheelPreferences? { get set }
+    var preferences: SFWConfiguration.WheelPreferences? { get set }
 }
 
 extension WheelMathCalculating {

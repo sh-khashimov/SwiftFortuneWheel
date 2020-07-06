@@ -25,7 +25,7 @@ public struct TextPreferences {
     public var font: UIFont
 
     /// Text color type
-    public var textColorType: SwiftFortuneWheelConfiguration.ColorType
+    public var textColorType: SFWConfiguration.ColorType
     
     /// Is text curved or not, works only with orientation equal to horizontal
     public var isCurved: Bool
@@ -59,7 +59,7 @@ public struct TextPreferences {
     ///   - spacing: Spacing between lines, default value is `3`
     ///   - flipUpsideDown: Flip the text upside down, default value is `false`
     ///   - isCurved: Is text curved or not, works only with orientation equal to horizontal, default value is `true`
-    public init(textColorType: SwiftFortuneWheelConfiguration.ColorType,
+    public init(textColorType: SFWConfiguration.ColorType,
                 font: UIFont,
                 verticalOffset: CGFloat = 0,
                 horizontalOffset: CGFloat = 0,

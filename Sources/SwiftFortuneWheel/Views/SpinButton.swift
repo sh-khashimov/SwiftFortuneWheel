@@ -26,7 +26,7 @@ class SpinButton: UIButton {
 extension SpinButton {
     /// Setups auto layouts with preferences
     /// - Parameter preferences: Spin button preferences, that contains layouts preference variables.
-    func setupAutoLayout(with preferences: SwiftFortuneWheelConfiguration.SpinButtonPreferences?) {
+    func setupAutoLayout(with preferences: SFWConfiguration.SpinButtonPreferences?) {
         guard let superView = self.superview else { return }
         guard let preferences = preferences else { return }
         self.removeConstraints(self.constraints)
@@ -41,27 +41,26 @@ extension SpinButton {
     /// Updates spin button image
     /// - Parameter name: Image name from assets catalog
     func image(name: String?) {
-        guard let imageName = name else { return }
-        let image = UIImage(named: imageName)
+        let image = UIImage(named: name ?? "")
         self.setImage(image, for: .normal)
     }
 
     /// Updates spin button background image
     /// - Parameter name: Image name from assets catalog
     func backgroundImage(name: String?) {
-        guard let imageName = name else { return }
-        let image = UIImage(named: imageName)
+        let image = UIImage(named: name ?? "")
         self.setBackgroundImage(image, for: .normal)
     }
 
     /// Updates spin button background color and layer
     /// - Parameter preferences: Preferences that contains appearance preference variables.
-    func configure(with preferences: SwiftFortuneWheelConfiguration.SpinButtonPreferences?) {
+    func configure(with preferences: SFWConfiguration.SpinButtonPreferences?) {
         self.backgroundColor = preferences?.backgroundColor
         self.layer.cornerRadius = preferences?.cornerRadius ?? 0
         self.layer.borderWidth = preferences?.cornerWidth ?? 0
         self.layer.borderColor = preferences?.cornerColor.cgColor
-        self.titleLabel?.textColor = preferences?.textColor
+        self.setTitleColor(preferences?.textColor, for: .normal)
+        self.setTitleColor(preferences?.disabledTextColor, for: .disabled)
         self.titleLabel?.font = preferences?.font
     }
 }

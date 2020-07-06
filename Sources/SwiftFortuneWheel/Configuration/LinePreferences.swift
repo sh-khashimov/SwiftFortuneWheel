@@ -15,7 +15,7 @@ public struct LinePreferences {
     public var height: CGFloat = 1
 
     /// Stroke color type
-    public var colorType: SwiftFortuneWheelConfiguration.ColorType
+    public var colorType: SFWConfiguration.ColorType
 
     /// Vertical offset in slice from the center
     public var verticalOffset: CGFloat
@@ -25,7 +25,7 @@ public struct LinePreferences {
     ///   - height: Line height, default value is `1`
     ///   - colorType: Line color type
     ///   - verticalOffset: Line vertical offset, default value is `0`
-    public init(colorType: SwiftFortuneWheelConfiguration.ColorType,
+    public init(colorType: SFWConfiguration.ColorType,
                 height: CGFloat = 1,
                 verticalOffset: CGFloat = 0) {
         self.height = height

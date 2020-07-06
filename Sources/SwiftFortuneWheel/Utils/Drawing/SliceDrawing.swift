@@ -21,8 +21,8 @@ extension SliceDrawing {
     }
     
     /// Content margins
-    var margins: SwiftFortuneWheelConfiguration.Margins {
-        self.preferences?.contentMargins ?? SwiftFortuneWheelConfiguration.Margins()
+    var margins: SFWConfiguration.Margins {
+        self.preferences?.contentMargins ?? SFWConfiguration.Margins()
     }
     
     

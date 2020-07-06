@@ -14,7 +14,7 @@ class WheelLayer: CALayer {
 
     /// Customizable preferences.
     /// Required in order to draw properly.
-    var preferences: SwiftFortuneWheelConfiguration.WheelPreferences?
+    var preferences: SFWConfiguration.WheelPreferences?
 
     /// List of Slice objects.
     /// Used to draw content.
@@ -28,7 +28,7 @@ class WheelLayer: CALayer {
     ///   - frame: Frame
     ///   - slices: List of Slices
     ///   - configuration: Customizable configuration
-    init(frame:CGRect, slices: [Slice], preferences: SwiftFortuneWheelConfiguration.WheelPreferences?) {
+    init(frame:CGRect, slices: [Slice], preferences: SFWConfiguration.WheelPreferences?) {
         self.slices = slices
         self.preferences = preferences
         super.init()

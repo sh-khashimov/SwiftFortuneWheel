@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2703B4F4248E204E00FB50F9 /* SwiftFortuneWheelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2703B4F3248E204E00FB50F9 /* SwiftFortuneWheelConfiguration.swift */; };
+		2703B4F4248E204E00FB50F9 /* SFWConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2703B4F3248E204E00FB50F9 /* SFWConfiguration.swift */; };
 		27105670248D4C93006C0181 /* TextPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27105653248D4C93006C0181 /* TextPreferences.swift */; };
 		27105671248D4C93006C0181 /* ImagePreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27105654248D4C93006C0181 /* ImagePreferences.swift */; };
 		27105673248D4C93006C0181 /* SliceDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27105658248D4C93006C0181 /* SliceDrawing.swift */; };
@@ -53,7 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2703B4F3248E204E00FB50F9 /* SwiftFortuneWheelConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftFortuneWheelConfiguration.swift; sourceTree = "<group>"; };
+		2703B4F3248E204E00FB50F9 /* SFWConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFWConfiguration.swift; sourceTree = "<group>"; };
 		27105653248D4C93006C0181 /* TextPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPreferences.swift; sourceTree = "<group>"; };
 		27105654248D4C93006C0181 /* ImagePreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreferences.swift; sourceTree = "<group>"; };
 		27105658248D4C93006C0181 /* SliceDrawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliceDrawing.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 			children = (
 				27105653248D4C93006C0181 /* TextPreferences.swift */,
 				27105654248D4C93006C0181 /* ImagePreferences.swift */,
-				2703B4F3248E204E00FB50F9 /* SwiftFortuneWheelConfiguration.swift */,
+				2703B4F3248E204E00FB50F9 /* SFWConfiguration.swift */,
 				277A6EBD249A9B450066C807 /* LinePreferences.swift */,
 			);
 			path = Configuration;
@@ -431,7 +431,7 @@
 				2710567C248D4C93006C0181 /* Color+Random.swift in Sources */,
 				27105670248D4C93006C0181 /* TextPreferences.swift in Sources */,
 				27105676248D4C93006C0181 /* TTUtils.swift in Sources */,
-				2703B4F4248E204E00FB50F9 /* SwiftFortuneWheelConfiguration.swift in Sources */,
+				2703B4F4248E204E00FB50F9 /* SFWConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

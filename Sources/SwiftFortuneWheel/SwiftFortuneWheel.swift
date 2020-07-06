@@ -19,17 +19,17 @@ public class SwiftFortuneWheel: UIControl {
     private var wheelView: WheelView?
 
     /// Pin image view
-    private lazy var pinImageView = PinImageView()
+    private var pinImageView: PinImageView?
 
     /// Spin button
-    private lazy var spinButton = SpinButton()
+    private var spinButton: SpinButton?
 
     /// Animator
     lazy private var animator:SpinningWheelAnimator = SpinningWheelAnimator(withObjectToAnimate: self)
 
     /// Customizable configuration.
     /// Required in order to draw properly.
-    public var configuration: SwiftFortuneWheelConfiguration? {
+    public var configuration: SFWConfiguration? {
         didSet {
             updatePreferences()
         }
@@ -46,21 +46,28 @@ public class SwiftFortuneWheel: UIControl {
     /// Pin image name from assets catalog
     private var _pinImageName: String? {
         didSet {
-            pinImageView.image(name: _pinImageName)
+            pinImageView?.image(name: _pinImageName)
         }
     }
 
     /// Spin button image name from assets catalog
     private var _spinButtonImageName: String? {
         didSet {
-            spinButton.image(name: _spinButtonImageName)
+            spinButton?.image(name: _spinButtonImageName)
         }
     }
 
     /// Spin button background image from assets catalog
     private var _spinButtonBackgroundImageName: String? {
         didSet {
-            spinButton.backgroundImage(name: _spinButtonImageName)
+            spinButton?.backgroundImage(name: _spinButtonImageName)
+        }
+    }
+
+    /// Spin button title
+    private var _spinTitle: String? {
+        didSet {
+            spinButton?.setTitle(_spinTitle, for: .normal)
         }
     }
 
@@ -69,7 +76,7 @@ public class SwiftFortuneWheel: UIControl {
     ///   - frame: Frame
     ///   - slices: List of Slices
     ///   - configuration: Customizable configuration
-    public init(frame: CGRect, slices: [Slice], configuration: SwiftFortuneWheelConfiguration?) {
+    public init(frame: CGRect, slices: [Slice], configuration: SFWConfiguration?) {
         self.configuration = configuration
         self.slices = slices
         self.wheelView = WheelView(frame: frame, slices: self.slices, preferences: self.configuration?.wheelPreferences)
@@ -82,21 +89,42 @@ public class SwiftFortuneWheel: UIControl {
     /// Adds pin image view to superview.
     /// Updates its layouts and image if needed.
     private func setupPinImageView() {
-        self.addSubview(pinImageView)
-        pinImageView.setupAutoLayout(with: configuration?.pinPreferences)
-        pinImageView.image(name: _pinImageName)
+        guard let pinPreferences = configuration?.pinPreferences else {
+            self.pinImageView = nil
+            return
+        }
+        if self.pinImageView == nil {
+            pinImageView = PinImageView()
+        }
+        if !self.isDescendant(of: pinImageView!) {
+            self.addSubview(pinImageView!)
+        }
+        pinImageView?.setupAutoLayout(with: pinPreferences)
+        pinImageView?.configure(with: pinPreferences)
+        pinImageView?.image(name: _pinImageName)
     }
 
     /// Adds spin button  to superview.
     /// Updates its layouts and content if needed.
     private func setupSpinButton() {
-        self.addSubview(spinButton)
-        spinButton.setupAutoLayout(with: configuration?.spinButtonPreferences)
-        spinButton.setTitle(spinTitle, for: .normal)
-        spinButton.backgroundImage(name: _spinButtonImageName)
-        spinButton.image(name: _spinButtonImageName)
-        spinButton.configure(with: configuration?.spinButtonPreferences)
-        spinButton.addTarget(self, action: #selector(spinAction), for: .touchUpInside)
+        guard let spinButtonPreferences = configuration?.spinButtonPreferences else {
+            self.spinButton = nil
+            return
+        }
+        if self.spinButton == nil {
+            spinButton = SpinButton()
+        }
+        if !self.isDescendant(of: spinButton!) {
+            self.addSubview(spinButton!)
+        }
+        spinButton?.setupAutoLayout(with: spinButtonPreferences)
+        DispatchQueue.main.async {
+            self.spinButton?.setTitle(self.spinTitle, for: .normal)
+            self.spinButton?.backgroundImage(name: self._spinButtonImageName)
+            self.spinButton?.image(name: self._spinButtonImageName)
+        }
+        spinButton?.configure(with: spinButtonPreferences)
+        spinButton?.addTarget(self, action: #selector(spinAction), for: .touchUpInside)
     }
 
     @objc
@@ -128,9 +156,8 @@ public class SwiftFortuneWheel: UIControl {
     /// Updates subviews preferences
     private func updatePreferences() {
         self.wheelView?.preferences = configuration?.wheelPreferences
-        pinImageView.setupAutoLayout(with: configuration?.pinPreferences)
-        spinButton.setupAutoLayout(with: configuration?.spinButtonPreferences)
-        spinButton.configure(with: configuration?.spinButtonPreferences)
+        setupPinImageView()
+        setupSpinButton()
     }
 
 }
@@ -161,7 +188,7 @@ extension SwiftFortuneWheel: SpinningAnimatorProtocol {
     }
     
     
-    /// Rotates to the specified index
+    /// Rotates to the specified angle offset
     /// - Parameters:
     ///   - rotationOffset: Rotation offset
     ///   - animationDuration: Animation duration
@@ -175,13 +202,13 @@ extension SwiftFortuneWheel: SpinningAnimatorProtocol {
     }
     
 
-    /// Start animating
+    /// Starts rotation animation and stops rotation at the specified rotation offset angle
     /// - Parameters:
     ///   - rotationOffset: Rotation offset
     ///   - fullRotationsUntilFinish: Full rotations until start deceleration
     ///   - animationDuration: Animation duration
     ///   - completion: Completion handler
-    open func startAnimating(rotationOffset: CGFloat = 0.0, fullRotationsUntilFinish: Int = 13, animationDuration: CFTimeInterval = 5.000, _ completion:((Bool) -> Void)?) {
+    open func startAnimating(rotationOffset: CGFloat, fullRotationsUntilFinish: Int = 13, animationDuration: CFTimeInterval = 5.000, _ completion: ((Bool) -> Void)?) {
         
         self.stopAnimating()
         self.animator.addRotationAnimation(fullRotationsUntilFinish: fullRotationsUntilFinish,
@@ -190,15 +217,15 @@ extension SwiftFortuneWheel: SpinningAnimatorProtocol {
                                            completionBlock: completion)
     }
 
-    /// Start animating
+    /// Starts rotation animation and stops rotation at the specified index
     /// - Parameters:
     ///   - finishIndex: Finish at index
     ///   - fullRotationsUntilFinish: Full rotations until start deceleration
     ///   - animationDuration: Animation duration
     ///   - completion: Completion handler
-    open func startAnimating(finishIndex:Int = 0, fullRotationsUntilFinish: Int = 13, animationDuration: CFTimeInterval = 5.000, _ completion:((Bool) -> Void)?) {
-        
-        let rotation = 360.0 - computeRadian(from: finishIndex)
+    open func startAnimating(finishIndex: Int, fullRotationsUntilFinish: Int = 13, animationDuration: CFTimeInterval = 5.000, _ completion: ((Bool) -> Void)?) {
+        let _index = finishIndex < self.slices.count ? finishIndex : self.slices.count - 1
+        let rotation = 360.0 - computeRadian(from: _index)
         self.startAnimating(rotationOffset: rotation,
                             fullRotationsUntilFinish: fullRotationsUntilFinish,
                             animationDuration: animationDuration,
@@ -206,42 +233,42 @@ extension SwiftFortuneWheel: SpinningAnimatorProtocol {
     }
 
 
-    /// Start animating
+    /// Starts indefinite rotation and stops rotation at the specified index
     /// - Parameters:
     ///   - indefiniteRotationTimeInSeconds: full rotation time in seconds before stops
     ///   - finishIndex: finished at index
     ///   - completion: completion
-    open func startAnimating(indefiniteRotationTimeInSeconds: Int, finishIndex: Int, _ completion:((Bool) -> Void)?) {
-        
+    open func startAnimating(indefiniteRotationTimeInSeconds: Int, finishIndex: Int, _ completion: ((Bool) -> Void)?) {
+        let _index = finishIndex < self.slices.count ? finishIndex : self.slices.count - 1
         self.startAnimating()
         let deadline = DispatchTime.now() + DispatchTimeInterval.seconds(indefiniteRotationTimeInSeconds)
         DispatchQueue.main.asyncAfter(deadline: deadline) {
-            self.startAnimating(finishIndex: finishIndex) { (finished) in
+            self.startAnimating(finishIndex: _index) { (finished) in
                 completion?(finished)
             }
         }
     }
 
-    /// Start indefinite rotation animating
+    /// Starts indefinite rotation animation
     open func startAnimating() {
         self.animator.addIndefiniteRotationAnimation()
     }
 
-    /// Stop animating
+    /// Stops all animations
     open func stopAnimating() {
         self.layerToAnimate?.removeAllAnimations()
     }
 
-    /// Start animating
+    /// Starts rotation animation and stops rotation at the specified index and rotation angle offset
     /// - Parameters:
     ///   - finishIndex: finished at index
     ///   - rotationOffset: Rotation offset
     ///   - fullRotationsUntilFinish: Full rotations until start deceleration
     ///   - animationDuration: Animation duration
     ///   - completion: completion
-    open func startAnimating(finishIndex:Int = 0, rotationOffset:CGFloat, fullRotationsUntilFinish: Int = 13, animationDuration: CFTimeInterval = 5.000, _ completion:((Bool) -> Void)?) {
-        
-        let rotation = 360.0 - computeRadian(from: finishIndex) + rotationOffset
+    open func startAnimating(finishIndex: Int, rotationOffset: CGFloat, fullRotationsUntilFinish: Int = 13, animationDuration: CFTimeInterval = 5.000, _ completion: ((Bool) -> Void)?) {
+        let _index = finishIndex < self.slices.count ? finishIndex : self.slices.count - 1
+        let rotation = 360.0 - computeRadian(from: _index) + rotationOffset
         self.startAnimating(rotationOffset: rotation,
                             fullRotationsUntilFinish: fullRotationsUntilFinish,
                             animationDuration: animationDuration,
@@ -252,45 +279,45 @@ extension SwiftFortuneWheel: SpinningAnimatorProtocol {
 
 public extension SwiftFortuneWheel {
 
-    /// Pin image name from assets catalog
+    /// Pin image name from assets catalog, sets image to the `pinImageView`
     @IBInspectable var pinImage: String? {
         set { _pinImageName = newValue }
         get { return _pinImageName }
     }
 
-    /// Pin image is hidden
+    /// is `pinImageView` hidden
     @IBInspectable var isPinHidden: Bool {
-        set { pinImageView.isHidden = newValue }
-        get { return pinImageView.isHidden }
+        set { pinImageView?.isHidden = newValue }
+        get { return pinImageView?.isHidden ?? false }
     }
 
-    /// Spin button image name from assets catalog
+    /// Spin button image name from assets catalog, sets image to the `spinButton`
     @IBInspectable var spinImage: String? {
         set { _spinButtonImageName = newValue }
         get { return _spinButtonImageName }
     }
 
-    /// Spin button background image from assets catalog
+    /// Spin button background image from assets catalog, sets background image to the `spinButton`
     @IBInspectable var spinBackgroundImage: String? {
         set { _spinButtonBackgroundImageName = newValue }
         get { return _spinButtonBackgroundImageName }
     }
 
-    /// Spin button title text
+    /// Spin button title text, sets title text to the `spinButton`
     @IBInspectable var spinTitle: String? {
-        set { spinButton.setTitle(newValue, for: .normal) }
-        get { return spinButton.titleLabel?.text }
+        set { _spinTitle = newValue }
+        get { return _spinTitle }
     }
 
-    /// Spin button is hidden
+    /// Is `spinButton` hidden
     @IBInspectable var isSpinHidden: Bool {
-        set { spinButton.isHidden = newValue }
-        get { return spinButton.isHidden }
+        set { spinButton?.isHidden = newValue }
+        get { return spinButton?.isHidden ?? false }
     }
 
-    /// Spin button is enabled
+    /// Is `spinButton` enabled
     @IBInspectable var isSpinEnabled: Bool {
-        set { spinButton.isEnabled = newValue }
-        get { return spinButton.isEnabled }
+        set { spinButton?.isEnabled = newValue }
+        get { return spinButton?.isEnabled ?? true }
     }
 }

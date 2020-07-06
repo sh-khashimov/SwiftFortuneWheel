@@ -10,34 +10,32 @@ import Foundation
 import UIKit
 
 /// Configuration, contains preferences to configure a fortune wheel
-public struct SwiftFortuneWheelConfiguration {
+public struct SFWConfiguration {
 
     /// Spin button preferences
-    public var spinButtonPreferences: SpinButtonPreferences
+    public var spinButtonPreferences: SpinButtonPreferences?
 
     /// Pin (arrow) view preferences
-    public var pinPreferences: PinImageViewPreferences
+    public var pinPreferences: PinImageViewPreferences?
 
     /// Wheel preferences
     public var wheelPreferences: WheelPreferences
 
     /// Initiates a configuration
     /// - Parameters:
-    ///   - spinButtonPreferences: Spin button preferences
-    ///   - pinPreferences: Pin (arrow) view preferences
     ///   - wheelPreferences: Wheel preferences
-    public init(spinButtonPreferences: SpinButtonPreferences,
-                pinPreferences: PinImageViewPreferences,
-                wheelPreferences: WheelPreferences) {
-        self.spinButtonPreferences = spinButtonPreferences
-        self.pinPreferences = pinPreferences
+    ///   - pinPreferences: Pin (arrow) view preferences, `optional`
+    ///   - spinButtonPreferences: Spin button preferences, `optional`
+    public init(wheelPreferences: WheelPreferences,
+                pinPreferences: PinImageViewPreferences? = nil,
+                spinButtonPreferences: SpinButtonPreferences? = nil) {
         self.wheelPreferences = wheelPreferences
-
-        self.wheelPreferences.startPosition = self.pinPreferences.position
+        self.pinPreferences = pinPreferences
+        self.spinButtonPreferences = spinButtonPreferences
     }
 }
 
-public extension SwiftFortuneWheelConfiguration {
+public extension SFWConfiguration {
     /// Wheel preferences
     struct WheelPreferences {
 
@@ -46,6 +44,9 @@ public extension SwiftFortuneWheelConfiguration {
 
         /// Slice preferences
         public var slicePreferences: SlicePreferences
+
+        /// Start position, should be equal to FortuneWheelConfiguration.pinPreferences.position
+        public var startPosition: Position
 
         /// Layer insets, used to center the drawing such that offseted graphics(e.g Shadows, Outer Glows) are not clipped.
         /// Can be increased to any size if needed.
@@ -60,19 +61,18 @@ public extension SwiftFortuneWheelConfiguration {
         /// Image anchor for each slice, located at the center of wheel's border
         public var centerImageAnchor: AnchorImage?
 
-        /// Start position, should be equal to FortuneWheelConfiguration.pinPreferences.position
-        var startPosition: Position
-
         /// Initiates a wheel preferences
         /// - Parameters:
         ///   - circlePreferences: Circle preferences
         ///   - slicePreferences: Slice preferences
+        ///   - startPosition: Start position, should be equal to FortuneWheelConfiguration.pinPreferences.position
         ///   - layerInsets: Layer insets, default value is `UIEdgeInsets(top: -50, left: -50, bottom: -50, right: -50)`
         ///   - contentMargins: Margins for content inside a slide
         ///   - imageAnchor: Image anchor for each slice, located at the wheel's border, `optional`
         ///   - centerImageAnchor: Image anchor for each slice, located at the center of wheel's border, `optional`
         public init(circlePreferences: CirclePreferences,
                     slicePreferences: SlicePreferences,
+                    startPosition: Position,
                     layerInsets: UIEdgeInsets = UIEdgeInsets(top: -50, left: -50, bottom: -50, right: -50),
                     contentMargins: Margins = Margins(),
                     imageAnchor: AnchorImage? = nil,
@@ -80,7 +80,7 @@ public extension SwiftFortuneWheelConfiguration {
             self.circlePreferences = circlePreferences
             self.slicePreferences = slicePreferences
             self.layerInsets = layerInsets
-            self.startPosition = .top
+            self.startPosition = startPosition
             self.imageAnchor = imageAnchor
             self.centerImageAnchor = centerImageAnchor
             self.contentMargins = contentMargins
@@ -88,7 +88,7 @@ public extension SwiftFortuneWheelConfiguration {
     }
 }
 
-public extension SwiftFortuneWheelConfiguration {
+public extension SFWConfiguration {
     /// Circle preferences
     struct CirclePreferences {
 
@@ -110,7 +110,7 @@ public extension SwiftFortuneWheelConfiguration {
     }
 }
 
-public extension SwiftFortuneWheelConfiguration {
+public extension SFWConfiguration {
     /// Slice preferences
     struct SlicePreferences {
 
@@ -138,7 +138,7 @@ public extension SwiftFortuneWheelConfiguration {
     }
 }
 
-public extension SwiftFortuneWheelConfiguration {
+public extension SFWConfiguration {
     /// Spin button preferences
     struct SpinButtonPreferences {
 
@@ -166,6 +166,9 @@ public extension SwiftFortuneWheelConfiguration {
         /// Text Color
         public var textColor: UIColor
 
+        /// Text Color
+        public var disabledTextColor: UIColor
+
         /// Font
         public var font: UIFont
 
@@ -178,6 +181,7 @@ public extension SwiftFortuneWheelConfiguration {
         ///   - horizontalOffset: Horizontal offset, default value is `0`
         ///   - verticalOffset: Vertical offset, default value is `0`
         ///   - textColor: Text color, default value is `.black`
+        ///   - disabledTextColor: Disabled text color, default value is `.black`
         ///   - font: Font, default value is `.systemFont(ofSize: 16)`
         ///   - backgroundColor: Background color, default value is `.clear`
         public init(size: CGSize,
@@ -187,6 +191,7 @@ public extension SwiftFortuneWheelConfiguration {
                     horizontalOffset: CGFloat = 0,
                     verticalOffset: CGFloat = 0,
                     textColor: UIColor = .black,
+                    disabledTextColor: UIColor = .black,
                     font: UIFont = .systemFont(ofSize: 16),
                     backgroundColor: UIColor = .clear) {
             self.size = size
@@ -197,13 +202,14 @@ public extension SwiftFortuneWheelConfiguration {
             self.verticalOffset = verticalOffset
             self.backgroundColor = backgroundColor
             self.textColor = textColor
+            self.disabledTextColor = disabledTextColor
             self.font = font
         }
     }
 }
 
 
-public extension SwiftFortuneWheelConfiguration {
+public extension SFWConfiguration {
     /// Pin image view preferences
     struct PinImageViewPreferences {
 
@@ -249,7 +255,7 @@ public extension SwiftFortuneWheelConfiguration {
     }
 }
 
-public extension SwiftFortuneWheelConfiguration {
+public extension SFWConfiguration {
     /// Position, pin or start position
     enum Position {
         case top
@@ -274,7 +280,7 @@ public extension SwiftFortuneWheelConfiguration {
     }
 }
 
-public extension SwiftFortuneWheelConfiguration {
+public extension SFWConfiguration {
     /// Margins
     struct Margins {
 
@@ -317,7 +323,7 @@ public extension SwiftFortuneWheelConfiguration {
     }
 }
 
-public extension SwiftFortuneWheelConfiguration {
+public extension SFWConfiguration {
     /// Color type, used to color the item with the particularized pattern.
     /// `evenOddColors` -  decorates with a two-color pattern, for odd or even item in the list.
     /// `customPatternColors` - decorates with specified color for each item on the list.
@@ -327,7 +333,7 @@ public extension SwiftFortuneWheelConfiguration {
     }
 }
 
-public extension SwiftFortuneWheelConfiguration {
+public extension SFWConfiguration {
     /// Anchor image used  to add images around the wheel for each slice
     struct AnchorImage {
 

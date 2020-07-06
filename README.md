@@ -22,7 +22,10 @@ Fortune spinning wheel that supports dynamic content and rich customization.
 <img src="./Images/layout.gif" width="250"/><img src="./Images/rotation.gif" width="250"/>
 
 ## Getting Started
+
 - [**Getting started guide**](/Documentation/GettingStarted.md)
+- [**API Overview**](/Documentation/API_Overview.md)
+- [**Configuration In-Depth**](/Documentation/Configuration_indepth.md)
 
 ## Installation
 
@@ -45,13 +48,17 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-## Author
+## Migration
 
-Sherzod Khashimov
+[**from 0.x.x to 1.0.0**](/Documentation/Migrations/Migration_0_to_1.md)
 
 ## Changelog
 
 See [**changelog here**](/Documentation/Changelog.md)
+
+## Author
+
+Sherzod Khashimov
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
