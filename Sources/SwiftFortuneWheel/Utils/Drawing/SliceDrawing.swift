@@ -69,18 +69,27 @@ extension SliceDrawing {
                                          rotation: rotation,
                                          index: index,
                                          topOffset: topOffset)
-            case .image(let name, let preferenes):
+            case .assetImage(let name, let preferences):
                 self.drawImage(in: context,
                                imageName: name,
-                               preferences: preferenes,
+                               preferences: preferences,
                                rotation: rotation,
                                index: index,
                                topOffset: topOffset,
                                radius: radius)
-                topOffset += preferenes.preferredSize.height + preferenes.verticalOffset
-            case .line(let preferenes):
+                topOffset += preferences.preferredSize.height + preferences.verticalOffset
+            case .image(let image, let preferences):
+                self.drawImage(in: context,
+                               image: image,
+                               preferences: preferences,
+                               rotation: rotation,
+                               index: index,
+                               topOffset: topOffset,
+                               radius: radius)
+                topOffset += preferences.preferredSize.height + preferences.verticalOffset
+            case .line(let preferences):
                 self.drawLine(in: context,
-                              preferences: preferenes,
+                              preferences: preferences,
                               start: start,
                               and: end,
                               rotation: rotation,
@@ -88,7 +97,7 @@ extension SliceDrawing {
                               topOffset: topOffset,
                               radius: radius,
                               contextPositionCorrectionOffsetDegree: contextPositionCorrectionOffsetDegree)
-                topOffset += preferenes.height
+                topOffset += preferences.height
             }
         }
         
