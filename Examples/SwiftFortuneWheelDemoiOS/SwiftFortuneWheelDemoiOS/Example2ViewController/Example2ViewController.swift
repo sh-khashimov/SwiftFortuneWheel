@@ -15,8 +15,8 @@ class Example2ViewController: UIViewController {
         var slices: [Slice] = []
 
         for index in 1...4 {
-            let headerContent = Slice.ContentType.text(text: "\(index)", preferenes: .example2AmountTextPreferences)
-            let descriptionContent = Slice.ContentType.text(text: "DESCRIPTION", preferenes: .example2DescriptionTextPreferences)
+            let headerContent = Slice.ContentType.text(text: "\(index)", preferences: .example2AmountTextPreferences)
+            let descriptionContent = Slice.ContentType.text(text: "DESCRIPTION", preferences: .example2DescriptionTextPreferences)
             let slice = Slice(contents: [headerContent, descriptionContent])
             slices.append(slice)
         }

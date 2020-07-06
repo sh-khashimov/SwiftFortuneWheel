@@ -11,15 +11,15 @@ import SwiftFortuneWheel
 
 extension Prize {
     var sliceContentTypes: [Slice.ContentType] {
-        return [Slice.ContentType.text(text: amountFormatted, preferenes: .amountTextWithWhiteBlackColorsPreferences), Slice.ContentType.text(text: description, preferenes: .descriptionTextWithWhiteBlackColorsPreferences), Slice.ContentType.image(name: priceType.imageName, preferenes: .prizeImagePreferences)]
+        return [Slice.ContentType.text(text: amountFormatted, preferences: .amountTextWithWhiteBlackColorsPreferences), Slice.ContentType.text(text: description, preferences: .descriptionTextWithWhiteBlackColorsPreferences), Slice.ContentType.assetImage(name: priceType.imageName, preferences: .prizeImagePreferences)]
     }
 
     func sliceContentTypes(isMonotone: Bool, withLine: Bool = false) -> [Slice.ContentType] {
-        var sliceContentTypes = [Slice.ContentType.text(text: amountFormatted, preferenes: isMonotone ? .amountTextWithBlackColorPreferences : .amountTextWithWhiteBlackColorsPreferences),
-        Slice.ContentType.text(text: description, preferenes: isMonotone ? .descriptionTextWithBlackColorPreferences : .descriptionTextWithWhiteBlackColorsPreferences),
-        Slice.ContentType.image(name: priceType.imageName, preferenes: .prizeImagePreferences)]
+        var sliceContentTypes = [Slice.ContentType.text(text: amountFormatted, preferences: isMonotone ? .amountTextWithBlackColorPreferences : .amountTextWithWhiteBlackColorsPreferences),
+        Slice.ContentType.text(text: description, preferences: isMonotone ? .descriptionTextWithBlackColorPreferences : .descriptionTextWithWhiteBlackColorsPreferences),
+        Slice.ContentType.assetImage(name: priceType.imageName, preferences: .prizeImagePreferences)]
         if withLine {
-            sliceContentTypes.append(Slice.ContentType.line(preferenes: .defaultPreferences))
+            sliceContentTypes.append(Slice.ContentType.line(preferences: .defaultPreferences))
         }
         return sliceContentTypes
     }
