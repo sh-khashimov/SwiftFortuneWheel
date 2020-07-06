@@ -22,7 +22,7 @@ import SwiftFortuneWheel
 
 <img src="../Images/ibpreferences.png" width="300"/>
 
-> **For more information, see the [API Overview](/API_Overview.md)**.
+> **For more information, see the [API Overview](API_Overview.md)**.
 
 ``` Swift
 /// Fortune Wheel
@@ -46,7 +46,7 @@ slices.append(slice)
 let configuration: SFWConfiguration = .myWheelConfiguration
 ```
 
-> **For detail information, how to create a configuration object, see the [Configuration In-Depth](/Configuration_indepth.md)**.
+> **For detail information, how to create a configuration object, see the [Configuration In-Depth](Configuration_indepth.md)**.
 
 - Pass slices and configuration to the `SwiftFortuneWheel`:
 
@@ -63,7 +63,7 @@ fortuneWheel.startAnimating(indefiniteRotationTimeInSeconds: 1, finishIndex: 0) 
         }
 ```
 
-> **For more information, see the [API Overview](/API_Overview.md)**.
+> **For more information, see the [API Overview](API_Overview.md)**.
 
 </br>
 
@@ -93,7 +93,7 @@ fortuneWheel.startAnimating(indefiniteRotationTimeInSeconds: 1, finishIndex: 0) 
 
 > _Please note that in order to properly draw objects, `SwiftFortuneWheel` is rellies on `SFWConfiguration`. It’s up to you how to configure but without configuration, `SwiftFortuneWheel` won’t work properly._
 
-> **For detail information, how to create a configuration object, see the [Configuration In-Depth](/Configuration_indepth.md)**.
+> **For detail information, how to create a configuration object, see the [Configuration In-Depth](Configuration_indepth.md)**.
 
 
 
