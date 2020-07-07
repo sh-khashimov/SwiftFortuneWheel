@@ -43,7 +43,15 @@ slices.append(slice)
 
 
 ``` Swift
-let configuration: SFWConfiguration = .myWheelConfiguration
+let sliceColorType = SFWConfiguration.ColorType.evenOddColors(evenColor: .black, oddColor: .cyan)
+
+let slicePreferences = SFWConfiguration.SlicePreferences(backgroundColorType: sliceColorType, strokeWidth: 1, strokeColor: .black)
+
+let circlePreferences = SFWConfiguration.CirclePreferences(strokeWidth: 10, strokeColor: .black)
+
+let wheelPreferences = SFWConfiguration.WheelPreferences(circlePreferences: circlePreferences, slicePreferences: slicePreferences, startPosition: .bottom)
+
+let configuration = SFWConfiguration(wheelPreferences: wheelPreferences)
 ```
 
 > **For detail information, how to create a configuration object, see the [Configuration In-Depth](Configuration_indepth.md)**.
