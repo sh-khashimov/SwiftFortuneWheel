@@ -34,7 +34,7 @@ import SwiftFortuneWheel
 ``` Swift
 var slices: [Slice] = []
 let imagePreferences = ImagePreferences(preferredSize: CGSize(width: 40, height: 40), verticalOffset: 40)
-let imageSliceContent = Slice.ContentType.image(name: "crown", preferenes: imagePreferences)
+let imageSliceContent = Slice.ContentType.assetImage(name: "crown", preferenes: imagePreferences)
 let slice = Slice(contents: [imageSliceContent])
 slices.append(slice)
 ```
@@ -91,7 +91,7 @@ fortuneWheel.startAnimating(indefiniteRotationTimeInSeconds: 1, finishIndex: 0) 
 
 6. List of **`Slice.ContentType`**
 
-7. **`Slice.ContentType.image`** (configures with `ImagePreferences`)
+7. **`Slice.ContentType.image`** or **`Slice.ContentType.assetImage`** (configures with `ImagePreferences`)
 
 8. **`Slice.ContentType.text`** (configures with `TextPreferences`)
 

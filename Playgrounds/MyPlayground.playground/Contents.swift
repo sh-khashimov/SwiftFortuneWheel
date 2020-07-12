@@ -28,6 +28,12 @@ class MyViewController : UIViewController {
             slices.append(slice)
         }
 
+//        let headerContent = Slice.ContentType.text(text: "\(index)", preferences: .amountTextPreferences)
+//        let descriptionContent = Slice.ContentType.text(text: "1qwewew 2qwewe 3qwewewew", preferences: .descriptionTextPreferences)
+//        let slice = Slice(contents: [headerContent,
+//                                     descriptionContent, headerContent])
+//        slices.append(slice)
+
         let frame = CGRect(x: 35, y: 100, width: 300, height: 300)
 
         fortuneWheel = SwiftFortuneWheel(frame: frame, slices: slices, configuration: .defaultConfiguration)

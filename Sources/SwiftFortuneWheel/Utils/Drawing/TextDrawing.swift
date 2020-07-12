@@ -240,7 +240,7 @@ extension TextDrawing {
         var availableTextRects: [CGRect] = []
         
         /// Counts max available vertical lines and create for each line a max text rectangle
-        for line in 1...Int(maxLinesInSlice - 1) {
+        for line in 1..<Int(maxLinesInSlice) {
             /// Spacing between lines
             let spacing = line > 1 ? preferences.spacing : 0
             
@@ -333,7 +333,7 @@ extension TextDrawing {
             /// Current text rectangle
             let textRect = textRects[index]
             /// X position of the current line
-            let xPos = textRect.height * CGFloat(index + 1) + spacing - contextWidth / 2
+            let xPos = textRect.height * CGFloat(index + 1) + spacing - contextWidth / 2 - preferences.horizontalOffset
             
             context.saveGState()
             context.rotate(by: rotation * CGFloat.pi/180)

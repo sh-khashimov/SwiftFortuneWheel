@@ -120,8 +120,8 @@ public class SwiftFortuneWheel: UIControl {
         spinButton?.setupAutoLayout(with: spinButtonPreferences)
         DispatchQueue.main.async {
             self.spinButton?.setTitle(self.spinTitle, for: .normal)
-            self.spinButton?.backgroundImage(name: self._spinButtonImageName)
             self.spinButton?.image(name: self._spinButtonImageName)
+            self.spinButton?.backgroundImage(name: self._spinButtonBackgroundImageName)
         }
         spinButton?.configure(with: spinButtonPreferences)
         spinButton?.addTarget(self, action: #selector(spinAction), for: .touchUpInside)
@@ -319,7 +319,7 @@ public extension SwiftFortuneWheel {
 
     /// Is `spinButton` enabled
     @IBInspectable var isSpinEnabled: Bool {
-        set { spinButton?.isEnabled = newValue }
-        get { return spinButton?.isEnabled ?? true }
+        set { spinButton?.isUserInteractionEnabled = newValue }
+        get { return spinButton?.isUserInteractionEnabled ?? true }
     }
 }

@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import SwiftFortuneWheel
 
-private let circleStrokeWidth: CGFloat = 2
+private let circleStrokeWidth: CGFloat = 50
 private let blackColor = UIColor(white: 51.0 / 255.0, alpha: 1.0)
 private let cyanColor = UIColor.cyan
 
@@ -57,8 +57,8 @@ public extension SFWConfiguration.SlicePreferences {
     static var defaultSlicePreferenes: SFWConfiguration.SlicePreferences {
         let backgroundColorType = SFWConfiguration.ColorType.evenOddColors(evenColor: blackColor, oddColor: cyanColor)
         let preferences = SFWConfiguration.SlicePreferences(backgroundColorType: backgroundColorType,
-                                                                            strokeWidth: 1,
-                                                                            strokeColor: blackColor)
+                                                                            strokeWidth: 5,
+                                                                            strokeColor: .red)
         return preferences
     }
 }

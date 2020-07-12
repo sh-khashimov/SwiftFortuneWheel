@@ -56,7 +56,10 @@ extension PinImageView {
     /// Updates pin image
     /// - Parameter name: Image name from assets catalog
     func image(name: String?) {
-        guard let imageName = name else { return }
+        guard let imageName = name, imageName != "" else {
+            self.image = nil
+            return
+        }
         self.image = UIImage(named: imageName)
     }
 

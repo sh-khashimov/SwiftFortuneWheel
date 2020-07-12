@@ -25,8 +25,20 @@
 		2794D29C24B3977B00379B6A /* SFWConfiguration+RotationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2794D29B24B3977B00379B6A /* SFWConfiguration+RotationExample.swift */; };
 		279EEF8624B39D8000AD2AB2 /* RotationExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279EEF8524B39D8000AD2AB2 /* RotationExampleViewController.swift */; };
 		279EEF8824B39F5700AD2AB2 /* Various.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279EEF8724B39F5700AD2AB2 /* Various.storyboard */; };
+		279EEF9424B5C31C00AD2AB2 /* VariousWheelSpikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279EEF9324B5C31B00AD2AB2 /* VariousWheelSpikeViewController.swift */; };
+		27E8C95724B8CF480021205F /* VariousWheelSimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C95624B8CF480021205F /* VariousWheelSimpleViewController.swift */; };
+		27E8C95924B8CF690021205F /* SFWConfiguration+VariousWheelSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C95824B8CF690021205F /* SFWConfiguration+VariousWheelSimple.swift */; };
+		27E8C95B24B8D2D20021205F /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C95A24B8D2D20021205F /* Color+Hex.swift */; };
+		27E8C95E24B8D8560021205F /* VariousWheelJackpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C95D24B8D8560021205F /* VariousWheelJackpotViewController.swift */; };
+		27E8C96024B8D87E0021205F /* SFWConfiguration+VariousWheelJackpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C95F24B8D87E0021205F /* SFWConfiguration+VariousWheelJackpot.swift */; };
+		27E8C96324B8DFEE0021205F /* VariousWheelPodiumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C96224B8DFEE0021205F /* VariousWheelPodiumViewController.swift */; };
+		27E8C96524B8E1590021205F /* SFWConfiguration+VariousWheelPodium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C96424B8E1590021205F /* SFWConfiguration+VariousWheelPodium.swift */; };
+		27E8C96924B9B3250021205F /* Ode to Idle Gaming.otf in Resources */ = {isa = PBXBuildFile; fileRef = 27E8C96824B9B3250021205F /* Ode to Idle Gaming.otf */; };
+		27E8C96B24B9B42D0021205F /* ToyBox.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27E8C96A24B9B42D0021205F /* ToyBox.ttf */; };
 		27F7D5B924A51C5D004BEE19 /* WithoutStoryboardExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7D5B824A51C5D004BEE19 /* WithoutStoryboardExampleViewController.swift */; };
 		27F7D5BB24A51D01004BEE19 /* SFWConfiguration+WithoutStoryboardExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7D5BA24A51D01004BEE19 /* SFWConfiguration+WithoutStoryboardExample.swift */; };
+		27FA0A1B24B5C3D800CA1F02 /* SFWConfiguration+VariousWheelSpike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA0A1A24B5C3D800CA1F02 /* SFWConfiguration+VariousWheelSpike.swift */; };
+		27FA0A1D24B5CA1F00CA1F02 /* LayoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA0A1C24B5CA1F00CA1F02 /* LayoutCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,8 +75,20 @@
 		2794D29B24B3977B00379B6A /* SFWConfiguration+RotationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+RotationExample.swift"; sourceTree = "<group>"; };
 		279EEF8524B39D8000AD2AB2 /* RotationExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationExampleViewController.swift; sourceTree = "<group>"; };
 		279EEF8724B39F5700AD2AB2 /* Various.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Various.storyboard; sourceTree = "<group>"; };
+		279EEF9324B5C31B00AD2AB2 /* VariousWheelSpikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariousWheelSpikeViewController.swift; sourceTree = "<group>"; };
+		27E8C95624B8CF480021205F /* VariousWheelSimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariousWheelSimpleViewController.swift; sourceTree = "<group>"; };
+		27E8C95824B8CF690021205F /* SFWConfiguration+VariousWheelSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+VariousWheelSimple.swift"; sourceTree = "<group>"; };
+		27E8C95A24B8D2D20021205F /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		27E8C95D24B8D8560021205F /* VariousWheelJackpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariousWheelJackpotViewController.swift; sourceTree = "<group>"; };
+		27E8C95F24B8D87E0021205F /* SFWConfiguration+VariousWheelJackpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+VariousWheelJackpot.swift"; sourceTree = "<group>"; };
+		27E8C96224B8DFEE0021205F /* VariousWheelPodiumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariousWheelPodiumViewController.swift; sourceTree = "<group>"; };
+		27E8C96424B8E1590021205F /* SFWConfiguration+VariousWheelPodium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+VariousWheelPodium.swift"; sourceTree = "<group>"; };
+		27E8C96824B9B3250021205F /* Ode to Idle Gaming.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ode to Idle Gaming.otf"; sourceTree = "<group>"; };
+		27E8C96A24B9B42D0021205F /* ToyBox.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ToyBox.ttf; sourceTree = "<group>"; };
 		27F7D5B824A51C5D004BEE19 /* WithoutStoryboardExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutStoryboardExampleViewController.swift; sourceTree = "<group>"; };
 		27F7D5BA24A51D01004BEE19 /* SFWConfiguration+WithoutStoryboardExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+WithoutStoryboardExample.swift"; sourceTree = "<group>"; };
+		27FA0A1A24B5C3D800CA1F02 /* SFWConfiguration+VariousWheelSpike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+VariousWheelSpike.swift"; sourceTree = "<group>"; };
+		27FA0A1C24B5CA1F00CA1F02 /* LayoutCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				276E800124B37954004E9D82 /* LayoutExamplesViewController.swift */,
+				27FA0A1C24B5CA1F00CA1F02 /* LayoutCollectionViewCell.swift */,
 			);
 			path = LayoutExamples;
 			sourceTree = "<group>";
@@ -123,6 +148,8 @@
 				2710562F248D3C9D006C0181 /* SceneDelegate.swift */,
 				27105633248D3C9D006C0181 /* Main.storyboard */,
 				279EEF8724B39F5700AD2AB2 /* Various.storyboard */,
+				27E8C96A24B9B42D0021205F /* ToyBox.ttf */,
+				27E8C96824B9B3250021205F /* Ode to Idle Gaming.otf */,
 				27105636248D3C9F006C0181 /* Assets.xcassets */,
 				27105638248D3C9F006C0181 /* LaunchScreen.storyboard */,
 				2710563B248D3C9F006C0181 /* Info.plist */,
@@ -169,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				2703B4F5248E2A9500FB50F9 /* UIView+CornerRadius.swift */,
+				27E8C95A24B8D2D20021205F /* Color+Hex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -198,8 +226,48 @@
 		279EEF8924B39F7C00AD2AB2 /* Various */ = {
 			isa = PBXGroup;
 			children = (
+				27E8C96124B8DF900021205F /* VariousWheelPodium */,
+				27E8C95C24B8D8370021205F /* VariousWheelJackpot */,
+				27E8C95524B8CEFE0021205F /* VariousWheelSimple */,
+				279EEF9524B5C32900AD2AB2 /* VariousWheelSpike */,
 			);
 			path = Various;
+			sourceTree = "<group>";
+		};
+		279EEF9524B5C32900AD2AB2 /* VariousWheelSpike */ = {
+			isa = PBXGroup;
+			children = (
+				279EEF9324B5C31B00AD2AB2 /* VariousWheelSpikeViewController.swift */,
+				27FA0A1A24B5C3D800CA1F02 /* SFWConfiguration+VariousWheelSpike.swift */,
+			);
+			path = VariousWheelSpike;
+			sourceTree = "<group>";
+		};
+		27E8C95524B8CEFE0021205F /* VariousWheelSimple */ = {
+			isa = PBXGroup;
+			children = (
+				27E8C95624B8CF480021205F /* VariousWheelSimpleViewController.swift */,
+				27E8C95824B8CF690021205F /* SFWConfiguration+VariousWheelSimple.swift */,
+			);
+			path = VariousWheelSimple;
+			sourceTree = "<group>";
+		};
+		27E8C95C24B8D8370021205F /* VariousWheelJackpot */ = {
+			isa = PBXGroup;
+			children = (
+				27E8C95D24B8D8560021205F /* VariousWheelJackpotViewController.swift */,
+				27E8C95F24B8D87E0021205F /* SFWConfiguration+VariousWheelJackpot.swift */,
+			);
+			path = VariousWheelJackpot;
+			sourceTree = "<group>";
+		};
+		27E8C96124B8DF900021205F /* VariousWheelPodium */ = {
+			isa = PBXGroup;
+			children = (
+				27E8C96224B8DFEE0021205F /* VariousWheelPodiumViewController.swift */,
+				27E8C96424B8E1590021205F /* SFWConfiguration+VariousWheelPodium.swift */,
+			);
+			path = VariousWheelPodium;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +330,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2710563A248D3C9F006C0181 /* LaunchScreen.storyboard in Resources */,
+				27E8C96B24B9B42D0021205F /* ToyBox.ttf in Resources */,
 				27105637248D3C9F006C0181 /* Assets.xcassets in Resources */,
 				279EEF8824B39F5700AD2AB2 /* Various.storyboard in Resources */,
 				27105635248D3C9D006C0181 /* Main.storyboard in Resources */,
+				27E8C96924B9B3250021205F /* Ode to Idle Gaming.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,11 +345,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27E8C95E24B8D8560021205F /* VariousWheelJackpotViewController.swift in Sources */,
+				27FA0A1B24B5C3D800CA1F02 /* SFWConfiguration+VariousWheelSpike.swift in Sources */,
 				2710568D248D53EF006C0181 /* Prize.swift in Sources */,
+				27E8C96524B8E1590021205F /* SFWConfiguration+VariousWheelPodium.swift in Sources */,
 				2703B4F6248E2A9500FB50F9 /* UIView+CornerRadius.swift in Sources */,
 				27F7D5B924A51C5D004BEE19 /* WithoutStoryboardExampleViewController.swift in Sources */,
 				2710568F248D541B006C0181 /* Prize+SliceContentType.swift in Sources */,
+				27E8C95B24B8D2D20021205F /* Color+Hex.swift in Sources */,
 				279EEF8624B39D8000AD2AB2 /* RotationExampleViewController.swift in Sources */,
+				27FA0A1D24B5CA1F00CA1F02 /* LayoutCollectionViewCell.swift in Sources */,
+				27E8C95924B8CF690021205F /* SFWConfiguration+VariousWheelSimple.swift in Sources */,
+				27E8C96024B8D87E0021205F /* SFWConfiguration+VariousWheelJackpot.swift in Sources */,
 				27105687248D4E49006C0181 /* MainViewController.swift in Sources */,
 				276E800224B37954004E9D82 /* LayoutExamplesViewController.swift in Sources */,
 				27F7D5BB24A51D01004BEE19 /* SFWConfiguration+WithoutStoryboardExample.swift in Sources */,
@@ -287,7 +364,10 @@
 				276E7FFF24B378E5004E9D82 /* AnimatedRotationExampleViewController.swift in Sources */,
 				27105630248D3C9D006C0181 /* SceneDelegate.swift in Sources */,
 				2710568C248D53EF006C0181 /* SFWConfiguration+DynamicContentExample.swift in Sources */,
+				279EEF9424B5C31C00AD2AB2 /* VariousWheelSpikeViewController.swift in Sources */,
 				2794D29C24B3977B00379B6A /* SFWConfiguration+RotationExample.swift in Sources */,
+				27E8C96324B8DFEE0021205F /* VariousWheelPodiumViewController.swift in Sources */,
+				27E8C95724B8CF480021205F /* VariousWheelSimpleViewController.swift in Sources */,
 				27105689248D4EC8006C0181 /* DynamicContentViewExampleController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -40,8 +40,9 @@ extension ShapeDrawing {
     ///   - index: index
     ///   - topOffset: top offset
     ///   - radius: radius
+    ///   - margins: content margins   
     ///   - contextPositionCorrectionOffsetDegree: Context position correction offset degree
-    func drawLine(in context: CGContext, preferences: LinePreferences, start: CGFloat, and end: CGFloat, rotation: CGFloat, index: Int, topOffset: CGFloat, radius: CGFloat, contextPositionCorrectionOffsetDegree: CGFloat) {
+    func drawLine(in context: CGContext, preferences: LinePreferences, start: CGFloat, and end: CGFloat, rotation: CGFloat, index: Int, topOffset: CGFloat, radius: CGFloat, margins: SFWConfiguration.Margins, contextPositionCorrectionOffsetDegree: CGFloat) {
         
         let strokeColor = preferences.strokeColor(for: index)
         
@@ -50,7 +51,7 @@ extension ShapeDrawing {
         
         let strokeWidth = preferences.height
         
-        let yPosition = radius - preferences.verticalOffset - topOffset
+        let yPosition = radius - preferences.verticalOffset - topOffset - margins.top
         
         let path = UIBezierPath()
         let center = CGPoint(x: 0, y: 0)

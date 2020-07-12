@@ -41,14 +41,22 @@ extension SpinButton {
     /// Updates spin button image
     /// - Parameter name: Image name from assets catalog
     func image(name: String?) {
-        let image = UIImage(named: name ?? "")
+        guard let imageName = name, imageName != "" else {
+            self.setImage(nil, for: .normal)
+            return
+        }
+        let image = UIImage(named: imageName)
         self.setImage(image, for: .normal)
     }
 
     /// Updates spin button background image
     /// - Parameter name: Image name from assets catalog
     func backgroundImage(name: String?) {
-        let image = UIImage(named: name ?? "")
+        guard let imageName = name, imageName != "" else {
+            self.setBackgroundImage(nil, for: .normal)
+            return
+        }
+        let image = UIImage(named: imageName)
         self.setBackgroundImage(image, for: .normal)
     }
 

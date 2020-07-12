@@ -13,20 +13,6 @@ import UIKit
 protocol ImageDrawing {}
 
 extension ImageDrawing {
-    /// Draws image
-    /// - Parameters:
-    ///   - context: context where to draw
-    ///   - imageName: image  name from assets catalog
-    ///   - preferences: image preferences
-    ///   - rotation: rotation degree
-    ///   - index: index
-    ///   - topOffset: top offset
-    ///   - radius: radius
-    func drawImage(in context: CGContext, imageName: String, preferences: ImagePreferences, rotation: CGFloat, index: Int, topOffset: CGFloat, radius: CGFloat) {
-        guard let image = UIImage(named: imageName, in: nil, compatibleWith: nil) else { return }
-        self.drawImage(in: context, image: image, preferences: preferences, rotation: rotation, index: index, topOffset: topOffset, radius: radius)
-    }
-    
     
     /// Draws image
     /// - Parameters:
@@ -37,7 +23,8 @@ extension ImageDrawing {
     ///   - index: index
     ///   - topOffset: top offset
     ///   - radius: radius
-    func drawImage(in context: CGContext, image: UIImage, preferences: ImagePreferences, rotation: CGFloat, index: Int, topOffset: CGFloat, radius: CGFloat) {
+    ///   - margins: content margins   
+    func drawImage(in context: CGContext, image: UIImage, preferences: ImagePreferences, rotation: CGFloat, index: Int, topOffset: CGFloat, radius: CGFloat, margins: SFWConfiguration.Margins) {
         
         var image = image
         if let tintColor = preferences.tintColor {
@@ -53,8 +40,8 @@ extension ImageDrawing {
         context.rotate(by: rotation * CGFloat.pi/180)
 
         let aspectRatioRect = preferences.preferredSize.aspectFit(sizeImage: image.size)
-        let yPositionWithoutOffset = radius - preferences.verticalOffset - topOffset
-        let yPosition = yPositionWithoutOffset + (aspectRatioRect.size.height / 2)
+        let yPositionWithoutOffset = radius - preferences.verticalOffset - topOffset - margins.top
+        let yPosition = yPositionWithoutOffset
 
         let rectangle = CGRect(x: -(aspectRatioRect.size.width / 2), y: -yPosition, width: aspectRatioRect.size.width, height: aspectRatioRect.size.height)
 
@@ -89,7 +76,10 @@ extension ImageDrawing {
         // Coordinate now start from center
         context.translateBy(x: rotationOffset, y: rotationOffset)
 
-        guard var image = UIImage(named: imageAnchor.imageName, in: nil, compatibleWith: nil) else { return }
+        guard var image = UIImage(named: imageAnchor.imageName, in: nil, compatibleWith: nil) else {
+            context.restoreGState()
+            return
+        }
 
         if let tintColor = imageAnchor.tintColor {
             if #available(iOS 13.0, *) {

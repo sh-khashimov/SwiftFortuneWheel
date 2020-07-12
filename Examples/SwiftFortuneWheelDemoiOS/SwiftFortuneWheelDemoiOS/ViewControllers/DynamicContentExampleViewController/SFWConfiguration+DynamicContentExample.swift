@@ -30,7 +30,7 @@ extension SFWConfiguration {
         
         let slicePreferences = SFWConfiguration.SlicePreferences(backgroundColorType: sliceBackgroundColorType,
                                                                           strokeWidth: 1,
-                                                                          strokeColor: blackColor)
+                                                                          strokeColor: .darkGray)
         
         let wheelPreference = SFWConfiguration.WheelPreferences(circlePreferences: circlePreferences,
                                                                           slicePreferences: slicePreferences, startPosition: _position,
@@ -97,7 +97,7 @@ extension SFWConfiguration {
 extension ImagePreferences {
     static var prizeImagePreferences: ImagePreferences {
         let preferences = ImagePreferences(preferredSize: CGSize(width: 25, height: 25),
-                                           verticalOffset: 25,
+                                           verticalOffset: 10,
                                            flipUpsideDown: true)
         return preferences
     }
@@ -156,7 +156,7 @@ extension TextPreferences {
 extension LinePreferences {
     static var defaultPreferences: LinePreferences {
         let colorType = SFWConfiguration.ColorType.customPatternColors(colors: [.orange, .purple, .yellow, .blue, .brown, .green, .systemPink, .systemTeal, .brown, .green, .white, .black, .magenta], defaultColor: .red)
-        let preferences = LinePreferences(colorType: colorType, height: 2, verticalOffset: 0)
+        let preferences = LinePreferences(colorType: colorType, height: 2, verticalOffset: 10)
         return preferences
     }
 }

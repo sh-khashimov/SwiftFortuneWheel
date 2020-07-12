@@ -22,7 +22,9 @@ extension SliceDrawing {
     
     /// Content margins
     var margins: SFWConfiguration.Margins {
-        self.preferences?.contentMargins ?? SFWConfiguration.Margins()
+        var margins = self.preferences?.contentMargins ?? SFWConfiguration.Margins()
+        margins.top = margins.top + (self.preferences?.circlePreferences.strokeWidth ?? 0) / 2
+        return margins
     }
     
     
@@ -69,14 +71,19 @@ extension SliceDrawing {
                                          rotation: rotation,
                                          index: index,
                                          topOffset: topOffset)
-            case .assetImage(let name, let preferences):
+            case .assetImage(let imageName, let preferences):
+                guard imageName != "", let image = UIImage(named: imageName) else {
+                    topOffset += preferences.preferredSize.height + preferences.verticalOffset
+                    break
+                }
                 self.drawImage(in: context,
-                               imageName: name,
+                               image: image,
                                preferences: preferences,
                                rotation: rotation,
                                index: index,
                                topOffset: topOffset,
-                               radius: radius)
+                               radius: radius,
+                               margins: margins)
                 topOffset += preferences.preferredSize.height + preferences.verticalOffset
             case .image(let image, let preferences):
                 self.drawImage(in: context,
@@ -85,7 +92,8 @@ extension SliceDrawing {
                                rotation: rotation,
                                index: index,
                                topOffset: topOffset,
-                               radius: radius)
+                               radius: radius,
+                               margins: margins)
                 topOffset += preferences.preferredSize.height + preferences.verticalOffset
             case .line(let preferences):
                 self.drawLine(in: context,
@@ -96,6 +104,7 @@ extension SliceDrawing {
                               index: index,
                               topOffset: topOffset,
                               radius: radius,
+                              margins: margins,
                               contextPositionCorrectionOffsetDegree: contextPositionCorrectionOffsetDegree)
                 topOffset += preferences.height
             }
@@ -138,9 +147,23 @@ extension SliceDrawing {
         path.addArc(withCenter: center, radius: radius, startAngle: Calc.torad(start), endAngle: Calc.torad(end), clockwise: true)
         pathBackgroundColor?.setFill()
         path.fill()
-        strokeColor?.setStroke()
-        path.lineWidth = strokeWidth ?? 0
-        path.stroke()
+        
+        if rotation != end {
+            let line = UIBezierPath()
+            line.move(to: center)
+            line.addLine(to: CGPoint(x: (radius * (cos((end)*(CGFloat.pi/180)))), y: (radius * (sin((start)*(CGFloat.pi/180))))))
+            strokeColor?.setStroke()
+            line.lineWidth = strokeWidth ?? 0
+            line.stroke()
+            
+            let line2 = UIBezierPath()
+            line2.move(to: center)
+            line2.addLine(to: CGPoint(x: (radius * (cos((start)*(CGFloat.pi/180)))), y: (radius * (sin((end)*(CGFloat.pi/180))))))
+            strokeColor?.setStroke()
+            line2.lineWidth = strokeWidth ?? 0
+            line2.stroke()
+        }
+        
         context.restoreGState()
     }
     

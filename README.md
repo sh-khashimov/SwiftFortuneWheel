@@ -1,4 +1,6 @@
-# SwiftFortuneWheel
+
+
+<img src="./Images/header.png" width="500"/>
 
 [![Swift Version](https://img.shields.io/badge/Swift-5-orange.svg)]()
 [![Version](https://img.shields.io/cocoapods/v/SwiftFortuneWheel.svg?label=version)](https://cocoapods.org/pods/SwiftFortuneWheel)
@@ -6,7 +8,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/SwiftFortuneWheel.svg?style=flat)](https://cocoapods.org/pods/SwiftFortuneWheel)
 ![Documentation](./docs/badge.svg?style=flat&sanitize=true)
 
-Fortune spinning wheel that supports dynamic content and rich customization.
+Ultimate spinning wheel control that supports dynamic content and rich customization.
 
 | | Main Features |
 |---|---|
@@ -17,15 +19,25 @@ Fortune spinning wheel that supports dynamic content and rich customization.
 | 🎨 | Drawn and animated using CoreGraphics 
 | 🚀 | Written in Swift |
 
-## Preview
+### Dynamic Content and Rotation Preview
 
 <img src="./Images/layout.gif" width="250"/><img src="./Images/rotation.gif" width="250"/>
+
+> _Taken from [example projects](/Examples)_
+
+### Layout Preview
+
+<img src="./Images/screens/simple.png" width="250"/><img src="./Images/screens/spike.png" width="250"/>
+<img src="./Images/screens/podium.png" width="250"/><img src="./Images/screens/jackpot.png" width="250"/>
+
+> _Taken from [example projects](/Examples)_
 
 ## Getting Started
 
 - [**Getting started guide**](/Documentation/GettingStarted.md)
 - [**API Overview**](/Documentation/API_Overview.md)
 - [**Configuration In-Depth**](/Documentation/Configuration_indepth.md)
+- [**Example Projects**](/Examples)
 
 ## Installation
 

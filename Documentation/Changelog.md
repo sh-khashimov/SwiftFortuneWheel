@@ -1,5 +1,17 @@
 ## CHANGELOG
 
+### 1.0.1
+
+- Fixed layout warnings;
+- Fixed incorrect spinButton background image setting;
+- Fixed incorrect spinButton isEnabled setting;
+- Fixed incorrect content image position;
+- Fixed incorrect content line position;
+- Fixed incorrect slice border width;
+- Fixed incorrect content position after setting circle border height;
+- Fixed horizontal position in the vertical text;
+- Other small improvements are made;
+
 ### 1.0.0
 
 - Small improvements and bug fixes;
