@@ -8,7 +8,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/SwiftFortuneWheel.svg?style=flat)](https://cocoapods.org/pods/SwiftFortuneWheel)
 ![Documentation](./docs/badge.svg?style=flat&sanitize=true)
 
-Ultimate spinning wheel control that supports dynamic content and rich customization.
+The ultimate spinning wheel control that supports dynamic content and rich customization.
 
 | | Main Features |
 |---|---|
