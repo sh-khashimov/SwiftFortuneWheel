@@ -1,6 +1,6 @@
 
 
-<img src="./Images/header.png" width="350"/>
+<img src="./Images/header.png" width="350" alt="SwiftFortuneWheel"/>
 
 [![Swift Version](https://img.shields.io/badge/Swift-5-orange.svg)]()
 [![Version](https://img.shields.io/cocoapods/v/SwiftFortuneWheel.svg?label=version)](https://cocoapods.org/pods/SwiftFortuneWheel)
