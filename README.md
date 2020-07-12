@@ -19,16 +19,17 @@ Ultimate spinning wheel control that supports dynamic content and rich customiza
 | 🎨 | Drawn and animated using CoreGraphics 
 | 🚀 | Written in Swift |
 
-### Dynamic Content and Rotation Preview
-
-<img src="./Images/layout.gif" width="250"/><img src="./Images/rotation.gif" width="250"/>
-
-> _Taken from [example projects](/Examples)_
-
 ### Layout Preview
 
 <img src="./Images/screens/simple.png" width="250"/><img src="./Images/screens/spike.png" width="250"/>
+
 <img src="./Images/screens/podium.png" width="250"/><img src="./Images/screens/jackpot.png" width="250"/>
+
+> _Taken from [example projects](/Examples)_
+
+### Dynamic Content and Rotation Preview
+
+<img src="./Images/layout.gif" width="250"/><img src="./Images/rotation.gif" width="250"/>
 
 > _Taken from [example projects](/Examples)_
 
