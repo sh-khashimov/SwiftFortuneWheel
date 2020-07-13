@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="16097" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2xH-uU-JEx">
+    <device id="appleTV" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dynamic Content Example View Controller-->
+        <scene sceneID="TPc-TV-VND">
+            <objects>
+                <viewController id="1N1-mL-KPl" customClass="DynamicContentExampleViewController" customModule="SwiftFortuneWheelDemo_tvOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PQU-b1-Jxs"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wrd-g7-Rwq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ke3-Kc-pBs">
+                        <rect key="frame" x="0.0" y="0.0" width="1285.5" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bwj-lG-fRr">
+                                <rect key="frame" x="284" y="100" width="718" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="Black-Cyan Colors"/>
+                                    <segment title="Rainbow Colors"/>
+                                </segments>
+                                <connections>
+                                    <action selector="colorsTypeValueChanged:" destination="1N1-mL-KPl" eventType="valueChanged" id="O1X-Zg-JIM"/>
+                                </connections>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="heq-oj-o8U">
+                                <rect key="frame" x="359.5" y="229" width="567" height="86"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK5-3a-umM">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="86"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="Add Prize"/>
+                                        <connections>
+                                            <action selector="addPrizeAction:" destination="1N1-mL-KPl" eventType="primaryActionTriggered" id="9oL-wt-xjV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFT-S0-XSR">
+                                        <rect key="frame" x="260" y="0.0" width="307" height="86"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="Remove Prize"/>
+                                        <connections>
+                                            <action selector="removePrizeAction:" destination="1N1-mL-KPl" eventType="primaryActionTriggered" id="3bW-7x-qxx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tlN-yz-YzZ">
+                                <rect key="frame" x="389" y="375" width="508" height="69"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Draw curved line:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqV-Ad-HSC">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="69"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Pfd-pr-I8r">
+                                        <rect key="frame" x="308" y="0.0" width="200" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                        <segments>
+                                            <segment title="Off"/>
+                                            <segment title="On"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="drawCurverLineSegmentChanged:" destination="1N1-mL-KPl" eventType="valueChanged" id="eya-Yn-MF2"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUC-y4-Z80" customClass="SwiftFortuneWheel" customModule="SwiftFortuneWheel">
+                                <rect key="frame" x="395" y="484" width="496" height="496"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iUC-y4-Z80" secondAttribute="height" id="C6S-br-dqa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSpinEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="spinTitle" value="SPIN"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="pinImage" value="long-arrow-up"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Bwj-lG-fRr" firstAttribute="centerX" secondItem="ke3-Kc-pBs" secondAttribute="centerX" id="6P8-xf-MzJ"/>
+                            <constraint firstItem="tlN-yz-YzZ" firstAttribute="top" secondItem="heq-oj-o8U" secondAttribute="bottom" constant="60" id="6b0-eX-fdP"/>
+                            <constraint firstItem="heq-oj-o8U" firstAttribute="centerX" secondItem="ke3-Kc-pBs" secondAttribute="centerX" id="BZB-f4-PhR"/>
+                            <constraint firstItem="Wrd-g7-Rwq" firstAttribute="top" secondItem="iUC-y4-Z80" secondAttribute="bottom" constant="40" id="FuO-gC-Ver"/>
+                            <constraint firstItem="tlN-yz-YzZ" firstAttribute="centerX" secondItem="ke3-Kc-pBs" secondAttribute="centerX" id="VWF-Wb-lGh"/>
+                            <constraint firstItem="Bwj-lG-fRr" firstAttribute="top" secondItem="PQU-b1-Jxs" secondAttribute="bottom" constant="40" id="WKa-7w-cF4"/>
+                            <constraint firstItem="iUC-y4-Z80" firstAttribute="centerX" secondItem="ke3-Kc-pBs" secondAttribute="centerX" id="ZMD-nK-YEN"/>
+                            <constraint firstItem="iUC-y4-Z80" firstAttribute="top" secondItem="tlN-yz-YzZ" secondAttribute="bottom" constant="40" id="jnm-2U-HRl"/>
+                            <constraint firstItem="heq-oj-o8U" firstAttribute="top" secondItem="Bwj-lG-fRr" secondAttribute="bottom" constant="60" id="yS2-v9-Drg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CRH-BW-9k2"/>
+                    </view>
+                    <connections>
+                        <outlet property="colorsTypeSegment" destination="Bwj-lG-fRr" id="fOH-hx-CcN"/>
+                        <outlet property="drawCurvedLineSegment" destination="Pfd-pr-I8r" id="TNn-Ak-0Xi"/>
+                        <outlet property="fortuneWheel" destination="iUC-y4-Z80" id="kjQ-Gf-XJE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dzr-WX-1MS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="244"/>
+        </scene>
+        <!--SwiftFortuneWheel-->
+        <scene sceneID="kna-cb-zJA">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="txq-t5-7Od" customClass="MainViewController" customModule="SwiftFortuneWheelDemo_tvOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" id="fde-iB-bGH">
+                        <rect key="frame" x="0.0" y="0.0" width="634" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="bSD-oX-TBX" style="IBUITableViewCellStyleDefault" id="5Ec-wi-Ckc">
+                                <rect key="frame" x="90" y="66" width="499" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Ec-wi-Ckc" id="sHH-zW-uyw">
+                                    <rect key="frame" x="0.0" y="0.0" width="499" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bSD-oX-TBX">
+                                            <rect key="frame" x="20" y="0.0" width="459" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="txq-t5-7Od" id="bcD-75-eFP"/>
+                            <outlet property="delegate" destination="txq-t5-7Od" id="VVe-lZ-1qc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SwiftFortuneWheel" id="i0z-RA-h29"/>
+                    <connections>
+                        <outlet property="tabBarObservedScrollView" destination="fde-iB-bGH" id="6A4-XG-6kd"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Zy-x8-EHN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4042" y="-1225"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Z5h-F8-Tot">
+            <objects>
+                <navigationController id="oEe-bI-FyN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qea-4f-qWw">
+                        <rect key="frame" x="0.0" y="60" width="634" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="txq-t5-7Od" kind="relationship" relationship="rootViewController" id="eff-1E-Kxd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IKz-gE-Nai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="-1225"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="Y69-gP-VY8">
+            <objects>
+                <splitViewController id="2xH-uU-JEx" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="oEe-bI-FyN" kind="relationship" relationship="masterViewController" id="MBa-sz-wZK"/>
+                        <segue destination="1N1-mL-KPl" kind="relationship" relationship="detailViewController" id="Ip6-oq-PMF"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P1j-4x-5EP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-998" y="-517"/>
+        </scene>
+    </scenes>
+</document>

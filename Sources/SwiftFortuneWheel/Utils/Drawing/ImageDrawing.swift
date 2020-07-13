@@ -28,12 +28,21 @@ extension ImageDrawing {
         
         var image = image
         if let tintColor = preferences.tintColor {
+            #if os(tvOS)
+            if #available(tvOSApplicationExtension 13.0, *) {
+                image = image.withTintColor(tintColor, renderingMode: .alwaysTemplate)
+            } else {
+                // Fallback on earlier versions
+                image = image.withColor(tintColor)
+            }
+            #else
             if #available(iOS 13.0, *) {
                 image = image.withTintColor(tintColor, renderingMode: .alwaysTemplate)
             } else {
                 // Fallback on earlier versions
                 image = image.withColor(tintColor)
             }
+            #endif
         }
 
         context.saveGState()
@@ -82,12 +91,21 @@ extension ImageDrawing {
         }
 
         if let tintColor = imageAnchor.tintColor {
+            #if os(tvOS)
+            if #available(tvOSApplicationExtension 13.0, *) {
+                image = image.withTintColor(tintColor, renderingMode: .alwaysTemplate)
+            } else {
+                // Fallback on earlier versions
+                image = image.withColor(tintColor)
+            }
+            #else
             if #available(iOS 13.0, *) {
                 image = image.withTintColor(tintColor, renderingMode: .alwaysTemplate)
             } else {
                 // Fallback on earlier versions
                 image = image.withColor(tintColor)
             }
+            #endif
         }
 
         let centeredOffset: CGFloat = isCentered ? sliceDegree / 2 : 0

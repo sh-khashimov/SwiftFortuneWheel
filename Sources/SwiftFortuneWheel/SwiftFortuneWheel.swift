@@ -25,7 +25,7 @@ public class SwiftFortuneWheel: UIControl {
     private var spinButton: SpinButton?
 
     /// Animator
-    lazy private var animator:SpinningWheelAnimator = SpinningWheelAnimator(withObjectToAnimate: self)
+    lazy private var animator: SpinningWheelAnimator = SpinningWheelAnimator(withObjectToAnimate: self)
 
     /// Customizable configuration.
     /// Required in order to draw properly.
@@ -84,6 +84,20 @@ public class SwiftFortuneWheel: UIControl {
         setupWheelView()
         setupPinImageView()
         setupSpinButton()
+    }
+    
+    public override func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+        guard spinButton != nil else {
+            super.pressesEnded(presses, with: event)
+            return
+        }
+        for item in presses {
+            if item.type == .select {
+                onSpinButtonTap?()
+            } else {
+                super.pressesEnded(presses, with: event)
+            }
+        }
     }
 
     /// Adds pin image view to superview.
