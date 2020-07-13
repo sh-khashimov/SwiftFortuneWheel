@@ -6,8 +6,13 @@
 // 
 //
 
-import UIKit
 import CoreGraphics
+
+#if os(macOS)
+    import AppKit
+#else
+    import UIKit
+#endif
 
 /// Wheel layer
 class WheelLayer: CALayer {
@@ -34,7 +39,11 @@ class WheelLayer: CALayer {
         super.init()
         self.frame = frame
         self.backgroundColor = UIColor.clear.cgColor
+        #if os(macOS)
+        self.contentsScale = UIScreen.main?.scale ?? 1
+        #else
         self.contentsScale = UIScreen.main.scale
+        #endif
         updateSizes()
     }
     

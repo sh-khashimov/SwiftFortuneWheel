@@ -6,7 +6,11 @@
 // 
 //
 
-import UIKit
+#if os(macOS)
+    import AppKit
+#else
+    import UIKit
+#endif
 
 @IBDesignable
 /// Customizable Fortune spinning wheel control written in Swift.
@@ -67,7 +71,11 @@ public class SwiftFortuneWheel: UIControl {
     /// Spin button title
     private var _spinTitle: String? {
         didSet {
-            spinButton?.setTitle(_spinTitle, for: .normal)
+            #if os(macOS)
+            self.spinButton?.setTitle(self.spinTitle, attributes: configuration?.spinButtonPreferences?.textAttributes)
+            #else
+            self.spinButton?.setTitle(self.spinTitle, for: .normal)
+            #endif
         }
     }
 
@@ -86,6 +94,9 @@ public class SwiftFortuneWheel: UIControl {
         setupSpinButton()
     }
     
+    #if os(macOS)
+    //NO need to handle keyboard or gamepad presses on macos
+    #else
     public override func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
         guard spinButton != nil else {
             super.pressesEnded(presses, with: event)
@@ -99,6 +110,7 @@ public class SwiftFortuneWheel: UIControl {
             }
         }
     }
+    #endif
 
     /// Adds pin image view to superview.
     /// Updates its layouts and image if needed.
@@ -133,12 +145,20 @@ public class SwiftFortuneWheel: UIControl {
         }
         spinButton?.setupAutoLayout(with: spinButtonPreferences)
         DispatchQueue.main.async {
+            #if os(macOS)
+            self.spinButton?.setTitle(self.spinTitle, attributes: spinButtonPreferences.textAttributes)
+            #else
             self.spinButton?.setTitle(self.spinTitle, for: .normal)
+            #endif
             self.spinButton?.image(name: self._spinButtonImageName)
             self.spinButton?.backgroundImage(name: self._spinButtonBackgroundImageName)
         }
         spinButton?.configure(with: spinButtonPreferences)
+        #if os(macOS)
+        spinButton?.action = #selector(spinAction)
+        #else
         spinButton?.addTarget(self, action: #selector(spinAction), for: .touchUpInside)
+        #endif
     }
 
     @objc
@@ -154,10 +174,17 @@ public class SwiftFortuneWheel: UIControl {
         wheelView.setupAutoLayout()
     }
 
+    #if os(macOS)
+    public override func resize(withOldSuperviewSize oldSize: NSSize) {
+        super.resize(withOldSuperviewSize: oldSize)
+        self.layer?.needsDisplayOnBoundsChange = true
+    }
+    #else
     override public func layoutSubviews() {
         super.layoutSubviews()
         self.layer.needsDisplayOnBoundsChange = true
     }
+    #endif
 
     public required init?(coder aDecoder: NSCoder) {
         self.wheelView = WheelView(coder: aDecoder)
@@ -313,11 +340,13 @@ public extension SwiftFortuneWheel {
         get { return _spinButtonImageName }
     }
 
+    #if !os(macOS)
     /// Spin button background image from assets catalog, sets background image to the `spinButton`
     @IBInspectable var spinBackgroundImage: String? {
         set { _spinButtonBackgroundImageName = newValue }
         get { return _spinButtonBackgroundImageName }
     }
+    #endif
 
     /// Spin button title text, sets title text to the `spinButton`
     @IBInspectable var spinTitle: String? {

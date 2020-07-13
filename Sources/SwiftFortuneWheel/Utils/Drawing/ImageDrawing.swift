@@ -7,7 +7,12 @@
 //
 
 import Foundation
-import UIKit
+
+#if os(macOS)
+    import AppKit
+#else
+    import UIKit
+#endif
 
 /// Image drawing protocol
 protocol ImageDrawing {}
@@ -28,21 +33,7 @@ extension ImageDrawing {
         
         var image = image
         if let tintColor = preferences.tintColor {
-            #if os(tvOS)
-            if #available(tvOSApplicationExtension 13.0, *) {
-                image = image.withTintColor(tintColor, renderingMode: .alwaysTemplate)
-            } else {
-                // Fallback on earlier versions
-                image = image.withColor(tintColor)
-            }
-            #else
-            if #available(iOS 13.0, *) {
-                image = image.withTintColor(tintColor, renderingMode: .alwaysTemplate)
-            } else {
-                // Fallback on earlier versions
-                image = image.withColor(tintColor)
-            }
-            #endif
+            image = image.withTintColor(tintColor)
         }
 
         context.saveGState()
@@ -59,7 +50,11 @@ extension ImageDrawing {
             context.fill(rectangle)
         }
 
-        image.draw(in: rectangle, blendMode: .normal, alpha: 1)
+        #if os(macOS)
+            image.draw(in: rectangle)
+        #else
+            image.draw(in: rectangle, blendMode: .normal, alpha: 1)
+        #endif
 
         if preferences.flipUpsideDown {
             context.rotate(by: Calc.flipRotation)
@@ -85,27 +80,13 @@ extension ImageDrawing {
         // Coordinate now start from center
         context.translateBy(x: rotationOffset, y: rotationOffset)
 
-        guard var image = UIImage(named: imageAnchor.imageName, in: nil, compatibleWith: nil) else {
+        guard var image = UIImage(named: imageAnchor.imageName) else {
             context.restoreGState()
             return
         }
 
         if let tintColor = imageAnchor.tintColor {
-            #if os(tvOS)
-            if #available(tvOSApplicationExtension 13.0, *) {
-                image = image.withTintColor(tintColor, renderingMode: .alwaysTemplate)
-            } else {
-                // Fallback on earlier versions
-                image = image.withColor(tintColor)
-            }
-            #else
-            if #available(iOS 13.0, *) {
-                image = image.withTintColor(tintColor, renderingMode: .alwaysTemplate)
-            } else {
-                // Fallback on earlier versions
-                image = image.withColor(tintColor)
-            }
-            #endif
+            image = image.withTintColor(tintColor)
         }
 
         let centeredOffset: CGFloat = isCentered ? sliceDegree / 2 : 0
@@ -118,8 +99,12 @@ extension ImageDrawing {
         let xPosition: CGFloat = imageAnchor.size.width / 2
 
         let rectangle = CGRect(x: -xPosition, y: -yPosition, width: imageAnchor.size.width, height: imageAnchor.size.height)
-
-        image.draw(in: rectangle, blendMode: .normal, alpha: 1)
+        
+        #if os(macOS)
+            image.draw(in: rectangle)
+        #else
+            image.draw(in: rectangle, blendMode: .normal, alpha: 1)
+        #endif
 
         context.restoreGState()
         context.restoreGState()

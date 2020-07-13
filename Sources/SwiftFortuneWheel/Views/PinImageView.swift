@@ -6,7 +6,11 @@
 // 
 //
 
-import UIKit
+#if os(macOS)
+    import AppKit
+#else
+    import UIKit
+#endif
 
 /// Pin or anchor image view, that usually represents an arrow to point in selected slice.
 class PinImageView: UIImageView {

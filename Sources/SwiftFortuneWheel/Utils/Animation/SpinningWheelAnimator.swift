@@ -7,8 +7,13 @@
 //
 
 import Foundation
-import UIKit
 import CoreGraphics
+
+#if os(macOS)
+    import AppKit
+#else
+    import UIKit
+#endif
 
 /// Spinning animator protocol
 protocol SpinningAnimatorProtocol: class  {

@@ -7,7 +7,12 @@
 //
 
 import Foundation
-import UIKit
+
+#if os(macOS)
+    import AppKit
+#else
+    import UIKit
+#endif
 
 /// Slice object that will be drawn as a custom content
 public struct Slice {

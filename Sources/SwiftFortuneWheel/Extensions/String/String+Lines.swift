@@ -7,7 +7,12 @@
 //
 
 import Foundation
-import UIKit
+
+#if os(macOS)
+    import AppKit
+#else
+    import UIKit
+#endif
 
 extension String {
     /// Сounts the right amount of lines for text

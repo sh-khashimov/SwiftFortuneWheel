@@ -6,7 +6,11 @@
 //
 //
 
-import UIKit
+#if os(macOS)
+    import AppKit
+#else
+    import UIKit
+#endif
 
 /// Wheel view with slices.
 class WheelView: UIView {
@@ -28,7 +32,11 @@ class WheelView: UIView {
     var slices: [Slice] = [] {
         didSet {
             wheelLayer?.slices = slices
+            #if os(macOS)
+            self.setNeedsDisplay(self.frame)
+            #else
             self.setNeedsDisplay()
+            #endif
         }
     }
 
@@ -60,7 +68,11 @@ class WheelView: UIView {
     /// Updates wheel layer and adds to view layer.
     private func addWheelLayer() {
         wheelLayer = WheelLayer(frame: self.bounds, slices: self.slices, preferences: preferences)
+        #if os(macOS)
+        self.layer?.addSublayer(wheelLayer!)
+        #else
         self.layer.addSublayer(wheelLayer!)
+        #endif
         wheelLayer!.setNeedsDisplay()
     }
 

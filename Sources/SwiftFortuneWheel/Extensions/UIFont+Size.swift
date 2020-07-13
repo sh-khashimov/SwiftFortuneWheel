@@ -7,7 +7,12 @@
 //
 
 import Foundation
-import UIKit
+
+#if os(macOS)
+    import AppKit
+#else
+    import UIKit
+#endif
 
 extension UIFont {
     /// Calculates size of string
@@ -16,9 +21,14 @@ extension UIFont {
     ///   - width: maximum width
     /// - Returns: return size of string
     func sizeOfString(string: String, constrainedToWidth width: CGFloat) -> CGSize {
+        #if os(macOS)
+        let options = NSString.DrawingOptions.usesLineFragmentOrigin
+        #else
+            let options = NSStringDrawingOptions.usesLineFragmentOrigin
+        #endif
         return NSString(string: string).boundingRect(
             with: CGSize(width: width, height: CGFloat.greatestFiniteMagnitude),
-            options: NSStringDrawingOptions.usesLineFragmentOrigin,
+            options: options,
             attributes: [NSAttributedString.Key.font: self],
             context: nil
         ).size

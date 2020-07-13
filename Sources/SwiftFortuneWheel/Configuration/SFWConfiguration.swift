@@ -7,7 +7,12 @@
 //
 
 import Foundation
-import UIKit
+
+#if os(macOS)
+    import AppKit
+#else
+    import UIKit
+#endif
 
 /// Configuration, contains preferences to configure a fortune wheel
 public struct SFWConfiguration {
@@ -204,6 +209,20 @@ public extension SFWConfiguration {
             self.textColor = textColor
             self.disabledTextColor = disabledTextColor
             self.font = font
+        }
+
+        /// Creates text attributes, relative to slice index position
+        /// - Parameter index: Slice index
+        /// - Returns: Text attributes
+        var textAttributes: [NSAttributedString.Key:Any] {
+            let textStyle = NSMutableParagraphStyle()
+            textStyle.alignment = .center
+            textStyle.lineBreakMode = .byWordWrapping
+            let deafultAttributes:[NSAttributedString.Key: Any] =
+                [.font: self.font,
+                 .foregroundColor: textColor,
+                 .paragraphStyle: textStyle ]
+            return deafultAttributes
         }
     }
 }
