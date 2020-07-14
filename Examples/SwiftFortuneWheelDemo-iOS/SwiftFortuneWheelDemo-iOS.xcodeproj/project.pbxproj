@@ -26,6 +26,7 @@
 		279EEF8624B39D8000AD2AB2 /* RotationExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279EEF8524B39D8000AD2AB2 /* RotationExampleViewController.swift */; };
 		279EEF8824B39F5700AD2AB2 /* Various.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279EEF8724B39F5700AD2AB2 /* Various.storyboard */; };
 		279EEF9424B5C31C00AD2AB2 /* VariousWheelSpikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279EEF9324B5C31B00AD2AB2 /* VariousWheelSpikeViewController.swift */; };
+		27C6486E24BE1A6D00CB8167 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C6486D24BE1A6D00CB8167 /* SplitViewController.swift */; };
 		27E8C95724B8CF480021205F /* VariousWheelSimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C95624B8CF480021205F /* VariousWheelSimpleViewController.swift */; };
 		27E8C95924B8CF690021205F /* SFWConfiguration+VariousWheelSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C95824B8CF690021205F /* SFWConfiguration+VariousWheelSimple.swift */; };
 		27E8C95B24B8D2D20021205F /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C95A24B8D2D20021205F /* Color+Hex.swift */; };
@@ -77,6 +78,7 @@
 		279EEF8524B39D8000AD2AB2 /* RotationExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationExampleViewController.swift; sourceTree = "<group>"; };
 		279EEF8724B39F5700AD2AB2 /* Various.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Various.storyboard; sourceTree = "<group>"; };
 		279EEF9324B5C31B00AD2AB2 /* VariousWheelSpikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariousWheelSpikeViewController.swift; sourceTree = "<group>"; };
+		27C6486D24BE1A6D00CB8167 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		27E8C95624B8CF480021205F /* VariousWheelSimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariousWheelSimpleViewController.swift; sourceTree = "<group>"; };
 		27E8C95824B8CF690021205F /* SFWConfiguration+VariousWheelSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+VariousWheelSimple.swift"; sourceTree = "<group>"; };
 		27E8C95A24B8D2D20021205F /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				270CCFDC24B375A600924FBF /* LayoutExamples */,
 				279EEF8924B39F7C00AD2AB2 /* Various */,
 				27105686248D4E49006C0181 /* MainViewController.swift */,
+				27C6486D24BE1A6D00CB8167 /* SplitViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				27E8C95B24B8D2D20021205F /* Color+Hex.swift in Sources */,
 				279EEF8624B39D8000AD2AB2 /* RotationExampleViewController.swift in Sources */,
 				27FA0A1D24B5CA1F00CA1F02 /* LayoutCollectionViewCell.swift in Sources */,
+				27C6486E24BE1A6D00CB8167 /* SplitViewController.swift in Sources */,
 				27E8C95924B8CF690021205F /* SFWConfiguration+VariousWheelSimple.swift in Sources */,
 				27E8C96024B8D87E0021205F /* SFWConfiguration+VariousWheelJackpot.swift in Sources */,
 				27105687248D4E49006C0181 /* MainViewController.swift in Sources */,

@@ -23,22 +23,30 @@ class LayoutExamplesViewController: UIViewController {
     var layouts: [LayoutType] = LayoutType.allLayouts
     
     lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
+        return createLayout()
+    }()
+    
+    func createLayout() -> UICollectionViewCompositionalLayout {
+        let spacing: CGFloat = 15
+        
+        let count = (collectionView.bounds.width / 500).rounded(.down)
+        
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                              heightDimension: .fractionalHeight(1.0))
+                                              heightDimension: .estimated(300))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .fractionalWidth(1))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                               heightDimension: .estimated(300))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: max(1, Int(count)))
+        group.interItemSpacing = .fixed(spacing)
         
         let section = NSCollectionLayoutSection(group: group)
-        let spacing: CGFloat = 15
         section.contentInsets = .init(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
         section.interGroupSpacing = spacing
         
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
-    }()
+    }
     
     lazy var dataSource: DataSource = {
         let dataSource = DataSource(
@@ -60,6 +68,17 @@ class LayoutExamplesViewController: UIViewController {
         self.title = "Various Layout Examples"
         // Do any additional setup after loading the view.
         applySnapshot(animatingDifferences: false)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.compositionalLayout = createLayout()
+        collectionView.collectionViewLayout = compositionalLayout
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        collectionView.collectionViewLayout.invalidateLayout()
     }
     
     func applySnapshot(animatingDifferences: Bool = true) {

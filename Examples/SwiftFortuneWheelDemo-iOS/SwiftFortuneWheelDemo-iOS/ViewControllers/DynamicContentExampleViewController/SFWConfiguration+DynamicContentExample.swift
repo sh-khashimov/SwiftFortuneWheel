@@ -109,7 +109,7 @@ extension TextPreferences {
         let font = UIFont.systemFont(ofSize: 20, weight: .bold)
         let prefenreces = TextPreferences(textColorType: textColorType,
                                           font: font,
-                                          verticalOffset: 25,
+                                          verticalOffset: 10,
                                           flipUpsideDown: true,
                                           isCurved: true)
         return prefenreces
@@ -133,7 +133,7 @@ extension TextPreferences {
         let font = UIFont.systemFont(ofSize: 20, weight: .bold)
         let prefenreces = TextPreferences(textColorType: textColorType,
                                           font: font,
-                                          verticalOffset: 25,
+                                          verticalOffset: 10,
                                           flipUpsideDown: true,
                                           isCurved: true)
         return prefenreces
