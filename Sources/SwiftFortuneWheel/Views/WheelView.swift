@@ -49,16 +49,15 @@ class WheelView: UIView {
 
     override public func draw(_ rect: CGRect) {
         super.draw(rect)
-        if let existing = wheelLayer {
-            existing.removeFromSuperlayer()
-            wheelLayer = nil
-        }
         addWheelLayer()
     }
 
 
     /// Updates wheel layer and adds to view layer.
     private func addWheelLayer() {
+        for layer in self.layer.sublayers ?? [] {
+            layer.removeFromSuperlayer()
+        }
         wheelLayer = WheelLayer(frame: self.bounds, slices: self.slices, preferences: preferences)
         self.layer.addSublayer(wheelLayer!)
         wheelLayer!.setNeedsDisplay()
