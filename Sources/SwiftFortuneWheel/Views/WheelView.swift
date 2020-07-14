@@ -49,28 +49,50 @@ class WheelView: UIView {
         self.preferences = preferences
         self.slices = slices
         super.init(frame: frame)
+        wantsLayer = true
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        wantsLayer = true
     }
+
+    #if os(macOS)
+    public override func layout() {
+        super.layout()
+        self.wheelLayer?.needsDisplayOnBoundsChange = true
+    }
+    #else
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+        self.layer.needsDisplayOnBoundsChange = true
+    }
+    #endif
 
     override public func draw(_ rect: CGRect) {
         super.draw(rect)
-        if let existing = wheelLayer {
-            existing.removeFromSuperlayer()
-            wheelLayer = nil
-        }
         addWheelLayer()
+    }
+    
+    public override var wantsDefaultClipping: Bool {
+        return false
     }
 
 
     /// Updates wheel layer and adds to view layer.
     private func addWheelLayer() {
-        wheelLayer = WheelLayer(frame: self.bounds, slices: self.slices, preferences: preferences)
+        for layer in self.layer?.sublayers ?? [] {
+            layer.removeFromSuperlayer()
+        }
         #if os(macOS)
+        // -MARK: I don't know how to fix clipping problem on macOS, if you have a better solution, I will be happy to know
+        let circleWidth = preferences?.circlePreferences.strokeWidth ?? 0
+        let frame = NSRect(x: self.bounds.origin.x + circleWidth / 2, y: self.bounds.origin.y + circleWidth / 2, width: self.bounds.width - circleWidth, height: self.bounds.height - circleWidth)
+        wheelLayer = WheelLayer(frame: frame, slices: self.slices, preferences: preferences)
         self.layer?.addSublayer(wheelLayer!)
         #else
+        let frame = self.bounds
+        wheelLayer = WheelLayer(frame: self.bounds, slices: self.slices, preferences: preferences)
         self.layer.addSublayer(wheelLayer!)
         #endif
         wheelLayer!.setNeedsDisplay()

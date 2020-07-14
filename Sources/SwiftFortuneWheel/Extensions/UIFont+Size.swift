@@ -22,7 +22,7 @@ extension UIFont {
     /// - Returns: return size of string
     func sizeOfString(string: String, constrainedToWidth width: CGFloat) -> CGSize {
         #if os(macOS)
-        let options = NSString.DrawingOptions.usesLineFragmentOrigin
+        let options = NSString.DrawingOptions.usesFontLeading
         #else
             let options = NSStringDrawingOptions.usesLineFragmentOrigin
         #endif

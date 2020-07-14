@@ -40,7 +40,7 @@ func UIGraphicsGetCurrentContext() -> CGContext? {
 
 func UIGraphicsPushContext(_ content: CGContext) {
     NSGraphicsContext.saveGraphicsState()
-    let nscg = NSGraphicsContext.init(cgContext: content, flipped: false)
+    let nscg = NSGraphicsContext.init(cgContext: content, flipped: true)
     NSGraphicsContext.current = nscg
 }
 
@@ -73,6 +73,15 @@ extension NSView {
         set {
             self.layer?.backgroundColor = newValue?.cgColor
         }
+    }
+    
+    
+    
+    func clearConstraints() {
+        for subview in self.subviews {
+            subview.clearConstraints()
+        }
+        self.removeConstraints(self.constraints)
     }
 }
 #endif
@@ -137,7 +146,8 @@ extension NSButton {
 #if os(macOS)
 extension CGRect {
     func inset(by margins: NSEdgeInsets) -> CGRect {
-        return self.insetBy(dx: (margins.left + margins.right) / 2, dy: (margins.top + margins.bottom) / 2)
+//        return self.insetBy(dx: (margins.left + margins.right) / 2, dy: (margins.top + margins.bottom) / 2)
+        return self.insetBy(dx: margins.left, dy: margins.top)
     }
 }
 #endif

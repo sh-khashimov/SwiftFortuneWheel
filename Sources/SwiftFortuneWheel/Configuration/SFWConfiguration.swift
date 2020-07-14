@@ -65,6 +65,14 @@ public extension SFWConfiguration {
 
         /// Image anchor for each slice, located at the center of wheel's border
         public var centerImageAnchor: AnchorImage?
+        
+        var layerInsetsWithCircleWidth: UIEdgeInsets {
+            let circleWidth = self.circlePreferences.strokeWidth
+            return UIEdgeInsets(top: layerInsets.top - circleWidth,
+                                left: layerInsets.left - circleWidth,
+                                bottom: layerInsets.bottom - circleWidth,
+                                right: layerInsets.right - circleWidth)
+        }
 
         /// Initiates a wheel preferences
         /// - Parameters:

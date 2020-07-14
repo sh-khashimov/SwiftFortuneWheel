@@ -21,6 +21,7 @@
 		2720684C24BC625C0025815D /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720684824BC625C0025815D /* UIView+CornerRadius.swift */; };
 		2720685024BC629C0025815D /* DynamicContentExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720684E24BC629C0025815D /* DynamicContentExampleViewController.swift */; };
 		2720685124BC629C0025815D /* SFWConfiguration+DynamicContentExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720684F24BC629C0025815D /* SFWConfiguration+DynamicContentExample.swift */; };
+		2722559D24BCE0D600950563 /* NoClippingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559C24BCE0D600950563 /* NoClippingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		2720684824BC625C0025815D /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
 		2720684E24BC629C0025815D /* DynamicContentExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicContentExampleViewController.swift; sourceTree = "<group>"; };
 		2720684F24BC629C0025815D /* SFWConfiguration+DynamicContentExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+DynamicContentExample.swift"; sourceTree = "<group>"; };
+		2722559C24BCE0D600950563 /* NoClippingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoClippingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				2720681624BC2BDB0025815D /* Main.storyboard */,
 				2720681924BC2BDB0025815D /* Info.plist */,
 				2720681A24BC2BDB0025815D /* SwiftFortuneWheelDemo_macOS.entitlements */,
+				2722559C24BCE0D600950563 /* NoClippingView.swift */,
 			);
 			path = "SwiftFortuneWheelDemo-macOS";
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				2720685024BC629C0025815D /* DynamicContentExampleViewController.swift in Sources */,
 				2720684924BC625C0025815D /* Prize.swift in Sources */,
 				2720684A24BC625C0025815D /* Prize+SliceContentType.swift in Sources */,
+				2722559D24BCE0D600950563 /* NoClippingView.swift in Sources */,
 				2720684C24BC625C0025815D /* UIView+CornerRadius.swift in Sources */,
 				2720681324BC2BD80025815D /* ViewController.swift in Sources */,
 				2720685124BC629C0025815D /* SFWConfiguration+DynamicContentExample.swift in Sources */,
@@ -503,6 +507,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftFortuneWheel.SwiftFortuneWheelDemo-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -521,6 +526,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftFortuneWheel.SwiftFortuneWheelDemo-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -23,6 +23,18 @@ class SpinButton: UIButton {
         // Drawing code
     }
     */
+    
+    override init(frame frameRect: NSRect) {
+        super.init(frame: frameRect)
+        self.wantsLayer = true
+        self.isBordered = false
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.wantsLayer = true
+        self.isBordered = false
+    }
 
 }
 
@@ -79,7 +91,6 @@ extension SpinButton {
     func configure(with preferences: SFWConfiguration.SpinButtonPreferences?) {
         self.backgroundColor = preferences?.backgroundColor
         #if os(macOS)
-        self.isBordered = false
         self.layer?.cornerRadius = preferences?.cornerRadius ?? 0
         self.layer?.borderWidth = preferences?.cornerWidth ?? 0
         self.layer?.borderColor = preferences?.cornerColor.cgColor

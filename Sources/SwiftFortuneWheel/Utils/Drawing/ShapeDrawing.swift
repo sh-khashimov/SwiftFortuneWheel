@@ -58,15 +58,26 @@ extension ShapeDrawing {
         
         let yPosition = radius - preferences.verticalOffset - topOffset - margins.top
         
-        let path = UIBezierPath()
+        let path = CGMutablePath()
         let center = CGPoint(x: 0, y: 0)
-        //        path.move(to: center)
-        path.addArc(withCenter: center, radius: -yPosition, startAngle: Calc.torad(start), endAngle: Calc.torad(end), clockwise: true)
-        UIColor.clear.setFill()
-        path.fill()
-        strokeColor.setStroke()
-        path.lineWidth = strokeWidth
-        path.stroke()
+        path.move(to: center)
+        path.addArc(center: center, radius: -yPosition, startAngle: Calc.torad(start), endAngle: Calc.torad(end), clockwise: false)
+        path.closeSubpath()
+        context.setStrokeColor(strokeColor.cgColor)
+        context.setLineWidth(strokeWidth)
+        context.addPath(path)
+        context.drawPath(using: .stroke)
+        
+//        let path = UIBezierPath()
+//        let center = CGPoint(x: 0, y: 0)
+//        //        path.move(to: center)
+//        path.addArc(withCenter: center, radius: -yPosition, startAngle: Calc.torad(start), endAngle: Calc.torad(end), clockwise: true)
+//        UIColor.clear.setFill()
+//        path.fill()
+//        strokeColor.setStroke()
+//        path.lineWidth = strokeWidth
+//        path.stroke()
+        
         context.restoreGState()
     }
 }

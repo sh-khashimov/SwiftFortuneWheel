@@ -146,8 +146,6 @@ extension SliceDrawing {
         let strokeColor = preferences?.slicePreferences.strokeColor
         let strokeWidth = preferences?.slicePreferences.strokeWidth
         
-        
-        
         let path = CGMutablePath()
         let center = CGPoint(x: 0, y: 0)
         path.move(to: center)

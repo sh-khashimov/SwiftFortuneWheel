@@ -11,10 +11,12 @@ import SwiftFortuneWheel
 
 class ViewController: NSViewController {
 
-    @IBOutlet weak var wrapperView: NSView!
+    @IBOutlet weak var wrapperView: NoClippingView!
+    @IBOutlet weak var drawCurvedLineSwitch: NSSwitch!
+    @IBOutlet weak var colorsTypeSegment: NSSegmentedControl!
     
     lazy var wheelControl: SwiftFortuneWheel = {
-        let frame = CGRect(x: 0, y: 0, width: 300, height: 300)
+        let frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         let wheelControl = SwiftFortuneWheel(frame: frame, slices: [], configuration: .blackCyanColorsConfiguration)
         wheelControl.onSpinButtonTap = { [weak self] in
             self?.startAnimating()
@@ -47,8 +49,9 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        drawCurvedLine = drawCurvedLineSwitch.state == .on
+        
         wrapperView.addSubview(wheelControl)
         layoutWheel()
         
@@ -69,19 +72,19 @@ class ViewController: NSViewController {
     func layoutWheel() {
         guard let superview = wheelControl.superview else { return }
         wheelControl.translatesAutoresizingMaskIntoConstraints = false
-        wheelControl.topAnchor.constraint(equalTo: superview.topAnchor, constant: 30).isActive = true
-        wheelControl.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 30).isActive = true
-        wheelControl.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -30).isActive = true
-        wheelControl.bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -30).isActive = true
+        wheelControl.topAnchor.constraint(equalTo: superview.topAnchor, constant: 0).isActive = true
+        wheelControl.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 0).isActive = true
+        wheelControl.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: 0).isActive = true
+        wheelControl.bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: 0).isActive = true
     }
 
     @IBAction func colorsTypeValueChanged(_ sender: Any) {
-//        switch colorsTypeSegment.selectedSegmentIndex {
-//        case 1:
-//            wheelControl.configuration = .rainbowColorsConfiguration
-//        default:
-//            wheelControl.configuration = .blackCyanColorsConfiguration
-//        }
+        switch colorsTypeSegment.selectedSegment {
+        case 1:
+            wheelControl.configuration = .rainbowColorsConfiguration
+        default:
+            wheelControl.configuration = .blackCyanColorsConfiguration
+        }
         updateSlices()
     }
 
@@ -106,8 +109,7 @@ class ViewController: NSViewController {
 
 
     func updateSlices() {
-//        let slices: [Slice] = prizes.map({ Slice(contents: $0.sliceContentTypes(isMonotone: colorsTypeSegment.selectedSegmentIndex == 1, withLine: drawCurvedLine)) })
-        let slices: [Slice] = prizes.map({ Slice(contents: $0.sliceContentTypes(isMonotone: false, withLine: drawCurvedLine)) })
+        let slices: [Slice] = prizes.map({ Slice(contents: $0.sliceContentTypes(isMonotone: colorsTypeSegment.selectedSegment == 1, withLine: drawCurvedLine)) })
 
         wheelControl.slices = slices
 

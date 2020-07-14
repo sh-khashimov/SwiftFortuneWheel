@@ -94,9 +94,11 @@ public class SwiftFortuneWheel: UIControl {
         setupSpinButton()
     }
     
-    #if os(macOS)
-    //NO need to handle keyboard or gamepad presses on macos
-    #else
+    public override var wantsDefaultClipping: Bool {
+        return false
+    }
+    
+    #if os(tvOS)
     public override func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
         guard spinButton != nil else {
             super.pressesEnded(presses, with: event)
@@ -155,6 +157,7 @@ public class SwiftFortuneWheel: UIControl {
         }
         spinButton?.configure(with: spinButtonPreferences)
         #if os(macOS)
+        spinButton?.target = self
         spinButton?.action = #selector(spinAction)
         #else
         spinButton?.addTarget(self, action: #selector(spinAction), for: .touchUpInside)
@@ -175,14 +178,12 @@ public class SwiftFortuneWheel: UIControl {
     }
 
     #if os(macOS)
-    public override func resize(withOldSuperviewSize oldSize: NSSize) {
-        super.resize(withOldSuperviewSize: oldSize)
-        self.layer?.needsDisplayOnBoundsChange = true
+    public override func layout() {
+        super.layout()
     }
     #else
     override public func layoutSubviews() {
         super.layoutSubviews()
-        self.layer.needsDisplayOnBoundsChange = true
     }
     #endif
 
@@ -207,11 +208,14 @@ extension SwiftFortuneWheel: SliceCalculating {}
 
 extension SwiftFortuneWheel: SpinningAnimatorProtocol {
 
-    //// Animation conformance
-    internal var layerToAnimate: SpinningAnimatable? {
-        return self.wheelView?.wheelLayer
-    }
-    
+        //// Animation conformance
+        internal var layerToAnimate: SpinningAnimatable? {
+            let layer = self.wheelView?.wheelLayer
+    //        layer?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+    //        layer?.position = CGPoint(x: self.frame.origin.x + self.frame.size.width/2, y: self.frame.origin.y + self.frame.size.height/2)
+    self.wheelView?.setAnchorPoint(anchorPoint: CGPoint(x: 0.5, y: 0.5))
+            return layer
+        }
     
     /// Rotates to the specified index
     /// - Parameters:
@@ -294,6 +298,7 @@ extension SwiftFortuneWheel: SpinningAnimatorProtocol {
 
     /// Starts indefinite rotation animation
     open func startAnimating() {
+        self.stopAnimating()
         self.animator.addIndefiniteRotationAnimation()
     }
 

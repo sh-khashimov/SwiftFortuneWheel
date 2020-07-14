@@ -30,6 +30,8 @@
 		27105684248D4C93006C0181 /* WheelLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710566E248D4C93006C0181 /* WheelLayer.swift */; };
 		27105685248D4C93006C0181 /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710566F248D4C93006C0181 /* WheelView.swift */; };
 		2720684224BC31190025815D /* macOSSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720684124BC31190025815D /* macOSSupport.swift */; };
+		2722559924BCA4A400950563 /* NSView+AnchorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559824BCA4A400950563 /* NSView+AnchorPoint.swift */; };
+		2722559B24BCD7F400950563 /* NoClippingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559A24BCD7F300950563 /* NoClippingLayer.swift */; };
 		277A6EBE249A9B450066C807 /* LinePreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A6EBD249A9B450066C807 /* LinePreferences.swift */; };
 		2787E56E24A728F900533AD4 /* String+Width.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2787E56D24A728F900533AD4 /* String+Width.swift */; };
 		2787E57024A7292F00533AD4 /* String+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2787E56F24A7292F00533AD4 /* String+Lines.swift */; };
@@ -77,6 +79,8 @@
 		2710566E248D4C93006C0181 /* WheelLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelLayer.swift; sourceTree = "<group>"; };
 		2710566F248D4C93006C0181 /* WheelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
 		2720684124BC31190025815D /* macOSSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSSupport.swift; sourceTree = "<group>"; };
+		2722559824BCA4A400950563 /* NSView+AnchorPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+AnchorPoint.swift"; sourceTree = "<group>"; };
+		2722559A24BCD7F300950563 /* NoClippingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoClippingLayer.swift; sourceTree = "<group>"; };
 		272B62C524A46FED00F19E41 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		277A6EBD249A9B450066C807 /* LinePreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinePreferences.swift; sourceTree = "<group>"; };
 		2787E56D24A728F900533AD4 /* String+Width.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Width.swift"; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 				27105667248D4C93006C0181 /* UIImage+TintColor.swift */,
 				27105668248D4C93006C0181 /* CGRest+AspectFit.swift */,
 				27105669248D4C93006C0181 /* Array+Default.swift */,
+				2722559824BCA4A400950563 /* NSView+AnchorPoint.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 				2710566D248D4C93006C0181 /* SpinButton.swift */,
 				2710566E248D4C93006C0181 /* WheelLayer.swift */,
 				2710566F248D4C93006C0181 /* WheelView.swift */,
+				2722559A24BCD7F300950563 /* NoClippingLayer.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 				27105674248D4C93006C0181 /* CurveTextDrawing.swift in Sources */,
 				27105673248D4C93006C0181 /* SliceDrawing.swift in Sources */,
 				2720684224BC31190025815D /* macOSSupport.swift in Sources */,
+				2722559924BCA4A400950563 /* NSView+AnchorPoint.swift in Sources */,
 				2710567D248D4C93006C0181 /* String+Crop.swift in Sources */,
 				2710567F248D4C93006C0181 /* CGRest+AspectFit.swift in Sources */,
 				27105683248D4C93006C0181 /* SpinButton.swift in Sources */,
@@ -427,6 +434,7 @@
 				2787E57024A7292F00533AD4 /* String+Lines.swift in Sources */,
 				27105680248D4C93006C0181 /* Array+Default.swift in Sources */,
 				27105677248D4C93006C0181 /* SpinningWheelAnimator.swift in Sources */,
+				2722559B24BCD7F400950563 /* NoClippingLayer.swift in Sources */,
 				2710567E248D4C93006C0181 /* UIImage+TintColor.swift in Sources */,
 				27105682248D4C93006C0181 /* PinImageView.swift in Sources */,
 				27F4807B24AEE426005886F6 /* ShapeDrawing.swift in Sources */,

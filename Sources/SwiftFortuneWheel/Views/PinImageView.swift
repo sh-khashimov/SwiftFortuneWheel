@@ -22,6 +22,10 @@ class PinImageView: UIImageView {
         // Drawing code
     }
     */
+    
+    override func updateConstraints() {
+        super.updateConstraints()
+    }
 
 }
 

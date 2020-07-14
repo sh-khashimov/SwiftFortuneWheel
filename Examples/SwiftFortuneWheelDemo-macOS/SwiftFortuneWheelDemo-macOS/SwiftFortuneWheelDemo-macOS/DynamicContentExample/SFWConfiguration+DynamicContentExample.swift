@@ -36,7 +36,6 @@ extension SFWConfiguration {
         let wheelPreference = SFWConfiguration.WheelPreferences(circlePreferences: circlePreferences,
                                                                           slicePreferences: slicePreferences, startPosition: _position,
                                                                           imageAnchor: imageAnchor)
-//        wheelPreference.layerInsets = UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30)
         
         let pinPreferences = SFWConfiguration.PinImageViewPreferences(size: CGSize(width: 50, height: 50),
                                                                                  position: _position,
@@ -114,7 +113,7 @@ extension TextPreferences {
                                           verticalOffset: 10,
                                           orientation: .horizontal,
                                           flipUpsideDown: true,
-                                          isCurved: false)
+                                          isCurved: true)
         return prefenreces
     }
     
@@ -126,7 +125,7 @@ extension TextPreferences {
                                           verticalOffset: 10,
                                           orientation: .horizontal,
                                           flipUpsideDown: true,
-                                          isCurved: true)
+                                          isCurved: false)
         return prefenreces
     }
     
