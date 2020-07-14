@@ -7,10 +7,15 @@
 //
 
 import Foundation
+
+#if os(macOS)
+import AppKit
+#else
 import UIKit
+#endif
 
 extension String {
-
+    
     /// Splits String to lines
     /// - Parameters:
     ///   - font: Font
@@ -18,54 +23,54 @@ extension String {
     ///   - lineBreak: Line break type
     ///   - splitCharacter: Split by the specified character
     /// - Returns: List of split strings to lines
-    func split(font: UIFont, lineWidths: [CGFloat], lineBreak: TextPreferences.LineBreakMode, splitCharacter: String = " ") -> [String] {
-
+    func split(font: SFWFont, lineWidths: [CGFloat], lineBreak: TextPreferences.LineBreakMode, splitCharacter: String = " ") -> [String] {
+        
         /// List of split strings to lines
         var linedStrings: [String] = []
-
+        
         /// Split character width
         let splitCharacterWidth = splitCharacter.width(by: font)
-
+        
         /// Available words for String
         let words = self.split(separator: splitCharacter.first!)
-
+        
         /// The minimum size of the last word
         var lastWordMinimumSize = CGFloat.greatestFiniteMagnitude
-
+        
         if let lastWord = words.last {
             lastWordMinimumSize = String(lastWord.suffix(4)).width(by: font)
         }
-
+        
         /// Latest added word to the lines
         var latestAddedWord = 0
-
+        
         /// Splits String to lines, up to last word
         for index in 0..<lineWidths.count {
-
+            
             /// String at the line
             var linedString = ""
-
+            
             /// Available width in line
             var availableWidthInLine = lineWidths[index]
-
+            
             /// Adds each word to line
             for wordIndex in latestAddedWord..<words.count {
-
+                
                 /// Check for although there are lines available, no more words are left.
                 guard latestAddedWord != words.count else { break }
-
+                
                 /// Is word first in the line
                 let isFirstWordInLine = linedString.count < 1
-
+                
                 /// Current word
                 let word = String(words[wordIndex])
-
+                
                 /// Word width, if it's not first in the line, adds the space before the word
                 let wordWidth = isFirstWordInLine ? word.width(by: font) : word.width(by: font) + splitCharacterWidth
-
+                
                 /// Is word fit in the line
                 let isWordFit = availableWidthInLine > wordWidth
-
+                
                 /// If word fit in the line, adds the word and calculates available width in the line for next word.
                 if isWordFit {
                     linedString = isFirstWordInLine ? linedString + word : linedString + splitCharacter + word
@@ -108,7 +113,7 @@ extension String {
             guard linedString.count > 0 else { continue }
             linedStrings.append(linedString)
         }
-
+        
         return linedStrings
     }
 }

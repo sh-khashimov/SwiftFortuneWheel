@@ -7,29 +7,34 @@
 //
 
 import Foundation
+
+#if os(macOS)
+import AppKit
+#else
 import UIKit
+#endif
 
 /// Image preferences
 public struct ImagePreferences {
-
+    
     /// Prefered image size, required
     public var preferredSize: CGSize
-
+    
     /// Horizontal offset in slice from the center
     public var horizontalOffset: CGFloat
-
+    
     /// Vertical offset in slice from the center
     public var verticalOffset: CGFloat
-
+    
     /// Flip the text upside down
     public var flipUpsideDown: Bool
-
+    
     /// Background color
-    public var backgroundColor: UIColor?
-
+    public var backgroundColor: SFWColor?
+    
     /// Tint color
-    public var tintColor: UIColor?
-
+    public var tintColor: SFWColor?
+    
     /// Initiates a image preferences
     /// - Parameters:
     ///   - preferredSize: Prefered image size, required
@@ -42,8 +47,8 @@ public struct ImagePreferences {
                 verticalOffset: CGFloat = 0,
                 horizontalOffset: CGFloat = 0,
                 flipUpsideDown: Bool = false,
-                tintColor: UIColor? = nil,
-                backgroundColor: UIColor? = nil) {
+                tintColor: SFWColor? = nil,
+                backgroundColor: SFWColor? = nil) {
         self.preferredSize = preferredSize
         self.horizontalOffset = horizontalOffset
         self.verticalOffset = verticalOffset

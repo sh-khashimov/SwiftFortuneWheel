@@ -6,20 +6,25 @@
 //
 
 import Foundation
+
+#if os(macOS)
+import AppKit
+#else
 import UIKit
+#endif
 
 /// Line Preferences
 public struct LinePreferences {
-
+    
     /// Stroke width
     public var height: CGFloat = 1
-
+    
     /// Stroke color type
     public var colorType: SFWConfiguration.ColorType
-
+    
     /// Vertical offset in slice from the center
     public var verticalOffset: CGFloat
-
+    
     /// Initiates a line preferences
     /// - Parameters:
     ///   - height: Line height, default value is `1`
@@ -35,9 +40,9 @@ public struct LinePreferences {
 }
 
 extension LinePreferences {
-    func strokeColor(for index: Int) -> UIColor {
-        var strokeColor = UIColor.clear
-
+    func strokeColor(for index: Int) -> SFWColor {
+        var strokeColor = SFWColor.clear
+        
         switch self.colorType {
         case .evenOddColors(let evenColor, let oddColor):
             strokeColor = index % 2 == 0 ? evenColor : oddColor

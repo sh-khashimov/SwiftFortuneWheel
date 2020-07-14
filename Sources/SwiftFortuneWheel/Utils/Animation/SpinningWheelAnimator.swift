@@ -7,8 +7,13 @@
 //
 
 import Foundation
-import UIKit
 import CoreGraphics
+
+#if os(macOS)
+    import AppKit
+#else
+    import UIKit
+#endif
 
 /// Spinning animator protocol
 protocol SpinningAnimatorProtocol: class  {
@@ -29,6 +34,14 @@ class SpinningWheelAnimator : NSObject, CAAnimationDelegate {
     /// Current rotation position used to know where is last time rotation stopped
     var currentRotationPosition: CGFloat?
     
+    var rotationDirectionOffset: CGFloat {
+        #if os(macOS)
+            return -1
+        #else
+            return 1
+        #endif
+    }
+    
     /// Initialize spinning wheel animator
     /// - Parameter animationObject: Animation object
     init(withObjectToAnimate animationObject:SpinningAnimatorProtocol) {
@@ -38,16 +51,18 @@ class SpinningWheelAnimator : NSObject, CAAnimationDelegate {
     /// Start indefinite rotation animation
     /// - Parameter rotationTime: Rotation time
     func addIndefiniteRotationAnimation(rotationTime: CFTimeInterval = 5.000) {
+        
+        let layer = animationObject.layerToAnimate
 
         let fillMode : String = CAMediaTimingFillMode.forwards.rawValue
         let starTransformAnim      = CAKeyframeAnimation(keyPath:"transform.rotation.z")
-        starTransformAnim.values   = [0, 7000 * CGFloat.pi/180]
+        starTransformAnim.values   = [0, 7000 * CGFloat.pi/180 * rotationDirectionOffset]
         starTransformAnim.keyTimes = [0, 1]
         starTransformAnim.duration = rotationTime
 
         let starRotationAnim : CAAnimationGroup = TTUtils.group(animations: [starTransformAnim], fillMode:fillMode)
         starRotationAnim.repeatCount = Float.infinity
-        animationObject.layerToAnimate?.add(starRotationAnim, forKey:"starRotationIndefiniteAnim")
+        layer?.add(starRotationAnim, forKey:"starRotationIndefiniteAnim")
     }
     
     /// Start rotation animation
@@ -78,7 +93,7 @@ class SpinningWheelAnimator : NSObject, CAAnimationDelegate {
 
         ////Star animation
         let starTransformAnim            = CAKeyframeAnimation(keyPath:"transform.rotation.z")
-        starTransformAnim.values         = [0, rotation * CGFloat.pi/180]
+        starTransformAnim.values         = [0, rotation * rotationDirectionOffset * CGFloat.pi/180]
         starTransformAnim.keyTimes       = [0, 1]
         starTransformAnim.duration       = animationDuration
         starTransformAnim.timingFunction = CAMediaTimingFunction(controlPoints: 0.0256, 0.874, 0.675, 1)

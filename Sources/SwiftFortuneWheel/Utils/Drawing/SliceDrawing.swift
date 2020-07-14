@@ -7,8 +7,13 @@
 //
 
 import Foundation
-import UIKit
 import CoreGraphics
+
+#if os(macOS)
+import AppKit
+#else
+import UIKit
+#endif
 
 /// Slice drawing protocol
 protocol SliceDrawing: WheelMathCalculating, SliceCalculating, TextDrawing, ImageDrawing, ShapeDrawing {}
@@ -51,7 +56,7 @@ extension SliceDrawing {
         // Coordinate now start from center
         context.translateBy(x: rotationOffset, y: rotationOffset)
         
-        // Draws slice path and background
+        //         Draws slice path and background
         self.drawPath(in: context,
                       backgroundColor: slice.backgroundColor,
                       start: start,
@@ -72,7 +77,7 @@ extension SliceDrawing {
                                          index: index,
                                          topOffset: topOffset)
             case .assetImage(let imageName, let preferences):
-                guard imageName != "", let image = UIImage(named: imageName) else {
+                guard imageName != "", let image = SFWImage(named: imageName) else {
                     topOffset += preferences.preferredSize.height + preferences.verticalOffset
                     break
                 }
@@ -120,7 +125,7 @@ extension SliceDrawing {
     ///   - end: end degree
     ///   - rotation: rotation degree
     ///   - index: index
-    private func drawPath(in context: CGContext, backgroundColor: UIColor?, start: CGFloat, and end: CGFloat, rotation:CGFloat, index: Int) {
+    private func drawPath(in context: CGContext, backgroundColor: SFWColor?, start: CGFloat, and end: CGFloat, rotation:CGFloat, index: Int) {
         
         context.saveGState()
         context.rotate(by: (rotation + contextPositionCorrectionOffsetDegree) * CGFloat.pi/180)
@@ -141,24 +146,36 @@ extension SliceDrawing {
         let strokeColor = preferences?.slicePreferences.strokeColor
         let strokeWidth = preferences?.slicePreferences.strokeWidth
         
-        let path = UIBezierPath()
+        let path = CGMutablePath()
         let center = CGPoint(x: 0, y: 0)
         path.move(to: center)
-        path.addArc(withCenter: center, radius: radius, startAngle: Calc.torad(start), endAngle: Calc.torad(end), clockwise: true)
-        pathBackgroundColor?.setFill()
-        path.fill()
+        path.addArc(center: center, radius: radius, startAngle: Calc.torad(start), endAngle: Calc.torad(end), clockwise: false)
+        path.closeSubpath()
+        context.setFillColor(pathBackgroundColor!.cgColor)
+        context.addPath(path)
+        context.drawPath(using: .fill)
+        
+        //        let path = UIBezierPath()
+        //        let center = CGPoint(x: 0, y: 0)
+        //        path.move(to: center)
+        //        path.addArc(withCenter: center, radius: radius, startAngle: Calc.torad(start), endAngle: Calc.torad(end), clockwise: true)
+        //        pathBackgroundColor?.setFill()
+        //        path.fill()
         
         if rotation != end {
+            let startPoint = CGPoint(x: (radius * (cos((end)*(CGFloat.pi/180)))), y: (radius * (sin((start)*(CGFloat.pi/180)))))
+            let endPoint = CGPoint(x: (radius * (cos((start)*(CGFloat.pi/180)))), y: (radius * (sin((end)*(CGFloat.pi/180)))))
+            
             let line = UIBezierPath()
             line.move(to: center)
-            line.addLine(to: CGPoint(x: (radius * (cos((end)*(CGFloat.pi/180)))), y: (radius * (sin((start)*(CGFloat.pi/180))))))
+            line.addLine(to: startPoint)
             strokeColor?.setStroke()
             line.lineWidth = strokeWidth ?? 0
             line.stroke()
             
             let line2 = UIBezierPath()
             line2.move(to: center)
-            line2.addLine(to: CGPoint(x: (radius * (cos((start)*(CGFloat.pi/180)))), y: (radius * (sin((end)*(CGFloat.pi/180))))))
+            line2.addLine(to: endPoint)
             strokeColor?.setStroke()
             line2.lineWidth = strokeWidth ?? 0
             line2.stroke()

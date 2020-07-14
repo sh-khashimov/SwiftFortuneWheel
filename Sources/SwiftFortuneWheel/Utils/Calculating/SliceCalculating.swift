@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIKit
+import CoreGraphics
 
 /// Slice calculation protocol
 protocol SliceCalculating {
@@ -20,19 +20,19 @@ extension SliceCalculating {
     var sliceDegree: CGFloat {
         return 360.0 / CGFloat(slices.count)
     }
-
+    
     /// Theta
     var theta: CGFloat {
         return sliceDegree * .pi / 180.0
     }
-
+    
     /// Calculates radion for index
     /// - Parameter finishIndex: index
     /// - Returns: radian
     func computeRadian(from finishIndex:Int) -> CGFloat {
         return CGFloat(finishIndex) * sliceDegree
     }
-
+    
     /// Segment height
     /// - Parameter radius: Radius
     /// - Returns: Segment height
