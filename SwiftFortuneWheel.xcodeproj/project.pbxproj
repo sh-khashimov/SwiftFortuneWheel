@@ -29,7 +29,7 @@
 		27105683248D4C93006C0181 /* SpinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710566D248D4C93006C0181 /* SpinButton.swift */; };
 		27105684248D4C93006C0181 /* WheelLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710566E248D4C93006C0181 /* WheelLayer.swift */; };
 		27105685248D4C93006C0181 /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710566F248D4C93006C0181 /* WheelView.swift */; };
-		2720684224BC31190025815D /* macOSSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720684124BC31190025815D /* macOSSupport.swift */; };
+		2720684224BC31190025815D /* macOSPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720684124BC31190025815D /* macOSPort.swift */; };
 		2722559924BCA4A400950563 /* NSView+AnchorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559824BCA4A400950563 /* NSView+AnchorPoint.swift */; };
 		2722559B24BCD7F400950563 /* NoClippingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559A24BCD7F300950563 /* NoClippingLayer.swift */; };
 		277A6EBE249A9B450066C807 /* LinePreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A6EBD249A9B450066C807 /* LinePreferences.swift */; };
@@ -78,7 +78,7 @@
 		2710566D248D4C93006C0181 /* SpinButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinButton.swift; sourceTree = "<group>"; };
 		2710566E248D4C93006C0181 /* WheelLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelLayer.swift; sourceTree = "<group>"; };
 		2710566F248D4C93006C0181 /* WheelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
-		2720684124BC31190025815D /* macOSSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSSupport.swift; sourceTree = "<group>"; };
+		2720684124BC31190025815D /* macOSPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSPort.swift; sourceTree = "<group>"; };
 		2722559824BCA4A400950563 /* NSView+AnchorPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+AnchorPoint.swift"; sourceTree = "<group>"; };
 		2722559A24BCD7F300950563 /* NoClippingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoClippingLayer.swift; sourceTree = "<group>"; };
 		272B62C524A46FED00F19E41 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -126,7 +126,7 @@
 				27105663248D4C93006C0181 /* Extensions */,
 				2710566A248D4C93006C0181 /* SwiftFortuneWheel.swift */,
 				2710566B248D4C93006C0181 /* Views */,
-				2720684124BC31190025815D /* macOSSupport.swift */,
+				2720684124BC31190025815D /* macOSPort.swift */,
 			);
 			path = SwiftFortuneWheel;
 			sourceTree = "<group>";
@@ -356,7 +356,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = SwiftFortuneWheel;
 				TargetAttributes = {
 					52D6D97B1BEFF229002C0205 = {
@@ -421,7 +421,7 @@
 				27105679248D4C93006C0181 /* WheelMathCalculating.swift in Sources */,
 				27105674248D4C93006C0181 /* CurveTextDrawing.swift in Sources */,
 				27105673248D4C93006C0181 /* SliceDrawing.swift in Sources */,
-				2720684224BC31190025815D /* macOSSupport.swift in Sources */,
+				2720684224BC31190025815D /* macOSPort.swift in Sources */,
 				2722559924BCA4A400950563 /* NSView+AnchorPoint.swift in Sources */,
 				2710567D248D4C93006C0181 /* String+Crop.swift in Sources */,
 				2710567F248D4C93006C0181 /* CGRest+AspectFit.swift in Sources */,
@@ -489,6 +489,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -549,6 +550,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -604,7 +606,7 @@
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TARGETED_DEVICE_FAMILY = "1,2,3,6";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
@@ -633,7 +635,7 @@
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TARGETED_DEVICE_FAMILY = "1,2,3,6";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;

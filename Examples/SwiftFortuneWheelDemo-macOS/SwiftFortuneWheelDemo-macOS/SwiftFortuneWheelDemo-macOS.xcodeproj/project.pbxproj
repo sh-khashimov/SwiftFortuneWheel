@@ -19,7 +19,6 @@
 		2720684A24BC625C0025815D /* Prize+SliceContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720684624BC625C0025815D /* Prize+SliceContentType.swift */; };
 		2720684B24BC625C0025815D /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720684724BC625C0025815D /* Color+Hex.swift */; };
 		2720684C24BC625C0025815D /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720684824BC625C0025815D /* UIView+CornerRadius.swift */; };
-		2720685024BC629C0025815D /* DynamicContentExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720684E24BC629C0025815D /* DynamicContentExampleViewController.swift */; };
 		2720685124BC629C0025815D /* SFWConfiguration+DynamicContentExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720684F24BC629C0025815D /* SFWConfiguration+DynamicContentExample.swift */; };
 		2722559D24BCE0D600950563 /* NoClippingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559C24BCE0D600950563 /* NoClippingView.swift */; };
 /* End PBXBuildFile section */
@@ -74,7 +73,6 @@
 		2720684624BC625C0025815D /* Prize+SliceContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Prize+SliceContentType.swift"; sourceTree = "<group>"; };
 		2720684724BC625C0025815D /* Color+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		2720684824BC625C0025815D /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
-		2720684E24BC629C0025815D /* DynamicContentExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicContentExampleViewController.swift; sourceTree = "<group>"; };
 		2720684F24BC629C0025815D /* SFWConfiguration+DynamicContentExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+DynamicContentExample.swift"; sourceTree = "<group>"; };
 		2722559C24BCE0D600950563 /* NoClippingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoClippingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,7 +129,7 @@
 			children = (
 				2720681024BC2BD80025815D /* AppDelegate.swift */,
 				2720681224BC2BD80025815D /* ViewController.swift */,
-				2720684D24BC629C0025815D /* DynamicContentExample */,
+				2720684F24BC629C0025815D /* SFWConfiguration+DynamicContentExample.swift */,
 				2720684524BC625C0025815D /* Extensions */,
 				2720684324BC625C0025815D /* Models */,
 				2720681424BC2BDB0025815D /* Assets.xcassets */,
@@ -185,15 +183,6 @@
 				2720684824BC625C0025815D /* UIView+CornerRadius.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		2720684D24BC629C0025815D /* DynamicContentExample */ = {
-			isa = PBXGroup;
-			children = (
-				2720684E24BC629C0025815D /* DynamicContentExampleViewController.swift */,
-				2720684F24BC629C0025815D /* SFWConfiguration+DynamicContentExample.swift */,
-			);
-			path = DynamicContentExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +249,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Sherzod Khashimov";
 				TargetAttributes = {
 					2720680C24BC2BD80025815D = {
@@ -328,7 +317,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2720684B24BC625C0025815D /* Color+Hex.swift in Sources */,
-				2720685024BC629C0025815D /* DynamicContentExampleViewController.swift in Sources */,
 				2720684924BC625C0025815D /* Prize.swift in Sources */,
 				2720684A24BC625C0025815D /* Prize+SliceContentType.swift in Sources */,
 				2722559D24BCE0D600950563 /* NoClippingView.swift in Sources */,
@@ -408,6 +396,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -468,6 +457,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

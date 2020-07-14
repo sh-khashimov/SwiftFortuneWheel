@@ -9,12 +9,12 @@
 import Foundation
 
 #if os(macOS)
-    import AppKit
+import AppKit
 #else
-    import UIKit
+import UIKit
 #endif
 
-extension UIFont {
+extension SFWFont {
     /// Calculates size of string
     /// - Parameters:
     ///   - string: string
@@ -24,7 +24,7 @@ extension UIFont {
         #if os(macOS)
         let options = NSString.DrawingOptions.usesFontLeading
         #else
-            let options = NSStringDrawingOptions.usesLineFragmentOrigin
+        let options = NSStringDrawingOptions.usesLineFragmentOrigin
         #endif
         return NSString(string: string).boundingRect(
             with: CGSize(width: width, height: CGFloat.greatestFiniteMagnitude),
@@ -33,7 +33,7 @@ extension UIFont {
             context: nil
         ).size
     }
-
+    
     /// Number of characters that fit witdh
     /// - Parameters:
     ///   - text: text
@@ -45,9 +45,9 @@ extension UIFont {
         let attributes = [kCTFontAttributeName : fontRef]
         let attributedString = NSAttributedString(string: text, attributes: attributes as [NSAttributedString.Key : Any])
         let frameSetterRef = CTFramesetterCreateWithAttributedString(attributedString as CFAttributedString)
-
+        
         var characterFitRange: CFRange = CFRange()
-
+        
         CTFramesetterSuggestFrameSizeWithConstraints(frameSetterRef, CFRangeMake(0, 0), nil, CGSize(width: width, height: CGFloat(numberOfLines)*self.lineHeight), &characterFitRange)
         return Int(characterFitRange.length)
     }

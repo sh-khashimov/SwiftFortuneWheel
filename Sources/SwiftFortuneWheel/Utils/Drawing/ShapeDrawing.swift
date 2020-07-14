@@ -9,9 +9,9 @@
 import Foundation
 
 #if os(macOS)
-    import AppKit
+import AppKit
 #else
-    import UIKit
+import UIKit
 #endif
 
 /// Shape drawing protocol
@@ -57,26 +57,15 @@ extension ShapeDrawing {
         let strokeWidth = preferences.height
         
         let yPosition = radius - preferences.verticalOffset - topOffset - margins.top
+        let center = CGPoint(x: 0, y: 0)
         
         let path = CGMutablePath()
-        let center = CGPoint(x: 0, y: 0)
-        path.move(to: center)
         path.addArc(center: center, radius: -yPosition, startAngle: Calc.torad(start), endAngle: Calc.torad(end), clockwise: false)
-        path.closeSubpath()
         context.setStrokeColor(strokeColor.cgColor)
+        context.setFillColor(SFWColor.clear.cgColor)
         context.setLineWidth(strokeWidth)
         context.addPath(path)
-        context.drawPath(using: .stroke)
-        
-//        let path = UIBezierPath()
-//        let center = CGPoint(x: 0, y: 0)
-//        //        path.move(to: center)
-//        path.addArc(withCenter: center, radius: -yPosition, startAngle: Calc.torad(start), endAngle: Calc.torad(end), clockwise: true)
-//        UIColor.clear.setFill()
-//        path.fill()
-//        strokeColor.setStroke()
-//        path.lineWidth = strokeWidth
-//        path.stroke()
+        context.strokePath()
         
         context.restoreGState()
     }

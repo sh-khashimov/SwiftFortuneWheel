@@ -8,17 +8,17 @@
 import Foundation
 
 #if os(macOS)
-    import AppKit
+import AppKit
 #else
-    import UIKit
+import UIKit
 #endif
 
-extension UIImage {
+extension SFWImage {
     /// Tint the image with color
     /// - Parameter color: Color
     /// - Returns: Tinted image
-    func withTintColor(_ tintColor: UIColor) -> UIImage {
-        var image: UIImage = self
+    func withTintColor(_ tintColor: SFWColor) -> SFWImage {
+        var image: SFWImage = self
         
         #if os(tvOS)
         if #available(tvOSApplicationExtension 13.0, *) {
@@ -28,7 +28,7 @@ extension UIImage {
             image = self.withColor(tintColor)
         }
         #elseif os(macOS)
-            image = self.withColor(tintColor)
+        image = self.withColor(tintColor)
         #else
         if #available(iOS 13.0, *) {
             image = self.withTintColor(tintColor, renderingMode: .alwaysTemplate)
@@ -41,7 +41,7 @@ extension UIImage {
         return image
     }
     
-    private func withColor(_ color: UIColor) -> UIImage {
+    private func withColor(_ color: SFWColor) -> SFWImage {
         #if os(macOS)
         return self.tint(color: color)
         #else

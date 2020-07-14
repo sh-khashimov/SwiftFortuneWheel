@@ -9,9 +9,9 @@
 import Foundation
 
 #if os(macOS)
-    import AppKit
+import AppKit
 #else
-    import UIKit
+import UIKit
 #endif
 
 /// Curved text drawing protocol

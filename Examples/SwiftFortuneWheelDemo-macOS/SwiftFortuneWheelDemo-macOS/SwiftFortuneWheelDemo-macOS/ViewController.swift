@@ -72,18 +72,20 @@ class ViewController: NSViewController {
     func layoutWheel() {
         guard let superview = wheelControl.superview else { return }
         wheelControl.translatesAutoresizingMaskIntoConstraints = false
-        wheelControl.topAnchor.constraint(equalTo: superview.topAnchor, constant: 0).isActive = true
-        wheelControl.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 0).isActive = true
-        wheelControl.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: 0).isActive = true
-        wheelControl.bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: 0).isActive = true
+        wheelControl.topAnchor.constraint(equalTo: superview.topAnchor, constant: 25).isActive = true
+        wheelControl.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 25).isActive = true
+        wheelControl.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -25).isActive = true
+        wheelControl.bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -25).isActive = true
     }
 
     @IBAction func colorsTypeValueChanged(_ sender: Any) {
         switch colorsTypeSegment.selectedSegment {
         case 1:
             wheelControl.configuration = .rainbowColorsConfiguration
+            wheelControl.pinImage = "long-arrow-up-black"
         default:
             wheelControl.configuration = .blackCyanColorsConfiguration
+            wheelControl.pinImage = "long-arrow-up"
         }
         updateSlices()
     }

@@ -9,9 +9,9 @@
 import Foundation
 
 #if os(macOS)
-    import AppKit
+import AppKit
 #else
-    import UIKit
+import UIKit
 #endif
 
 extension String {
@@ -20,7 +20,7 @@ extension String {
     ///   - font: Font
     ///   - spacing: Spacing between lines
     /// - Returns: Right amount of lines for text
-    func linesCount(for font: UIFont, spacing: CGFloat) -> Int {
+    func linesCount(for font: SFWFont, spacing: CGFloat) -> Int {
         let width = self.width(by: font)
         return max(1, Int((width / (font.pointSize + spacing)).rounded(.down)))
     }

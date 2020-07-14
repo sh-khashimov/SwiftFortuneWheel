@@ -10,9 +10,9 @@ import Foundation
 import CoreGraphics
 
 #if os(macOS)
-    import AppKit
+import AppKit
 #else
-    import UIKit
+import UIKit
 #endif
 
 /// Slice drawing protocol
@@ -56,7 +56,7 @@ extension SliceDrawing {
         // Coordinate now start from center
         context.translateBy(x: rotationOffset, y: rotationOffset)
         
-//         Draws slice path and background
+        //         Draws slice path and background
         self.drawPath(in: context,
                       backgroundColor: slice.backgroundColor,
                       start: start,
@@ -77,7 +77,7 @@ extension SliceDrawing {
                                          index: index,
                                          topOffset: topOffset)
             case .assetImage(let imageName, let preferences):
-                guard imageName != "", let image = UIImage(named: imageName) else {
+                guard imageName != "", let image = SFWImage(named: imageName) else {
                     topOffset += preferences.preferredSize.height + preferences.verticalOffset
                     break
                 }
@@ -125,7 +125,7 @@ extension SliceDrawing {
     ///   - end: end degree
     ///   - rotation: rotation degree
     ///   - index: index
-    private func drawPath(in context: CGContext, backgroundColor: UIColor?, start: CGFloat, and end: CGFloat, rotation:CGFloat, index: Int) {
+    private func drawPath(in context: CGContext, backgroundColor: SFWColor?, start: CGFloat, and end: CGFloat, rotation:CGFloat, index: Int) {
         
         context.saveGState()
         context.rotate(by: (rotation + contextPositionCorrectionOffsetDegree) * CGFloat.pi/180)
@@ -155,12 +155,12 @@ extension SliceDrawing {
         context.addPath(path)
         context.drawPath(using: .fill)
         
-//        let path = UIBezierPath()
-//        let center = CGPoint(x: 0, y: 0)
-//        path.move(to: center)
-//        path.addArc(withCenter: center, radius: radius, startAngle: Calc.torad(start), endAngle: Calc.torad(end), clockwise: true)
-//        pathBackgroundColor?.setFill()
-//        path.fill()
+        //        let path = UIBezierPath()
+        //        let center = CGPoint(x: 0, y: 0)
+        //        path.move(to: center)
+        //        path.addArc(withCenter: center, radius: radius, startAngle: Calc.torad(start), endAngle: Calc.torad(end), clockwise: true)
+        //        pathBackgroundColor?.setFill()
+        //        path.fill()
         
         if rotation != end {
             let startPoint = CGPoint(x: (radius * (cos((end)*(CGFloat.pi/180)))), y: (radius * (sin((start)*(CGFloat.pi/180)))))

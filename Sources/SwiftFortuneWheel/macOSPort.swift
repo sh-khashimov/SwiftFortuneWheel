@@ -1,5 +1,5 @@
 //
-//  macOSSupport.swift
+//  macOSPort.swift
 //  SwiftFortuneWheel
 //
 //  Created by Sherzod Khashimov on 7/13/20.
@@ -8,21 +8,28 @@
 import Foundation
 
 #if os(macOS)
-    import AppKit
-    typealias UIView = NSView
-    typealias UIImageView = NSImageView
-    typealias UIButton = NSButton
-    typealias UIBezierPath = NSBezierPath
-    typealias UIScreen = NSScreen
+import AppKit
+typealias UIView = NSView
+typealias UIImageView = NSImageView
+typealias UIButton = NSButton
+typealias UIBezierPath = NSBezierPath
+typealias UIScreen = NSScreen
 #endif
 
 #if os(macOS)
-    import AppKit
-    public typealias UIControl = NSControl
-    public typealias UIColor = NSColor
-    public typealias UIImage = NSImage
-    public typealias UIFont = NSFont
-    public typealias UIEdgeInsets = NSEdgeInsets
+import AppKit
+public typealias SFWControl = NSControl
+public typealias SFWColor = NSColor
+public typealias SFWImage = NSImage
+public typealias SFWFont = NSFont
+public typealias SFWEdgeInsets = NSEdgeInsets
+#else
+import UIKit
+public typealias SFWControl = UIControl
+public typealias SFWColor = UIColor
+public typealias SFWImage = UIImage
+public typealias SFWFont = UIFont
+public typealias SFWEdgeInsets = UIEdgeInsets
 #endif
 
 #if os(macOS)
@@ -75,13 +82,8 @@ extension NSView {
         }
     }
     
-    
-    
-    func clearConstraints() {
-        for subview in self.subviews {
-            subview.clearConstraints()
-        }
-        self.removeConstraints(self.constraints)
+    func layoutIfNeeded() {
+        self.layout()
     }
 }
 #endif
@@ -91,14 +93,14 @@ extension NSImage {
     func tint(color: NSColor) -> NSImage {
         let image = self.copy() as! NSImage
         image.lockFocus()
-
+        
         color.set()
-
+        
         let imageRect = NSRect(origin: NSZeroPoint, size: image.size)
         imageRect.fill(using: .sourceAtop)
-
+        
         image.unlockFocus()
-
+        
         return image
     }
 }
@@ -146,7 +148,7 @@ extension NSButton {
 #if os(macOS)
 extension CGRect {
     func inset(by margins: NSEdgeInsets) -> CGRect {
-//        return self.insetBy(dx: (margins.left + margins.right) / 2, dy: (margins.top + margins.bottom) / 2)
+        //        return self.insetBy(dx: (margins.left + margins.right) / 2, dy: (margins.top + margins.bottom) / 2)
         return self.insetBy(dx: margins.left, dy: margins.top)
     }
 }

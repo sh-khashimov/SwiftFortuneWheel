@@ -9,15 +9,15 @@
 import Foundation
 
 #if os(macOS)
-    import AppKit
+import AppKit
 #else
-    import UIKit
+import UIKit
 #endif
 
 class NoClippingLayer: CALayer {
     override var masksToBounds: Bool {
         set {
-
+            
         }
         get {
             return false

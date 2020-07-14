@@ -14,4 +14,25 @@ class NoClippingView: NSView {
         return false
     }
     
+    override var wantsLayer: Bool {
+        set {
+            
+        }
+        get {
+            return true
+        }
+    }
+    
+    override init(frame frameRect: NSRect) {
+        super.init(frame: frameRect)
+        self.wantsLayer = true
+        self.layer?.masksToBounds = false
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.wantsLayer = true
+        self.layer?.masksToBounds = false
+    }
+    
 }
