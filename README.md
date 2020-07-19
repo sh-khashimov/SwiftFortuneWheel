@@ -37,28 +37,32 @@ The ultimate spinning wheel control that supports dynamic content and rich custo
 
 <details>
   <summary>from iOS Example Project</summary>
-<img src="./Images/screens/simple.png" width="250"/><img src="./Images/screens/spike.png" width="250"/>
+<img src="./Images/screenshots/1.png" width="250"/><img src="./Images/screenshots/2.png" width="250"/><img src="./Images/screenshots/3.png" width="250"/><img src="./Images/screenshots/4.png" width="250"/><img src="./Images/screenshots/5.png" width="250"/><img src="./Images/screenshots/6.png" width="250"/><img src="./Images/screenshots/7.png" width="250"/>
 </details>
+
+- - -
 
 <details>
   <summary>from macOS Example Project</summary>
-<img src="./Images/screens/simple.png" width="250"/><img src="./Images/screens/spike.png" width="250"/>
+<img src="./Images/screenshots/macos.png" width="450"/>
 </details>
 
+- - -
 <details>
   <summary>from tvOS Example Project</summary>
-<img src="./Images/screens/simple.png" width="250"/><img src="./Images/screens/spike.png" width="250"/>
+<img src="./Images/screenshots/tvos.png" width="550"/>
 </details>
+
+- - -
 
 ## Documentation
 
 - [**Getting Started Guide**](/Documentation/GettingStarted.md)
 - [**API Overview**](/Documentation/API_Overview.md)
 - [**Configuration In-Depth**](/Documentation/Configuration_indepth.md)
-- [**Slice and Slice’s contents In-Depth**]()
-- [**About Port to Other Platforms**]()
+- [**About Slice and Slice’s contents**](/Documentation/About_Slice_and_Slice_contents.md)
+- [**About Port to Other Platforms**](/Documentation/Port_to_Other_Platforms.md)
 - [**Example Projects**](/Examples)
-
 ## Installation
 
 When you are ready to install, follow the [**Installation Guide**](/Documentation/Installation.md).

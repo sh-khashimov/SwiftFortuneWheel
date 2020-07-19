@@ -18,11 +18,11 @@ public extension SFWConfiguration {
 
 public extension SFWConfiguration.SpinButtonPreferences {
     static var defaultSpinButtonPreferences: SFWConfiguration.SpinButtonPreferences {
-        let preferences = SFWConfiguration.SpinButtonPreferences(size: CGSize(width: 80, height: 80),
-                                                                                    cornerRadius: 40,
-                                                                                    textColor: .white,
-                                                                                    font: .systemFont(ofSize: 20, weight: .bold),
-                                                                                    backgroundColor: blackColor)
+        var preferences = SFWConfiguration.SpinButtonPreferences(size: CGSize(width: 80, height: 80))
+        preferences.cornerRadius = 40
+        preferences.textColor = .white
+        preferences.font = .systemFont(ofSize: 20, weight: .bold)
+        preferences.backgroundColor = blackColor
         return preferences
     }
 }
@@ -66,9 +66,9 @@ public extension SFWConfiguration.SlicePreferences {
 
 public extension ImagePreferences {
     static var prizeImagePreferences: ImagePreferences {
-        let preferences = ImagePreferences(preferredSize: CGSize(width: 25, height: 25),
-                                           verticalOffset: 27,
-                                           flipUpsideDown: true)
+        var preferences = ImagePreferences(preferredSize: CGSize(width: 25, height: 25),
+                                           verticalOffset: 27)
+        preferences.flipUpsideDown = true
         return preferences
     }
 }
@@ -77,26 +77,27 @@ public extension TextPreferences {
     static var amountTextPreferences: TextPreferences {
         let textColorType = SFWConfiguration.ColorType.evenOddColors(evenColor: .white, oddColor: blackColor)
         let font = UIFont.systemFont(ofSize: 22, weight: .bold)
-        let prefenreces = TextPreferences(textColorType: textColorType,
+        var preferences = TextPreferences(textColorType: textColorType,
                                           font: font,
-                                          verticalOffset: 10,
-                                          isCurved: true)
-        return prefenreces
+                                          verticalOffset: 10)
+        
+        preferences.isCurved = true
+        return preferences
     }
 
     static var descriptionTextPreferences: TextPreferences {
         let textColorType = SFWConfiguration.ColorType.evenOddColors(evenColor: .white, oddColor: blackColor)
         let font = UIFont.systemFont(ofSize: 12, weight: .bold)
-        let prefenreces = TextPreferences(textColorType: textColorType,
+        var preferences = TextPreferences(textColorType: textColorType,
                                           font: font,
-                                          verticalOffset: 10,
-                                          orientation: .horizontal,
-                                          lineBreak: .truncateTail,
-                                          alignment: . center,
-                                          lines: 0,
-                                          spacing: 5,
-                                          flipUpsideDown: true,
-                                          isCurved: true)
-        return prefenreces
+                                          verticalOffset: 10)
+        preferences.orientation = .horizontal
+        preferences.lineBreakMode = .truncateTail
+        preferences.alignment = .center
+        preferences.numberOfLines = 0
+        preferences.spacing = 5
+        preferences.flipUpsideDown = true
+        preferences.isCurved = true
+        return preferences
     }
 }
