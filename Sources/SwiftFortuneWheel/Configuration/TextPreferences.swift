@@ -17,75 +17,50 @@ import UIKit
 /// Text preferemces
 public struct TextPreferences {
     
-    /// Horizontal offset in slice from the center
-    public var horizontalOffset: CGFloat
-    
-    /// Vertical offset in slice from the center
-    public var verticalOffset: CGFloat
-    
-    /// Flip the text upside down
-    public var flipUpsideDown: Bool
-    
     /// Text font
     public var font: SFWFont
     
     /// Text color type
     public var textColorType: SFWConfiguration.ColorType
     
-    /// Is text curved or not, works only with orientation equal to horizontal
-    public var isCurved: Bool
+    /// Horizontal offset in slice from the center, default value is `0`
+    public var horizontalOffset: CGFloat = 0
     
-    /// Text orientation
-    public var orientation: Orientation
+    /// Vertical offset in slice from the center
+    public var verticalOffset: CGFloat
     
-    /// The technique to use for wrapping and truncating the label’s text
-    public var lineBreakMode: LineBreakMode
+    /// Flip the text upside down, default value is `true`
+    public var flipUpsideDown: Bool = true
     
-    /// The maximum number of lines to use for rendering text.
-    public var numberOfLines: Int
+    /// Is text curved or not, works only with orientation equal to horizontal, default value is `true`
+    public var isCurved: Bool = true
     
-    /// Spacing between lines
-    public var spacing: CGFloat
+    /// Text orientation, default value is `.horizontal`
+    public var orientation: Orientation = .horizontal
     
-    /// The technique to use for aligning the text.
-    public var alignment: NSTextAlignment
+    /// The technique to use for wrapping and truncating the label’s text, default value is `.clip`
+    public var lineBreakMode: LineBreakMode = .clip
+    
+    /// The maximum number of lines to use for rendering text., default valie is `1`
+    public var numberOfLines: Int = 1
+    
+    /// Spacing between lines, default value is `3`
+    public var spacing: CGFloat = 3
+    
+    /// The technique to use for aligning the text, default value is `.left`
+    public var alignment: NSTextAlignment = .center
     
     /// Initiates a text preferences
     /// - Parameters:
     ///   - textColorType: Text color type
     ///   - font: Font
-    ///   - preferedFontSize: Prefered font size, requared to calculate a size
     ///   - verticalOffset: Vertical offset in slice from the center, default value is `0`
-    ///   - horizontalOffset: Horizontal offset in slice from the center, default value is `0`
-    ///   - orientation: Text orientation, default value is `.horizontal`
-    ///   - alignment: The technique to use for aligning the text, default value is `.left`
-    ///   - lineBreakMode: The technique to use for wrapping and truncating the label’s text, default value is `.clip`
-    ///   - numberOfLines: The maximum number of lines to use for rendering text., default valie is `1`
-    ///   - spacing: Spacing between lines, default value is `3`
-    ///   - flipUpsideDown: Flip the text upside down, default value is `false`
-    ///   - isCurved: Is text curved or not, works only with orientation equal to horizontal, default value is `true`
     public init(textColorType: SFWConfiguration.ColorType,
                 font: SFWFont,
-                verticalOffset: CGFloat = 0,
-                horizontalOffset: CGFloat = 0,
-                orientation: Orientation = .horizontal,
-                lineBreak: LineBreakMode = .clip,
-                alignment: NSTextAlignment = .center,
-                lines: Int = 1,
-                spacing: CGFloat = 3,
-                flipUpsideDown: Bool = true,
-                isCurved: Bool = true) {
+                verticalOffset: CGFloat = 0) {
         self.textColorType = textColorType
-        self.horizontalOffset = horizontalOffset
-        self.verticalOffset = verticalOffset
-        self.flipUpsideDown = flipUpsideDown
         self.font = font
-        self.isCurved = isCurved
-        self.orientation = orientation
-        self.lineBreakMode = lineBreak
-        self.numberOfLines = lines
-        self.spacing = spacing
-        self.alignment = alignment
+        self.verticalOffset = verticalOffset
     }
 }
 

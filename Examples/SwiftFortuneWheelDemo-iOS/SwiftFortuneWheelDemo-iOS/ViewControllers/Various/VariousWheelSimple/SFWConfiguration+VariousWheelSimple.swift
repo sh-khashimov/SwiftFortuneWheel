@@ -44,8 +44,7 @@ public extension TextPreferences {
     static var variousWheelSimpleText: TextPreferences {
         let textPreferences = TextPreferences(textColorType: SFWConfiguration.ColorType.customPatternColors(colors: nil, defaultColor: .white),
                                               font: .systemFont(ofSize: 16, weight: .bold),
-                                              verticalOffset: 12,
-                                              orientation: .horizontal)
+                                              verticalOffset: 12)
         return textPreferences
     }
 }

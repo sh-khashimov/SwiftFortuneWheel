@@ -310,7 +310,10 @@ extension SwiftFortuneWheel: SpinningAnimatorProtocol {
     }
     
     /// Starts indefinite rotation animation
-    open func startAnimating() {
+    /// - Parameters:
+    ///   - rotationTime: Rotation time is how many seconds needs to rotate all full rotation counts, default value is `5.000`
+    ///   - fullRotationCountInRotationTime: How many rotation should be done for spefied rotation time, default value is `7000`
+    open func startAnimating(rotationTime: CFTimeInterval = 5.000, fullRotationCountInRotationTime: CGFloat = 7000) {
         self.stopAnimating()
         self.animator.addIndefiniteRotationAnimation()
     }

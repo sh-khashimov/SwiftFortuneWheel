@@ -24,7 +24,9 @@ public extension SFWConfiguration {
         
         let circlePreferences = SFWConfiguration.CirclePreferences(strokeWidth: 15, strokeColor: .black)
         
-        let wheelPreferences = SFWConfiguration.WheelPreferences(circlePreferences: circlePreferences, slicePreferences: slicePreferences, startPosition: .top, centerImageAnchor: anchorImage)
+        var wheelPreferences = SFWConfiguration.WheelPreferences(circlePreferences: circlePreferences, slicePreferences: slicePreferences, startPosition: .top)
+        
+        wheelPreferences.centerImageAnchor = anchorImage
         
         let configuration = SFWConfiguration(wheelPreferences: wheelPreferences, pinPreferences: pin, spinButtonPreferences: spin)
         
@@ -43,12 +45,14 @@ public extension TextPreferences {
             horizontalOffset = 2
         }
         
-        let textPreferences = TextPreferences(textColorType: SFWConfiguration.ColorType.customPatternColors(colors: nil, defaultColor: .white),
+        var textPreferences = TextPreferences(textColorType: SFWConfiguration.ColorType.customPatternColors(colors: nil, defaultColor: .white),
                                               font: font,
-                                              verticalOffset: 5,
-                                              horizontalOffset: horizontalOffset,
-                                              orientation: .vertical,
-                                              alignment: .right)
+                                              verticalOffset: 5)
+        
+        textPreferences.horizontalOffset = horizontalOffset
+        textPreferences.orientation = .vertical
+        textPreferences.alignment = .right
+        
         return textPreferences
     }
 }

@@ -36,12 +36,15 @@ extension ImageDrawing {
             image = image.withTintColor(tintColor)
         }
         
+        let flipAngle: CGFloat = preferences.flipUpsideDown ?  180 : 0
+        
         context.saveGState()
-        context.rotate(by: rotation * CGFloat.pi/180)
+        context.rotate(by: (flipAngle + rotation) * CGFloat.pi/180)
         
         let aspectRatioRect = preferences.preferredSize.aspectFit(sizeImage: image.size)
         let yPositionWithoutOffset = radius - preferences.verticalOffset - topOffset - margins.top
-        let yPosition = yPositionWithoutOffset
+        let flipYOffset: CGFloat = preferences.flipUpsideDown ?  -radius + aspectRatioRect.height / 2  : 0
+        let yPosition = yPositionWithoutOffset + flipYOffset
         
         let rectangle = CGRect(x: -(aspectRatioRect.size.width / 2), y: -yPosition, width: aspectRatioRect.size.width, height: aspectRatioRect.size.height)
         
@@ -56,9 +59,6 @@ extension ImageDrawing {
         image.draw(in: rectangle, blendMode: .normal, alpha: 1)
         #endif
         
-        if preferences.flipUpsideDown {
-            context.rotate(by: Calc.flipRotation)
-        }
         context.restoreGState()
         
     }

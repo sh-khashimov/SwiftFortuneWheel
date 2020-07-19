@@ -44,20 +44,21 @@ public extension TextPreferences {
         let font = UIFont.systemFont(ofSize: 22, weight: .bold)
         let prefenreces = TextPreferences(textColorType: textColorType,
                                           font: font,
-                                          verticalOffset: 10,
-                                          isCurved: true)
+                                          verticalOffset: 10)
         return prefenreces
     }
 
     static var withoutStoryboardExampleDescriptionTextPreferences: TextPreferences {
         let textColorType = SFWConfiguration.ColorType.customPatternColors(colors: nil, defaultColor: .white)
         let font = UIFont.systemFont(ofSize: 12, weight: .bold)
-        let prefenreces = TextPreferences(textColorType: textColorType,
+        var prefenreces = TextPreferences(textColorType: textColorType,
                                           font: font,
-                                          verticalOffset: 10,
-                                          orientation: .vertical,
-                                          flipUpsideDown: false,
-                                          isCurved: false)
+                                          verticalOffset: 10)
+        
+        prefenreces.orientation = .vertical
+        prefenreces.flipUpsideDown = false
+        prefenreces.isCurved = false
+        
         return prefenreces
     }
 }

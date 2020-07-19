@@ -50,13 +50,13 @@ class SpinningWheelAnimator : NSObject, CAAnimationDelegate {
     
     /// Start indefinite rotation animation
     /// - Parameter rotationTime: Rotation time
-    func addIndefiniteRotationAnimation(rotationTime: CFTimeInterval = 5.000) {
+    func addIndefiniteRotationAnimation(rotationTime: CFTimeInterval = 5.000, fullRotationCount: CGFloat = 7000) {
         
         let layer = animationObject.layerToAnimate
 
         let fillMode : String = CAMediaTimingFillMode.forwards.rawValue
         let starTransformAnim      = CAKeyframeAnimation(keyPath:"transform.rotation.z")
-        starTransformAnim.values   = [0, 7000 * CGFloat.pi/180 * rotationDirectionOffset]
+        starTransformAnim.values   = [0, fullRotationCount * CGFloat.pi/180 * rotationDirectionOffset]
         starTransformAnim.keyTimes = [0, 1]
         starTransformAnim.duration = rotationTime
 

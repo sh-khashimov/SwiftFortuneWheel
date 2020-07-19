@@ -20,33 +20,29 @@ private let _position: SFWConfiguration.Position = .bottom
 extension SFWConfiguration {
     static var blackCyanColorsConfiguration: SFWConfiguration {
         
-        let imageAnchor = SFWConfiguration.AnchorImage(imageName: "filled-circle",
-                                                                     size: CGSize(width: 10, height: 10),
-                                                                     verticalOffset: -circleStrokeWidth / 2,
-                                                                     tintColor: .white)
+        var imageAnchor = SFWConfiguration.AnchorImage(imageName: "filled-circle", size: CGSize(width: 10, height: 10))
         
-        let circlePreferences = SFWConfiguration.CirclePreferences(strokeWidth: circleStrokeWidth,
-                                                                           strokeColor: borderColor)
+        imageAnchor.verticalOffset = -circleStrokeWidth / 2
+        imageAnchor.tintColor = .white
+        
+        let circlePreferences = SFWConfiguration.CirclePreferences(strokeWidth: circleStrokeWidth, strokeColor: borderColor)
         
         let sliceBackgroundColorType = SFWConfiguration.ColorType.evenOddColors(evenColor: darkGrayColor, oddColor: cyanColor)
         
-        let slicePreferences = SFWConfiguration.SlicePreferences(backgroundColorType: sliceBackgroundColorType,
-                                                                          strokeWidth: 1,
-                                                                          strokeColor: borderColor)
+        let slicePreferences = SFWConfiguration.SlicePreferences(backgroundColorType: sliceBackgroundColorType, strokeWidth: 1, strokeColor: borderColor)
         
-        let wheelPreferences = SFWConfiguration.WheelPreferences(circlePreferences: circlePreferences,
-                                                                          slicePreferences: slicePreferences, startPosition: _position,
-                                                                          imageAnchor: imageAnchor)
+        var wheelPreferences = SFWConfiguration.WheelPreferences(circlePreferences: circlePreferences, slicePreferences: slicePreferences, startPosition: _position)
         
-        let pinPreferences = SFWConfiguration.PinImageViewPreferences(size: CGSize(width: 50, height: 50),
-                                                                                 position: _position,
-                                                                                 verticalOffset: 30)
+        wheelPreferences.imageAnchor = imageAnchor
         
-        let spinButtonPreferences = SFWConfiguration.SpinButtonPreferences(size: CGSize(width: 60, height: 60),
-                                                                               cornerRadius: 30,
-                                                                               textColor: .white,
-                                                                               font: .systemFont(ofSize: 16, weight: .bold),
-                                                                               backgroundColor: darkGrayColor)
+        let pinPreferences = SFWConfiguration.PinImageViewPreferences(size: CGSize(width: 50, height: 50), position: _position, verticalOffset: 30)
+        
+        var spinButtonPreferences = SFWConfiguration.SpinButtonPreferences(size: CGSize(width: 60, height: 60))
+        
+        spinButtonPreferences.cornerRadius = 30
+        spinButtonPreferences.textColor = .white
+        spinButtonPreferences.font = .systemFont(ofSize: 16, weight: .bold)
+        spinButtonPreferences.backgroundColor = darkGrayColor
         
         var configuration = SFWConfiguration(wheelPreferences: wheelPreferences,
                                              pinPreferences: pinPreferences,
@@ -61,34 +57,29 @@ extension SFWConfiguration {
 
         let position: SFWConfiguration.Position = .bottom
         
-        let centerImageAnchor = SFWConfiguration.AnchorImage(imageName: "filled-circle",
-                                                                size: CGSize(width: 10, height: 10),
-                                                                verticalOffset: -circleStrokeWidth / 2,
-                                                                tintColor: .white)
+        var centerImageAnchor = SFWConfiguration.AnchorImage(imageName: "filled-circle", size: CGSize(width: 10, height: 10))
         
-        let circlePreferences = SFWConfiguration.CirclePreferences(strokeWidth: circleStrokeWidth,
-                                                                           strokeColor: borderColor)
+        centerImageAnchor.verticalOffset = -circleStrokeWidth / 2
+        centerImageAnchor.tintColor = .white
+        
+        let circlePreferences = SFWConfiguration.CirclePreferences(strokeWidth: circleStrokeWidth, strokeColor: borderColor)
         
         let sliceBackgroundColorType = SFWConfiguration.ColorType.customPatternColors(colors: [.blue, .brown, .green, .cyan, .magenta, .orange, .purple, .yellow, .systemPink, .systemTeal, .brown, .green, .cyan], defaultColor: .red)
         
-        let slicePreferences = SFWConfiguration.SlicePreferences(backgroundColorType: sliceBackgroundColorType,
-                                                                            strokeWidth: 1,
-                                                                            strokeColor: borderColor)
+        let slicePreferences = SFWConfiguration.SlicePreferences(backgroundColorType: sliceBackgroundColorType, strokeWidth: 1, strokeColor: borderColor)
         
-        let wheelPreferences = SFWConfiguration.WheelPreferences(circlePreferences: circlePreferences,
-                                                                          slicePreferences: slicePreferences,
-                                                                          startPosition: position,
-                                                                          centerImageAnchor: centerImageAnchor)
+        var wheelPreferences = SFWConfiguration.WheelPreferences(circlePreferences: circlePreferences, slicePreferences: slicePreferences, startPosition: position)
         
-        let pinPreferences = SFWConfiguration.PinImageViewPreferences(size: CGSize(width: 25, height: 25),
-                                                                                 position: position,
-                                                                                 verticalOffset: 25)
+        wheelPreferences.centerImageAnchor = centerImageAnchor
         
-        let spinButtonPreferences = SFWConfiguration.SpinButtonPreferences(size: CGSize(width: 60, height: 60),
-                                                                               cornerRadius: 30,
-                                                                               textColor: .white,
-                                                                               font: .systemFont(ofSize: 16, weight: .bold),
-                                                                               backgroundColor: darkGrayColor)
+        let pinPreferences = SFWConfiguration.PinImageViewPreferences(size: CGSize(width: 25, height: 25), position: position, verticalOffset: 25)
+        
+        var spinButtonPreferences = SFWConfiguration.SpinButtonPreferences(size: CGSize(width: 60, height: 60))
+        
+        spinButtonPreferences.cornerRadius = 30
+        spinButtonPreferences.textColor = .white
+        spinButtonPreferences.font = .systemFont(ofSize: 16, weight: .bold)
+        spinButtonPreferences.backgroundColor = darkGrayColor
         
         var configuration = SFWConfiguration(wheelPreferences: wheelPreferences,
                                              pinPreferences: pinPreferences,
@@ -102,9 +93,7 @@ extension SFWConfiguration {
 
 extension ImagePreferences {
     static var prizeImagePreferences: ImagePreferences {
-        let preferences = ImagePreferences(preferredSize: CGSize(width: 25, height: 25),
-                                           verticalOffset: 10,
-                                           flipUpsideDown: true)
+        let preferences = ImagePreferences(preferredSize: CGSize(width: 25, height: 25), verticalOffset: 10)
         return preferences
     }
 }
@@ -113,49 +102,34 @@ extension TextPreferences {
     static var amountTextWithWhiteBlackColorsPreferences: TextPreferences {
         let textColorType = SFWConfiguration.ColorType.evenOddColors(evenColor: .white, oddColor: blackColor)
         let font = NSFont.systemFont(ofSize: 20, weight: .bold)
-        let prefenreces = TextPreferences(textColorType: textColorType,
-                                          font: font,
-                                          verticalOffset: 10,
-                                          orientation: .horizontal,
-                                          flipUpsideDown: true,
-                                          isCurved: true)
-        return prefenreces
+        let preferences = TextPreferences(textColorType: textColorType,
+                                          font: font, verticalOffset: 10)
+        return preferences
     }
     
     static var descriptionTextWithWhiteBlackColorsPreferences: TextPreferences {
         let textColorType = SFWConfiguration.ColorType.evenOddColors(evenColor: .white, oddColor: blackColor)
         let font = NSFont.systemFont(ofSize: 10, weight: .bold)
-        let prefenreces = TextPreferences(textColorType: textColorType,
-                                          font: font,
-                                          verticalOffset: 10,
-                                          orientation: .horizontal,
-                                          flipUpsideDown: true,
-                                          isCurved: true)
-        return prefenreces
+        let preferences = TextPreferences(textColorType: textColorType,
+                                          font: font, verticalOffset: 10)
+        return preferences
     }
     
     
     static var amountTextWithBlackColorPreferences: TextPreferences {
         let textColorType = SFWConfiguration.ColorType.customPatternColors(colors: nil, defaultColor: .black)
         let font = NSFont.systemFont(ofSize: 20, weight: .bold)
-        let prefenreces = TextPreferences(textColorType: textColorType,
-                                          font: font,
-                                          verticalOffset: 10,
-                                          flipUpsideDown: true,
-                                          isCurved: true)
-        return prefenreces
+        let preferences = TextPreferences(textColorType: textColorType,
+                                          font: font, verticalOffset: 10)
+        return preferences
     }
     
     static var descriptionTextWithBlackColorPreferences: TextPreferences {
         let textColorType = SFWConfiguration.ColorType.customPatternColors(colors: nil, defaultColor: .black)
         let font = NSFont.systemFont(ofSize: 10, weight: .bold)
-        let prefenreces = TextPreferences(textColorType: textColorType,
-                                          font: font,
-                                          verticalOffset: 10,
-                                          orientation: .horizontal,
-                                          flipUpsideDown: true,
-                                          isCurved: true)
-        return prefenreces
+        let preferences = TextPreferences(textColorType: textColorType,
+                                          font: font, verticalOffset: 10)
+        return preferences
     }
 }
 

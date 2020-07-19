@@ -116,7 +116,8 @@ class ViewController: NSViewController {
         wheelControl.slices = slices
 
         if prizes.count == maximumPrize - 1 {
-            let imageSliceContent = Slice.ContentType.assetImage(name: "crown", preferences: ImagePreferences(preferredSize: CGSize(width: 40, height: 40), verticalOffset: 40))
+            let imagePreferences = ImagePreferences(preferredSize: CGSize(width: 40, height: 40), verticalOffset: 40)
+            let imageSliceContent = Slice.ContentType.assetImage(name: "crown", preferences: imagePreferences)
             var slice = Slice(contents: [imageSliceContent])
             if drawCurvedLine {
                 let linePreferences = LinePreferences(colorType: .customPatternColors(colors: nil, defaultColor: .black), height: 2, verticalOffset: 35)

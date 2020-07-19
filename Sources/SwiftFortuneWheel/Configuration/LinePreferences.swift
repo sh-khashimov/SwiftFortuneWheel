@@ -16,8 +16,8 @@ import UIKit
 /// Line Preferences
 public struct LinePreferences {
     
-    /// Stroke width
-    public var height: CGFloat = 1
+    /// Stroke height, default value is `1`
+    public var height: CGFloat
     
     /// Stroke color type
     public var colorType: SFWConfiguration.ColorType
@@ -27,14 +27,14 @@ public struct LinePreferences {
     
     /// Initiates a line preferences
     /// - Parameters:
-    ///   - height: Line height, default value is `1`
     ///   - colorType: Line color type
-    ///   - verticalOffset: Line vertical offset, default value is `0`
+    ///   - height: Stroke height, default value is `1`
+    ///   - verticalOffset: Vertical offset in slice from the center, default value is `0`
     public init(colorType: SFWConfiguration.ColorType,
                 height: CGFloat = 1,
                 verticalOffset: CGFloat = 0) {
-        self.height = height
         self.colorType = colorType
+        self.height = height
         self.verticalOffset = verticalOffset
     }
 }

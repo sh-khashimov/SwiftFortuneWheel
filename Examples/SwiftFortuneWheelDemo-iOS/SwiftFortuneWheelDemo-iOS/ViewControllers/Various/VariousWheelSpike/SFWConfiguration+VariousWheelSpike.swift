@@ -29,21 +29,22 @@ public extension SFWConfiguration {
                                                                             strokeColor: .clear)
         
         
-        let imageAnchor = SFWConfiguration.AnchorImage(imageName: "triangleAnchor",
+        var imageAnchor = SFWConfiguration.AnchorImage(imageName: "triangleAnchor",
                                                                      size: CGSize(width: 15, height: 7),
-                                                                     verticalOffset: -10,
-                                                                     tintColor: .white)
+                                                                     verticalOffset: -10)
         
+        imageAnchor.tintColor = .white
         
         let imageCenterAnchor = SFWConfiguration.AnchorImage(imageName: "ovalAnchor",
                                                                      size: CGSize(width: 8, height: 8),
                                                                      verticalOffset: -14)
         
-        let wheeelPreferences = SFWConfiguration.WheelPreferences(circlePreferences: circlePreferences,
+        var wheeelPreferences = SFWConfiguration.WheelPreferences(circlePreferences: circlePreferences,
                                                                           slicePreferences: slicePreferences,
-                                                                          startPosition: _position,
-                                                                          imageAnchor: imageAnchor,
-                                                                          centerImageAnchor: imageCenterAnchor)
+                                                                          startPosition: _position)
+        
+        wheeelPreferences.imageAnchor = imageAnchor
+        wheeelPreferences.centerImageAnchor = imageCenterAnchor
         
         let pinPreferences = SFWConfiguration.PinImageViewPreferences(size: CGSize(width: 101, height: 83),
                                                                       position: _position, horizontalOffset: 15, verticalOffset: (250 - 83) / 2 + 5)
@@ -60,8 +61,7 @@ public extension TextPreferences {
         let font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
         let prefenreces = TextPreferences(textColorType: textColorType,
                                           font: font,
-                                          verticalOffset: 10,
-                                          isCurved: true)
+                                          verticalOffset: 10)
         return prefenreces
     }
 }

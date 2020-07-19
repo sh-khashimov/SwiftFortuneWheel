@@ -1,4 +1,4 @@
-# Migration
+## Migration
 
 ### from 0.x.x to 1.0.0
 

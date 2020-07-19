@@ -18,10 +18,11 @@ private let _position: SFWConfiguration.Position = .bottom
 extension SFWConfiguration {
     static var blackCyanColorsConfiguration: SFWConfiguration {
         
-        let imageAnchor = SFWConfiguration.AnchorImage(imageName: "filled-circle",
+        var imageAnchor = SFWConfiguration.AnchorImage(imageName: "filled-circle",
                                                                      size: CGSize(width: 10, height: 10),
-                                                                     verticalOffset: -circleStrokeWidth / 2,
-                                                                     tintColor: .white)
+                                                                     verticalOffset: -circleStrokeWidth / 2)
+        
+        imageAnchor.tintColor = .white
         
         let circlePreferences = SFWConfiguration.CirclePreferences(strokeWidth: circleStrokeWidth,
                                                                            strokeColor: blackColor)
@@ -32,19 +33,22 @@ extension SFWConfiguration {
                                                                           strokeWidth: 1,
                                                                           strokeColor: .darkGray)
         
-        let wheelPreference = SFWConfiguration.WheelPreferences(circlePreferences: circlePreferences,
-                                                                          slicePreferences: slicePreferences, startPosition: _position,
-                                                                          imageAnchor: imageAnchor)
+        var wheelPreference = SFWConfiguration.WheelPreferences(circlePreferences: circlePreferences,
+                                                                          slicePreferences: slicePreferences,
+                                                                          startPosition: _position)
+        
+        wheelPreference.imageAnchor = imageAnchor
         
         let pinPreferences = SFWConfiguration.PinImageViewPreferences(size: CGSize(width: 50, height: 50),
                                                                                  position: _position,
                                                                                  verticalOffset: 30)
         
-        let spinButtonPreferences = SFWConfiguration.SpinButtonPreferences(size: CGSize(width: 80, height: 80),
-                                                                               cornerRadius: 40,
-                                                                               textColor: .white,
-                                                                               font: .systemFont(ofSize: 20, weight: .bold),
-                                                                               backgroundColor: blackColor)
+        var spinButtonPreferences = SFWConfiguration.SpinButtonPreferences(size: CGSize(width: 80, height: 80))
+        
+        spinButtonPreferences.cornerRadius = 40
+        spinButtonPreferences.textColor = .white
+        spinButtonPreferences.font = .systemFont(ofSize: 20, weight: .bold)
+        spinButtonPreferences.backgroundColor = blackColor
         
         let configuration = SFWConfiguration(wheelPreferences: wheelPreference,
                                              pinPreferences: pinPreferences,
@@ -57,10 +61,11 @@ extension SFWConfiguration {
 
         let position: SFWConfiguration.Position = .bottom
         
-        let centerImageAnchor = SFWConfiguration.AnchorImage(imageName: "filled-circle",
+        var centerImageAnchor = SFWConfiguration.AnchorImage(imageName: "filled-circle",
                                                                 size: CGSize(width: 10, height: 10),
-                                                                verticalOffset: -circleStrokeWidth / 2,
-                                                                tintColor: .white)
+                                                                verticalOffset: -circleStrokeWidth / 2)
+        
+        centerImageAnchor.tintColor = .white
         
         let circlePreferences = SFWConfiguration.CirclePreferences(strokeWidth: circleStrokeWidth,
                                                                            strokeColor: blackColor)
@@ -71,20 +76,22 @@ extension SFWConfiguration {
                                                                             strokeWidth: 1,
                                                                             strokeColor: blackColor)
         
-        let wheelPreferences = SFWConfiguration.WheelPreferences(circlePreferences: circlePreferences,
+        var wheelPreferences = SFWConfiguration.WheelPreferences(circlePreferences: circlePreferences,
                                                                           slicePreferences: slicePreferences,
-                                                                          startPosition: position,
-                                                                          centerImageAnchor: centerImageAnchor)
+                                                                          startPosition: position)
+        
+        wheelPreferences.centerImageAnchor = centerImageAnchor
         
         let pinPreferences = SFWConfiguration.PinImageViewPreferences(size: CGSize(width: 50, height: 50),
                                                                                  position: position,
                                                                                  verticalOffset: 30)
         
-        let spinButtonPreferences = SFWConfiguration.SpinButtonPreferences(size: CGSize(width: 80, height: 80),
-                                                                               cornerRadius: 40,
-                                                                               textColor: .white,
-                                                                               font: .systemFont(ofSize: 20, weight: .bold),
-                                                                               backgroundColor: blackColor)
+        var spinButtonPreferences = SFWConfiguration.SpinButtonPreferences(size: CGSize(width: 80, height: 80))
+        
+        spinButtonPreferences.cornerRadius = 40
+        spinButtonPreferences.textColor = .white
+        spinButtonPreferences.font = .systemFont(ofSize: 20, weight: .bold)
+        spinButtonPreferences.backgroundColor = blackColor
         
         let configuration = SFWConfiguration(wheelPreferences: wheelPreferences,
                                              pinPreferences: pinPreferences,
@@ -97,8 +104,7 @@ extension SFWConfiguration {
 extension ImagePreferences {
     static var prizeImagePreferences: ImagePreferences {
         let preferences = ImagePreferences(preferredSize: CGSize(width: 25, height: 25),
-                                           verticalOffset: 10,
-                                           flipUpsideDown: true)
+                                           verticalOffset: 10)
         return preferences
     }
 }
@@ -109,9 +115,7 @@ extension TextPreferences {
         let font = UIFont.systemFont(ofSize: 20, weight: .bold)
         let prefenreces = TextPreferences(textColorType: textColorType,
                                           font: font,
-                                          verticalOffset: 10,
-                                          flipUpsideDown: true,
-                                          isCurved: true)
+                                          verticalOffset: 10)
         return prefenreces
     }
     
@@ -120,10 +124,7 @@ extension TextPreferences {
         let font = UIFont.systemFont(ofSize: 10, weight: .bold)
         let prefenreces = TextPreferences(textColorType: textColorType,
                                           font: font,
-                                          verticalOffset: 10,
-                                          orientation: .horizontal,
-                                          flipUpsideDown: true,
-                                          isCurved: true)
+                                          verticalOffset: 10)
         return prefenreces
     }
     
@@ -133,9 +134,7 @@ extension TextPreferences {
         let font = UIFont.systemFont(ofSize: 20, weight: .bold)
         let prefenreces = TextPreferences(textColorType: textColorType,
                                           font: font,
-                                          verticalOffset: 10,
-                                          flipUpsideDown: true,
-                                          isCurved: true)
+                                          verticalOffset: 10)
         return prefenreces
     }
     
@@ -144,10 +143,7 @@ extension TextPreferences {
         let font = UIFont.systemFont(ofSize: 10, weight: .bold)
         let prefenreces = TextPreferences(textColorType: textColorType,
                                           font: font,
-                                          verticalOffset: 10,
-                                          orientation: .horizontal,
-                                          flipUpsideDown: true,
-                                          isCurved: true)
+                                          verticalOffset: 10)
         return prefenreces
     }
 }

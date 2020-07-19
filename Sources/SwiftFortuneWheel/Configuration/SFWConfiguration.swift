@@ -59,17 +59,17 @@ public extension SFWConfiguration {
         public var startPosition: Position
         
         /// Layer insets, used to center the drawing such that offseted graphics(e.g Shadows, Outer Glows) are not clipped.
-        /// Can be increased to any size if needed.
-        public var layerInsets: SFWEdgeInsets
+        /// Can be increased to any size if needed. Default value is `UIEdgeInsets(top: -50, left: -50, bottom: -50, right: -50)`
+        public var layerInsets: SFWEdgeInsets = SFWEdgeInsets(top: -50, left: -50, bottom: -50, right: -50)
         
         /// Margins for content inside a slide
-        public var contentMargins: Margins
+        public var contentMargins: Margins = Margins()
         
-        /// Image anchor for each slice, located at the wheel's border
-        public var imageAnchor: AnchorImage?
+        /// Image anchor for each slice, located at the wheel's border, `optional`
+        public var imageAnchor: AnchorImage? = nil
         
-        /// Image anchor for each slice, located at the center of wheel's border
-        public var centerImageAnchor: AnchorImage?
+        /// Image anchor for each slice, located at the center of wheel's border, `optional`
+        public var centerImageAnchor: AnchorImage? = nil
         
         var layerInsetsWithCircleWidth: SFWEdgeInsets {
             let circleWidth = self.circlePreferences.strokeWidth
@@ -84,24 +84,12 @@ public extension SFWConfiguration {
         ///   - circlePreferences: Circle preferences
         ///   - slicePreferences: Slice preferences
         ///   - startPosition: Start position, should be equal to FortuneWheelConfiguration.pinPreferences.position
-        ///   - layerInsets: Layer insets, default value is `UIEdgeInsets(top: -50, left: -50, bottom: -50, right: -50)`
-        ///   - contentMargins: Margins for content inside a slide
-        ///   - imageAnchor: Image anchor for each slice, located at the wheel's border, `optional`
-        ///   - centerImageAnchor: Image anchor for each slice, located at the center of wheel's border, `optional`
         public init(circlePreferences: CirclePreferences,
                     slicePreferences: SlicePreferences,
-                    startPosition: Position,
-                    layerInsets: SFWEdgeInsets = SFWEdgeInsets(top: -50, left: -50, bottom: -50, right: -50),
-                    contentMargins: Margins = Margins(),
-                    imageAnchor: AnchorImage? = nil,
-                    centerImageAnchor: AnchorImage? = nil) {
+                    startPosition: Position) {
             self.circlePreferences = circlePreferences
             self.slicePreferences = slicePreferences
-            self.layerInsets = layerInsets
             self.startPosition = startPosition
-            self.imageAnchor = imageAnchor
-            self.centerImageAnchor = centerImageAnchor
-            self.contentMargins = contentMargins
         }
     }
 }
@@ -163,14 +151,14 @@ public extension SFWConfiguration {
         /// Size
         public var size: CGSize
         
-        /// Corner radius
-        public var cornerRadius: CGFloat
+        /// Corner radius, default value is `0`
+        public var cornerRadius: CGFloat = 0
         
-        /// Corner width
-        public var cornerWidth: CGFloat
+        /// Corner width, default value is `0`
+        public var cornerWidth: CGFloat = 0
         
-        /// Corner color
-        public var cornerColor: SFWColor
+        /// Corner color, default  value is `.clear`
+        public var cornerColor: SFWColor = .clear
         
         /// Horizontal offset
         public var horizontalOffset: CGFloat
@@ -178,50 +166,29 @@ public extension SFWConfiguration {
         /// Vertical offset
         public var verticalOffset: CGFloat
         
-        /// Background color
-        public var backgroundColor: SFWColor
+        /// Background color, default value is `.clear`
+        public var backgroundColor: SFWColor = .clear
         
-        /// Text Color
-        public var textColor: SFWColor
+        /// Text Color, default value is `.black`
+        public var textColor: SFWColor = .black
         
-        /// Text Color
-        public var disabledTextColor: SFWColor
+        /// Disabled text color, default value is `.black`
+        public var disabledTextColor: SFWColor = .black
         
-        /// Font
-        public var font: SFWFont
+        /// Font, default value is `.systemFont(ofSize: 16, weight: .semibold)`
+        public var font: SFWFont = .systemFont(ofSize: 16, weight: .semibold)
         
         /// Initiates a spin button preferences
         /// - Parameters:
         ///   - size: Size
-        ///   - cornerRadius: Corner radius, default value is `0`
-        ///   - cornerWidth: Corner width, default value is `0`
-        ///   - cornerColor: Corner color, default  value is `.clear`
         ///   - horizontalOffset: Horizontal offset, default value is `0`
         ///   - verticalOffset: Vertical offset, default value is `0`
-        ///   - textColor: Text color, default value is `.black`
-        ///   - disabledTextColor: Disabled text color, default value is `.black`
-        ///   - font: Font, default value is `.systemFont(ofSize: 16)`
-        ///   - backgroundColor: Background color, default value is `.clear`
         public init(size: CGSize,
-                    cornerRadius: CGFloat = 0,
-                    cornerWidth: CGFloat = 0,
-                    cornerColor: SFWColor = .clear,
                     horizontalOffset: CGFloat = 0,
-                    verticalOffset: CGFloat = 0,
-                    textColor: SFWColor = .black,
-                    disabledTextColor: SFWColor = .black,
-                    font: SFWFont = .systemFont(ofSize: 16),
-                    backgroundColor: SFWColor = .clear) {
+                    verticalOffset: CGFloat = 0) {
             self.size = size
-            self.cornerRadius = cornerRadius
-            self.cornerWidth = cornerWidth
-            self.cornerColor = cornerColor
             self.horizontalOffset = horizontalOffset
             self.verticalOffset = verticalOffset
-            self.backgroundColor = backgroundColor
-            self.textColor = textColor
-            self.disabledTextColor = disabledTextColor
-            self.font = font
         }
         
         /// Creates text attributes, relative to slice index position
@@ -257,11 +224,11 @@ public extension SFWConfiguration {
         /// Vertical offset
         public var verticalOffset: CGFloat
         
-        /// Background color
-        public var backgroundColor: SFWColor
+        /// Background color, default value is `.clear`
+        public var backgroundColor: SFWColor = .clear
         
-        /// Tint color
-        public var tintColor: SFWColor?
+        /// Tint color, `optional`
+        public var tintColor: SFWColor? = nil
         
         /// Initiates a pin image view preferences
         /// - Parameters:
@@ -269,20 +236,14 @@ public extension SFWConfiguration {
         ///   - position: Position
         ///   - horizontalOffset: Horizontal offset, default value is `0`
         ///   - verticalOffset: Vertical offset, default value is `0`
-        ///   - backgroundColor: Background color, default value is `.clear`
-        ///   - tintColor: Tint color, `optional`
         public init(size: CGSize,
                     position: Position,
                     horizontalOffset: CGFloat = 0,
-                    verticalOffset: CGFloat = 0,
-                    backgroundColor: SFWColor = .clear,
-                    tintColor: SFWColor? = nil) {
+                    verticalOffset: CGFloat = 0) {
             self.size = size
             self.position = position
             self.horizontalOffset = horizontalOffset
             self.verticalOffset = verticalOffset
-            self.backgroundColor = backgroundColor
-            self.tintColor = tintColor
         }
     }
 }
@@ -375,32 +336,26 @@ public extension SFWConfiguration {
         /// Image name from assets catalog
         public var imageName: String
         
-        /// Rotation degree offset
-        public var rotationDegreeOffset: CGFloat
+        /// Rotation degree offset, default value is `0`
+        public var rotationDegreeOffset: CGFloat = 0
         
         /// Vertical offset
         public var verticalOffset: CGFloat
         
-        /// Tint color
-        public var tintColor: SFWColor?
+        /// Tint color, `optional`
+        public var tintColor: SFWColor? = nil
         
         /// Initiates a anchor image object
         /// - Parameters:
         ///   - imageName: Image name from assets catalog
         ///   - size: Size, required
         ///   - verticalOffset: Vertical offset, default value is `0`
-        ///   - rotationDegreeOffset: Rotation degree offset, default value is `0`
-        ///   - tintColor: Tint color, `optional`
         public init(imageName: String,
                     size: CGSize,
-                    verticalOffset: CGFloat = 0,
-                    rotationDegreeOffset: CGFloat = 0,
-                    tintColor: SFWColor? = nil) {
+                    verticalOffset: CGFloat = 0) {
             self.imageName = imageName
             self.size = size
-            self.rotationDegreeOffset = rotationDegreeOffset
             self.verticalOffset = verticalOffset
-            self.tintColor = tintColor
         }
     }
 }

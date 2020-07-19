@@ -1,5 +1,18 @@
 ## CHANGELOG
 
+### 1.1.0
+
+- Added support for **macOS 10.11** and above;
+- Added support for **tvOS 9.0** and above;
+- **`TextPreferences`** initialize process changed;
+- **`ImagePreferences`** initialize process changed;
+- **`WheelPreferences`** initialize process changed;
+- **`SpinButtonPreferences`** initialize process changed;
+- **`PinImageViewPreferences`** initialize process changed;
+- **`AnchorImage`** initialize process changed;
+- Fixed image `flipUpsideDown` from not working;
+- See migration process here: [**from 1.0.x to 1.x.x**](Migrations/Migration_1_to_1.x.md);
+
 ### 1.0.1
 
 - Fixed layout warnings;
