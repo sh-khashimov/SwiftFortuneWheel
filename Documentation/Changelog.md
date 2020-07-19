@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.0.3
+
+- When you using `startAnimating` method to start indefinite rotation animation, it’s possible now change optional `rotationTime` and `fullRotationCountInRotationTime` parameters to change the rotation speed;
+
 ### 1.0.2
 
 - Fixed memory leak when re-drawing the wheel;
