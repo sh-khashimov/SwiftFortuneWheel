@@ -29,6 +29,9 @@
 		27105683248D4C93006C0181 /* SpinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710566D248D4C93006C0181 /* SpinButton.swift */; };
 		27105684248D4C93006C0181 /* WheelLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710566E248D4C93006C0181 /* WheelLayer.swift */; };
 		27105685248D4C93006C0181 /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710566F248D4C93006C0181 /* WheelView.swift */; };
+		2720684224BC31190025815D /* macOSPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720684124BC31190025815D /* macOSPort.swift */; };
+		2722559924BCA4A400950563 /* NSView+AnchorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559824BCA4A400950563 /* NSView+AnchorPoint.swift */; };
+		2722559B24BCD7F400950563 /* NoClippingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559A24BCD7F300950563 /* NoClippingLayer.swift */; };
 		277A6EBE249A9B450066C807 /* LinePreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A6EBD249A9B450066C807 /* LinePreferences.swift */; };
 		2787E56E24A728F900533AD4 /* String+Width.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2787E56D24A728F900533AD4 /* String+Width.swift */; };
 		2787E57024A7292F00533AD4 /* String+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2787E56F24A7292F00533AD4 /* String+Lines.swift */; };
@@ -75,6 +78,9 @@
 		2710566D248D4C93006C0181 /* SpinButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinButton.swift; sourceTree = "<group>"; };
 		2710566E248D4C93006C0181 /* WheelLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelLayer.swift; sourceTree = "<group>"; };
 		2710566F248D4C93006C0181 /* WheelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
+		2720684124BC31190025815D /* macOSPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSPort.swift; sourceTree = "<group>"; };
+		2722559824BCA4A400950563 /* NSView+AnchorPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+AnchorPoint.swift"; sourceTree = "<group>"; };
+		2722559A24BCD7F300950563 /* NoClippingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoClippingLayer.swift; sourceTree = "<group>"; };
 		272B62C524A46FED00F19E41 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		277A6EBD249A9B450066C807 /* LinePreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinePreferences.swift; sourceTree = "<group>"; };
 		2787E56D24A728F900533AD4 /* String+Width.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Width.swift"; sourceTree = "<group>"; };
@@ -86,7 +92,7 @@
 		27F7D5BC24A5CB6A004BEE19 /* String+Split.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Split.swift"; sourceTree = "<group>"; };
 		27F7D5BE24A5F6B0004BEE19 /* String+Dots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Dots.swift"; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* SwiftFortuneWheel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftFortuneWheel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		52D6D9861BEFF229002C0205 /* SwiftFortuneWheel-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftFortuneWheel-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52D6D9861BEFF229002C0205 /* SwiftFortuneWheel Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftFortuneWheel Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8933C7891EB5B82A000D00A4 /* SwiftFortuneWheelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftFortuneWheelTests.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* SwiftFortuneWheel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SwiftFortuneWheel.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* SwiftFortuneWheelTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SwiftFortuneWheelTests.plist; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 				27105663248D4C93006C0181 /* Extensions */,
 				2710566A248D4C93006C0181 /* SwiftFortuneWheel.swift */,
 				2710566B248D4C93006C0181 /* Views */,
+				2720684124BC31190025815D /* macOSPort.swift */,
 			);
 			path = SwiftFortuneWheel;
 			sourceTree = "<group>";
@@ -194,6 +201,7 @@
 				27105667248D4C93006C0181 /* UIImage+TintColor.swift */,
 				27105668248D4C93006C0181 /* CGRest+AspectFit.swift */,
 				27105669248D4C93006C0181 /* Array+Default.swift */,
+				2722559824BCA4A400950563 /* NSView+AnchorPoint.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -205,6 +213,7 @@
 				2710566D248D4C93006C0181 /* SpinButton.swift */,
 				2710566E248D4C93006C0181 /* WheelLayer.swift */,
 				2710566F248D4C93006C0181 /* WheelView.swift */,
+				2722559A24BCD7F300950563 /* NoClippingLayer.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -244,7 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				52D6D97C1BEFF229002C0205 /* SwiftFortuneWheel.framework */,
-				52D6D9861BEFF229002C0205 /* SwiftFortuneWheel-iOS Tests.xctest */,
+				52D6D9861BEFF229002C0205 /* SwiftFortuneWheel Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -304,9 +313,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		52D6D97B1BEFF229002C0205 /* SwiftFortuneWheel-iOS */ = {
+		52D6D97B1BEFF229002C0205 /* SwiftFortuneWheel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52D6D9901BEFF229002C0205 /* Build configuration list for PBXNativeTarget "SwiftFortuneWheel-iOS" */;
+			buildConfigurationList = 52D6D9901BEFF229002C0205 /* Build configuration list for PBXNativeTarget "SwiftFortuneWheel" */;
 			buildPhases = (
 				52D6D9771BEFF229002C0205 /* Sources */,
 				52D6D9781BEFF229002C0205 /* Frameworks */,
@@ -317,14 +326,14 @@
 			);
 			dependencies = (
 			);
-			name = "SwiftFortuneWheel-iOS";
+			name = SwiftFortuneWheel;
 			productName = SwiftFortuneWheel;
 			productReference = 52D6D97C1BEFF229002C0205 /* SwiftFortuneWheel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		52D6D9851BEFF229002C0205 /* SwiftFortuneWheel-iOS Tests */ = {
+		52D6D9851BEFF229002C0205 /* SwiftFortuneWheel Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52D6D9931BEFF229002C0205 /* Build configuration list for PBXNativeTarget "SwiftFortuneWheel-iOS Tests" */;
+			buildConfigurationList = 52D6D9931BEFF229002C0205 /* Build configuration list for PBXNativeTarget "SwiftFortuneWheel Tests" */;
 			buildPhases = (
 				52D6D9821BEFF229002C0205 /* Sources */,
 				52D6D9831BEFF229002C0205 /* Frameworks */,
@@ -335,9 +344,9 @@
 			dependencies = (
 				52D6D9891BEFF229002C0205 /* PBXTargetDependency */,
 			);
-			name = "SwiftFortuneWheel-iOS Tests";
+			name = "SwiftFortuneWheel Tests";
 			productName = SwiftFortuneWheelTests;
-			productReference = 52D6D9861BEFF229002C0205 /* SwiftFortuneWheel-iOS Tests.xctest */;
+			productReference = 52D6D9861BEFF229002C0205 /* SwiftFortuneWheel Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -346,8 +355,8 @@
 		52D6D9731BEFF229002C0205 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = SwiftFortuneWheel;
 				TargetAttributes = {
 					52D6D97B1BEFF229002C0205 = {
@@ -373,8 +382,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				52D6D97B1BEFF229002C0205 /* SwiftFortuneWheel-iOS */,
-				52D6D9851BEFF229002C0205 /* SwiftFortuneWheel-iOS Tests */,
+				52D6D97B1BEFF229002C0205 /* SwiftFortuneWheel */,
+				52D6D9851BEFF229002C0205 /* SwiftFortuneWheel Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -412,6 +421,8 @@
 				27105679248D4C93006C0181 /* WheelMathCalculating.swift in Sources */,
 				27105674248D4C93006C0181 /* CurveTextDrawing.swift in Sources */,
 				27105673248D4C93006C0181 /* SliceDrawing.swift in Sources */,
+				2720684224BC31190025815D /* macOSPort.swift in Sources */,
+				2722559924BCA4A400950563 /* NSView+AnchorPoint.swift in Sources */,
 				2710567D248D4C93006C0181 /* String+Crop.swift in Sources */,
 				2710567F248D4C93006C0181 /* CGRest+AspectFit.swift in Sources */,
 				27105683248D4C93006C0181 /* SpinButton.swift in Sources */,
@@ -423,6 +434,7 @@
 				2787E57024A7292F00533AD4 /* String+Lines.swift in Sources */,
 				27105680248D4C93006C0181 /* Array+Default.swift in Sources */,
 				27105677248D4C93006C0181 /* SpinningWheelAnimator.swift in Sources */,
+				2722559B24BCD7F400950563 /* NoClippingLayer.swift in Sources */,
 				2710567E248D4C93006C0181 /* UIImage+TintColor.swift in Sources */,
 				27105682248D4C93006C0181 /* PinImageView.swift in Sources */,
 				27F4807B24AEE426005886F6 /* ShapeDrawing.swift in Sources */,
@@ -448,7 +460,7 @@
 /* Begin PBXTargetDependency section */
 		52D6D9891BEFF229002C0205 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 52D6D97B1BEFF229002C0205 /* SwiftFortuneWheel-iOS */;
+			target = 52D6D97B1BEFF229002C0205 /* SwiftFortuneWheel */;
 			targetProxy = 52D6D9881BEFF229002C0205 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -477,6 +489,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -537,6 +550,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -571,7 +585,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -581,12 +597,17 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftFortuneWheel.SwiftFortuneWheel-iOS";
 				PRODUCT_NAME = SwiftFortuneWheel;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,6";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -594,7 +615,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -604,11 +627,16 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftFortuneWheel.SwiftFortuneWheel-iOS";
 				PRODUCT_NAME = SwiftFortuneWheel;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,6";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -621,6 +649,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftFortuneWheel.SwiftFortuneWheel-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -635,6 +664,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftFortuneWheel.SwiftFortuneWheel-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 			};
@@ -652,7 +682,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52D6D9901BEFF229002C0205 /* Build configuration list for PBXNativeTarget "SwiftFortuneWheel-iOS" */ = {
+		52D6D9901BEFF229002C0205 /* Build configuration list for PBXNativeTarget "SwiftFortuneWheel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52D6D9911BEFF229002C0205 /* Debug */,
@@ -661,7 +691,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52D6D9931BEFF229002C0205 /* Build configuration list for PBXNativeTarget "SwiftFortuneWheel-iOS Tests" */ = {
+		52D6D9931BEFF229002C0205 /* Build configuration list for PBXNativeTarget "SwiftFortuneWheel Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52D6D9941BEFF229002C0205 /* Debug */,

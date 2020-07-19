@@ -13,7 +13,7 @@ extension Array {
         guard index >= 0, index < endIndex else {
             return defaultValue()
         }
-
+        
         return self[index]
     }
 }

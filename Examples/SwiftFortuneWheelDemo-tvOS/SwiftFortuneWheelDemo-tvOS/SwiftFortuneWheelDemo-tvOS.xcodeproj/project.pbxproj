@@ -1,0 +1,675 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27E8C9DB24BB82E20021205F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C9DA24BB82E20021205F /* AppDelegate.swift */; };
+		27E8C9E024BB82E20021205F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E8C9DE24BB82E20021205F /* Main.storyboard */; };
+		27E8C9E224BB82E80021205F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E8C9E124BB82E80021205F /* Assets.xcassets */; };
+		27E8C9E524BB82E80021205F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E8C9E324BB82E80021205F /* LaunchScreen.storyboard */; };
+		27E8C9F024BB82E90021205F /* SwiftFortuneWheelDemo_tvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C9EF24BB82E90021205F /* SwiftFortuneWheelDemo_tvOSTests.swift */; };
+		27E8C9FB24BB82E90021205F /* SwiftFortuneWheelDemo_tvOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C9FA24BB82E90021205F /* SwiftFortuneWheelDemo_tvOSUITests.swift */; };
+		27E8CA0924BB85380021205F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8CA0824BB85380021205F /* MainViewController.swift */; };
+		27E8CA0D24BB89830021205F /* DynamicContentExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8CA0C24BB89830021205F /* DynamicContentExampleViewController.swift */; };
+		27E8CA1024BB89D80021205F /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8CA0F24BB89D80021205F /* Prize.swift */; };
+		27E8CA1724BB8A1F0021205F /* SFWConfiguration+DynamicContentExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8CA1624BB8A1F0021205F /* SFWConfiguration+DynamicContentExample.swift */; };
+		27E8CA2124BB8C020021205F /* SwiftFortuneWheel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E8CA2024BB8C020021205F /* SwiftFortuneWheel.framework */; };
+		27E8CA2224BB8C020021205F /* SwiftFortuneWheel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27E8CA2024BB8C020021205F /* SwiftFortuneWheel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		27E8CA2824BB8CD00021205F /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8CA2524BB8CD00021205F /* Color+Hex.swift */; };
+		27E8CA2924BB8CD00021205F /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8CA2624BB8CD00021205F /* UIView+CornerRadius.swift */; };
+		27E8CA2A24BB8CD00021205F /* Prize+SliceContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8CA2724BB8CD00021205F /* Prize+SliceContentType.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27E8C9EC24BB82E90021205F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27E8C9CF24BB82E20021205F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27E8C9D624BB82E20021205F;
+			remoteInfo = "SwiftFortuneWheelDemo-tvOS";
+		};
+		27E8C9F724BB82E90021205F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27E8C9CF24BB82E20021205F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27E8C9D624BB82E20021205F;
+			remoteInfo = "SwiftFortuneWheelDemo-tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		27E8CA2324BB8C020021205F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				27E8CA2224BB8C020021205F /* SwiftFortuneWheel.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		27E8C9D724BB82E20021205F /* SwiftFortuneWheelDemo-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftFortuneWheelDemo-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E8C9DA24BB82E20021205F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		27E8C9DF24BB82E20021205F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27E8C9E124BB82E80021205F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27E8C9E424BB82E80021205F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27E8C9E624BB82E80021205F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27E8C9EB24BB82E90021205F /* SwiftFortuneWheelDemo-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftFortuneWheelDemo-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E8C9EF24BB82E90021205F /* SwiftFortuneWheelDemo_tvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFortuneWheelDemo_tvOSTests.swift; sourceTree = "<group>"; };
+		27E8C9F124BB82E90021205F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27E8C9F624BB82E90021205F /* SwiftFortuneWheelDemo-tvOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftFortuneWheelDemo-tvOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E8C9FA24BB82E90021205F /* SwiftFortuneWheelDemo_tvOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFortuneWheelDemo_tvOSUITests.swift; sourceTree = "<group>"; };
+		27E8C9FC24BB82E90021205F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27E8CA0824BB85380021205F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		27E8CA0C24BB89830021205F /* DynamicContentExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicContentExampleViewController.swift; sourceTree = "<group>"; };
+		27E8CA0F24BB89D80021205F /* Prize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
+		27E8CA1224BB8A050021205F /* SwiftFortuneWheel_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFortuneWheel_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E8CA1624BB8A1F0021205F /* SFWConfiguration+DynamicContentExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+DynamicContentExample.swift"; sourceTree = "<group>"; };
+		27E8CA1824BB8A660021205F /* SwiftFortuneWheel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFortuneWheel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E8CA1C24BB8AD70021205F /* SwiftFortuneWheel_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFortuneWheel_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E8CA2024BB8C020021205F /* SwiftFortuneWheel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFortuneWheel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E8CA2524BB8CD00021205F /* Color+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		27E8CA2624BB8CD00021205F /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
+		27E8CA2724BB8CD00021205F /* Prize+SliceContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Prize+SliceContentType.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27E8C9D424BB82E20021205F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E8CA2124BB8C020021205F /* SwiftFortuneWheel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E8C9E824BB82E90021205F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E8C9F324BB82E90021205F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27E8C9CE24BB82E20021205F = {
+			isa = PBXGroup;
+			children = (
+				27E8C9D924BB82E20021205F /* SwiftFortuneWheelDemo-tvOS */,
+				27E8C9EE24BB82E90021205F /* SwiftFortuneWheelDemo-tvOSTests */,
+				27E8C9F924BB82E90021205F /* SwiftFortuneWheelDemo-tvOSUITests */,
+				27E8C9D824BB82E20021205F /* Products */,
+				27E8CA1124BB8A050021205F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		27E8C9D824BB82E20021205F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27E8C9D724BB82E20021205F /* SwiftFortuneWheelDemo-tvOS.app */,
+				27E8C9EB24BB82E90021205F /* SwiftFortuneWheelDemo-tvOSTests.xctest */,
+				27E8C9F624BB82E90021205F /* SwiftFortuneWheelDemo-tvOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27E8C9D924BB82E20021205F /* SwiftFortuneWheelDemo-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				27E8CA2424BB8CAD0021205F /* Extensions */,
+				27E8CA0E24BB89C50021205F /* Models */,
+				27E8CA0A24BB892C0021205F /* ViewControllers */,
+				27E8C9DA24BB82E20021205F /* AppDelegate.swift */,
+				27E8C9DE24BB82E20021205F /* Main.storyboard */,
+				27E8C9E124BB82E80021205F /* Assets.xcassets */,
+				27E8C9E324BB82E80021205F /* LaunchScreen.storyboard */,
+				27E8C9E624BB82E80021205F /* Info.plist */,
+			);
+			path = "SwiftFortuneWheelDemo-tvOS";
+			sourceTree = "<group>";
+		};
+		27E8C9EE24BB82E90021205F /* SwiftFortuneWheelDemo-tvOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				27E8C9EF24BB82E90021205F /* SwiftFortuneWheelDemo_tvOSTests.swift */,
+				27E8C9F124BB82E90021205F /* Info.plist */,
+			);
+			path = "SwiftFortuneWheelDemo-tvOSTests";
+			sourceTree = "<group>";
+		};
+		27E8C9F924BB82E90021205F /* SwiftFortuneWheelDemo-tvOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				27E8C9FA24BB82E90021205F /* SwiftFortuneWheelDemo_tvOSUITests.swift */,
+				27E8C9FC24BB82E90021205F /* Info.plist */,
+			);
+			path = "SwiftFortuneWheelDemo-tvOSUITests";
+			sourceTree = "<group>";
+		};
+		27E8CA0A24BB892C0021205F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				27E8CA0B24BB894A0021205F /* DynamicContentExample */,
+				27E8CA0824BB85380021205F /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		27E8CA0B24BB894A0021205F /* DynamicContentExample */ = {
+			isa = PBXGroup;
+			children = (
+				27E8CA0C24BB89830021205F /* DynamicContentExampleViewController.swift */,
+				27E8CA1624BB8A1F0021205F /* SFWConfiguration+DynamicContentExample.swift */,
+			);
+			path = DynamicContentExample;
+			sourceTree = "<group>";
+		};
+		27E8CA0E24BB89C50021205F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27E8CA0F24BB89D80021205F /* Prize.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		27E8CA1124BB8A050021205F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27E8CA2024BB8C020021205F /* SwiftFortuneWheel.framework */,
+				27E8CA1C24BB8AD70021205F /* SwiftFortuneWheel_tvOS.framework */,
+				27E8CA1824BB8A660021205F /* SwiftFortuneWheel.framework */,
+				27E8CA1224BB8A050021205F /* SwiftFortuneWheel_tvOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27E8CA2424BB8CAD0021205F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				27E8CA2524BB8CD00021205F /* Color+Hex.swift */,
+				27E8CA2724BB8CD00021205F /* Prize+SliceContentType.swift */,
+				27E8CA2624BB8CD00021205F /* UIView+CornerRadius.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27E8C9D624BB82E20021205F /* SwiftFortuneWheelDemo-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27E8C9FF24BB82E90021205F /* Build configuration list for PBXNativeTarget "SwiftFortuneWheelDemo-tvOS" */;
+			buildPhases = (
+				27E8C9D324BB82E20021205F /* Sources */,
+				27E8C9D424BB82E20021205F /* Frameworks */,
+				27E8C9D524BB82E20021205F /* Resources */,
+				27E8CA2324BB8C020021205F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftFortuneWheelDemo-tvOS";
+			productName = "SwiftFortuneWheelDemo-tvOS";
+			productReference = 27E8C9D724BB82E20021205F /* SwiftFortuneWheelDemo-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27E8C9EA24BB82E90021205F /* SwiftFortuneWheelDemo-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27E8CA0224BB82E90021205F /* Build configuration list for PBXNativeTarget "SwiftFortuneWheelDemo-tvOSTests" */;
+			buildPhases = (
+				27E8C9E724BB82E90021205F /* Sources */,
+				27E8C9E824BB82E90021205F /* Frameworks */,
+				27E8C9E924BB82E90021205F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27E8C9ED24BB82E90021205F /* PBXTargetDependency */,
+			);
+			name = "SwiftFortuneWheelDemo-tvOSTests";
+			productName = "SwiftFortuneWheelDemo-tvOSTests";
+			productReference = 27E8C9EB24BB82E90021205F /* SwiftFortuneWheelDemo-tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		27E8C9F524BB82E90021205F /* SwiftFortuneWheelDemo-tvOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27E8CA0524BB82E90021205F /* Build configuration list for PBXNativeTarget "SwiftFortuneWheelDemo-tvOSUITests" */;
+			buildPhases = (
+				27E8C9F224BB82E90021205F /* Sources */,
+				27E8C9F324BB82E90021205F /* Frameworks */,
+				27E8C9F424BB82E90021205F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27E8C9F824BB82E90021205F /* PBXTargetDependency */,
+			);
+			name = "SwiftFortuneWheelDemo-tvOSUITests";
+			productName = "SwiftFortuneWheelDemo-tvOSUITests";
+			productReference = 27E8C9F624BB82E90021205F /* SwiftFortuneWheelDemo-tvOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27E8C9CF24BB82E20021205F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Sherzod Khashimov";
+				TargetAttributes = {
+					27E8C9D624BB82E20021205F = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					27E8C9EA24BB82E90021205F = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 27E8C9D624BB82E20021205F;
+					};
+					27E8C9F524BB82E90021205F = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 27E8C9D624BB82E20021205F;
+					};
+				};
+			};
+			buildConfigurationList = 27E8C9D224BB82E20021205F /* Build configuration list for PBXProject "SwiftFortuneWheelDemo-tvOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27E8C9CE24BB82E20021205F;
+			productRefGroup = 27E8C9D824BB82E20021205F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27E8C9D624BB82E20021205F /* SwiftFortuneWheelDemo-tvOS */,
+				27E8C9EA24BB82E90021205F /* SwiftFortuneWheelDemo-tvOSTests */,
+				27E8C9F524BB82E90021205F /* SwiftFortuneWheelDemo-tvOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27E8C9D524BB82E20021205F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E8C9E524BB82E80021205F /* LaunchScreen.storyboard in Resources */,
+				27E8C9E224BB82E80021205F /* Assets.xcassets in Resources */,
+				27E8C9E024BB82E20021205F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E8C9E924BB82E90021205F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E8C9F424BB82E90021205F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27E8C9D324BB82E20021205F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E8CA1024BB89D80021205F /* Prize.swift in Sources */,
+				27E8CA2A24BB8CD00021205F /* Prize+SliceContentType.swift in Sources */,
+				27E8CA1724BB8A1F0021205F /* SFWConfiguration+DynamicContentExample.swift in Sources */,
+				27E8CA0924BB85380021205F /* MainViewController.swift in Sources */,
+				27E8C9DB24BB82E20021205F /* AppDelegate.swift in Sources */,
+				27E8CA0D24BB89830021205F /* DynamicContentExampleViewController.swift in Sources */,
+				27E8CA2924BB8CD00021205F /* UIView+CornerRadius.swift in Sources */,
+				27E8CA2824BB8CD00021205F /* Color+Hex.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E8C9E724BB82E90021205F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E8C9F024BB82E90021205F /* SwiftFortuneWheelDemo_tvOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E8C9F224BB82E90021205F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E8C9FB24BB82E90021205F /* SwiftFortuneWheelDemo_tvOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27E8C9ED24BB82E90021205F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27E8C9D624BB82E20021205F /* SwiftFortuneWheelDemo-tvOS */;
+			targetProxy = 27E8C9EC24BB82E90021205F /* PBXContainerItemProxy */;
+		};
+		27E8C9F824BB82E90021205F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27E8C9D624BB82E20021205F /* SwiftFortuneWheelDemo-tvOS */;
+			targetProxy = 27E8C9F724BB82E90021205F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27E8C9DE24BB82E20021205F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27E8C9DF24BB82E20021205F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27E8C9E324BB82E80021205F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27E8C9E424BB82E80021205F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27E8C9FD24BB82E90021205F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 13.4;
+			};
+			name = Debug;
+		};
+		27E8C9FE24BB82E90021205F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TVOS_DEPLOYMENT_TARGET = 13.4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27E8CA0024BB82E90021205F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "SwiftFortuneWheelDemo-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftFortuneWheel.SwiftFortuneWheelDemo-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		27E8CA0124BB82E90021205F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "SwiftFortuneWheelDemo-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftFortuneWheel.SwiftFortuneWheelDemo-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		27E8CA0324BB82E90021205F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "SwiftFortuneWheelDemo-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftFortuneWheel.SwiftFortuneWheelDemo-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftFortuneWheelDemo-tvOS.app/SwiftFortuneWheelDemo-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 13.4;
+			};
+			name = Debug;
+		};
+		27E8CA0424BB82E90021205F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "SwiftFortuneWheelDemo-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftFortuneWheel.SwiftFortuneWheelDemo-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftFortuneWheelDemo-tvOS.app/SwiftFortuneWheelDemo-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 13.4;
+			};
+			name = Release;
+		};
+		27E8CA0624BB82E90021205F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "SwiftFortuneWheelDemo-tvOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftFortuneWheel.SwiftFortuneWheelDemo-tvOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = "SwiftFortuneWheelDemo-tvOS";
+			};
+			name = Debug;
+		};
+		27E8CA0724BB82E90021205F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "SwiftFortuneWheelDemo-tvOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftFortuneWheel.SwiftFortuneWheelDemo-tvOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = "SwiftFortuneWheelDemo-tvOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27E8C9D224BB82E20021205F /* Build configuration list for PBXProject "SwiftFortuneWheelDemo-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E8C9FD24BB82E90021205F /* Debug */,
+				27E8C9FE24BB82E90021205F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27E8C9FF24BB82E90021205F /* Build configuration list for PBXNativeTarget "SwiftFortuneWheelDemo-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E8CA0024BB82E90021205F /* Debug */,
+				27E8CA0124BB82E90021205F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27E8CA0224BB82E90021205F /* Build configuration list for PBXNativeTarget "SwiftFortuneWheelDemo-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E8CA0324BB82E90021205F /* Debug */,
+				27E8CA0424BB82E90021205F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27E8CA0524BB82E90021205F /* Build configuration list for PBXNativeTarget "SwiftFortuneWheelDemo-tvOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E8CA0624BB82E90021205F /* Debug */,
+				27E8CA0724BB82E90021205F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27E8C9CF24BB82E20021205F /* Project object */;
+}

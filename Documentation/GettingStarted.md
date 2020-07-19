@@ -39,6 +39,8 @@ let slice = Slice(contents: [imageSliceContent])
 slices.append(slice)
 ```
 
+> **For more information, see the [About Slice and Slice’s contents](About_Slice_and_Slice_contents.md)**.
+
 - Create a `SwiftFortuneWheel` configuration:
 
 

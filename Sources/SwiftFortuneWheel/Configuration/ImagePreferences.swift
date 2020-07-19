@@ -7,48 +7,41 @@
 //
 
 import Foundation
+
+#if os(macOS)
+import AppKit
+#else
 import UIKit
+#endif
 
 /// Image preferences
 public struct ImagePreferences {
-
+    
     /// Prefered image size, required
     public var preferredSize: CGSize
-
-    /// Horizontal offset in slice from the center
-    public var horizontalOffset: CGFloat
-
+    
+    /// Horizontal offset in slice from the center, default value is `0`
+    public var horizontalOffset: CGFloat = 0
+    
     /// Vertical offset in slice from the center
     public var verticalOffset: CGFloat
-
-    /// Flip the text upside down
-    public var flipUpsideDown: Bool
-
-    /// Background color
-    public var backgroundColor: UIColor?
-
-    /// Tint color
-    public var tintColor: UIColor?
-
+    
+    /// Flip the text upside down, default value is `false`
+    public var flipUpsideDown: Bool = false
+    
+    /// Background color, `optional`
+    public var backgroundColor: SFWColor? = nil
+    
+    /// Tint color, `optional`
+    public var tintColor: SFWColor? = nil
+    
     /// Initiates a image preferences
     /// - Parameters:
     ///   - preferredSize: Prefered image size, required
     ///   - verticalOffset: Vertical offset in slice from the center, default value is `0`
-    ///   - horizontalOffset: Horizontal offset in slice from the center, default value is `0`
-    ///   - flipUpsideDown: Flip the text upside down, default value is `false`
-    ///   - tintColor: Tint color, `optional`
-    ///   - backgroundColor: Background color, `optional`
     public init(preferredSize: CGSize,
-                verticalOffset: CGFloat = 0,
-                horizontalOffset: CGFloat = 0,
-                flipUpsideDown: Bool = false,
-                tintColor: UIColor? = nil,
-                backgroundColor: UIColor? = nil) {
+                verticalOffset: CGFloat = 0) {
         self.preferredSize = preferredSize
-        self.horizontalOffset = horizontalOffset
         self.verticalOffset = verticalOffset
-        self.backgroundColor = backgroundColor
-        self.tintColor = tintColor
-        self.flipUpsideDown = flipUpsideDown
     }
 }

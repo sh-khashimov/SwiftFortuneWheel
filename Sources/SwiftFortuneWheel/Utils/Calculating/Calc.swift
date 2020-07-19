@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIKit
+import CoreGraphics
 
 struct Calc {
     
@@ -15,14 +15,14 @@ struct Calc {
     static var flipRotation: CGFloat {
         return .pi
     }
-
+    
     /// to rad.
     /// - Parameter f: degree
     /// - Returns: postion
     static func torad(_ f: CGFloat) -> CGFloat {
         return f * .pi / 180.0
     }
-
+    
     /// Circular segment height for radius and degree
     /// - Parameters:
     ///   - radius: degree
@@ -31,7 +31,7 @@ struct Calc {
     static func circularSegmentHeight(radius: CGFloat, from degree: CGFloat) -> CGFloat {
         return 2 * radius * sin(degree / 2.0 * CGFloat.pi / 180)
     }
-
+    
     /// Radius calculation
     /// - Parameters:
     ///   - circularSegmentHeight: Circular segment height

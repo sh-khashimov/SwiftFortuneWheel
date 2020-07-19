@@ -7,40 +7,45 @@
 //
 
 import Foundation
+
+#if os(macOS)
+import AppKit
+#else
 import UIKit
+#endif
 
 /// Wheel other math calculation protocol
 protocol WheelMathCalculating: class {
-
+    
     /// Wheel frame
     var frame: CGRect { get set }
-
+    
     /// Wheel main frame
     var mainFrame: CGRect! { get set }
-
+    
     /// Wheel preferences
     var preferences: SFWConfiguration.WheelPreferences? { get set }
 }
 
 extension WheelMathCalculating {
-
+    
     /// Radius
     var radius:CGFloat {
         return mainFrame.height / 2.0
     }
-
+    
     /// Rotation offset
     var rotationOffset:CGFloat {
         return (mainFrame.width) / 2 + abs(preferences?.layerInsets.top ?? 0)
     }
-
+    
     /// Circular segment height for degree
     /// - Parameter degree: degree
     /// - Returns: height
     func circularSegmentHeight(from degree: CGFloat) -> CGFloat {
         return Calc.circularSegmentHeight(radius: radius, from: degree)
     }
-
+    
     /// Updates frame sizes
     func updateSizes(updateFrame: Bool = true) {
         if let layerInsets = preferences?.layerInsets {

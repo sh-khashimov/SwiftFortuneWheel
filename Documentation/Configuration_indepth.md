@@ -59,5 +59,7 @@ class myViewController: UIViewController {
 }
 ```
 
+Some of the `Preferences` has property `colorType` equal to `SFWConfiguration.ColorType`, which helps to specify color with evenOddColors pattern or with custom pattern. Wheen you need to set a solid color, use `SFWConfiguration.ColorType.customPatternColors(colors: nil, defaultColor: mySolidColor)`
+
 
 > **For more information, see [example projects](../Examples)**

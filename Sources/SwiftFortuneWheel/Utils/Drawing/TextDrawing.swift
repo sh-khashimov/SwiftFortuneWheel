@@ -7,7 +7,12 @@
 //
 
 import Foundation
+
+#if os(macOS)
+import AppKit
+#else
 import UIKit
+#endif
 
 /// Curved text drawing protocol
 protocol TextDrawing: CurveTextDrawing {}
