@@ -2,7 +2,7 @@
 
 ### macOS
 
-**SwiftFortuneWheel** is ported to **macOS** at `version 1.1.0` and should be work natively. However, you should note that the `SwiftFortuneWheel` view could be clipped with `NSView`, in order to fix that, you can add the inner spacing with auto-layout in your constrains and you need also specify `alignmentRectInsets` in the configuration.
+**SwiftFortuneWheel** is ported to **macOS** at `version 1.1.0` and should work natively. However, you should note that the `SwiftFortuneWheel` view could be clipped with `NSView`, in order to fix that, you can add the inner spacing with auto-layout in your constrains and you need also specify `alignmentRectInsets` in the configuration.
 
 > **See [SwiftFortuneWheelDemo-macOS example](../Examples)**
 
