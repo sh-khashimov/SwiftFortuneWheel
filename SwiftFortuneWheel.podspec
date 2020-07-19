@@ -17,5 +17,7 @@ Pod::Spec.new do |s|
   s.swift_versions = "5.0"
   s.source       = { :git => "https://github.com/sh-khashimov/SwiftFortuneWheel.git", :tag => s.version.to_s }
   s.source_files  = "Sources/**/*"
-  s.frameworks  = "Foundation", "UIKit"
+  s.frameworks  = "Foundation"
+  s.ios.framework  = 'UIKit'
+  s.osx.framework  = 'AppKit'
 end
