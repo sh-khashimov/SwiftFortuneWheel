@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   DESC
   s.homepage     = "https://github.com/sh-khashimov/SwiftFortuneWheel.git"
   s.documentation_url = 'https://sh-khashimov.github.io/SwiftFortuneWheel'
-  s.screenshots     = 'https://raw.githubusercontent.com/sh-khashimov/SwiftFortuneWheel/master/example.png'
+  s.screenshots     = 'https://raw.githubusercontent.com/sh-khashimov/SwiftFortuneWheel/master/Images/screenshots/1.png', 'https://raw.githubusercontent.com/sh-khashimov/SwiftFortuneWheel/master/Images/screenshots/2.png', 'https://raw.githubusercontent.com/sh-khashimov/SwiftFortuneWheel/master/Images/screenshots/3.png', 'https://raw.githubusercontent.com/sh-khashimov/SwiftFortuneWheel/master/Images/screenshots/4.png', 'https://raw.githubusercontent.com/sh-khashimov/SwiftFortuneWheel/master/Images/screenshots/5.png', 'https://raw.githubusercontent.com/sh-khashimov/SwiftFortuneWheel/master/Images/screenshots/6.png', 'https://raw.githubusercontent.com/sh-khashimov/SwiftFortuneWheel/master/Images/screenshots/7.png'
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "Sherzod Khashimov" => "sh.khashimov@gmail.com" }
   s.social_media_url   = ""
