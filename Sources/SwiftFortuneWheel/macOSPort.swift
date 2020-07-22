@@ -103,6 +103,10 @@ extension NSImage {
         
         return image
     }
+    
+    func draw(at position: NSPoint) {
+        self.draw(at: position, from: NSRect(x: 0, y: 0, width: self.size.width, height: self.size.height), operation: .copy, fraction: 1)
+    }
 }
 #endif
 

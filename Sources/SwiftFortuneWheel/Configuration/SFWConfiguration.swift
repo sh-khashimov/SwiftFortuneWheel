@@ -129,6 +129,9 @@ public extension SFWConfiguration {
         /// Stroke color
         public var strokeColor: SFWColor
         
+        /// Background image content mode
+        public var backgroundImageContentMode: ContentMode = .scaleAspectFill
+        
         /// Initiates a slice preferences
         /// - Parameters:
         ///   - backgroundColorType: Background color type
@@ -357,5 +360,14 @@ public extension SFWConfiguration {
             self.size = size
             self.verticalOffset = verticalOffset
         }
+    }
+}
+
+
+public extension SFWConfiguration {
+    /// Content can be drawn by specified mode
+    enum ContentMode {
+        case scaleAspectFill
+        case bottom
     }
 }

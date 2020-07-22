@@ -1,5 +1,8 @@
 ## CHANGELOG
 
+### 1.1.1
+- [Issue #8](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/8): Added background image for Slice object;
+
 ### 1.1.0
 
 - Added support for **macOS 10.11** and above;

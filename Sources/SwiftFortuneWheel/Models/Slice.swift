@@ -19,16 +19,23 @@ public struct Slice {
     /// Contents in vertical align order
     public var contents: [ContentType]
     
+    
     /// Background color, `optional`
     public var backgroundColor: SFWColor?
+    
+    /// Background image, `optional`
+    public var backgroundImage: SFWImage?
     
     /// Initiates a slice object
     /// - Parameter contents: Contents in vertical align order
     /// - Parameter backgroundColor: Background color, `optional`
+    /// - Parameter backgroundImage: Background image, `optional`
     public init(contents: [ContentType],
-                backgroundColor: SFWColor? = nil) {
+                backgroundColor: SFWColor? = nil,
+                backgroundImage: SFWImage? = nil) {
         self.contents = contents
         self.backgroundColor = backgroundColor
+        self.backgroundImage = backgroundImage
     }
 }
 
