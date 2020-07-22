@@ -59,6 +59,7 @@ extension SliceDrawing {
         //         Draws slice path and background
         self.drawPath(in: context,
                       backgroundColor: slice.backgroundColor,
+                      backgroundImage: slice.backgroundImage,
                       start: start,
                       and: end,
                       rotation: rotation,
@@ -125,7 +126,7 @@ extension SliceDrawing {
     ///   - end: end degree
     ///   - rotation: rotation degree
     ///   - index: index
-    private func drawPath(in context: CGContext, backgroundColor: SFWColor?, start: CGFloat, and end: CGFloat, rotation:CGFloat, index: Int) {
+    private func drawPath(in context: CGContext, backgroundColor: SFWColor?, backgroundImage: SFWImage?, start: CGFloat, and end: CGFloat, rotation:CGFloat, index: Int) {
         
         context.saveGState()
         context.rotate(by: (rotation + contextPositionCorrectionOffsetDegree) * CGFloat.pi/180)
@@ -155,12 +156,14 @@ extension SliceDrawing {
         context.addPath(path)
         context.drawPath(using: .fill)
         
-        //        let path = UIBezierPath()
-        //        let center = CGPoint(x: 0, y: 0)
-        //        path.move(to: center)
-        //        path.addArc(withCenter: center, radius: radius, startAngle: Calc.torad(start), endAngle: Calc.torad(end), clockwise: true)
-        //        pathBackgroundColor?.setFill()
-        //        path.fill()
+        if let backgroundImage = backgroundImage {
+            context.saveGState()
+            context.addPath(path)
+            context.clip()
+            context.rotate(by: -contextPositionCorrectionOffsetDegree * CGFloat.pi/180)
+            self.draw(backgroundImage: backgroundImage, in: context)
+            context.restoreGState()
+        }
         
         if rotation != end {
             let startPoint = CGPoint(x: (radius * (cos((end)*(CGFloat.pi/180)))), y: (radius * (sin((start)*(CGFloat.pi/180)))))
@@ -182,6 +185,29 @@ extension SliceDrawing {
         }
         
         context.restoreGState()
+    }
+    
+    /// Draws background image for slice
+    /// - Parameters:
+    ///   - backgroundImage: Background Image
+    ///   - context: Context
+    private func draw(backgroundImage: SFWImage, in context: CGContext) {
+        
+        let aspectFillSize = CGSize.aspectFill(aspectRatio: backgroundImage.size, minimumSize: CGSize(width: radius, height: circularSegmentHeight))
+        
+        let position = CGPoint(x: -aspectFillSize.width / 2, y: -aspectFillSize.height)
+        let rectangle = CGRect(x: position.x, y: position.y, width: aspectFillSize.width, height: aspectFillSize.height)
+        
+        switch preferences?.slicePreferences.backgroundImageContentMode {
+        case .some(.bottom):
+            #if os(macOS)
+            backgroundImage.draw(at: position, from: NSRect(x: 0, y: 0, width: rectangle.width, height: rectangle.height), operation: .copy, fraction: 1)
+            #else
+            backgroundImage.draw(at: position)
+            #endif
+        default:
+            backgroundImage.draw(in: rectangle)
+        }
     }
     
     /// Prepare to draw text

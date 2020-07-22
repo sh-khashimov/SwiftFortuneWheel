@@ -14,9 +14,11 @@ The ultimate spinning wheel control that supports dynamic content and rich custo
 |---|---|
 | 🏵 | Dynamic content, supports texts, images, and lines |
 | 🎯 | Adaptive text size with support multiline, alignment and line break mode |
+| 🎇 | Supports background Image for each Slice (sector) |
 | 🧮 | Supports vertical and horizontal text orientation |
 | 🌈 | Appearance customization |
-| 🎨 | Drawn and animated using CoreGraphics, CoreAnimations
+| 🔋 | High performance, low memory usage |
+| 🎨 | Drawn and animated using CoreGraphics, CoreAnimations |
 | 🚀 | Written in Swift |
 
 ### Layout Preview

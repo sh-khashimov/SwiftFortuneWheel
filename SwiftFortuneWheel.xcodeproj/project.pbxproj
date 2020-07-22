@@ -33,6 +33,7 @@
 		2722559924BCA4A400950563 /* NSView+AnchorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559824BCA4A400950563 /* NSView+AnchorPoint.swift */; };
 		2722559B24BCD7F400950563 /* NoClippingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559A24BCD7F300950563 /* NoClippingLayer.swift */; };
 		277A6EBE249A9B450066C807 /* LinePreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A6EBD249A9B450066C807 /* LinePreferences.swift */; };
+		277C4C2B24C85D25007580F4 /* CGRect+AspectFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C4C2A24C85D25007580F4 /* CGRect+AspectFill.swift */; };
 		2787E56E24A728F900533AD4 /* String+Width.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2787E56D24A728F900533AD4 /* String+Width.swift */; };
 		2787E57024A7292F00533AD4 /* String+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2787E56F24A7292F00533AD4 /* String+Lines.swift */; };
 		27F4807924AEE406005886F6 /* TextDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4807824AEE406005886F6 /* TextDrawing.swift */; };
@@ -83,6 +84,7 @@
 		2722559A24BCD7F300950563 /* NoClippingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoClippingLayer.swift; sourceTree = "<group>"; };
 		272B62C524A46FED00F19E41 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		277A6EBD249A9B450066C807 /* LinePreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinePreferences.swift; sourceTree = "<group>"; };
+		277C4C2A24C85D25007580F4 /* CGRect+AspectFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+AspectFill.swift"; sourceTree = "<group>"; };
 		2787E56D24A728F900533AD4 /* String+Width.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Width.swift"; sourceTree = "<group>"; };
 		2787E56F24A7292F00533AD4 /* String+Lines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Lines.swift"; sourceTree = "<group>"; };
 		27F4807824AEE406005886F6 /* TextDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDrawing.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				27105668248D4C93006C0181 /* CGRest+AspectFit.swift */,
 				27105669248D4C93006C0181 /* Array+Default.swift */,
 				2722559824BCA4A400950563 /* NSView+AnchorPoint.swift */,
+				277C4C2A24C85D25007580F4 /* CGRect+AspectFill.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				277A6EBE249A9B450066C807 /* LinePreferences.swift in Sources */,
 				27105681248D4C93006C0181 /* SwiftFortuneWheel.swift in Sources */,
 				27105671248D4C93006C0181 /* ImagePreferences.swift in Sources */,
+				277C4C2B24C85D25007580F4 /* CGRect+AspectFill.swift in Sources */,
 				27105675248D4C93006C0181 /* SpinningAnimatable.swift in Sources */,
 				27F7D5BF24A5F6B0004BEE19 /* String+Dots.swift in Sources */,
 				27105684248D4C93006C0181 /* WheelLayer.swift in Sources */,
