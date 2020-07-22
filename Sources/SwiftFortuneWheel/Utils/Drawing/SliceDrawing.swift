@@ -157,12 +157,7 @@ extension SliceDrawing {
         context.drawPath(using: .fill)
         
         if let backgroundImage = backgroundImage {
-            context.saveGState()
-            context.addPath(path)
-            context.clip()
-            context.rotate(by: -contextPositionCorrectionOffsetDegree * CGFloat.pi/180)
-            self.draw(backgroundImage: backgroundImage, in: context)
-            context.restoreGState()
+            self.draw(backgroundImage: backgroundImage, in: context, clipPath: path)
         }
         
         if rotation != end {
@@ -191,7 +186,12 @@ extension SliceDrawing {
     /// - Parameters:
     ///   - backgroundImage: Background Image
     ///   - context: Context
-    private func draw(backgroundImage: SFWImage, in context: CGContext) {
+    private func draw(backgroundImage: SFWImage, in context: CGContext, clipPath: CGPath) {
+
+        context.saveGState()
+        context.addPath(clipPath)
+        context.clip()
+        context.rotate(by: -contextPositionCorrectionOffsetDegree * CGFloat.pi/180)
         
         let aspectFillSize = CGSize.aspectFill(aspectRatio: backgroundImage.size, minimumSize: CGSize(width: radius, height: circularSegmentHeight))
         
@@ -208,6 +208,8 @@ extension SliceDrawing {
         default:
             backgroundImage.draw(in: rectangle)
         }
+        
+        context.restoreGState()
     }
     
     /// Prepare to draw text
