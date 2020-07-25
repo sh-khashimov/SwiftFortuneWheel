@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.1.2
+
+- SPM macOS support added;
+
 ### 1.1.1
 - [Issue #8](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/8): Added background image for Slice object;
 
