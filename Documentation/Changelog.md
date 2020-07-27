@@ -1,5 +1,12 @@
 ## CHANGELOG
 
+### 1.1.3
+
+- `characterWrap` type added to the `TextPreferences.LineBreakMode`;
+- `maxWidth` added to the `TextPreferences`. With `maxWdith` possible to set maximum width that will be available for text;
+- Fixed text margins;
+- Fixed when `numberOfLines = 0` may not work properly;
+
 ### 1.1.2
 
 - SPM macOS support added;

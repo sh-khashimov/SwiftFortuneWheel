@@ -32,7 +32,7 @@ extension String {
         let splitCharacterWidth = splitCharacter.width(by: font)
         
         /// Available words for String
-        let words = self.split(separator: splitCharacter.first!)
+        var words = self.split(separator: splitCharacter.first!)
         
         /// The minimum size of the last word
         var lastWordMinimumSize = CGFloat.greatestFiniteMagnitude
@@ -45,7 +45,7 @@ extension String {
         var latestAddedWord = 0
         
         /// Splits String to lines, up to last word
-        for index in 0..<lineWidths.count {
+        for index in stride(from: 0, to: lineWidths.count, by: 1) {
             
             /// String at the line
             var linedString = ""
@@ -79,33 +79,55 @@ extension String {
                 } else {
                     /// Сhecks if lineBreak == .wordWrap then the current word should not be added to the line
                     guard lineBreak != .wordWrap else { continue }
-                    /// if word first in the line, crops the word and adds it to the line
-                    if isFirstWordInLine {
+                    
+                    /// Split by character
+                    if lineBreak == .characterWrap {
                         /// Cropped word
-                        var croppedWord = word.crop(by: availableWidthInLine, font: font)
-                        if lineBreak == .truncateTail {
-                            croppedWord.replaceLastCharactersWithDots()
+                        let croppedWord = word.crop(by: isFirstWordInLine ? availableWidthInLine : availableWidthInLine - splitCharacterWidth, font: font)
+                        
+                        /// Second part of cropped word
+                        let wordSecondPart = word.dropFirst(croppedWord.count)
+                        
+                        // if word first in the line, crops the word and adds it to the line
+                        if isFirstWordInLine {
+                            linedString = linedString + croppedWord
+                        } else {
+                            linedString = linedString + splitCharacter + croppedWord
                         }
-                        linedString += croppedWord
+                        /// Insert second word part to iteration
+                        words.insert(wordSecondPart, at: wordIndex+1)
+                        
                         availableWidthInLine = 0
                         latestAddedWord = wordIndex + 1
                     } else {
-                        /// Is the latest line
-                        let isLatestLine = lineWidths.count - 1 == index
-                        /// If the line is not latest, the current word most likely will be added to the next line
-                        guard isLatestLine else { continue }
-                        /// Checks available width in the line for the cropped word, the word won't be added if available width is less then for 5 character
-                        guard availableWidthInLine >= splitCharacterWidth + lastWordMinimumSize else { continue }
-                        /// Cropped word
-                        var croppedWord = word.crop(by: availableWidthInLine, font: font)
-                        /// Checks are cropped word more than 3 character
-                        guard croppedWord.count > 3 else { continue }
-                        if lineBreak == .truncateTail {
-                            croppedWord.replaceLastCharactersWithDots()
+                        /// if word first in the line, crops the word and adds it to the line
+                        if isFirstWordInLine {
+                            /// Cropped word
+                            var croppedWord = word.crop(by: availableWidthInLine, font: font)
+                            if lineBreak == .truncateTail {
+                                croppedWord.replaceLastCharactersWithDots()
+                            }
+                            linedString += croppedWord
+                            availableWidthInLine = 0
+                            latestAddedWord = wordIndex + 1
+                        } else {
+                            /// Is the latest line
+                            let isLatestLine = lineWidths.count - 1 == index
+                            /// If the line is not latest, the current word most likely will be added to the next line
+                            guard isLatestLine else { continue }
+                            /// Checks available width in the line for the cropped word, the word won't be added if available width is less then for 5 character
+                            guard availableWidthInLine >= splitCharacterWidth + lastWordMinimumSize else { continue }
+                            /// Cropped word
+                            var croppedWord = word.crop(by: availableWidthInLine, font: font)
+                            /// Checks are cropped word more than 3 character
+                            guard croppedWord.count > 3 else { continue }
+                            if lineBreak == .truncateTail {
+                                croppedWord.replaceLastCharactersWithDots()
+                            }
+                            linedString += splitCharacter + croppedWord
+                            availableWidthInLine = 0
+                            latestAddedWord = wordIndex + 1
                         }
-                        linedString += splitCharacter + croppedWord
-                        availableWidthInLine = 0
-                        latestAddedWord = wordIndex + 1
                     }
                 }
             }

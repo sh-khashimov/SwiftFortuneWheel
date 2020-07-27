@@ -29,6 +29,9 @@ extension SliceDrawing {
     var margins: SFWConfiguration.Margins {
         var margins = self.preferences?.contentMargins ?? SFWConfiguration.Margins()
         margins.top = margins.top + (self.preferences?.circlePreferences.strokeWidth ?? 0) / 2
+        margins.left = margins.left + (self.preferences?.circlePreferences.strokeWidth ?? 0)
+        margins.right = margins.right + (self.preferences?.circlePreferences.strokeWidth ?? 0)
+        margins.bottom = margins.bottom + (self.preferences?.circlePreferences.strokeWidth ?? 0) / 2
         return margins
     }
     

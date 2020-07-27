@@ -50,6 +50,9 @@ public struct TextPreferences {
     /// The technique to use for aligning the text, default value is `.left`
     public var alignment: NSTextAlignment = .center
     
+    /// Maximum width that will be available for text
+    public var maxWidth: CGFloat = .greatestFiniteMagnitude
+    
     /// Initiates a text preferences
     /// - Parameters:
     ///   - textColorType: Text color type
@@ -78,6 +81,7 @@ public extension TextPreferences {
         case clip
         case truncateTail
         case wordWrap
+        case characterWrap
         
         /// NSLineBreakMode
         var systemLineBreakMode: NSLineBreakMode {
@@ -88,6 +92,8 @@ public extension TextPreferences {
                 return .byTruncatingTail
             case .wordWrap:
                 return .byWordWrapping
+            case .characterWrap:
+                return  .byCharWrapping
             }
         }
     }

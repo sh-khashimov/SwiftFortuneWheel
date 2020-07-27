@@ -30,10 +30,10 @@ extension TextDrawing {
     private func availableTextRect(yPosition: CGFloat, preferences: TextPreferences, topOffset: CGFloat, radius: CGFloat, sliceDegree: CGFloat, margins: SFWConfiguration.Margins) -> [CGRect] {
         
         /// Max. available height from Y position
-        let maxHeight = radius - abs(yPosition) - margins.bottom
+        let maxHeight = abs(yPosition) - margins.bottom
         
         /// Max. available lines for String
-        let maxLines = preferences.numberOfLines == 0 ? Int((maxHeight / preferences.font.pointSize).rounded(.towardZero)) : preferences.numberOfLines
+        let maxLines = preferences.numberOfLines == 0 ? Int((maxHeight / (preferences.font.pointSize + preferences.spacing)).rounded(.up)) : preferences.numberOfLines
         
         /// Text rectangles
         var textRects: [CGRect] = []
@@ -47,10 +47,10 @@ extension TextDrawing {
             /// Y position of the rectangle bottoms
             let bottomYPosition = -(radius - preferences.verticalOffset - topOffset - heightOffset - spacing)
             /// Width
-            let width = self.width(forYPosition: bottomYPosition,
+            let width = min(preferences.maxWidth, self.width(forYPosition: bottomYPosition,
                                    sliceDegree: sliceDegree,
                                    leftMargin: margins.left,
-                                   rightMargin: margins.right)
+                                   rightMargin: margins.right))
             /// Text rectangle
             let textRect = CGRect(x: 0, y: 0, width: width, height: preferences.font.pointSize)
             textRects.append(textRect)
@@ -239,7 +239,7 @@ extension TextDrawing {
         let maxWidth = Calc.circularSegmentHeight(radius: radius - preferences.verticalOffset - topOffset, from: sliceDegree)
         
         /// Maximum available lines in slice
-        let maxLinesInSlice = (maxWidth / (preferences.font.pointSize + preferences.spacing)).rounded(.down)
+        let maxLinesInSlice = (maxWidth / (preferences.font.pointSize + preferences.spacing)).rounded(.up)
         
         /// Available text rectangles
         var availableTextRects: [CGRect] = []
@@ -252,7 +252,7 @@ extension TextDrawing {
             /// Height of text rectangle
             let _height = preferences.font.pointSize * CGFloat(line) + preferences.spacing * (CGFloat(line) - 1)
             /// Maximum circular segment height (chord) for current line (rectangle)
-            let _maxCircularSegmentHeight = margins.left + margins.right + _height
+            let _maxCircularSegmentHeight = _height - margins.top - margins.bottom
             /// Bottom radius offset
             let _bottomRadiusOffset = max(margins.bottom, Calc.radius(circularSegmentHeight: _maxCircularSegmentHeight, from: sliceDegree))
             /// Available width in slice
@@ -263,7 +263,7 @@ extension TextDrawing {
             /// Height of the next text rectangle
             let _nextHeight = preferences.font.pointSize * CGFloat(line + 1) + preferences.spacing * (CGFloat(line))
             /// Maximum circular segment height (chord) for current line (rectangle)
-            let _nextMaxCircularSegmentHeight = margins.left + margins.right + _nextHeight + spacing
+            let _nextMaxCircularSegmentHeight = _nextHeight + spacing - margins.top - margins.bottom
             /// Bottom radius offset for next line
             let _nextBottomRadiusOffset = max(margins.bottom, Calc.radius(circularSegmentHeight: _nextMaxCircularSegmentHeight, from: sliceDegree))
             /// Available width in slice for next line
@@ -296,13 +296,13 @@ extension TextDrawing {
             
             /// split the availableTextRect to the text rectangles
             textRects = Array(repeating: CGRect(x: 0, y: 0, width: textRect.width, height: preferences.font.pointSize), count: line)
-            multilineString = text.split(font: preferences.font, lineWidths: textRects.map({ $0.width }), lineBreak: preferences.lineBreakMode)
+            multilineString = text.split(font: preferences.font, lineWidths: textRects.map({ min(preferences.maxWidth, $0.width) }), lineBreak: preferences.lineBreakMode)
             
             /// Word count for text in the current line
             let _wordCount = max(multilineString.joined().split(separator: " ".first!).count, line)
             
             if wordsCount == _wordCount {
-                break
+//                break
             }
         }
         
@@ -352,9 +352,9 @@ extension TextDrawing {
             }
             
             //         For Debugging purposes
-            //            context.addRect(textRect)
-            //            UIColor.red.setStroke()
-            //            context.drawPath(using: .fillStroke)
+//                        context.addRect(textRect)
+//                        UIColor.red.setStroke()
+//                        context.drawPath(using: .fillStroke)
             
             string.draw(in: CGRect(x: 0, y: 0, width: textRect.width, height: CGFloat.infinity), withAttributes: textAttributes)
             

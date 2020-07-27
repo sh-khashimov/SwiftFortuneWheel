@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import SwiftFortuneWheel
 
-private let circleStrokeWidth: CGFloat = 50
+private let circleStrokeWidth: CGFloat = 10
 private let blackColor = UIColor(white: 51.0 / 255.0, alpha: 1.0)
 private let cyanColor = UIColor.cyan
 
@@ -91,8 +91,9 @@ public extension TextPreferences {
         var preferences = TextPreferences(textColorType: textColorType,
                                           font: font,
                                           verticalOffset: 10)
+        preferences.maxWidth = 12
         preferences.orientation = .horizontal
-        preferences.lineBreakMode = .truncateTail
+        preferences.lineBreakMode = .characterWrap
         preferences.alignment = .center
         preferences.numberOfLines = 0
         preferences.spacing = 5
