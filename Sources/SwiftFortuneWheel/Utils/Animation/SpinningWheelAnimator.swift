@@ -60,7 +60,7 @@ class SpinningWheelAnimator : NSObject, CAAnimationDelegate {
         starTransformAnim.keyTimes = [0, 1]
         starTransformAnim.duration = rotationTime
 
-        let starRotationAnim : CAAnimationGroup = TTUtils.group(animations: [starTransformAnim], fillMode:fillMode)
+        let starRotationAnim : CAAnimationGroup = CAAnimationGroup(animations: [starTransformAnim], fillMode:fillMode)
         starRotationAnim.repeatCount = Float.infinity
         layer?.add(starRotationAnim, forKey:"starRotationIndefiniteAnim")
     }
@@ -98,7 +98,7 @@ class SpinningWheelAnimator : NSObject, CAAnimationDelegate {
         starTransformAnim.duration       = animationDuration
         starTransformAnim.timingFunction = CAMediaTimingFunction(controlPoints: 0.0256, 0.874, 0.675, 1)
 
-        let starRotationAnim : CAAnimationGroup = TTUtils.group(animations: [starTransformAnim], fillMode:fillMode)
+        let starRotationAnim : CAAnimationGroup = CAAnimationGroup(animations: [starTransformAnim], fillMode:fillMode)
         animationObject.layerToAnimate?.add(starRotationAnim, forKey:"starRotationAnim")
     }
 
