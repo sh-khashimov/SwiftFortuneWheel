@@ -28,7 +28,7 @@ class SpinningWheelAnimator : NSObject, CAAnimationDelegate {
     /// Animation object
     weak var animationObject: SpinningAnimatorProtocol!
 
-    internal var completionBlocks = [CAAnimation: (Bool) -> Void]()
+    internal var completionBlock: ((Bool) -> Void)?
     internal var updateLayerValueForCompletedAnimation : Bool = false
     
     /// Current rotation position used to know where is last time rotation stopped
@@ -72,20 +72,6 @@ class SpinningWheelAnimator : NSObject, CAAnimationDelegate {
     ///   - rotationOffset: Rotation offset
     ///   - completionBlock: Completion block
     func addRotationAnimation(fullRotationsUntilFinish: Int, animationDuration: CFTimeInterval, rotationOffset: CGFloat = 0.0, completionBlock: ((_ finished: Bool) -> Void)? = nil){
-        if completionBlock != nil {
-            let completionAnim = CABasicAnimation(keyPath:"completionAnim")
-            completionAnim.duration = animationDuration
-            completionAnim.delegate = self
-            completionAnim.setValue("rotation", forKey:"animId")
-            completionAnim.setValue(false, forKey:"needEndAnim")
-            let layer = animationObject.layerToAnimate
-            layer?.add(completionAnim, forKey:"rotation")
-            if let anim = layer?.animation(forKey: "rotation") {
-                completionBlocks[anim] = completionBlock
-            }
-        }
-
-        let fillMode : String = CAMediaTimingFillMode.forwards.rawValue
         
         currentRotationPosition = rotationOffset
 
@@ -96,26 +82,23 @@ class SpinningWheelAnimator : NSObject, CAAnimationDelegate {
         starTransformAnim.values         = [0, rotation * rotationDirectionOffset * CGFloat.pi/180]
         starTransformAnim.keyTimes       = [0, 1]
         starTransformAnim.duration       = animationDuration
+//        starTransformAnim.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         starTransformAnim.timingFunction = CAMediaTimingFunction(controlPoints: 0.0256, 0.874, 0.675, 1)
+        starTransformAnim.fillMode = CAMediaTimingFillMode.forwards
+        starTransformAnim.isRemovedOnCompletion = false
+        if completionBlock != nil {
+            starTransformAnim.delegate = self
+            self.completionBlock = completionBlock
+        }
 
-        let starRotationAnim : CAAnimationGroup = CAAnimationGroup(animations: [starTransformAnim], fillMode:fillMode)
-        animationObject.layerToAnimate?.add(starRotationAnim, forKey:"starRotationAnim")
+        animationObject.layerToAnimate?.add(starTransformAnim, forKey:"starRotationAnim")
     }
 
     //MARK: - Animation Cleanup
-    
-    /// Animation did stop
-    /// - Parameters:
-    ///   - anim: animation
-    ///   - flag: flag
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool){
-        if let completionBlock = completionBlocks[anim]{
-            completionBlocks.removeValue(forKey: anim)
-            if (flag && updateLayerValueForCompletedAnimation) || anim.value(forKey: "needEndAnim") as! Bool{
-                animationObject.layerToAnimate?.updateLayerValues(forAnimationId: anim.value(forKey: "animId") as! String)
-                animationObject.layerToAnimate?.removeAnimations(forAnimationId: anim.value(forKey: "animId") as! String)
-            }
+        if let completionBlock = self.completionBlock {
             completionBlock(flag)
+            self.completionBlock = nil
         }
     }
 

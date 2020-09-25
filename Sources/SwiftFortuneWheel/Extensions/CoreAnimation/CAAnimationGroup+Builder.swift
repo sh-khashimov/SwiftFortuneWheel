@@ -31,7 +31,7 @@ extension CAAnimationGroup {
             self.isRemovedOnCompletion = false
         }
 
-        if forEffectLayer{
+        if forEffectLayer {
             self.duration = self.maxDuration(sublayersCount: sublayersCount)
         }else{
             self.duration = animations.maxDuration
