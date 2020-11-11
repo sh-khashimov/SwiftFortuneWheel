@@ -14,6 +14,7 @@ import AppKit
 import UIKit
 #endif
 
+#if os(iOS)
 /// The protocol that adds support for the impact feedback
 protocol ImpactFeedbackable {
     @available(iOSApplicationExtension 10.0, *)
@@ -45,3 +46,4 @@ extension ImpactFeedbackable {
         }
     }
 }
+#endif

@@ -25,11 +25,13 @@ public class SwiftFortuneWheel: SFWControl {
     /// Callback for center collision
     public var onCenterCollision: ((_ progress: Double?) -> Void)?
     
+    #if os(iOS)
     public var impactFeedbackOn: Bool = false {
         didSet {
             prepareImpactFeedbackIfNeeded()
         }
     }
+    #endif
     
     public var edgeCollisionDetectionOn: Bool = false
     
@@ -100,8 +102,10 @@ public class SwiftFortuneWheel: SFWControl {
     
     private(set) lazy var audioPlayerManager = AudioPlayerManager()
     
+    #if os(iOS)
     @available(iOSApplicationExtension 10.0, *)
     private(set) lazy var impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .light)
+    #endif
     
     /// Spin button title
     private var _spinTitle: String? {
@@ -257,14 +261,8 @@ extension SwiftFortuneWheel: SliceCalculating {}
 
 // MARK: - Audio and Impack Feedback Support
 
-extension SwiftFortuneWheel: AudioPlayable, ImpactFeedbackable {
-    
-    /// Impacts feedback and sound if needed
-    /// - Parameter type: Collision type
-    fileprivate func impactIfNeeded(for type: CollisionType) {
-        playSoundIfNeeded(type: type)
-        impactFeedbackIfNeeded(for: type)
-    }
+#if os(iOS)
+extension SwiftFortuneWheel: ImpactFeedbackable {
     
     /// Impacts feedback if needed
     /// - Parameter type: Collision type
@@ -279,6 +277,19 @@ extension SwiftFortuneWheel: AudioPlayable, ImpactFeedbackable {
                 impactFeedback()
             }
         }
+    }
+}
+#endif
+
+extension SwiftFortuneWheel: AudioPlayable {
+    
+    /// Impacts feedback and sound if needed
+    /// - Parameter type: Collision type
+    fileprivate func impactIfNeeded(for type: CollisionType) {
+        playSoundIfNeeded(type: type)
+        #if os(iOS)
+        impactFeedbackIfNeeded(for: type)
+        #endif
     }
 }
 
