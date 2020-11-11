@@ -1,5 +1,12 @@
 ## CHANGELOG
 
+### 1.2.0
+
+- Added sound effect and haptic feedback during the rotation;
+- [Issue #6](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/6): animation callback added;
+- Animation API refined;
+- iOS Example project updated; 
+
 ### 1.1.3
 
 - `characterWrap` type added to the `TextPreferences.LineBreakMode`;

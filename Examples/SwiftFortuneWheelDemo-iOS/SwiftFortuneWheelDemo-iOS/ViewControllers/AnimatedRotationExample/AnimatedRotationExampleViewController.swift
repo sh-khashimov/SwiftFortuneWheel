@@ -16,11 +16,24 @@ class AnimatedRotationExampleViewController: UIViewController {
             wheelControl.configuration = .rotationExampleConfiguration
             wheelControl.slices = slices
             wheelControl.pinImage = "long-arrow-up-black"
+//            wheelControl.edgeCollisionSound = AudioFile(filename: "Tick", extensionName: "mp3")
+//            wheelControl.onEdgeAnchorCollision = { progress in
+//                print("edge collision progress: \(String(describing: progress))")
+//            }
+//            wheelControl.centerAnchorCollisionSound = AudioFile(filename: "Click", extensionName: "mp3")
+//            wheelControl.onCenterCollision = { progress in
+//                print("center collision progress: \(String(describing: progress))")
+//            }
+            wheelControl.impactFeedbackOn = true
+            wheelControl.edgeCollisionDetectionOn = true
         }
     }
     
-
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var keyboardToolbar: UIToolbar!
+    
+    @IBOutlet weak var keyboardToolbarLabel: UILabel!
     
     @IBOutlet weak var rotationStopAtIndexTextField: UITextField!
     @IBOutlet weak var rotationStopAtAngleTextField: UITextField!
@@ -30,7 +43,11 @@ class AnimatedRotationExampleViewController: UIViewController {
     @IBOutlet weak var fullRotationUntilFinishTextField: UITextField!
     @IBOutlet weak var animationDurationTextField: UITextField!
     
+    private var selectedTextfield: UITextField?
+    
     let rotationStrings: [String] = ["R", "O", "T", "A", "T", "I", "O", "N"]
+    
+    var animationSuccess: Bool?
     
     lazy var slices: [Slice] = {
         var slices: [Slice] = []
@@ -65,7 +82,7 @@ class AnimatedRotationExampleViewController: UIViewController {
         return index
     }
     
-    var fullRotationUntilFinish: Int {
+    var fullRotationsCount: Int {
         guard let index = Int(fullRotationUntilFinishTextField.text ?? "") else { return 13 }
         return index
     }
@@ -87,25 +104,43 @@ class AnimatedRotationExampleViewController: UIViewController {
         fullRotationUntilFinishTextField.inputAccessoryView = keyboardToolbar
         animationDurationTextField.inputAccessoryView = keyboardToolbar
         
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
+    @objc func adjustForKeyboard(notification: Notification) {
+        guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+
+        let keyboardScreenEndFrame = keyboardValue.cgRectValue
+        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            scrollView.contentInset = .zero
+        } else {
+            scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height + 20 - view.safeAreaInsets.bottom, right: 0)
+        }
+
+        scrollView.scrollIndicatorInsets = scrollView.contentInset
     }
     
     @IBAction func startAnimatingTap(_ sender: Any) {
-        wheelControl.startAnimating()
+        wheelControl.startContinuousRotationAnimation()
     }
     
     @IBAction func stopAnimatingTap(_ sender: Any) {
-        wheelControl.stopAnimating()
+        wheelControl.stopRotation()
     }
 
     @IBAction func startAnimatingWithIndexStopTap(_ sender: Any) {
         let _animationDuration = CFTimeInterval(integerLiteral: Int64(animationDuration))
-        wheelControl.startAnimating(finishIndex: rotationStopAtIndex, fullRotationsUntilFinish: fullRotationUntilFinish, animationDuration: _animationDuration) { (success) in
+        wheelControl.startRotationAnimation(finishIndex: rotationStopAtIndex, fullRotationsCount: fullRotationsCount, animationDuration: _animationDuration) { [weak self] (success) in
             //
         }
     }
     
     @IBAction func startAnimatingWithAngleStopTap(_ sender: Any) {
-        wheelControl.startAnimating(rotationOffset: CGFloat(rotationStopAtAngle), fullRotationsUntilFinish: fullRotationUntilFinish, animationDuration: CFTimeInterval(animationDuration)) { (success) in
+        wheelControl.startRotationAnimation(rotationOffset: CGFloat(rotationStopAtAngle), fullRotationsCount: fullRotationsCount, animationDuration: CFTimeInterval(animationDuration)) { (success) in
             //
         }
     }
@@ -133,15 +168,28 @@ class AnimatedRotationExampleViewController: UIViewController {
     }
 
     @IBAction func fullRotationUntilFinishValueChange(_ sender: Any) {
-        fullRotationUntilFinishTextField.text = "\(fullRotationUntilFinish)"
+        fullRotationUntilFinishTextField.text = "\(fullRotationsCount)"
     }
 
     @IBAction func animationDurationValueChange(_ sender: Any) {
         animationDurationTextField.text = "\(animationDuration)"
     }
+    
+    @IBAction func editingChanged(_ sender: UITextField) {
+        keyboardToolbarLabel.text = sender.text
+    }
+    
 
     @IBAction func closeKeyboard(_ sender: Any) {
         view.endEditing(true)
     }
     
+}
+
+
+extension AnimatedRotationExampleViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.selectedTextfield = textField
+        keyboardToolbarLabel.text = textField.text
+    }
 }

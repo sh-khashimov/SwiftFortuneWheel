@@ -68,7 +68,7 @@ fortuneWheel.slices = slices
 - To start spin animation:
 
 ``` Swift
-fortuneWheel.startAnimating(indefiniteRotationTimeInSeconds: 1, finishIndex: 0) { (finished) in
+fortuneWheel.startRotationAnimation(finishIndex: 0, continuousRotationTime: 1) { (finished) in
             print(finished)
         }
 ```

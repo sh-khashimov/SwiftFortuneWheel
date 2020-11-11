@@ -25,13 +25,13 @@ func rotate(rotationOffset: CGFloat, animationDuration: CFTimeInterval = 0.00001
 </br>
 
 
-- Starts indefinite rotation animation
+- Starts continuos rotation animation
 ``` Swift
-func startAnimating()
+func startContinuousRotationAnimation()
 ```
 - Stops all animations
 ``` Swift
-func stopAnimating()
+func stopRotation()
 ```
 
 
@@ -39,19 +39,19 @@ func stopAnimating()
 
 - Starts rotation animation and stops rotation at the specified index and rotation angle offset. 
 ``` Swift
-func startAnimating(finishIndex: Int, rotationOffset: CGFloat, _ completion: ((Bool) -> Void)?)
+func startRotationAnimation(finishIndex: Int, rotationOffset: CGFloat, _ completion: ((Bool) -> Void)?)
 ```
 - Starts rotation animation and stops rotation at the specified index.
 ``` Swift
-func startAnimating(finishIndex: Int, _ completion: ((Bool) -> Void)?)
+func startRotationAnimation(finishIndex: Int, _ completion: ((Bool) -> Void)?)
 ```
 - Starts rotation animation and stops rotation at the specified rotation offset angle.
 ``` Swift
-func startAnimating(rotationOffset: CGFloat, _ completion: ((Bool) -> Void)?)
+func startRotationAnimation(rotationOffset: CGFloat, _ completion: ((Bool) -> Void)?)
 ```
-- Starts indefinite rotation and stops rotation at the specified index.
+- Starts continuos rotation and stops rotation at the specified index.
 ``` Swift
-func startAnimating(indefiniteRotationTimeInSeconds: Int, finishIndex: Int, _ completion: ((Bool) -> Void)?)
+func startRotationAnimation(finishIndex: Int, continuousRotationTime: Int, _ completion: ((Bool) -> Void)?)
 ```
 
 ---

@@ -28,16 +28,29 @@
 		27105683248D4C93006C0181 /* SpinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710566D248D4C93006C0181 /* SpinButton.swift */; };
 		27105684248D4C93006C0181 /* WheelLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710566E248D4C93006C0181 /* WheelLayer.swift */; };
 		27105685248D4C93006C0181 /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710566F248D4C93006C0181 /* WheelView.swift */; };
+		2710F813254A9A6C00033887 /* CollisionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710F812254A9A6C00033887 /* CollisionCalculator.swift */; };
+		2710F817254A9C5100033887 /* ContinuousCollisionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710F816254A9C5100033887 /* ContinuousCollisionCalculator.swift */; };
+		2710F81B254ABA3900033887 /* CollisionDetectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710F81A254ABA3900033887 /* CollisionDetectable.swift */; };
+		271C192F254841370042A316 /* AudioFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C192E254841370042A316 /* AudioFile.swift */; };
 		2720684224BC31190025815D /* macOSPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720684124BC31190025815D /* macOSPort.swift */; };
 		2722559924BCA4A400950563 /* NSView+AnchorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559824BCA4A400950563 /* NSView+AnchorPoint.swift */; };
 		2722559B24BCD7F400950563 /* NoClippingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559A24BCD7F300950563 /* NoClippingLayer.swift */; };
+		2725A0342549386C00C6F7CF /* CollisionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725A0332549386C00C6F7CF /* CollisionType.swift */; };
 		277A6EBE249A9B450066C807 /* LinePreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A6EBD249A9B450066C807 /* LinePreferences.swift */; };
+		277BB2B2253B3AB5007E7E93 /* CollisionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277BB2B1253B3AB5007E7E93 /* CollisionDetector.swift */; };
 		277C4C2B24C85D25007580F4 /* CGRect+AspectFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C4C2A24C85D25007580F4 /* CGRect+AspectFill.swift */; };
 		277FCC70251DC3F600CC6590 /* CAAnimationGroup+Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277FCC6F251DC3F600CC6590 /* CAAnimationGroup+Builder.swift */; };
 		277FCC77251DC69900CC6590 /* CAAnimation+Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277FCC76251DC69900CC6590 /* CAAnimation+Duration.swift */; };
 		277FCC7B251DC89700CC6590 /* CALayer+UpdateValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277FCC7A251DC89700CC6590 /* CALayer+UpdateValues.swift */; };
 		2787E56E24A728F900533AD4 /* String+Width.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2787E56D24A728F900533AD4 /* String+Width.swift */; };
 		2787E57024A7292F00533AD4 /* String+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2787E56F24A7292F00533AD4 /* String+Lines.swift */; };
+		27A5741E253EB46300B060FF /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5741D253EB46300B060FF /* AudioPlayer.swift */; };
+		27A57422253EB46D00B060FF /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57421253EB46D00B060FF /* AudioPlayerManager.swift */; };
+		27A57426253EB57900B060FF /* AudioError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57425253EB57900B060FF /* AudioError.swift */; };
+		27A5742A253EB71400B060FF /* SynchronizedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57429253EB71400B060FF /* SynchronizedArray.swift */; };
+		27A5742E253EB81200B060FF /* SynchronizedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5742D253EB81200B060FF /* SynchronizedDictionary.swift */; };
+		27E291C02550300800486B6D /* AudioPlayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E291BF2550300800486B6D /* AudioPlayable.swift */; };
+		27E291C42550309200486B6D /* ImpactFeedbackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E291C32550309200486B6D /* ImpactFeedbackable.swift */; };
 		27F4807924AEE406005886F6 /* TextDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4807824AEE406005886F6 /* TextDrawing.swift */; };
 		27F4807B24AEE426005886F6 /* ShapeDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4807A24AEE426005886F6 /* ShapeDrawing.swift */; };
 		27F4807D24AEE431005886F6 /* ImageDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4807C24AEE431005886F6 /* ImageDrawing.swift */; };
@@ -80,17 +93,30 @@
 		2710566D248D4C93006C0181 /* SpinButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinButton.swift; sourceTree = "<group>"; };
 		2710566E248D4C93006C0181 /* WheelLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelLayer.swift; sourceTree = "<group>"; };
 		2710566F248D4C93006C0181 /* WheelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
+		2710F812254A9A6C00033887 /* CollisionCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionCalculator.swift; sourceTree = "<group>"; };
+		2710F816254A9C5100033887 /* ContinuousCollisionCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuousCollisionCalculator.swift; sourceTree = "<group>"; };
+		2710F81A254ABA3900033887 /* CollisionDetectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionDetectable.swift; sourceTree = "<group>"; };
+		271C192E254841370042A316 /* AudioFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFile.swift; sourceTree = "<group>"; };
 		2720684124BC31190025815D /* macOSPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSPort.swift; sourceTree = "<group>"; };
 		2722559824BCA4A400950563 /* NSView+AnchorPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+AnchorPoint.swift"; sourceTree = "<group>"; };
 		2722559A24BCD7F300950563 /* NoClippingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoClippingLayer.swift; sourceTree = "<group>"; };
+		2725A0332549386C00C6F7CF /* CollisionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionType.swift; sourceTree = "<group>"; };
 		272B62C524A46FED00F19E41 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		277A6EBD249A9B450066C807 /* LinePreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinePreferences.swift; sourceTree = "<group>"; };
+		277BB2B1253B3AB5007E7E93 /* CollisionDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionDetector.swift; sourceTree = "<group>"; };
 		277C4C2A24C85D25007580F4 /* CGRect+AspectFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+AspectFill.swift"; sourceTree = "<group>"; };
 		277FCC6F251DC3F600CC6590 /* CAAnimationGroup+Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAAnimationGroup+Builder.swift"; sourceTree = "<group>"; };
 		277FCC76251DC69900CC6590 /* CAAnimation+Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAAnimation+Duration.swift"; sourceTree = "<group>"; };
 		277FCC7A251DC89700CC6590 /* CALayer+UpdateValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+UpdateValues.swift"; sourceTree = "<group>"; };
 		2787E56D24A728F900533AD4 /* String+Width.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Width.swift"; sourceTree = "<group>"; };
 		2787E56F24A7292F00533AD4 /* String+Lines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Lines.swift"; sourceTree = "<group>"; };
+		27A5741D253EB46300B060FF /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		27A57421253EB46D00B060FF /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
+		27A57425253EB57900B060FF /* AudioError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioError.swift; sourceTree = "<group>"; };
+		27A57429253EB71400B060FF /* SynchronizedArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynchronizedArray.swift; sourceTree = "<group>"; };
+		27A5742D253EB81200B060FF /* SynchronizedDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynchronizedDictionary.swift; sourceTree = "<group>"; };
+		27E291BF2550300800486B6D /* AudioPlayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayable.swift; sourceTree = "<group>"; };
+		27E291C32550309200486B6D /* ImpactFeedbackable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactFeedbackable.swift; sourceTree = "<group>"; };
 		27F4807824AEE406005886F6 /* TextDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDrawing.swift; sourceTree = "<group>"; };
 		27F4807A24AEE426005886F6 /* ShapeDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeDrawing.swift; sourceTree = "<group>"; };
 		27F4807C24AEE431005886F6 /* ImageDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDrawing.swift; sourceTree = "<group>"; };
@@ -151,6 +177,7 @@
 		27105656248D4C93006C0181 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				27A5741C253EB3F400B060FF /* Audio */,
 				27105657248D4C93006C0181 /* Drawing */,
 				2710565A248D4C93006C0181 /* Animation */,
 				2710565E248D4C93006C0181 /* Calculating */,
@@ -173,6 +200,7 @@
 		2710565A248D4C93006C0181 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				2710F811254A9A3700033887 /* Collision */,
 				2710565B248D4C93006C0181 /* SpinningAnimatable.swift */,
 				2710565D248D4C93006C0181 /* SpinningWheelAnimator.swift */,
 			);
@@ -192,7 +220,12 @@
 		27105661248D4C93006C0181 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				27A5742D253EB81200B060FF /* SynchronizedDictionary.swift */,
+				27A57429253EB71400B060FF /* SynchronizedArray.swift */,
 				27105662248D4C93006C0181 /* Slice.swift */,
+				271C192E254841370042A316 /* AudioFile.swift */,
+				27A57425253EB57900B060FF /* AudioError.swift */,
+				2725A0332549386C00C6F7CF /* CollisionType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,6 +258,17 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2710F811254A9A3700033887 /* Collision */ = {
+			isa = PBXGroup;
+			children = (
+				277BB2B1253B3AB5007E7E93 /* CollisionDetector.swift */,
+				2710F812254A9A6C00033887 /* CollisionCalculator.swift */,
+				2710F816254A9C5100033887 /* ContinuousCollisionCalculator.swift */,
+				2710F81A254ABA3900033887 /* CollisionDetectable.swift */,
+			);
+			path = Collision;
+			sourceTree = "<group>";
+		};
 		272B62C224A46DBB00F19E41 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +297,17 @@
 				2787E56F24A7292F00533AD4 /* String+Lines.swift */,
 			);
 			path = String;
+			sourceTree = "<group>";
+		};
+		27A5741C253EB3F400B060FF /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				27A5741D253EB46300B060FF /* AudioPlayer.swift */,
+				27A57421253EB46D00B060FF /* AudioPlayerManager.swift */,
+				27E291BF2550300800486B6D /* AudioPlayable.swift */,
+				27E291C32550309200486B6D /* ImpactFeedbackable.swift */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		52D6D9721BEFF229002C0205 = {
@@ -428,11 +483,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				277FCC70251DC3F600CC6590 /* CAAnimationGroup+Builder.swift in Sources */,
+				27A5742E253EB81200B060FF /* SynchronizedDictionary.swift in Sources */,
 				27105685248D4C93006C0181 /* WheelView.swift in Sources */,
 				27105678248D4C93006C0181 /* SliceCalculating.swift in Sources */,
 				277A6EBE249A9B450066C807 /* LinePreferences.swift in Sources */,
 				27105681248D4C93006C0181 /* SwiftFortuneWheel.swift in Sources */,
 				27105671248D4C93006C0181 /* ImagePreferences.swift in Sources */,
+				27A5742A253EB71400B060FF /* SynchronizedArray.swift in Sources */,
 				277C4C2B24C85D25007580F4 /* CGRect+AspectFill.swift in Sources */,
 				27105675248D4C93006C0181 /* SpinningAnimatable.swift in Sources */,
 				27F7D5BF24A5F6B0004BEE19 /* String+Dots.swift in Sources */,
@@ -440,29 +497,40 @@
 				27105679248D4C93006C0181 /* WheelMathCalculating.swift in Sources */,
 				27105674248D4C93006C0181 /* CurveTextDrawing.swift in Sources */,
 				27105673248D4C93006C0181 /* SliceDrawing.swift in Sources */,
+				27E291C02550300800486B6D /* AudioPlayable.swift in Sources */,
+				271C192F254841370042A316 /* AudioFile.swift in Sources */,
 				2720684224BC31190025815D /* macOSPort.swift in Sources */,
 				2722559924BCA4A400950563 /* NSView+AnchorPoint.swift in Sources */,
 				2710567D248D4C93006C0181 /* String+Crop.swift in Sources */,
+				2710F817254A9C5100033887 /* ContinuousCollisionCalculator.swift in Sources */,
+				27E291C42550309200486B6D /* ImpactFeedbackable.swift in Sources */,
 				2710567F248D4C93006C0181 /* CGRest+AspectFit.swift in Sources */,
 				27105683248D4C93006C0181 /* SpinButton.swift in Sources */,
 				2710567A248D4C93006C0181 /* Slice.swift in Sources */,
+				2710F813254A9A6C00033887 /* CollisionCalculator.swift in Sources */,
 				2787E56E24A728F900533AD4 /* String+Width.swift in Sources */,
 				2710567B248D4C93006C0181 /* UIFont+Size.swift in Sources */,
+				27A57422253EB46D00B060FF /* AudioPlayerManager.swift in Sources */,
 				27F4807F24AEE5C6005886F6 /* Calc.swift in Sources */,
 				27F4807924AEE406005886F6 /* TextDrawing.swift in Sources */,
 				2787E57024A7292F00533AD4 /* String+Lines.swift in Sources */,
 				27105680248D4C93006C0181 /* Array+Default.swift in Sources */,
 				27105677248D4C93006C0181 /* SpinningWheelAnimator.swift in Sources */,
+				27A5741E253EB46300B060FF /* AudioPlayer.swift in Sources */,
 				2722559B24BCD7F400950563 /* NoClippingLayer.swift in Sources */,
 				2710567E248D4C93006C0181 /* UIImage+TintColor.swift in Sources */,
 				27105682248D4C93006C0181 /* PinImageView.swift in Sources */,
 				27F4807B24AEE426005886F6 /* ShapeDrawing.swift in Sources */,
+				27A57426253EB57900B060FF /* AudioError.swift in Sources */,
 				277FCC77251DC69900CC6590 /* CAAnimation+Duration.swift in Sources */,
 				27F4807D24AEE431005886F6 /* ImageDrawing.swift in Sources */,
 				277FCC7B251DC89700CC6590 /* CALayer+UpdateValues.swift in Sources */,
 				27F7D5BD24A5CB6A004BEE19 /* String+Split.swift in Sources */,
 				2710567C248D4C93006C0181 /* Color+Random.swift in Sources */,
 				27105670248D4C93006C0181 /* TextPreferences.swift in Sources */,
+				277BB2B2253B3AB5007E7E93 /* CollisionDetector.swift in Sources */,
+				2725A0342549386C00C6F7CF /* CollisionType.swift in Sources */,
+				2710F81B254ABA3900033887 /* CollisionDetectable.swift in Sources */,
 				2703B4F4248E204E00FB50F9 /* SFWConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
