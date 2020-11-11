@@ -13,7 +13,7 @@
     <a title="SwiftFortuneWheel  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SwiftFortuneWheel 1.1.0 Docs</a> (79% documented)</p>
+        <p><a href="index.html">SwiftFortuneWheel 1.1.2 Docs</a> (81% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -30,6 +30,27 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Classes/AudioPlayer.html">AudioPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AudioPlayer/Status.html">– Status</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AudioPlayer/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AudioPlayerManager.html">AudioPlayerManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CollisionCalculator.html">CollisionCalculator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CollisionDetector.html">CollisionDetector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ContinuousCollisionCalculator.html">ContinuousCollisionCalculator</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/NoClippingLayer.html">NoClippingLayer</a>
               </li>
               <li class="nav-group-task">
@@ -45,7 +66,10 @@
                 <a href="Classes/SwiftFortuneWheel.html">SwiftFortuneWheel</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/TTUtils.html">TTUtils</a>
+                <a href="Classes/SynchronizedArray.html">SynchronizedArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SynchronizedDictionary.html">SynchronizedDictionary</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/WheelLayer.html">WheelLayer</a>
@@ -56,10 +80,30 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AudioError.html">AudioError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/CollisionType.html">CollisionType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/CAAnimation.html">CAAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/CAAnimationGroup.html">CAAnimationGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/CALayer.html">CALayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/CGRect.html">CGRect</a>
@@ -98,6 +142,9 @@
                 <a href="Extensions/SFWImage.html">SFWImage</a>
               </li>
               <li class="nav-group-task">
+                <a href="Extensions/Sequence.html">Sequence</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Extensions/String.html">String</a>
               </li>
               <li class="nav-group-task">
@@ -123,10 +170,22 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Protocols/AudioPlayable.html">AudioPlayable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/CollisionDetectable.html">CollisionDetectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/CollisionProtocol.html">CollisionProtocol</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/CurveTextDrawing.html">CurveTextDrawing</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/ImageDrawing.html">ImageDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ImpactFeedbackable.html">ImpactFeedbackable</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/ShapeDrawing.html">ShapeDrawing</a>
@@ -154,6 +213,9 @@
           <li class="nav-group-name">
             <a href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/AudioFile.html">AudioFile</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Structs/Calc.html">Calc</a>
               </li>
@@ -247,6 +309,9 @@
                 <a href="Typealiases.html#/s:17SwiftFortuneWheel8SFWImagea">SFWImage</a>
               </li>
               <li class="nav-group-task">
+                <a href="Typealiases.html#/s:17SwiftFortuneWheel15SoundIdentifiera">SoundIdentifier</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Typealiases.html#/UIBezierPath">UIBezierPath</a>
               </li>
               <li class="nav-group-task">
@@ -294,7 +359,7 @@
 <td>Adaptive text size with support multiline, alignment and line break mode</td>
 </tr>
 <tr>
-<td></td>
+<td>🎇</td>
 <td>Supports background Image for each Slice (sector)</td>
 </tr>
 <tr>
@@ -306,12 +371,16 @@
 <td>Appearance customization</td>
 </tr>
 <tr>
-<td>🎨</td>
-<td>High performance, low memory usage</td>
+<td>🔊</td>
+<td>Sounds and haptic feedback</td>
 </tr>
 <tr>
 <td>🎨</td>
 <td>Drawn and animated using CoreGraphics, CoreAnimations</td>
+</tr>
+<tr>
+<td>🔋</td>
+<td>High performance, low memory usage</td>
 </tr>
 <tr>
 <td>🚀</td>
@@ -363,6 +432,7 @@
 <li><a href="/Documentation/API_Overview.md"><strong>API Overview</strong></a></li>
 <li><a href="/Documentation/Configuration_indepth.md"><strong>Configuration In-Depth</strong></a></li>
 <li><a href="/Documentation/About_Slice_and_Slice_contents.md"><strong>About Slice and Slice’s contents</strong></a></li>
+<li><a href="/Documentation/sound_effects.md"><strong>Sound Effects and Impact Feedback</strong></a></li>
 <li><a href="/Documentation/Port_to_Other_Platforms.md"><strong>About Port to Other Platforms</strong></a></li>
 <li><a href="/Examples"><strong>Example Projects</strong></a>
 ## Installation</li>
@@ -407,6 +477,7 @@
 <h2 id='migration' class='heading'>Migration</h2>
 
 <ul>
+<li><a href="/Documentation/Migrations/Migration_1.1.x_to_1.2.x.md"><strong>from 1.1.x to 1.2.x</strong></a></li>
 <li><a href="/Documentation/Migrations/Migration_1_to_1.x.md"><strong>from 1.0.x to 1.1.x</strong></a></li>
 <li><a href="/Documentation/Migrations/Migration_0_to_1.md"><strong>from 0.x.x to 1.0.0</strong></a></li>
 </ul>
@@ -423,7 +494,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-07-22)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-11-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
