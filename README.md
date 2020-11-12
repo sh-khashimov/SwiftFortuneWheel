@@ -2,6 +2,7 @@
 
 <img src="./Images/header.png" width="400" alt="SwiftFortuneWheel"/>
 
+[![CI Status](https://img.shields.io/travis/sh-khashimov/SwiftFortuneWheel.svg?style=flat)](https://travis-ci.org/sh-khashimov/SwiftFortuneWheel)
 [![Swift Version](https://img.shields.io/badge/Swift-5-orange.svg)]()
 [![Version](https://img.shields.io/cocoapods/v/SwiftFortuneWheel.svg?label=version)](https://cocoapods.org/pods/SwiftFortuneWheel)
 ![Support](https://img.shields.io/badge/supports-SPM%2C%20CocoaPods-green.svg)
