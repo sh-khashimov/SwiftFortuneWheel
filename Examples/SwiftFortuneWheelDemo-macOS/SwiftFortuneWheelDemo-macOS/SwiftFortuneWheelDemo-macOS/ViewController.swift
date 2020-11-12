@@ -24,6 +24,15 @@ class ViewController: NSViewController {
         wheelControl.pinImage = "long-arrow-up"
         wheelControl.spinTitle = "SPIN"
         wheelControl.isSpinEnabled = true
+        
+        wheelControl.onEdgeCollision = { progress in
+            print("edge collision progress: \(String(describing: progress))")
+        }
+        
+        wheelControl.edgeCollisionSound = AudioFile(filename: "Click", extensionName: "mp3")
+        
+        wheelControl.edgeCollisionDetectionOn = true
+        
         return wheelControl
     }()
 
@@ -129,7 +138,7 @@ class ViewController: NSViewController {
     }
 
     func startAnimating() {
-        wheelControl.startAnimating(indefiniteRotationTimeInSeconds: 1, finishIndex: finishIndex) { (finished) in
+        wheelControl.startRotationAnimation(finishIndex: finishIndex, continuousRotationTime: 1) { (finished) in
             print(finished)
         }
     }

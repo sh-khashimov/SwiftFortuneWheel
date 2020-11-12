@@ -109,7 +109,7 @@ class DynamicContentViewExampleController: UIViewController {
     }
 
     func startAnimating() {
-        fortuneWheel.startAnimating(indefiniteRotationTimeInSeconds: 1, finishIndex: finishIndex) { (finished) in
+        fortuneWheel.startRotationAnimation(finishIndex: finishIndex, continuousRotationTime: 1) { (finished) in
             print(finished)
         }
     }

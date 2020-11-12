@@ -16,16 +16,6 @@ class AnimatedRotationExampleViewController: UIViewController {
             wheelControl.configuration = .rotationExampleConfiguration
             wheelControl.slices = slices
             wheelControl.pinImage = "long-arrow-up-black"
-//            wheelControl.edgeCollisionSound = AudioFile(filename: "Tick", extensionName: "mp3")
-//            wheelControl.onEdgeAnchorCollision = { progress in
-//                print("edge collision progress: \(String(describing: progress))")
-//            }
-//            wheelControl.centerAnchorCollisionSound = AudioFile(filename: "Click", extensionName: "mp3")
-//            wheelControl.onCenterCollision = { progress in
-//                print("center collision progress: \(String(describing: progress))")
-//            }
-            wheelControl.impactFeedbackOn = true
-            wheelControl.edgeCollisionDetectionOn = true
         }
     }
     
@@ -134,7 +124,7 @@ class AnimatedRotationExampleViewController: UIViewController {
 
     @IBAction func startAnimatingWithIndexStopTap(_ sender: Any) {
         let _animationDuration = CFTimeInterval(integerLiteral: Int64(animationDuration))
-        wheelControl.startRotationAnimation(finishIndex: rotationStopAtIndex, fullRotationsCount: fullRotationsCount, animationDuration: _animationDuration) { [weak self] (success) in
+        wheelControl.startRotationAnimation(finishIndex: rotationStopAtIndex, fullRotationsCount: fullRotationsCount, animationDuration: _animationDuration) { (success) in
             //
         }
     }
@@ -146,7 +136,7 @@ class AnimatedRotationExampleViewController: UIViewController {
     }
     
     @IBAction func startIndefiniteRotationAndStopTap(_ sender: Any) {
-        wheelControl.startAnimating(indefiniteRotationTimeInSeconds: indefiniteRotationStopAtIndex, finishIndex: indefiniteRotationTime) { (success) in
+        wheelControl.startRotationAnimation(finishIndex: indefiniteRotationStopAtIndex, continuousRotationTime: indefiniteRotationTime) { (success) in
             //
         }
     }

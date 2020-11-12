@@ -23,8 +23,13 @@ class CollisionDetector {
     /// On collision callback
     var onCollision: ((_ progress: Double?) -> Void)?
     
+    
+    #if os(macOS)
+    private var timer: Timer?
+    #else
     /// Time updater
     private var updater: CADisplayLink?
+    #endif
     
     /// Collision calculator
     private lazy var collisionCalculator = CollisionCalculator()
@@ -39,9 +44,11 @@ class CollisionDetector {
     init(animationObjectLayer: CALayer?, onCollision: ((_ progress: Double?) -> Void)? = nil) {
         self.animationObjectLayer = animationObjectLayer
         self.onCollision = onCollision
+        #if !os(macOS)
         updater = CADisplayLink(target: self, selector: #selector(screenRefresh))
         updater?.add(to: .current, forMode: .default)
         updater?.isPaused = true
+        #endif
     }
     
     /// Prepare collision detection with continuous animation
@@ -72,12 +79,21 @@ class CollisionDetector {
     /// Starts
     func start() {
         continuousCollisionCalculator.lastCollisionTime = CACurrentMediaTime()
+        #if os(macOS)
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(timerUpdate(timer:)), userInfo: nil, repeats: true)
+        #else
         updater?.isPaused = false
+        #endif
     }
     
     /// Stops
     func stop() {
+        #if os(macOS)
+        timer?.invalidate()
+        timer = nil
+        #else
         updater?.isPaused = true
+        #endif
     }
     
     /// Reset calculators parametrs
@@ -86,19 +102,36 @@ class CollisionDetector {
         collisionCalculator.reset()
     }
     
+    #if os(macOS)
+    /// On timer updates
+    /// - Parameter timer: Timer
+    @objc
+    private func timerUpdate(timer: Timer) {
+        continuousCollisionCalculator.calculateCollisionsIfNeeded(timestamp: CACurrentMediaTime(), onCollision: { [weak self] progress in
+            self?.onCollision?(progress)
+        })
+        
+        let layerRotationZ = animationObjectLayer?.presentation()?.value(forKeyPath: "transform.rotation.z") as? Double
+        
+        collisionCalculator.calculateCollisionsIfNeeded(layerRotationZ: layerRotationZ, onCollision: { [weak self] progress in
+            self?.onCollision?(progress)
+        })
+    }
+    #else
     /// On screen refresh
     /// - Parameter displaylink: A timer object that allows your application to synchronize its drawing to the refresh rate of the display.
     @objc
     private func screenRefresh(displaylink: CADisplayLink) {
-        
         continuousCollisionCalculator.calculateCollisionsIfNeeded(timestamp: displaylink.timestamp, onCollision: { [weak self] progress in
             self?.onCollision?(progress)
         })
         
         let layerRotationZ = animationObjectLayer?.presentation()?.value(forKeyPath: "transform.rotation.z") as? Double
+        
         collisionCalculator.calculateCollisionsIfNeeded(layerRotationZ: layerRotationZ, onCollision: { [weak self] progress in
             self?.onCollision?(progress)
         })
     }
+    #endif
     
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		276E95C1255CF8540018D843 /* Click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 276E95C0255CF8540018D843 /* Click.mp3 */; };
 		27E8C9DB24BB82E20021205F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C9DA24BB82E20021205F /* AppDelegate.swift */; };
 		27E8C9E024BB82E20021205F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E8C9DE24BB82E20021205F /* Main.storyboard */; };
 		27E8C9E224BB82E80021205F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E8C9E124BB82E80021205F /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		276E95C0255CF8540018D843 /* Click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Click.mp3; sourceTree = "<group>"; };
 		27E8C9D724BB82E20021205F /* SwiftFortuneWheelDemo-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftFortuneWheelDemo-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E8C9DA24BB82E20021205F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27E8C9DF24BB82E20021205F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				27E8CA0A24BB892C0021205F /* ViewControllers */,
 				27E8C9DA24BB82E20021205F /* AppDelegate.swift */,
 				27E8C9DE24BB82E20021205F /* Main.storyboard */,
+				276E95C0255CF8540018D843 /* Click.mp3 */,
 				27E8C9E124BB82E80021205F /* Assets.xcassets */,
 				27E8C9E324BB82E80021205F /* LaunchScreen.storyboard */,
 				27E8C9E624BB82E80021205F /* Info.plist */,
@@ -314,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27E8C9E524BB82E80021205F /* LaunchScreen.storyboard in Resources */,
+				276E95C1255CF8540018D843 /* Click.mp3 in Resources */,
 				27E8C9E224BB82E80021205F /* Assets.xcassets in Resources */,
 				27E8C9E024BB82E20021205F /* Main.storyboard in Resources */,
 			);

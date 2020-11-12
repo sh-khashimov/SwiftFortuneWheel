@@ -32,6 +32,14 @@ class CollisionCalculator {
     /// Last rotation degree
     private var lastRotationDegree: Double?
     
+    /// Rotation direction offset
+    private var rotationDirectionOffset: CGFloat {
+        #if os(macOS)
+        return -1
+        #else
+        return 1
+        #endif
+    }
     
     /// Calculates collisions start positions
     /// - Parameters:
@@ -49,6 +57,7 @@ class CollisionCalculator {
         }
     }
     
+    
     /// Calculates collisions if needed
     /// - Parameters:
     ///   - layerRotationZ: Animation layer rotation Z position
@@ -62,7 +71,7 @@ class CollisionCalculator {
         guard currentCollisionIndex < collisionDegrees.count else { return }
         
         // The layer's rotated offset value converted to degree
-        let rotationOffset = rotationZ * 180.0 / .pi
+        let rotationOffset = rotationZ * Double(rotationDirectionOffset) * 180.0 / .pi
         
         // Current rotation position of the layer
         let currentRotationDegree = rotationOffset >= 0 ? rotationOffset : 360 + rotationOffset

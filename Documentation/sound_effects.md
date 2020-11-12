@@ -2,6 +2,7 @@
 
 **`SwiftFortuneWheel`** can play sounds when the edge or the center of a slice moves during the rotation. Optionally, it’s possible to turn on the haptic feedback while playing sound. Or use the impact callback and implement your own effect.
 
+
 ### Edge Collision Sound Effect Example
 
 ``` Swift 
@@ -67,5 +68,7 @@ fortuneWheel.onCenterCollision = { progress in
 fortuneWheel.centerCollisionDetectionOn = true
 
 ```
+
+> _**`impactFeedbackOn`** is only available on iOS 10 and above, not available on other platforms_
 
 > **For more information, see [example projects](../Examples)**
