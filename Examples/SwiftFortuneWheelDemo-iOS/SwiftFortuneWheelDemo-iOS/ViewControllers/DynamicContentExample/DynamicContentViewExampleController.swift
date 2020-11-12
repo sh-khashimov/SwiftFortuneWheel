@@ -31,7 +31,7 @@ class DynamicContentViewExampleController: UIViewController {
     }
 
     var minimumPrize: Int {
-        return 4
+        return 0
     }
 
     var maximumPrize: Int {

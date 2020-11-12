@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2703B4F4248E204E00FB50F9 /* SFWConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2703B4F3248E204E00FB50F9 /* SFWConfiguration.swift */; };
+		270550A6255D4F9F008D331B /* MockSliceCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270550A2255D4F76008D331B /* MockSliceCalculation.swift */; };
+		270550AC255D501E008D331B /* MockWheelMathCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270550AB255D501E008D331B /* MockWheelMathCalculation.swift */; };
+		270550B1255D5104008D331B /* CalculationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270550B0255D5104008D331B /* CalculationTests.swift */; };
 		27105670248D4C93006C0181 /* TextPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27105653248D4C93006C0181 /* TextPreferences.swift */; };
 		27105671248D4C93006C0181 /* ImagePreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27105654248D4C93006C0181 /* ImagePreferences.swift */; };
 		27105673248D4C93006C0181 /* SliceDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27105658248D4C93006C0181 /* SliceDrawing.swift */; };
@@ -73,6 +76,9 @@
 
 /* Begin PBXFileReference section */
 		2703B4F3248E204E00FB50F9 /* SFWConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFWConfiguration.swift; sourceTree = "<group>"; };
+		270550A2255D4F76008D331B /* MockSliceCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSliceCalculation.swift; sourceTree = "<group>"; };
+		270550AB255D501E008D331B /* MockWheelMathCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWheelMathCalculation.swift; sourceTree = "<group>"; };
+		270550B0255D5104008D331B /* CalculationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationTests.swift; sourceTree = "<group>"; };
 		27105653248D4C93006C0181 /* TextPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPreferences.swift; sourceTree = "<group>"; };
 		27105654248D4C93006C0181 /* ImagePreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreferences.swift; sourceTree = "<group>"; };
 		27105658248D4C93006C0181 /* SliceDrawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliceDrawing.swift; sourceTree = "<group>"; };
@@ -124,7 +130,7 @@
 		27F7D5BC24A5CB6A004BEE19 /* String+Split.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Split.swift"; sourceTree = "<group>"; };
 		27F7D5BE24A5F6B0004BEE19 /* String+Dots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Dots.swift"; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* SwiftFortuneWheel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftFortuneWheel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		52D6D9861BEFF229002C0205 /* SwiftFortuneWheel Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftFortuneWheel Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52D6D9861BEFF229002C0205 /* SwiftFortuneWheelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftFortuneWheelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8933C7891EB5B82A000D00A4 /* SwiftFortuneWheelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftFortuneWheelTests.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* SwiftFortuneWheel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SwiftFortuneWheel.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* SwiftFortuneWheelTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SwiftFortuneWheelTests.plist; sourceTree = "<group>"; };
@@ -149,6 +155,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2705509F255D4F36008D331B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				270550A0255D4F3D008D331B /* Calculating */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		270550A0255D4F3D008D331B /* Calculating */ = {
+			isa = PBXGroup;
+			children = (
+				270550A2255D4F76008D331B /* MockSliceCalculation.swift */,
+				270550AB255D501E008D331B /* MockWheelMathCalculation.swift */,
+			);
+			path = Calculating;
+			sourceTree = "<group>";
+		};
+		270550A1255D4F46008D331B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				2705509F255D4F36008D331B /* Utils */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		270550AF255D50DD008D331B /* TestCases */ = {
+			isa = PBXGroup;
+			children = (
+				270550B0255D5104008D331B /* CalculationTests.swift */,
+			);
+			path = TestCases;
+			sourceTree = "<group>";
+		};
 		27105651248D4C93006C0181 /* SwiftFortuneWheel */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,7 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				52D6D97C1BEFF229002C0205 /* SwiftFortuneWheel.framework */,
-				52D6D9861BEFF229002C0205 /* SwiftFortuneWheel Tests.xctest */,
+				52D6D9861BEFF229002C0205 /* SwiftFortuneWheelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -350,6 +389,8 @@
 		8933C7831EB5B7EB000D00A4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				270550AF255D50DD008D331B /* TestCases */,
+				270550A1255D4F46008D331B /* Mocks */,
 				8933C7891EB5B82A000D00A4 /* SwiftFortuneWheelTests.swift */,
 			);
 			name = Tests;
@@ -403,9 +444,9 @@
 			productReference = 52D6D97C1BEFF229002C0205 /* SwiftFortuneWheel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		52D6D9851BEFF229002C0205 /* SwiftFortuneWheel Tests */ = {
+		52D6D9851BEFF229002C0205 /* SwiftFortuneWheelTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52D6D9931BEFF229002C0205 /* Build configuration list for PBXNativeTarget "SwiftFortuneWheel Tests" */;
+			buildConfigurationList = 52D6D9931BEFF229002C0205 /* Build configuration list for PBXNativeTarget "SwiftFortuneWheelTests" */;
 			buildPhases = (
 				52D6D9821BEFF229002C0205 /* Sources */,
 				52D6D9831BEFF229002C0205 /* Frameworks */,
@@ -416,9 +457,9 @@
 			dependencies = (
 				52D6D9891BEFF229002C0205 /* PBXTargetDependency */,
 			);
-			name = "SwiftFortuneWheel Tests";
+			name = SwiftFortuneWheelTests;
 			productName = SwiftFortuneWheelTests;
-			productReference = 52D6D9861BEFF229002C0205 /* SwiftFortuneWheel Tests.xctest */;
+			productReference = 52D6D9861BEFF229002C0205 /* SwiftFortuneWheelTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -455,7 +496,7 @@
 			projectRoot = "";
 			targets = (
 				52D6D97B1BEFF229002C0205 /* SwiftFortuneWheel */,
-				52D6D9851BEFF229002C0205 /* SwiftFortuneWheel Tests */,
+				52D6D9851BEFF229002C0205 /* SwiftFortuneWheelTests */,
 			);
 		};
 /* End PBXProject section */
@@ -539,7 +580,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				270550AC255D501E008D331B /* MockWheelMathCalculation.swift in Sources */,
+				270550A6255D4F9F008D331B /* MockSliceCalculation.swift in Sources */,
 				8933C7901EB5B82D000D00A4 /* SwiftFortuneWheelTests.swift in Sources */,
+				270550B1255D5104008D331B /* CalculationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,7 +823,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52D6D9931BEFF229002C0205 /* Build configuration list for PBXNativeTarget "SwiftFortuneWheel Tests" */ = {
+		52D6D9931BEFF229002C0205 /* Build configuration list for PBXNativeTarget "SwiftFortuneWheelTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52D6D9941BEFF229002C0205 /* Debug */,

@@ -34,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "52D6D9851BEFF229002C0205"
-               BuildableName = "SwiftFortuneWheel Tests.xctest"
-               BlueprintName = "SwiftFortuneWheel Tests"
+               BuildableName = "SwiftFortuneWheelTests.xctest"
+               BlueprintName = "SwiftFortuneWheelTests"
                ReferencedContainer = "container:SwiftFortuneWheel.xcodeproj">
             </BuildableReference>
          </TestableReference>
