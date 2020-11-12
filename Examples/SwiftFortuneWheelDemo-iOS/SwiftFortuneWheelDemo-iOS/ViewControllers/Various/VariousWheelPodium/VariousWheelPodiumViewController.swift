@@ -57,7 +57,7 @@ class VariousWheelPodiumViewController: UIViewController {
     }
     
     @IBAction func rotateTap(_ sender: Any) {
-        wheelControl.startAnimating(indefiniteRotationTimeInSeconds: 1, finishIndex: finishIndex) { (finished) in
+        wheelControl.startRotationAnimation(finishIndex: finishIndex, continuousRotationTime: 1) { (finished) in
             print(finished)
         }
     }

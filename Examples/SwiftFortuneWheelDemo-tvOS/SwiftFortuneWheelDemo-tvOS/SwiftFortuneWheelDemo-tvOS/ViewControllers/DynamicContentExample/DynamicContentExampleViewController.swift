@@ -19,6 +19,14 @@ class DynamicContentExampleViewController: UIViewController {
             fortuneWheel.onSpinButtonTap = { [weak self] in
                 self?.startAnimating()
             }
+            
+            fortuneWheel.onEdgeCollision = { progress in
+                print("edge collision progress: \(String(describing: progress))")
+            }
+            
+            fortuneWheel.edgeCollisionSound = AudioFile(filename: "Click", extensionName: "mp3")
+            
+            fortuneWheel.edgeCollisionDetectionOn = true
         }
     }
 
@@ -109,7 +117,7 @@ class DynamicContentExampleViewController: UIViewController {
     }
 
     func startAnimating() {
-        fortuneWheel.startAnimating(indefiniteRotationTimeInSeconds: 1, finishIndex: finishIndex) { (finished) in
+        fortuneWheel.startRotationAnimation(finishIndex: finishIndex, continuousRotationTime: 1) { (finished) in
             print(finished)
         }
     }

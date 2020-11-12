@@ -18,6 +18,9 @@ protocol SliceCalculating {
 extension SliceCalculating {
     /// Slice degree
     var sliceDegree: CGFloat {
+        guard slices.count > 0 else {
+            return 0
+        }
         return 360.0 / CGFloat(slices.count)
     }
     

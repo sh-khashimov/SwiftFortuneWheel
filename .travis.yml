@@ -1,0 +1,19 @@
+# references:
+# * https://www.objc.io/issues/6-build-tools/travis-ci/
+# * https://github.com/supermarin/xcpretty#usage
+
+osx_image: xcode11.2
+language: swift
+xcode_project: SwiftFortuneWheel.xcodeproj # path to your xcodeproj folder
+xcode_scheme: SwiftFortuneWheelTests
+xcode_destination: platform=iOS Simulator,OS=13.2.2,name=iPhone 11
+
+# cache: cocoapods
+# podfile: Example/Podfile
+# before_install:
+# - gem install cocoapods # Since Travis is not always on latest version
+# - pod install --project-directory=Example
+
+# script:
+# - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/RESegmentedControl.xcworkspace -scheme RESegmentedControl-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
+# - pod lib lint

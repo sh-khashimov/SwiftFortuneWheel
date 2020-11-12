@@ -14,7 +14,7 @@
     <a title="SwiftFortuneWheel Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SwiftFortuneWheel 1.1.0 Docs</a> (79% documented)</p>
+        <p><a href="../index.html">SwiftFortuneWheel 1.1.2 Docs</a> (81% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -31,6 +31,27 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Classes/AudioPlayer.html">AudioPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AudioPlayer/Status.html">– Status</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AudioPlayer/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AudioPlayerManager.html">AudioPlayerManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CollisionCalculator.html">CollisionCalculator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CollisionDetector.html">CollisionDetector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ContinuousCollisionCalculator.html">ContinuousCollisionCalculator</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NoClippingLayer.html">NoClippingLayer</a>
               </li>
               <li class="nav-group-task">
@@ -46,7 +67,10 @@
                 <a href="../Classes/SwiftFortuneWheel.html">SwiftFortuneWheel</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/TTUtils.html">TTUtils</a>
+                <a href="../Classes/SynchronizedArray.html">SynchronizedArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SynchronizedDictionary.html">SynchronizedDictionary</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/WheelLayer.html">WheelLayer</a>
@@ -57,10 +81,30 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AudioError.html">AudioError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CollisionType.html">CollisionType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CAAnimation.html">CAAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CAAnimationGroup.html">CAAnimationGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CALayer.html">CALayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/CGRect.html">CGRect</a>
@@ -99,6 +143,9 @@
                 <a href="../Extensions/SFWImage.html">SFWImage</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Extensions/Sequence.html">Sequence</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/String.html">String</a>
               </li>
               <li class="nav-group-task">
@@ -124,10 +171,22 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Protocols/AudioPlayable.html">AudioPlayable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CollisionDetectable.html">CollisionDetectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CollisionProtocol.html">CollisionProtocol</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/CurveTextDrawing.html">CurveTextDrawing</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ImageDrawing.html">ImageDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImpactFeedbackable.html">ImpactFeedbackable</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ShapeDrawing.html">ShapeDrawing</a>
@@ -155,6 +214,9 @@
           <li class="nav-group-name">
             <a href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AudioFile.html">AudioFile</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Structs/Calc.html">Calc</a>
               </li>
@@ -248,6 +310,9 @@
                 <a href="../Typealiases.html#/s:17SwiftFortuneWheel8SFWImagea">SFWImage</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17SwiftFortuneWheel15SoundIdentifiera">SoundIdentifier</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Typealiases.html#/UIBezierPath">UIBezierPath</a>
               </li>
               <li class="nav-group-task">
@@ -275,6 +340,7 @@
                   <pre class="highlight swift"><code><span class="kd">@IBDesignable</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">SwiftFortuneWheel</span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/SFWControl">SFWControl</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SwiftFortuneWheel</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SliceCalculating.html">SliceCalculating</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SwiftFortuneWheel</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioPlayable.html">AudioPlayable</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/ImpactFeedbackable.html">ImpactFeedbackable</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SwiftFortuneWheel</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SpinningAnimatorProtocol.html">SpinningAnimatorProtocol</a></span></code></pre>
 
                 </div>
@@ -306,6 +372,190 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">onSpinButtonTap</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC15onEdgeCollisionySdSgcSgvp"></a>
+                    <a name="//apple_ref/swift/Property/onEdgeCollision" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC15onEdgeCollisionySdSgcSgvp">onEdgeCollision</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Callback for edge collision</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">onEdgeCollision</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC17onCenterCollisionySdSgcSgvp"></a>
+                    <a name="//apple_ref/swift/Property/onCenterCollision" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC17onCenterCollisionySdSgcSgvp">onCenterCollision</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Callback for center collision</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">onCenterCollision</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel18ImpactFeedbackableP16impactFeedbackOnSbvp"></a>
+                    <a name="//apple_ref/swift/Property/impactFeedbackOn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel18ImpactFeedbackableP16impactFeedbackOnSbvp">impactFeedbackOn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">impactFeedbackOn</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel17CollisionProtocolP04edgeD11DetectionOnSbvp"></a>
+                    <a name="//apple_ref/swift/Property/edgeCollisionDetectionOn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel17CollisionProtocolP04edgeD11DetectionOnSbvp">edgeCollisionDetectionOn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">edgeCollisionDetectionOn</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel17CollisionProtocolP06centerD11DetectionOnSbvp"></a>
+                    <a name="//apple_ref/swift/Property/centerCollisionDetectionOn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel17CollisionProtocolP06centerD11DetectionOnSbvp">centerCollisionDetectionOn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">centerCollisionDetectionOn</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel13AudioPlayableP18edgeCollisionSoundAA0D4FileVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/edgeCollisionSound" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel13AudioPlayableP18edgeCollisionSoundAA0D4FileVSgvp">edgeCollisionSound</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">edgeCollisionSound</span><span class="p">:</span> <span class="kt"><a href="../Structs/AudioFile.html">AudioFile</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel13AudioPlayableP20centerCollisionSoundAA0D4FileVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/centerCollisionSound" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel13AudioPlayableP20centerCollisionSoundAA0D4FileVSgvp">centerCollisionSound</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">centerCollisionSound</span><span class="p">:</span> <span class="kt"><a href="../Structs/AudioFile.html">AudioFile</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -362,6 +612,59 @@ Used to draw content.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">slices</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Slice.html">Slice</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel13AudioPlayableP18audioPlayerManagerAA0dgH0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/audioPlayerManager" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel13AudioPlayableP18audioPlayerManagerAA0dgH0Cvp">audioPlayerManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">audioPlayerManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioPlayerManager.html">AudioPlayerManager</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC23impactFeedbackgeneratorSo25UIImpactFeedbackGeneratorCvp"></a>
+                    <a name="//apple_ref/swift/Property/impactFeedbackgenerator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC23impactFeedbackgeneratorSo25UIImpactFeedbackGeneratorCvp">impactFeedbackgenerator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">impactFeedbackgenerator</span><span class="p">:</span> <span class="kt">UIImpactFeedbackGenerator</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -564,6 +867,19 @@ Used to draw content.</p>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/SpinningAnimatorProtocol"></a>
+                <a name="//apple_ref/swift/Section/SpinningAnimatorProtocol" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/SpinningAnimatorProtocol"></a>
+                  <h3 class="section-name"><p>SpinningAnimatorProtocol</p>
+</h3>
+                </div>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -584,13 +900,104 @@ Used to draw content.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">internal</span> <span class="k">var</span> <span class="nv">layerToAnimate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SpinningAnimatable.html">SpinningAnimatable</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">layerToAnimate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SpinningAnimatable.html">SpinningAnimatable</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel17CollisionProtocolP11sliceDegree12CoreGraphics7CGFloatVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/sliceDegree" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel17CollisionProtocolP11sliceDegree12CoreGraphics7CGFloatVSgvp">sliceDegree</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sliceDegree</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel17CollisionProtocolP24edgeAnchorRotationOffset12CoreGraphics7CGFloatVvp"></a>
+                    <a name="//apple_ref/swift/Property/edgeAnchorRotationOffset" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel17CollisionProtocolP24edgeAnchorRotationOffset12CoreGraphics7CGFloatVvp">edgeAnchorRotationOffset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">edgeAnchorRotationOffset</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel17CollisionProtocolP26centerAnchorRotationOffset12CoreGraphics7CGFloatVvp"></a>
+                    <a name="//apple_ref/swift/Property/centerAnchorRotationOffset" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel17CollisionProtocolP26centerAnchorRotationOffset12CoreGraphics7CGFloatVvp">centerAnchorRotationOffset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">centerAnchorRotationOffset</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20API%20%28Animation%29"></a>
+                <a name="//apple_ref/swift/Section/Public API (Animation)" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public%20API%20%28Animation%29"></a>
+                  <h3 class="section-name"><p>Public API (Animation)</p>
+</h3>
+                </div>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -611,7 +1018,7 @@ Used to draw content.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">rotate</span><span class="p">(</span><span class="n">toIndex</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">animationDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">0.00001</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">rotate</span><span class="p">(</span><span class="n">toIndex</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">animationDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">0.00001</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -669,7 +1076,7 @@ Used to draw content.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">rotate</span><span class="p">(</span><span class="nv">rotationOffset</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">animationDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">0.00001</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">rotate</span><span class="p">(</span><span class="nv">rotationOffset</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">animationDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">0.00001</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -710,9 +1117,9 @@ Used to draw content.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SwiftFortuneWheelAAC14startAnimating14rotationOffset24fullRotationsUntilFinish17animationDuration_y12CoreGraphics7CGFloatV_SiSdySbcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/startAnimating(rotationOffset:fullRotationsUntilFinish:animationDuration:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheelAAC14startAnimating14rotationOffset24fullRotationsUntilFinish17animationDuration_y12CoreGraphics7CGFloatV_SiSdySbcSgtF">startAnimating(rotationOffset:<wbr>fullRotationsUntilFinish:<wbr>animationDuration:<wbr>_:<wbr>)</a>
+                    <a name="/s:17SwiftFortuneWheelAAC22startRotationAnimation14rotationOffset18fullRotationsCount17animationDuration_y12CoreGraphics7CGFloatV_SiSdySbcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/startRotationAnimation(rotationOffset:fullRotationsCount:animationDuration:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC22startRotationAnimation14rotationOffset18fullRotationsCount17animationDuration_y12CoreGraphics7CGFloatV_SiSdySbcSgtF">startRotationAnimation(rotationOffset:<wbr>fullRotationsCount:<wbr>animationDuration:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -727,7 +1134,7 @@ Used to draw content.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">startAnimating</span><span class="p">(</span><span class="nv">rotationOffset</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">fullRotationsUntilFinish</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span> <span class="nv">animationDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">5.000</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startRotationAnimation</span><span class="p">(</span><span class="nv">rotationOffset</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">fullRotationsCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span> <span class="nv">animationDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">5.000</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
 
                         </div>
                       </div>
@@ -750,7 +1157,7 @@ Used to draw content.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>fullRotationsUntilFinish</em>
+                                <em>fullRotationsCount</em>
                                 </code>
                               </td>
                               <td>
@@ -792,9 +1199,9 @@ Used to draw content.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SwiftFortuneWheelAAC14startAnimating11finishIndex24fullRotationsUntilFinish17animationDuration_ySi_SiSdySbcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/startAnimating(finishIndex:fullRotationsUntilFinish:animationDuration:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheelAAC14startAnimating11finishIndex24fullRotationsUntilFinish17animationDuration_ySi_SiSdySbcSgtF">startAnimating(finishIndex:<wbr>fullRotationsUntilFinish:<wbr>animationDuration:<wbr>_:<wbr>)</a>
+                    <a name="/s:17SwiftFortuneWheelAAC22startRotationAnimation11finishIndex18fullRotationsCount17animationDuration_ySi_SiSdySbcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/startRotationAnimation(finishIndex:fullRotationsCount:animationDuration:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC22startRotationAnimation11finishIndex18fullRotationsCount17animationDuration_ySi_SiSdySbcSgtF">startRotationAnimation(finishIndex:<wbr>fullRotationsCount:<wbr>animationDuration:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -809,7 +1216,7 @@ Used to draw content.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">startAnimating</span><span class="p">(</span><span class="nv">finishIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">fullRotationsUntilFinish</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span> <span class="nv">animationDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">5.000</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startRotationAnimation</span><span class="p">(</span><span class="nv">finishIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">fullRotationsCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span> <span class="nv">animationDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">5.000</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
 
                         </div>
                       </div>
@@ -874,9 +1281,9 @@ Used to draw content.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SwiftFortuneWheelAAC14startAnimating31indefiniteRotationTimeInSeconds11finishIndex_ySi_SiySbcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/startAnimating(indefiniteRotationTimeInSeconds:finishIndex:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheelAAC14startAnimating31indefiniteRotationTimeInSeconds11finishIndex_ySi_SiySbcSgtF">startAnimating(indefiniteRotationTimeInSeconds:<wbr>finishIndex:<wbr>_:<wbr>)</a>
+                    <a name="/s:17SwiftFortuneWheelAAC22startRotationAnimation11finishIndex010continuousE4Time0iE5Speed_ySi_Si12CoreGraphics7CGFloatVySbcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/startRotationAnimation(finishIndex:continuousRotationTime:continuousRotationSpeed:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC22startRotationAnimation11finishIndex010continuousE4Time0iE5Speed_ySi_Si12CoreGraphics7CGFloatVySbcSgtF">startRotationAnimation(finishIndex:<wbr>continuousRotationTime:<wbr>continuousRotationSpeed:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -891,7 +1298,7 @@ Used to draw content.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">startAnimating</span><span class="p">(</span><span class="nv">indefiniteRotationTimeInSeconds</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">finishIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startRotationAnimation</span><span class="p">(</span><span class="nv">finishIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">continuousRotationTime</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">continuousRotationSpeed</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
 
                         </div>
                       </div>
@@ -902,24 +1309,36 @@ Used to draw content.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>indefiniteRotationTimeInSeconds</em>
+                                <em>finishIndex</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>full rotation time in seconds before stops</p>
+                                  <p>Finish at index</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>finishIndex</em>
+                                <em>continuousRotationTime</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>finished at index</p>
+                                  <p>Full rotation time in seconds before stops</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>continuousRotationSpeed</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Rotation speed</p>
                                 </div>
                               </td>
                             </tr>
@@ -931,7 +1350,7 @@ Used to draw content.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>completion</p>
+                                  <p>Completion handler</p>
                                 </div>
                               </td>
                             </tr>
@@ -944,9 +1363,9 @@ Used to draw content.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SwiftFortuneWheelAAC14startAnimating12rotationTime019fullRotationCountIniG0ySd_12CoreGraphics7CGFloatVtF"></a>
-                    <a name="//apple_ref/swift/Method/startAnimating(rotationTime:fullRotationCountInRotationTime:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheelAAC14startAnimating12rotationTime019fullRotationCountIniG0ySd_12CoreGraphics7CGFloatVtF">startAnimating(rotationTime:<wbr>fullRotationCountInRotationTime:<wbr>)</a>
+                    <a name="/s:17SwiftFortuneWheelAAC22startRotationAnimation11finishIndex010continuousE4Time0iE5Speed14rotationOffset_ySi_Si12CoreGraphics7CGFloatVAJySbcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/startRotationAnimation(finishIndex:continuousRotationTime:continuousRotationSpeed:rotationOffset:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC22startRotationAnimation11finishIndex010continuousE4Time0iE5Speed14rotationOffset_ySi_Si12CoreGraphics7CGFloatVAJySbcSgtF">startRotationAnimation(finishIndex:<wbr>continuousRotationTime:<wbr>continuousRotationSpeed:<wbr>rotationOffset:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -954,14 +1373,14 @@ Used to draw content.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Starts indefinite rotation animation</p>
+                        <p>Starts indefinite rotation and stops rotation at the specified index</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">startAnimating</span><span class="p">(</span><span class="nv">rotationTime</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">5.000</span><span class="p">,</span> <span class="nv">fullRotationCountInRotationTime</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">7000</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startRotationAnimation</span><span class="p">(</span><span class="nv">finishIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">continuousRotationTime</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">continuousRotationSpeed</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="nv">rotationOffset</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
 
                         </div>
                       </div>
@@ -972,24 +1391,60 @@ Used to draw content.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>rotationTime</em>
+                                <em>finishIndex</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Rotation time is how many seconds needs to rotate all full rotation counts, default value is <code>5.000</code></p>
+                                  <p>Finish at index</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>fullRotationCountInRotationTime</em>
+                                <em>continuousRotationTime</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>How many rotation should be done for spefied rotation time, default value is <code>7000</code></p>
+                                  <p>Full rotation time in seconds before stops</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>continuousRotationSpeed</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Rotation speed</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rotationOffset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Rotation offset</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion handler</p>
                                 </div>
                               </td>
                             </tr>
@@ -1002,9 +1457,9 @@ Used to draw content.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SwiftFortuneWheelAAC13stopAnimatingyyF"></a>
-                    <a name="//apple_ref/swift/Method/stopAnimating()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheelAAC13stopAnimatingyyF">stopAnimating()</a>
+                    <a name="/s:17SwiftFortuneWheelAAC32startContinuousRotationAnimation4withy12CoreGraphics7CGFloatV_tF"></a>
+                    <a name="//apple_ref/swift/Method/startContinuousRotationAnimation(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC32startContinuousRotationAnimation4withy12CoreGraphics7CGFloatV_tF">startContinuousRotationAnimation(with:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1012,14 +1467,60 @@ Used to draw content.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Stops all animations</p>
+                        <p>Starts continuos rotation animation</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">stopAnimating</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startContinuousRotationAnimation</span><span class="p">(</span><span class="n">with</span> <span class="nv">speed</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>speed</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Rotation speed</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC12stopRotationyyF"></a>
+                    <a name="//apple_ref/swift/Method/stopRotation()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC12stopRotationyyF">stopRotation()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stops rotation animation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stopRotation</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -1029,9 +1530,9 @@ Used to draw content.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SwiftFortuneWheelAAC14startAnimating11finishIndex14rotationOffset24fullRotationsUntilFinish17animationDuration_ySi_12CoreGraphics7CGFloatVSiSdySbcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/startAnimating(finishIndex:rotationOffset:fullRotationsUntilFinish:animationDuration:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheelAAC14startAnimating11finishIndex14rotationOffset24fullRotationsUntilFinish17animationDuration_ySi_12CoreGraphics7CGFloatVSiSdySbcSgtF">startAnimating(finishIndex:<wbr>rotationOffset:<wbr>fullRotationsUntilFinish:<wbr>animationDuration:<wbr>_:<wbr>)</a>
+                    <a name="/s:17SwiftFortuneWheelAAC22startRotationAnimation11finishIndex14rotationOffset18fullRotationsCount17animationDuration_ySi_12CoreGraphics7CGFloatVSiSdySbcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/startRotationAnimation(finishIndex:rotationOffset:fullRotationsCount:animationDuration:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC22startRotationAnimation11finishIndex14rotationOffset18fullRotationsCount17animationDuration_ySi_12CoreGraphics7CGFloatVSiSdySbcSgtF">startRotationAnimation(finishIndex:<wbr>rotationOffset:<wbr>fullRotationsCount:<wbr>animationDuration:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1046,7 +1547,7 @@ Used to draw content.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">startAnimating</span><span class="p">(</span><span class="nv">finishIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">rotationOffset</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">fullRotationsUntilFinish</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span> <span class="nv">animationDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">5.000</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startRotationAnimation</span><span class="p">(</span><span class="nv">finishIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">rotationOffset</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">fullRotationsCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span> <span class="nv">animationDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">5.000</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
 
                         </div>
                       </div>
@@ -1120,6 +1621,19 @@ Used to draw content.</p>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20API%20%28IBInspectable%29"></a>
+                <a name="//apple_ref/swift/Section/Public API (IBInspectable)" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public%20API%20%28IBInspectable%29"></a>
+                  <h3 class="section-name"><p>Public API (IBInspectable)</p>
+</h3>
+                </div>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -1318,10 +1832,442 @@ Used to draw content.</p>
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Deprecated%20API"></a>
+                <a name="//apple_ref/swift/Section/Deprecated API" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Deprecated%20API"></a>
+                  <h3 class="section-name"><p>Deprecated API</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC14startAnimating12rotationTime019fullRotationCountIniG0ySd_12CoreGraphics7CGFloatVtF"></a>
+                    <a name="//apple_ref/swift/Method/startAnimating(rotationTime:fullRotationCountInRotationTime:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC14startAnimating12rotationTime019fullRotationCountIniG0ySd_12CoreGraphics7CGFloatVtF">startAnimating(rotationTime:<wbr>fullRotationCountInRotationTime:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts indefinite rotation animation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use startContinuousRotationAnimation(with: speed﹚ instead"</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">startAnimating</span><span class="p">(</span><span class="nv">rotationTime</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">5.000</span><span class="p">,</span> <span class="nv">fullRotationCountInRotationTime</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">7000</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rotationTime</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Rotation time is how many seconds needs to rotate all full rotation counts, default value is <code>5.000</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fullRotationCountInRotationTime</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>How many rotation should be done for spefied rotation time, default value is <code>7000</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC13stopAnimatingyyF"></a>
+                    <a name="//apple_ref/swift/Method/stopAnimating()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC13stopAnimatingyyF">stopAnimating()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stops all animations</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">renamed</span><span class="p">:</span> <span class="s">"stopRotation"</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">stopAnimating</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC14startAnimating31indefiniteRotationTimeInSeconds11finishIndex_ySi_SiySbcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/startAnimating(indefiniteRotationTimeInSeconds:finishIndex:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC14startAnimating31indefiniteRotationTimeInSeconds11finishIndex_ySi_SiySbcSgtF">startAnimating(indefiniteRotationTimeInSeconds:<wbr>finishIndex:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts indefinite rotation and stops rotation at the specified index</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use startRotationAnimation(finishIndex:continuousRotationTime:completion:﹚ instead"</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">startAnimating</span><span class="p">(</span><span class="nv">indefiniteRotationTimeInSeconds</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">finishIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>indefiniteRotationTimeInSeconds</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>full rotation time in seconds before stops</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>finishIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>finished at index</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC14startAnimating11finishIndex14rotationOffset24fullRotationsUntilFinish17animationDuration_ySi_12CoreGraphics7CGFloatVSiSdySbcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/startAnimating(finishIndex:rotationOffset:fullRotationsUntilFinish:animationDuration:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC14startAnimating11finishIndex14rotationOffset24fullRotationsUntilFinish17animationDuration_ySi_12CoreGraphics7CGFloatVSiSdySbcSgtF">startAnimating(finishIndex:<wbr>rotationOffset:<wbr>fullRotationsUntilFinish:<wbr>animationDuration:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts rotation animation and stops rotation at the specified index and rotation angle offset</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">renamed</span><span class="p">:</span> <span class="s">"startRotationAnimation(finishIndex:rotationOffset:fullRotationsCount:animationDuration:completion:﹚"</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">startAnimating</span><span class="p">(</span><span class="nv">finishIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">rotationOffset</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">fullRotationsUntilFinish</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span> <span class="nv">animationDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">5.000</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>finishIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>finished at index</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rotationOffset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Rotation offset</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fullRotationsUntilFinish</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Full rotations until start deceleration</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animationDuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Animation duration</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC14startAnimating14rotationOffset24fullRotationsUntilFinish17animationDuration_y12CoreGraphics7CGFloatV_SiSdySbcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/startAnimating(rotationOffset:fullRotationsUntilFinish:animationDuration:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC14startAnimating14rotationOffset24fullRotationsUntilFinish17animationDuration_y12CoreGraphics7CGFloatV_SiSdySbcSgtF">startAnimating(rotationOffset:<wbr>fullRotationsUntilFinish:<wbr>animationDuration:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts rotation animation and stops rotation at the specified rotation offset angle</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">renamed</span><span class="p">:</span> <span class="s">"startRotationAnimation(rotationOffset:fullRotationsCount:animationDuration:completion:﹚"</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">startAnimating</span><span class="p">(</span><span class="nv">rotationOffset</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">fullRotationsUntilFinish</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span> <span class="nv">animationDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">5.000</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rotationOffset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Rotation offset</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fullRotationsUntilFinish</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Full rotations until start deceleration</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animationDuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Animation duration</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheelAAC14startAnimating11finishIndex24fullRotationsUntilFinish17animationDuration_ySi_SiSdySbcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/startAnimating(finishIndex:fullRotationsUntilFinish:animationDuration:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC14startAnimating11finishIndex24fullRotationsUntilFinish17animationDuration_ySi_SiSdySbcSgtF">startAnimating(finishIndex:<wbr>fullRotationsUntilFinish:<wbr>animationDuration:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts rotation animation and stops rotation at the specified index</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">renamed</span><span class="p">:</span> <span class="s">"startRotationAnimation(finishIndex:fullRotationsCount:animationDuration:completion:﹚"</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">startAnimating</span><span class="p">(</span><span class="nv">finishIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">fullRotationsUntilFinish</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span> <span class="nv">animationDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">5.000</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>finishIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Finish at index</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fullRotationsUntilFinish</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Full rotations until start deceleration</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animationDuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Animation duration</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-07-22)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-11-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

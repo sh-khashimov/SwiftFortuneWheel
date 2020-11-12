@@ -31,7 +31,7 @@ class DynamicContentViewExampleController: UIViewController {
     }
 
     var minimumPrize: Int {
-        return 4
+        return 0
     }
 
     var maximumPrize: Int {
@@ -109,7 +109,7 @@ class DynamicContentViewExampleController: UIViewController {
     }
 
     func startAnimating() {
-        fortuneWheel.startAnimating(indefiniteRotationTimeInSeconds: 1, finishIndex: finishIndex) { (finished) in
+        fortuneWheel.startRotationAnimation(finishIndex: finishIndex, continuousRotationTime: 1) { (finished) in
             print(finished)
         }
     }
