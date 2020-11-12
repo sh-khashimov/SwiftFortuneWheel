@@ -2,11 +2,11 @@
 # * https://www.objc.io/issues/6-build-tools/travis-ci/
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode11.2
+osx_image: xcode12.2
 language: swift
 xcode_project: SwiftFortuneWheel.xcodeproj # path to your xcodeproj folder
 xcode_scheme: SwiftFortuneWheelTests
-xcode_destination: platform=iOS Simulator,OS=13.2.2,name=iPhone 11
+xcode_destination: platform=iOS Simulator,OS=14.2,name=iPhone 12
 
 # cache: cocoapods
 # podfile: Example/Podfile
