@@ -17,7 +17,7 @@ import UIKit
 #if os(iOS)
 /// The protocol that adds support for the impact feedback
 protocol ImpactFeedbackable {
-    @available(iOSApplicationExtension 10.0, *)
+    @available(iOS 10.0, iOSApplicationExtension 10.0, *)
     /// Use impact feedback to indicate that an impact has occurred
     var impactFeedbackgenerator: UIImpactFeedbackGenerator { get }
     /// Impact feedback on or off
@@ -27,7 +27,7 @@ protocol ImpactFeedbackable {
 extension ImpactFeedbackable {
     /// Prepare impact feedback if needed
     func prepareImpactFeedbackIfNeeded() {
-        if #available(iOSApplicationExtension 10.0, *) {
+        if #available(iOS 10.0, iOSApplicationExtension 10.0, *) {
             guard impactFeedbackOn == true else { return }
             impactFeedbackgenerator.prepare()
         } else {
@@ -37,7 +37,7 @@ extension ImpactFeedbackable {
     
     /// Generates impact feedback
     func impactFeedback() {
-        if #available(iOSApplicationExtension 10.0, *) {
+        if #available(iOS 10.0, iOSApplicationExtension 10.0, *) {
             if impactFeedbackOn {
                 impactFeedbackgenerator.impactOccurred()
             }

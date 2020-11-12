@@ -19,7 +19,7 @@ class AudioPlayer {
     ///   - file: Audio file that will be played
     ///   - identifier: Sound identifier which is will start to play
     func play(_ file: AVAudioFile, identifier: SoundIdentifier) {
-        if #available(iOSApplicationExtension 11.0, OSXApplicationExtension 10.13, tvOSApplicationExtension 11.0, *) {
+        if #available(iOS 11.0, iOSApplicationExtension 11.0, OSX 10.13, OSXApplicationExtension 10.13, tvOS 11.0, tvOSApplicationExtension 11.0, *) {
             node.scheduleFile(file, at: nil, completionCallbackType: .dataPlayedBack) {
                 [weak self] callbackType in
                 self?.didCompletePlayback(for: identifier)

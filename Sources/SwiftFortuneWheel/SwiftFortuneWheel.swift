@@ -103,7 +103,7 @@ public class SwiftFortuneWheel: SFWControl {
     private(set) lazy var audioPlayerManager = AudioPlayerManager()
     
     #if os(iOS)
-    @available(iOSApplicationExtension 10.0, *)
+    @available(iOS 10.0, iOSApplicationExtension 10.0, *)
     private(set) lazy var impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .light)
     #endif
     

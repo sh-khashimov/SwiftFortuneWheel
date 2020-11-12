@@ -62,7 +62,7 @@ class SoundExampleViewController: UIViewController {
     }
     
     func rotate() {
-        fortuneWheel.startRotationAnimation(finishIndex: 0, continuousRotationTime: 5, nil)
+        fortuneWheel.startRotationAnimation(finishIndex: 0, continuousRotationTime: 2, nil)
     }
     
     @IBAction func impactFeedbackValueChanged(_ sender: UISwitch) {
@@ -70,6 +70,8 @@ class SoundExampleViewController: UIViewController {
     }
     
     @IBAction func soundEffectTypeValueChanged(_ sender: UISegmentedControl) {
+        fortuneWheel.stopRotation()
+        
         fortuneWheel.edgeCollisionDetectionOn = soundEffectTypeSegmentedControl.selectedSegmentIndex == 0
         
         fortuneWheel.centerCollisionDetectionOn = soundEffectTypeSegmentedControl.selectedSegmentIndex == 1
