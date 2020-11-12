@@ -20,6 +20,20 @@
                ReferencedContainer = "container:SwiftFortuneWheel.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "52D6D9851BEFF229002C0205"
+               BuildableName = "SwiftFortuneWheelTests.xctest"
+               BlueprintName = "SwiftFortuneWheelTests"
+               ReferencedContainer = "container:SwiftFortuneWheel.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

@@ -22,7 +22,6 @@
 		2710568F248D541B006C0181 /* Prize+SliceContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710568E248D541B006C0181 /* Prize+SliceContentType.swift */; };
 		276E7FFF24B378E5004E9D82 /* AnimatedRotationExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E7FFE24B378E5004E9D82 /* AnimatedRotationExampleViewController.swift */; };
 		276E800224B37954004E9D82 /* LayoutExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E800124B37954004E9D82 /* LayoutExamplesViewController.swift */; };
-		276E95C5255CF9CD0018D843 /* Tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 276E95C4255CF9CD0018D843 /* Tick.mp3 */; };
 		2794D29C24B3977B00379B6A /* SFWConfiguration+RotationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2794D29B24B3977B00379B6A /* SFWConfiguration+RotationExample.swift */; };
 		279BA971255AAF470088BFCF /* BackgroundImageExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BA970255AAF470088BFCF /* BackgroundImageExampleViewController.swift */; };
 		279BA974255AAF6B0088BFCF /* SoundExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BA973255AAF6B0088BFCF /* SoundExampleViewController.swift */; };
@@ -33,6 +32,7 @@
 		279EEF9424B5C31C00AD2AB2 /* VariousWheelSpikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279EEF9324B5C31B00AD2AB2 /* VariousWheelSpikeViewController.swift */; };
 		27C6486E24BE1A6D00CB8167 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C6486D24BE1A6D00CB8167 /* SplitViewController.swift */; };
 		27DA036A254ED51B0019A7F1 /* Click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27DA0369254ED51B0019A7F1 /* Click.mp3 */; };
+		27E5A35A255DA04300F5F8DE /* Tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27E5A359255DA04300F5F8DE /* Tick.mp3 */; };
 		27E8C95724B8CF480021205F /* VariousWheelSimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C95624B8CF480021205F /* VariousWheelSimpleViewController.swift */; };
 		27E8C95924B8CF690021205F /* SFWConfiguration+VariousWheelSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C95824B8CF690021205F /* SFWConfiguration+VariousWheelSimple.swift */; };
 		27E8C95B24B8D2D20021205F /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8C95A24B8D2D20021205F /* Color+Hex.swift */; };
@@ -80,7 +80,6 @@
 		274E9E3524BBA05E00613A49 /* SwiftFortuneWheelDemo-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SwiftFortuneWheelDemo-iOS.entitlements"; sourceTree = "<group>"; };
 		276E7FFE24B378E5004E9D82 /* AnimatedRotationExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedRotationExampleViewController.swift; sourceTree = "<group>"; };
 		276E800124B37954004E9D82 /* LayoutExamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutExamplesViewController.swift; sourceTree = "<group>"; };
-		276E95C4255CF9CD0018D843 /* Tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Tick.mp3; path = "../../SwiftFortuneWheelDemo-tvOS/SwiftFortuneWheelDemo-tvOS/SwiftFortuneWheelDemo-tvOS/Tick.mp3"; sourceTree = "<group>"; };
 		2794D29B24B3977B00379B6A /* SFWConfiguration+RotationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+RotationExample.swift"; sourceTree = "<group>"; };
 		279BA970255AAF470088BFCF /* BackgroundImageExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageExampleViewController.swift; sourceTree = "<group>"; };
 		279BA973255AAF6B0088BFCF /* SoundExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundExampleViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +90,7 @@
 		279EEF9324B5C31B00AD2AB2 /* VariousWheelSpikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariousWheelSpikeViewController.swift; sourceTree = "<group>"; };
 		27C6486D24BE1A6D00CB8167 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		27DA0369254ED51B0019A7F1 /* Click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Click.mp3; sourceTree = "<group>"; };
+		27E5A359255DA04300F5F8DE /* Tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tick.mp3; sourceTree = "<group>"; };
 		27E8C95624B8CF480021205F /* VariousWheelSimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariousWheelSimpleViewController.swift; sourceTree = "<group>"; };
 		27E8C95824B8CF690021205F /* SFWConfiguration+VariousWheelSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+VariousWheelSimple.swift"; sourceTree = "<group>"; };
 		27E8C95A24B8D2D20021205F /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 				27E8C96A24B9B42D0021205F /* ToyBox.ttf */,
 				274E9E3324BB9F5100613A49 /* Info.plist */,
 				27E8C96824B9B3250021205F /* Ode to Idle Gaming.otf */,
-				276E95C4255CF9CD0018D843 /* Tick.mp3 */,
+				27E5A359255DA04300F5F8DE /* Tick.mp3 */,
 				27DA0369254ED51B0019A7F1 /* Click.mp3 */,
 				27105636248D3C9F006C0181 /* Assets.xcassets */,
 				27105638248D3C9F006C0181 /* LaunchScreen.storyboard */,
@@ -369,7 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27DA036A254ED51B0019A7F1 /* Click.mp3 in Resources */,
-				276E95C5255CF9CD0018D843 /* Tick.mp3 in Resources */,
+				27E5A35A255DA04300F5F8DE /* Tick.mp3 in Resources */,
 				2710563A248D3C9F006C0181 /* LaunchScreen.storyboard in Resources */,
 				27E8C96B24B9B42D0021205F /* ToyBox.ttf in Resources */,
 				27105637248D3C9F006C0181 /* Assets.xcassets in Resources */,
