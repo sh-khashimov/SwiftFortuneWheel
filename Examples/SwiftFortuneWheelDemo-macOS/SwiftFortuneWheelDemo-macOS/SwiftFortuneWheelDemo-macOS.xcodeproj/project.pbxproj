@@ -21,6 +21,7 @@
 		2720684C24BC625C0025815D /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720684824BC625C0025815D /* UIView+CornerRadius.swift */; };
 		2720685124BC629C0025815D /* SFWConfiguration+DynamicContentExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720684F24BC629C0025815D /* SFWConfiguration+DynamicContentExample.swift */; };
 		2722559D24BCE0D600950563 /* NoClippingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559C24BCE0D600950563 /* NoClippingView.swift */; };
+		276E95BB255CF7950018D843 /* Click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 276E95BA255CF7950018D843 /* Click.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		2720684824BC625C0025815D /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
 		2720684F24BC629C0025815D /* SFWConfiguration+DynamicContentExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+DynamicContentExample.swift"; sourceTree = "<group>"; };
 		2722559C24BCE0D600950563 /* NoClippingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoClippingView.swift; sourceTree = "<group>"; };
+		276E95BA255CF7950018D843 /* Click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Click.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				2720684324BC625C0025815D /* Models */,
 				2720681424BC2BDB0025815D /* Assets.xcassets */,
 				2720681624BC2BDB0025815D /* Main.storyboard */,
+				276E95BA255CF7950018D843 /* Click.mp3 */,
 				2720681924BC2BDB0025815D /* Info.plist */,
 				2720681A24BC2BDB0025815D /* SwiftFortuneWheelDemo_macOS.entitlements */,
 				2722559C24BCE0D600950563 /* NoClippingView.swift */,
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2720681524BC2BDB0025815D /* Assets.xcassets in Resources */,
+				276E95BB255CF7950018D843 /* Click.mp3 in Resources */,
 				2720681824BC2BDB0025815D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

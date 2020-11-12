@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CollisionDetectable Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/CollisionDetectable" class="dashAnchor"></a>
+    <a title="CollisionDetectable Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SwiftFortuneWheel 1.1.2 Docs</a> (81% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SwiftFortuneWheel Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CollisionDetectable Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AudioPlayer.html">AudioPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AudioPlayer/Status.html">– Status</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AudioPlayer/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AudioPlayerManager.html">AudioPlayerManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CollisionCalculator.html">CollisionCalculator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CollisionDetector.html">CollisionDetector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ContinuousCollisionCalculator.html">ContinuousCollisionCalculator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoClippingLayer.html">NoClippingLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PinImageView.html">PinImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SpinButton.html">SpinButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SpinningWheelAnimator.html">SpinningWheelAnimator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SwiftFortuneWheel.html">SwiftFortuneWheel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SynchronizedArray.html">SynchronizedArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SynchronizedDictionary.html">SynchronizedDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WheelLayer.html">WheelLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WheelView.html">WheelView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AudioError.html">AudioError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CollisionType.html">CollisionType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CAAnimation.html">CAAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CAAnimationGroup.html">CAAnimationGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CALayer.html">CALayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CGRect.html">CGRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CGSize.html">CGSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSBezierPath.html">NSBezierPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSButton.html">NSButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSFont.html">NSFont</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSImage.html">NSImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSImageView.html">NSImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSScreen.html">NSScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSView.html">NSView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SFWColor.html">SFWColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SFWFont.html">SFWFont</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SFWImage.html">SFWImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Sequence.html">Sequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/UIGraphicsGetCurrentContext()">UIGraphicsGetCurrentContext()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/UIGraphicsPopContext()">UIGraphicsPopContext()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/UIGraphicsPushContext(_:)">UIGraphicsPushContext(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AudioPlayable.html">AudioPlayable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CollisionDetectable.html">CollisionDetectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CollisionProtocol.html">CollisionProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CurveTextDrawing.html">CurveTextDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageDrawing.html">ImageDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImpactFeedbackable.html">ImpactFeedbackable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ShapeDrawing.html">ShapeDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SliceCalculating.html">SliceCalculating</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SliceDrawing.html">SliceDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SpinningAnimatable.html">SpinningAnimatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SpinningAnimatorProtocol.html">SpinningAnimatorProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TextDrawing.html">TextDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/WheelMathCalculating.html">WheelMathCalculating</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AudioFile.html">AudioFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Calc.html">Calc</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImagePreferences.html">ImagePreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LinePreferences.html">LinePreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SFWConfiguration.html">SFWConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SFWConfiguration/WheelPreferences.html">– WheelPreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SFWConfiguration/CirclePreferences.html">– CirclePreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SFWConfiguration/SlicePreferences.html">– SlicePreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SFWConfiguration/SpinButtonPreferences.html">– SpinButtonPreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SFWConfiguration/PinImageViewPreferences.html">– PinImageViewPreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SFWConfiguration/Position.html">– Position</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SFWConfiguration/Margins.html">– Margins</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SFWConfiguration/ColorType.html">– ColorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SFWConfiguration/AnchorImage.html">– AnchorImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SFWConfiguration/ContentMode.html">– ContentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Slice.html">Slice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Slice/ContentType.html">– ContentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TextPreferences.html">TextPreferences</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TextPreferences/Orientation.html">– Orientation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TextPreferences/LineBreakMode.html">– LineBreakMode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/SFWColor">SFWColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17SwiftFortuneWheel8SFWColora">SFWColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/SFWControl">SFWControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17SwiftFortuneWheel10SFWControla">SFWControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/SFWEdgeInsets">SFWEdgeInsets</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17SwiftFortuneWheel13SFWEdgeInsetsa">SFWEdgeInsets</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/SFWFont">SFWFont</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17SwiftFortuneWheel7SFWFonta">SFWFont</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/SFWImage">SFWImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17SwiftFortuneWheel8SFWImagea">SFWImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17SwiftFortuneWheel15SoundIdentifiera">SoundIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/UIBezierPath">UIBezierPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/UIButton">UIButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/UIImageView">UIImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/UIScreen">UIScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/UIView">UIView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CollisionDetectable</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CollisionDetectable</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Collision Detection Support protocol</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel19CollisionDetectableP15animationObjectAA24SpinningAnimatorProtocol_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/animationObject" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel19CollisionDetectableP15animationObjectAA24SpinningAnimatorProtocol_pSgvp">animationObject</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Animation object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">animationObject</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SpinningAnimatorProtocol.html">SpinningAnimatorProtocol</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel19CollisionDetectableP04edgeD8DetectorAA0dG0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/edgeCollisionDetector" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel19CollisionDetectableP04edgeD8DetectorAA0dG0Cvp">edgeCollisionDetector</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Edge Collision Detector</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">edgeCollisionDetector</span><span class="p">:</span> <span class="kt"><a href="../Classes/CollisionDetector.html">CollisionDetector</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel19CollisionDetectableP06centerD8DetectorAA0dG0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/centerCollisionDetector" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel19CollisionDetectableP06centerD8DetectorAA0dG0Cvp">centerCollisionDetector</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Center Collision Detector</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">centerCollisionDetector</span><span class="p">:</span> <span class="kt"><a href="../Classes/CollisionDetector.html">CollisionDetector</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel19CollisionDetectablePAAE05startD17DetectorsIfNeededyyF"></a>
+                    <a name="//apple_ref/swift/Method/startCollisionDetectorsIfNeeded()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel19CollisionDetectablePAAE05startD17DetectorsIfNeededyyF">startCollisionDetectorsIfNeeded()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts all collision detectors if needed</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startCollisionDetectorsIfNeeded</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel19CollisionDetectablePAAE04stopD17DetectorsIfNeededyyF"></a>
+                    <a name="//apple_ref/swift/Method/stopCollisionDetectorsIfNeeded()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel19CollisionDetectablePAAE04stopD17DetectorsIfNeededyyF">stopCollisionDetectorsIfNeeded()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stops all collision detectos if needed</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stopCollisionDetectorsIfNeeded</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel19CollisionDetectablePAAE010prepareAllD17DetectorsIfNeeded4with17animationDuration06onEdgeD00n6CenterD0y12CoreGraphics7CGFloatV_SdySdSgcSgAMtF"></a>
+                    <a name="//apple_ref/swift/Method/prepareAllCollisionDetectorsIfNeeded(with:animationDuration:onEdgeCollision:onCenterCollision:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel19CollisionDetectablePAAE010prepareAllD17DetectorsIfNeeded4with17animationDuration06onEdgeD00n6CenterD0y12CoreGraphics7CGFloatV_SdySdSgcSgAMtF">prepareAllCollisionDetectorsIfNeeded(with:<wbr>animationDuration:<wbr>onEdgeCollision:<wbr>onCenterCollision:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Prepares all collision detectors if needed</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">prepareAllCollisionDetectorsIfNeeded</span><span class="p">(</span><span class="n">with</span> <span class="nv">rotationDegree</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
+                                          <span class="nv">animationDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span><span class="p">,</span>
+                                          <span class="nv">onEdgeCollision</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                          <span class="nv">onCenterCollision</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rotationDegree</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Animation full rotation degree</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animationDuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Animation duration time</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>onEdgeCollision</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>On edge collision callback</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>onCenterCollision</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>On center collision callback</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel19CollisionDetectablePAAE07prepareD16DetectorIfNeeded3for4with17animationDuration02onD0yAA0D4TypeO_12CoreGraphics7CGFloatVSdySdSgcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/prepareCollisionDetectorIfNeeded(for:with:animationDuration:onCollision:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel19CollisionDetectablePAAE07prepareD16DetectorIfNeeded3for4with17animationDuration02onD0yAA0D4TypeO_12CoreGraphics7CGFloatVSdySdSgcSgtF">prepareCollisionDetectorIfNeeded(for:<wbr>with:<wbr>animationDuration:<wbr>onCollision:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Prepare collision detector if needed by collision type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">prepareCollisionDetectorIfNeeded</span><span class="p">(</span><span class="k">for</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/CollisionType.html">CollisionType</a></span><span class="p">,</span>
+                                      <span class="n">with</span> <span class="nv">rotationDegree</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
+                                      <span class="nv">animationDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span><span class="p">,</span>
+                                      <span class="nv">onCollision</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Collision type</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rotationDegree</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Animation full rotation degree</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animationDuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Animation duration time</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>onCollision</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>On collision callback</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel19CollisionDetectablePAAE010prepareAllD17DetectorsIfNeeded4with5speed0L12Acceleration06onEdgeD00n6CenterD0y12CoreGraphics7CGFloatV_A2LySdSgcSgANtF"></a>
+                    <a name="//apple_ref/swift/Method/prepareAllCollisionDetectorsIfNeeded(with:speed:speedAcceleration:onEdgeCollision:onCenterCollision:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel19CollisionDetectablePAAE010prepareAllD17DetectorsIfNeeded4with5speed0L12Acceleration06onEdgeD00n6CenterD0y12CoreGraphics7CGFloatV_A2LySdSgcSgANtF">prepareAllCollisionDetectorsIfNeeded(with:<wbr>speed:<wbr>speedAcceleration:<wbr>onEdgeCollision:<wbr>onCenterCollision:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Prepare all collision detectors if needed with continuous animation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">prepareAllCollisionDetectorsIfNeeded</span><span class="p">(</span><span class="n">with</span> <span class="nv">rotationDegree</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
+                                          <span class="nv">speed</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
+                                          <span class="nv">speedAcceleration</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
+                                          <span class="nv">onEdgeCollision</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                          <span class="nv">onCenterCollision</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rotationDegree</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Animation full rotation degree</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>speed</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Rotation speed</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>speedAcceleration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Rotation speed acceleration</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>onEdgeCollision</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>On edge collision callback</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>onCenterCollision</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>On center collision callback</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel19CollisionDetectablePAAE07prepareD16DetectorIfNeeded3for4with5speed0L12Acceleration02onD0yAA0D4TypeO_12CoreGraphics7CGFloatVA2NySdSgcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/prepareCollisionDetectorIfNeeded(for:with:speed:speedAcceleration:onCollision:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel19CollisionDetectablePAAE07prepareD16DetectorIfNeeded3for4with5speed0L12Acceleration02onD0yAA0D4TypeO_12CoreGraphics7CGFloatVA2NySdSgcSgtF">prepareCollisionDetectorIfNeeded(for:<wbr>with:<wbr>speed:<wbr>speedAcceleration:<wbr>onCollision:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Prepare collision detector if needed with continuous animation by collision type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">prepareCollisionDetectorIfNeeded</span><span class="p">(</span><span class="k">for</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/CollisionType.html">CollisionType</a></span><span class="p">,</span>
+                                      <span class="n">with</span> <span class="nv">rotationDegree</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
+                                      <span class="nv">speed</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
+                                      <span class="nv">speedAcceleration</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
+                                      <span class="nv">onCollision</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Collision type</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rotationDegree</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Animation full rotation degree</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>speed</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Rotation speed</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>speedAcceleration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Rotation speed acceleration</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>onCollision</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>On collision callback</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel19CollisionDetectablePAAE20rotationDegreeOffset3for12CoreGraphics7CGFloatVAA0D4TypeO_tF"></a>
+                    <a name="//apple_ref/swift/Method/rotationDegreeOffset(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel19CollisionDetectablePAAE20rotationDegreeOffset3for12CoreGraphics7CGFloatVAA0D4TypeO_tF">rotationDegreeOffset(for:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns rotation degree offset to collision type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">rotationDegreeOffset</span><span class="p">(</span><span class="k">for</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/CollisionType.html">CollisionType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Collision type</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Rotation degree offset</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel19CollisionDetectablePAAE05startD16DetectorIfNeeded4typeyAA0D4TypeO_tF"></a>
+                    <a name="//apple_ref/swift/Method/startCollisionDetectorIfNeeded(type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel19CollisionDetectablePAAE05startD16DetectorIfNeeded4typeyAA0D4TypeO_tF">startCollisionDetectorIfNeeded(type:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts collision detector if needed by collision type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startCollisionDetectorIfNeeded</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/CollisionType.html">CollisionType</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Collision type</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel19CollisionDetectablePAAE04stopD16DetectorIfNeeded4typeyAA0D4TypeO_tF"></a>
+                    <a name="//apple_ref/swift/Method/stopCollisionDetectorIfNeeded(type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel19CollisionDetectablePAAE04stopD16DetectorIfNeeded4typeyAA0D4TypeO_tF">stopCollisionDetectorIfNeeded(type:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stops collision detector if needed by collision type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stopCollisionDetectorIfNeeded</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/CollisionType.html">CollisionType</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Collision type</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel19CollisionDetectablePAAE02isD10DetectorOn3forSbAA0D4TypeO_tF"></a>
+                    <a name="//apple_ref/swift/Method/isCollisionDetectorOn(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel19CollisionDetectablePAAE02isD10DetectorOn3forSbAA0D4TypeO_tF">isCollisionDetectorOn(for:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Checks are collision detector is on for collision type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isCollisionDetectorOn</span><span class="p">(</span><span class="k">for</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/CollisionType.html">CollisionType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Collision type</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Is collision detection on or off</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-11-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

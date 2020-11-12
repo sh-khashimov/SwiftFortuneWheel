@@ -22,7 +22,7 @@ extension SpinningAnimatable {
     /// - Parameter identifier: animation identifier
     func updateLayerValues(forAnimationId identifier: String) {
         if identifier == "rotation"{
-            TTUtils.updateValueFromPresentationLayer(forAnimation: self.animation(forKey: "starRotationAnim"), theLayer: self)
+            self.updateValueFromPresentationLayer(forAnimation: self.animation(forKey: "starRotationAnim"))
         }
     }
     

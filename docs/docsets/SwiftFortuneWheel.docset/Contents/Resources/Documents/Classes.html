@@ -14,7 +14,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SwiftFortuneWheel 1.1.0 Docs</a> (79% documented)</p>
+        <p><a href="index.html">SwiftFortuneWheel 1.1.2 Docs</a> (81% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -31,6 +31,27 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Classes/AudioPlayer.html">AudioPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AudioPlayer/Status.html">– Status</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AudioPlayer/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AudioPlayerManager.html">AudioPlayerManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CollisionCalculator.html">CollisionCalculator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CollisionDetector.html">CollisionDetector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ContinuousCollisionCalculator.html">ContinuousCollisionCalculator</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/NoClippingLayer.html">NoClippingLayer</a>
               </li>
               <li class="nav-group-task">
@@ -46,7 +67,10 @@
                 <a href="Classes/SwiftFortuneWheel.html">SwiftFortuneWheel</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/TTUtils.html">TTUtils</a>
+                <a href="Classes/SynchronizedArray.html">SynchronizedArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SynchronizedDictionary.html">SynchronizedDictionary</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/WheelLayer.html">WheelLayer</a>
@@ -57,10 +81,30 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AudioError.html">AudioError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/CollisionType.html">CollisionType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/CAAnimation.html">CAAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/CAAnimationGroup.html">CAAnimationGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/CALayer.html">CALayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/CGRect.html">CGRect</a>
@@ -99,6 +143,9 @@
                 <a href="Extensions/SFWImage.html">SFWImage</a>
               </li>
               <li class="nav-group-task">
+                <a href="Extensions/Sequence.html">Sequence</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Extensions/String.html">String</a>
               </li>
               <li class="nav-group-task">
@@ -124,10 +171,22 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Protocols/AudioPlayable.html">AudioPlayable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/CollisionDetectable.html">CollisionDetectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/CollisionProtocol.html">CollisionProtocol</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/CurveTextDrawing.html">CurveTextDrawing</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/ImageDrawing.html">ImageDrawing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ImpactFeedbackable.html">ImpactFeedbackable</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/ShapeDrawing.html">ShapeDrawing</a>
@@ -155,6 +214,9 @@
           <li class="nav-group-name">
             <a href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/AudioFile.html">AudioFile</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Structs/Calc.html">Calc</a>
               </li>
@@ -248,6 +310,9 @@
                 <a href="Typealiases.html#/s:17SwiftFortuneWheel8SFWImagea">SFWImage</a>
               </li>
               <li class="nav-group-task">
+                <a href="Typealiases.html#/s:17SwiftFortuneWheel15SoundIdentifiera">SoundIdentifier</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Typealiases.html#/UIBezierPath">UIBezierPath</a>
               </li>
               <li class="nav-group-task">
@@ -279,6 +344,62 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:17SwiftFortuneWheel17SynchronizedArrayC"></a>
+                    <a name="//apple_ref/swift/Class/SynchronizedArray" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel17SynchronizedArrayC">SynchronizedArray</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A thread-safe array.</p>
+
+                        <a href="Classes/SynchronizedArray.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SynchronizedArray</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel22SynchronizedDictionaryC"></a>
+                    <a name="//apple_ref/swift/Class/SynchronizedDictionary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel22SynchronizedDictionaryC">SynchronizedDictionary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Classes/SynchronizedDictionary.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SynchronizedDictionary</span><span class="o">&lt;</span><span class="kt">KeyType</span><span class="p">,</span> <span class="kt">ValueType</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">KeyType</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:@M@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel"></a>
                     <a name="//apple_ref/swift/Class/SwiftFortuneWheel" class="dashAnchor"></a>
                     <a class="token" href="#/c:@M@SwiftFortuneWheel@objc(cs)SwiftFortuneWheel">SwiftFortuneWheel</a>
@@ -300,7 +421,92 @@
                           <pre class="highlight swift"><code><span class="kd">@IBDesignable</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">SwiftFortuneWheel</span> <span class="p">:</span> <span class="kt"><a href="Typealiases.html#/SFWControl">SFWControl</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SwiftFortuneWheel</span><span class="p">:</span> <span class="kt"><a href="Protocols/SliceCalculating.html">SliceCalculating</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SwiftFortuneWheel</span><span class="p">:</span> <span class="kt"><a href="Protocols/AudioPlayable.html">AudioPlayable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/ImpactFeedbackable.html">ImpactFeedbackable</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SwiftFortuneWheel</span><span class="p">:</span> <span class="kt"><a href="Protocols/SpinningAnimatorProtocol.html">SpinningAnimatorProtocol</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel19CollisionCalculatorC"></a>
+                    <a name="//apple_ref/swift/Class/CollisionCalculator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel19CollisionCalculatorC">CollisionCalculator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculates collision during the animation</p>
+
+                        <a href="Classes/CollisionCalculator.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CollisionCalculator</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel17CollisionDetectorC"></a>
+                    <a name="//apple_ref/swift/Class/CollisionDetector" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel17CollisionDetectorC">CollisionDetector</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Detects collisions</p>
+
+                        <a href="Classes/CollisionDetector.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CollisionDetector</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel29ContinuousCollisionCalculatorC"></a>
+                    <a name="//apple_ref/swift/Class/ContinuousCollisionCalculator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel29ContinuousCollisionCalculatorC">ContinuousCollisionCalculator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculates a collision during continuous animation</p>
+
+                        <a href="Classes/ContinuousCollisionCalculator.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ContinuousCollisionCalculator</span></code></pre>
 
                         </div>
                       </div>
@@ -328,7 +534,9 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SpinningWheelAnimator</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">CAAnimationDelegate</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SpinningWheelAnimator</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SpinningWheelAnimator</span><span class="p">:</span> <span class="kt">CAAnimationDelegate</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SpinningWheelAnimator</span><span class="p">:</span> <span class="kt"><a href="Protocols/CollisionDetectable.html">CollisionDetectable</a></span></code></pre>
 
                         </div>
                       </div>
@@ -338,9 +546,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SwiftFortuneWheel7TTUtilsC"></a>
-                    <a name="//apple_ref/swift/Class/TTUtils" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel7TTUtilsC">TTUtils</a>
+                    <a name="/s:17SwiftFortuneWheel11AudioPlayerC"></a>
+                    <a name="//apple_ref/swift/Class/AudioPlayer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel11AudioPlayerC">AudioPlayer</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -348,15 +556,43 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Audio player that plays sound</p>
 
-                        <a href="Classes/TTUtils.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/AudioPlayer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">TTUtils</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">AudioPlayer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel18AudioPlayerManagerC"></a>
+                    <a name="//apple_ref/swift/Class/AudioPlayerManager" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel18AudioPlayerManagerC">AudioPlayerManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Audio Player Manager, used to control the sound playing process</p>
+
+                        <a href="Classes/AudioPlayerManager.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">AudioPlayerManager</span></code></pre>
 
                         </div>
                       </div>
@@ -511,7 +747,7 @@ Optional and can be hidden.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-07-22)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-11-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

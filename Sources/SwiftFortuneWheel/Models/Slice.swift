@@ -19,7 +19,6 @@ public struct Slice {
     /// Contents in vertical align order
     public var contents: [ContentType]
     
-    
     /// Background color, `optional`
     public var backgroundColor: SFWColor?
     
