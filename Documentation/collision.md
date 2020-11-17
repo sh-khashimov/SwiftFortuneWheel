@@ -22,7 +22,7 @@ fortuneWheel.edgeCollisionDetectionOn = true
 
 - - -
 
-You can use the impact callback and implement your own effect:
+You can use the collision callback and implement your own effect:
 
 ### Example of use callback for Edge Collision
 

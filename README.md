@@ -37,11 +37,17 @@ The ultimate spinning wheel control that supports dynamic content and rich custo
 
 > _Taken from [example projects](/Examples)_
 
+### Collision Effect Preview
+
+<img src="./Images/collision_01.gif" width="250"/><img src="./Images/collision_02.gif" width="235"/>
+
+> _Taken from [example projects](/Examples)_
+
 ## Screenshots
 
 <details>
   <summary>from iOS Example Project</summary>
-<img src="./Images/screenshots/1.png" width="250"/><img src="./Images/screenshots/2.png" width="250"/><img src="./Images/screenshots/3.png" width="250"/><img src="./Images/screenshots/4.png" width="250"/><img src="./Images/screenshots/5.png" width="250"/><img src="./Images/screenshots/6.png" width="250"/><img src="./Images/screenshots/7.png" width="250"/>
+<img src="./Images/screenshots/1.png" width="250"/><img src="./Images/screenshots/2.png" width="250"/><img src="./Images/screenshots/3.png" width="250"/><img src="./Images/screenshots/8.png" width="250"/><img src="./Images/screenshots/9.png" width="250"/><img src="./Images/screenshots/4.png" width="250"/><img src="./Images/screenshots/5.png" width="250"/><img src="./Images/screenshots/6.png" width="250"/><img src="./Images/screenshots/7.png" width="250"/>
 </details>
 
 - - -
