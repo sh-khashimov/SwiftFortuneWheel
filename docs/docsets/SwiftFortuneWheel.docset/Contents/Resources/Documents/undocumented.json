@@ -72,36 +72,43 @@
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/TextPreferences.swift",
-      "line": 70,
+      "line": 73,
       "symbol": "TextPreferences.Orientation.horizontal",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/TextPreferences.swift",
-      "line": 71,
+      "line": 74,
       "symbol": "TextPreferences.Orientation.vertical",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/TextPreferences.swift",
-      "line": 78,
+      "line": 81,
       "symbol": "TextPreferences.LineBreakMode.clip",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/TextPreferences.swift",
-      "line": 79,
+      "line": 82,
       "symbol": "TextPreferences.LineBreakMode.truncateTail",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/TextPreferences.swift",
-      "line": 80,
+      "line": 83,
       "symbol": "TextPreferences.LineBreakMode.wordWrap",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Configuration/TextPreferences.swift",
+      "line": 84,
+      "symbol": "TextPreferences.LineBreakMode.characterWrap",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
@@ -120,6 +127,48 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Extensions/CoreAnimation/CAAnimation+Duration.swift",
+      "line": 18,
+      "symbol": "CAAnimation.maxDuration(sublayersCount:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Extensions/CoreAnimation/CAAnimation+Duration.swift",
+      "line": 48,
+      "symbol": "Sequence.maxDuration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Extensions/CoreAnimation/CAAnimationGroup+Builder.swift",
+      "line": 20,
+      "symbol": "CAAnimationGroup.init(animations:fillMode:forEffectLayer:sublayersCount:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Extensions/CoreAnimation/CALayer+UpdateValues.swift",
+      "line": 18,
+      "symbol": "CALayer.updateValue(forAnimation:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Extensions/CoreAnimation/CALayer+UpdateValues.swift",
+      "line": 35,
+      "symbol": "CALayer.updateValueFromPresentationLayer(forAnimation:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Extensions/CoreAnimation/CALayer+UpdateValues.swift",
+      "line": 49,
+      "symbol": "Sequence.updateValueFromAnimations()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Extensions/NSView+AnchorPoint.swift",
       "line": 44,
       "symbol": "UIView.setAnchorPoint(anchorPoint:)",
@@ -127,31 +176,150 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/AudioError.swift",
+      "line": 11,
+      "symbol": "AudioError.resourceNotFound(name:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/AudioError.swift",
+      "line": 12,
+      "symbol": "AudioError.invalidSoundIdentifier(name:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/AudioError.swift",
+      "line": 13,
+      "symbol": "AudioError.audioLoadingFailure",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/CollisionType.swift",
+      "line": 13,
+      "symbol": "CollisionType.center",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/CollisionType.swift",
+      "line": 13,
+      "symbol": "CollisionType.edge",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/Slice.swift",
-      "line": 45,
+      "line": 44,
       "symbol": "Slice.ContentType.assetImage(name:preferences:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/Slice.swift",
-      "line": 46,
+      "line": 45,
       "symbol": "Slice.ContentType.image(image:preferences:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/Slice.swift",
-      "line": 47,
+      "line": 46,
       "symbol": "Slice.ContentType.text(text:preferences:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/Slice.swift",
-      "line": 48,
+      "line": 47,
       "symbol": "Slice.ContentType.line(preferences:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/SynchronizedArray.swift",
+      "line": 16,
+      "symbol": "SynchronizedArray.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/SynchronizedArray.swift",
+      "line": 21,
+      "symbol": "SynchronizedArray.synchronizedArray",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/SynchronizedArray.swift",
+      "line": 29,
+      "symbol": "SynchronizedArray.count",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/SynchronizedArray.swift",
+      "line": 37,
+      "symbol": "SynchronizedArray.append(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/SynchronizedArray.swift",
+      "line": 43,
+      "symbol": "SynchronizedArray.clear()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/SynchronizedArray.swift",
+      "line": 49,
+      "symbol": "SynchronizedArray.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/SynchronizedArray.swift",
+      "line": 60,
+      "symbol": "SynchronizedArray.index(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/SynchronizedArray.swift",
+      "line": 68,
+      "symbol": "SynchronizedArray.contains(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/SynchronizedDictionary.swift",
+      "line": 11,
+      "symbol": "SynchronizedDictionary",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/SynchronizedDictionary.swift",
+      "line": 15,
+      "symbol": "SynchronizedDictionary.removeValue(forKey:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/SynchronizedDictionary.swift",
+      "line": 21,
+      "symbol": "SynchronizedDictionary.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/SynchronizedDictionary.swift",
+      "line": 36,
+      "symbol": "SynchronizedDictionary.clear()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -163,107 +331,100 @@
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 97,
+      "line": 104,
+      "symbol": "SwiftFortuneWheel.impactFeedbackgenerator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
+      "line": 132,
       "symbol": "SwiftFortuneWheel.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 197,
+      "line": 232,
       "symbol": "SwiftFortuneWheel.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 220,
+      "line": 256,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 222,
+      "line": 260,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 344,
+      "line": 287,
+      "symbol": "SwiftFortuneWheel",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
+      "line": 310,
+      "symbol": "SwiftFortuneWheel",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
+      "line": 451,
+      "symbol": "SwiftFortuneWheel",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
+      "line": 499,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 31,
-      "symbol": "SpinningWheelAnimator.completionBlocks",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "line": 149,
+      "symbol": "SpinningWheelAnimator.animationDidStop(_:finished:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 32,
-      "symbol": "SpinningWheelAnimator.updateLayerValueForCompletedAnimation",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 37,
-      "symbol": "SpinningWheelAnimator.rotationDirectionOffset",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/TTUtils.swift",
-      "line": 17,
-      "symbol": "TTUtils",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/TTUtils.swift",
-      "line": 21,
-      "symbol": "TTUtils.group(animations:fillMode:forEffectLayer:sublayersCount:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/TTUtils.swift",
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Audio/AudioPlayer.swift",
       "line": 44,
-      "symbol": "TTUtils.maxDuration(ofAnimations:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "symbol": "AudioPlayer.Status.idle",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/TTUtils.swift",
-      "line": 57,
-      "symbol": "TTUtils.maxDuration(ofEffectAnimation:sublayersCount:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Audio/AudioPlayer.swift",
+      "line": 45,
+      "symbol": "AudioPlayer.Status.playing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/TTUtils.swift",
-      "line": 84,
-      "symbol": "TTUtils.updateValueFromAnimations(forLayers:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Audio/AudioPlayer.swift",
+      "line": 46,
+      "symbol": "AudioPlayer.Status.looping",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/TTUtils.swift",
-      "line": 101,
-      "symbol": "TTUtils.updateValue(forAnimation:theLayer:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/TTUtils.swift",
-      "line": 118,
-      "symbol": "TTUtils.updateValueFromPresentationLayer(forAnimation:theLayer:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Audio/ImpactFeedbackable.swift",
+      "line": 21,
+      "symbol": "ImpactFeedbackable.impactFeedbackgenerator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {

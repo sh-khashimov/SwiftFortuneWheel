@@ -19,9 +19,9 @@ The ultimate spinning wheel control that supports dynamic content and rich custo
 | 🧮 | Supports vertical and horizontal text orientation |
 | 🌈 | Appearance customization |
 | 🔊 | Sounds and haptic feedback |
+| 🌋 | Collision callbacks and effects |
 | 🎨 | Drawn and animated using CoreGraphics, CoreAnimations |
 | 🔋 | High performance, low memory usage |
-| 🚀 | Written in Swift |
 
 ### Layout Preview
 
@@ -66,6 +66,7 @@ The ultimate spinning wheel control that supports dynamic content and rich custo
 - [**Configuration In-Depth**](/Documentation/Configuration_indepth.md)
 - [**About Slice and Slice’s contents**](/Documentation/About_Slice_and_Slice_contents.md)
 - [**Sound Effects and Impact Feedback**](/Documentation/sound_effects.md)
+- [**pinImageView Collision effect and Collision Callbacks**](/Documentation/collision.md)
 - [**About Port to Other Platforms**](/Documentation/Port_to_Other_Platforms.md)
 - [**Example Projects**](/Examples)
 ## Installation

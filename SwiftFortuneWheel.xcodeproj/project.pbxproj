@@ -39,6 +39,8 @@
 		2722559924BCA4A400950563 /* NSView+AnchorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559824BCA4A400950563 /* NSView+AnchorPoint.swift */; };
 		2722559B24BCD7F400950563 /* NoClippingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559A24BCD7F300950563 /* NoClippingLayer.swift */; };
 		2725A0342549386C00C6F7CF /* CollisionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725A0332549386C00C6F7CF /* CollisionType.swift */; };
+		275855A825628E8B009B69D0 /* CollisionEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275855A725628E8B009B69D0 /* CollisionEffect.swift */; };
+		275855AC25628ED9009B69D0 /* PinImageViewCollisionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275855AB25628ED9009B69D0 /* PinImageViewCollisionAnimator.swift */; };
 		277A6EBE249A9B450066C807 /* LinePreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A6EBD249A9B450066C807 /* LinePreferences.swift */; };
 		277BB2B2253B3AB5007E7E93 /* CollisionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277BB2B1253B3AB5007E7E93 /* CollisionDetector.swift */; };
 		277C4C2B24C85D25007580F4 /* CGRect+AspectFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C4C2A24C85D25007580F4 /* CGRect+AspectFill.swift */; };
@@ -108,6 +110,8 @@
 		2722559A24BCD7F300950563 /* NoClippingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoClippingLayer.swift; sourceTree = "<group>"; };
 		2725A0332549386C00C6F7CF /* CollisionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionType.swift; sourceTree = "<group>"; };
 		272B62C524A46FED00F19E41 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		275855A725628E8B009B69D0 /* CollisionEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionEffect.swift; sourceTree = "<group>"; };
+		275855AB25628ED9009B69D0 /* PinImageViewCollisionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinImageViewCollisionAnimator.swift; sourceTree = "<group>"; };
 		277A6EBD249A9B450066C807 /* LinePreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinePreferences.swift; sourceTree = "<group>"; };
 		277BB2B1253B3AB5007E7E93 /* CollisionDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionDetector.swift; sourceTree = "<group>"; };
 		277C4C2A24C85D25007580F4 /* CGRect+AspectFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+AspectFill.swift"; sourceTree = "<group>"; };
@@ -265,6 +269,7 @@
 				271C192E254841370042A316 /* AudioFile.swift */,
 				27A57425253EB57900B060FF /* AudioError.swift */,
 				2725A0332549386C00C6F7CF /* CollisionType.swift */,
+				275855A725628E8B009B69D0 /* CollisionEffect.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 				2710F812254A9A6C00033887 /* CollisionCalculator.swift */,
 				2710F816254A9C5100033887 /* ContinuousCollisionCalculator.swift */,
 				2710F81A254ABA3900033887 /* CollisionDetectable.swift */,
+				275855AB25628ED9009B69D0 /* PinImageViewCollisionAnimator.swift */,
 			);
 			path = Collision;
 			sourceTree = "<group>";
@@ -549,6 +555,7 @@
 				27105683248D4C93006C0181 /* SpinButton.swift in Sources */,
 				2710567A248D4C93006C0181 /* Slice.swift in Sources */,
 				2710F813254A9A6C00033887 /* CollisionCalculator.swift in Sources */,
+				275855A825628E8B009B69D0 /* CollisionEffect.swift in Sources */,
 				2787E56E24A728F900533AD4 /* String+Width.swift in Sources */,
 				2710567B248D4C93006C0181 /* UIFont+Size.swift in Sources */,
 				27A57422253EB46D00B060FF /* AudioPlayerManager.swift in Sources */,
@@ -573,6 +580,7 @@
 				2725A0342549386C00C6F7CF /* CollisionType.swift in Sources */,
 				2710F81B254ABA3900033887 /* CollisionDetectable.swift in Sources */,
 				2703B4F4248E204E00FB50F9 /* SFWConfiguration.swift in Sources */,
+				275855AC25628ED9009B69D0 /* PinImageViewCollisionAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -51,6 +51,12 @@ public class SwiftFortuneWheel: SFWControl {
         }
     }
     
+    
+    #if !os(macOS)
+    /// `PinImageView` collision effect configurator
+    public var pinImageViewCollisionEffect: CollisionEffect?
+    #endif
+    
     /// Wheel view
     private var wheelView: WheelView?
     
@@ -62,6 +68,9 @@ public class SwiftFortuneWheel: SFWControl {
     
     /// Animator
     lazy private var animator: SpinningWheelAnimator = SpinningWheelAnimator(withObjectToAnimate: self)
+    
+    /// Animation helper for `pinImageView` collision effect
+    lazy private var pinImageViewAnimator = PinImageViewCollisionAnimator()
     
     /// Customizable configuration.
     /// Required in order to draw properly.
@@ -100,6 +109,7 @@ public class SwiftFortuneWheel: SFWControl {
         }
     }
     
+    /// Audio player manager, used for collision effects sound
     private(set) lazy var audioPlayerManager = AudioPlayerManager()
     
     #if os(iOS)
@@ -128,17 +138,26 @@ public class SwiftFortuneWheel: SFWControl {
         self.slices = slices
         self.wheelView = WheelView(frame: frame, slices: self.slices, preferences: self.configuration?.wheelPreferences)
         super.init(frame: frame)
-        setupWheelView()
-        setupPinImageView()
-        setupSpinButton()
+        setup()
     }
     
     public required init?(coder aDecoder: NSCoder) {
         self.wheelView = WheelView(coder: aDecoder)
         super.init(coder: aDecoder)
+        setup()
+    }
+    
+    /// Setups views after init complete
+    private func setup() {
         setupWheelView()
         setupPinImageView()
         setupSpinButton()
+    }
+    
+    /// Setups snap animator for `pinImageView`
+    private func setupSnapAnimator() {
+        guard let pinImageView = self.pinImageView else { return }
+        pinImageViewAnimator.prepare(referenceView: self, pinImageView: pinImageView)
     }
     
     #if os(macOS)
@@ -231,10 +250,12 @@ public class SwiftFortuneWheel: SFWControl {
     #if os(macOS)
     public override func layout() {
         super.layout()
+//        setupSnapAnimator()
     }
     #else
     override public func layoutSubviews() {
         super.layoutSubviews()
+        setupSnapAnimator()
     }
     #endif
     
@@ -286,7 +307,13 @@ extension SwiftFortuneWheel: AudioPlayable {
     /// Impacts feedback and sound if needed
     /// - Parameter type: Collision type
     fileprivate func impactIfNeeded(for type: CollisionType) {
+        
+        #if !os(macOS)
+        pinImageViewAnimator.movePinIfNeeded(collisionEffect: self.pinImageViewCollisionEffect, position: self.configuration?.pinPreferences?.position)
+        #endif
+        
         playSoundIfNeeded(type: type)
+        
         #if os(iOS)
         impactFeedbackIfNeeded(for: type)
         #endif

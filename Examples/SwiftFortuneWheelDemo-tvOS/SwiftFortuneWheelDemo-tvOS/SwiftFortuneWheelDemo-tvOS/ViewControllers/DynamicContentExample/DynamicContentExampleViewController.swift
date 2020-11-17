@@ -26,6 +26,8 @@ class DynamicContentExampleViewController: UIViewController {
             
             fortuneWheel.edgeCollisionSound = AudioFile(filename: "Click", extensionName: "mp3")
             
+            fortuneWheel.pinImageViewCollisionEffect = CollisionEffect()
+            
             fortuneWheel.edgeCollisionDetectionOn = true
         }
     }

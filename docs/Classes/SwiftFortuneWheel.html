@@ -14,7 +14,7 @@
     <a title="SwiftFortuneWheel Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SwiftFortuneWheel 1.1.2 Docs</a> (81% documented)</p>
+        <p><a href="../index.html">SwiftFortuneWheel 1.2.0 Docs</a> (81% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -56,6 +56,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/PinImageView.html">PinImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PinImageViewCollisionAnimator.html">PinImageViewCollisionAnimator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PinImageViewCollisionAnimator.html">PinImageViewCollisionAnimator</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/SpinButton.html">SpinButton</a>
@@ -221,6 +227,9 @@
                 <a href="../Structs/Calc.html">Calc</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/CollisionEffect.html">CollisionEffect</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/ImagePreferences.html">ImagePreferences</a>
               </li>
               <li class="nav-group-task">
@@ -340,7 +349,8 @@
                   <pre class="highlight swift"><code><span class="kd">@IBDesignable</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">SwiftFortuneWheel</span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/SFWControl">SFWControl</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SwiftFortuneWheel</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SliceCalculating.html">SliceCalculating</a></span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SwiftFortuneWheel</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioPlayable.html">AudioPlayable</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/ImpactFeedbackable.html">ImpactFeedbackable</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SwiftFortuneWheel</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ImpactFeedbackable.html">ImpactFeedbackable</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SwiftFortuneWheel</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioPlayable.html">AudioPlayable</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SwiftFortuneWheel</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SpinningAnimatorProtocol.html">SpinningAnimatorProtocol</a></span></code></pre>
 
                 </div>
@@ -565,6 +575,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:17SwiftFortuneWheelAAC27pinImageViewCollisionEffectAA0gH0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/pinImageViewCollisionEffect" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC27pinImageViewCollisionEffectAA0gH0VSgvp">pinImageViewCollisionEffect</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code><a href="../Classes/PinImageView.html">PinImageView</a></code> collision effect configurator</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">pinImageViewCollisionEffect</span><span class="p">:</span> <span class="kt"><a href="../Structs/CollisionEffect.html">CollisionEffect</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:17SwiftFortuneWheelAAC13configurationAA16SFWConfigurationVSgvp"></a>
                     <a name="//apple_ref/swift/Property/configuration" class="dashAnchor"></a>
                     <a class="token" href="#/s:17SwiftFortuneWheelAAC13configurationAA16SFWConfigurationVSgvp">configuration</a>
@@ -621,9 +658,9 @@ Used to draw content.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SwiftFortuneWheel13AudioPlayableP18audioPlayerManagerAA0dgH0Cvp"></a>
+                    <a name="/s:17SwiftFortuneWheelAAC18audioPlayerManagerAA05AudioeF0Cvp"></a>
                     <a name="//apple_ref/swift/Property/audioPlayerManager" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel13AudioPlayableP18audioPlayerManagerAA0dgH0Cvp">audioPlayerManager</a>
+                    <a class="token" href="#/s:17SwiftFortuneWheelAAC18audioPlayerManagerAA05AudioeF0Cvp">audioPlayerManager</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -631,7 +668,8 @@ Used to draw content.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Audio player manager, used for collision effects sound</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2267,7 +2305,7 @@ Used to draw content.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-11-11)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/sh-khashimov/SwiftFortuneWheel.git" target="_blank" rel="external">Sherzod Khashimov</a>. All rights reserved. (Last updated: 2020-11-17)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
