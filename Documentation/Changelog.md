@@ -1,5 +1,8 @@
 ## CHANGELOG
 
+### 1.3.0
+- [Issue #6](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/6): `pinImageView` collision effect animation added;
+
 ### 1.2.0
 
 - Added sound effect and haptic feedback during the rotation;
