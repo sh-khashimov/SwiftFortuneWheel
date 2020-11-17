@@ -24,6 +24,10 @@ class VariousWheelSimpleViewController: UIViewController {
             wheelControl.configuration = .variousWheelSimpleConfiguration
             wheelControl.slices = slices
             wheelControl.pinImage = "whitePinArrow"
+            
+            wheelControl.pinImageViewCollisionEffect = CollisionEffect(force: 8, angle: 20)
+            
+            wheelControl.edgeCollisionDetectionOn = true
         }
     }
     

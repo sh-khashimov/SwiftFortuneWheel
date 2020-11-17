@@ -24,6 +24,10 @@ class VariousWheelJackpotViewController: UIViewController {
             wheelControl.spinImage = "redCenterImage"
             wheelControl.pinImage = "redArrow"
             wheelControl.isSpinEnabled = false
+            
+            wheelControl.pinImageViewCollisionEffect = CollisionEffect(force: 15, angle: 30)
+            
+            wheelControl.edgeCollisionDetectionOn = true
         }
     }
     

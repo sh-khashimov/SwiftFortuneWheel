@@ -15,14 +15,6 @@ import UIKit
 /// Pin or anchor image view, that usually represents an arrow to point in selected slice.
 class PinImageView: UIImageView {
     
-    /*
-     // Only override draw() if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func draw(_ rect: CGRect) {
-     // Drawing code
-     }
-     */
-    
     private var heightLC: NSLayoutConstraint?
     private var widthLC: NSLayoutConstraint?
     private var topLC: NSLayoutConstraint?
