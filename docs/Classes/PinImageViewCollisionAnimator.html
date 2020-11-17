@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>WheelView Class Reference</title>
+    <title>PinImageViewCollisionAnimator Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/WheelView" class="dashAnchor"></a>
-    <a title="WheelView Class Reference"></a>
+    <a name="//apple_ref/swift/Class/PinImageViewCollisionAnimator" class="dashAnchor"></a>
+    <a title="PinImageViewCollisionAnimator Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">SwiftFortuneWheel 1.2.0 Docs</a> (81% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">SwiftFortuneWheel Reference</a>
         <img id="carat" src="../img/carat.png" />
-        WheelView Class Reference
+        PinImageViewCollisionAnimator Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -343,14 +343,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>WheelView</h1>
+            <h1>PinImageViewCollisionAnimator</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">WheelView</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">PinImageViewCollisionAnimator</span></code></pre>
 
                 </div>
               </div>
-            <p>Wheel view with slices.</p>
+            <p>Helper class animates pin image with physics</p>
 
           </section>
           <section class="section task-group-section">
@@ -359,9 +359,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SwiftFortuneWheel0C4ViewC10wheelLayerAA0cF0CSgvp"></a>
-                    <a name="//apple_ref/swift/Property/wheelLayer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel0C4ViewC10wheelLayerAA0cF0CSgvp">wheelLayer</a>
+                    <a name="/s:17SwiftFortuneWheel29PinImageViewCollisionAnimatorC04snapH0So09UIDynamicH0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/snapAnimator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel29PinImageViewCollisionAnimatorC04snapH0So09UIDynamicH0CSgvp">snapAnimator</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -369,14 +369,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Wheel layer</p>
+                        <p>Physics related animation</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">wheelLayer</span><span class="p">:</span> <span class="kt"><a href="../Classes/WheelLayer.html">WheelLayer</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">snapAnimator</span><span class="p">:</span> <span class="kt">UIDynamicAnimator</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -386,9 +386,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SwiftFortuneWheel0C4ViewC11preferencesAA16SFWConfigurationV0C11PreferencesVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/preferences" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel0C4ViewC11preferencesAA16SFWConfigurationV0C11PreferencesVSgvp">preferences</a>
+                    <a name="/s:17SwiftFortuneWheel29PinImageViewCollisionAnimatorC12snapBehaviorSo06UISnapJ0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/snapBehavior" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel29PinImageViewCollisionAnimatorC12snapBehaviorSo06UISnapJ0CSgvp">snapBehavior</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -396,15 +396,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Customizable preferences.
-Required in order to draw properly.</p>
+                        <p>Snap behavior</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">preferences</span><span class="p">:</span> <span class="kt"><a href="../Structs/SFWConfiguration.html">SFWConfiguration</a></span><span class="o">.</span><span class="kt">WheelPreferences</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">snapBehavior</span><span class="p">:</span> <span class="kt">UISnapBehavior</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -414,9 +413,9 @@ Required in order to draw properly.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SwiftFortuneWheel0C4ViewC6slicesSayAA5SliceVGvp"></a>
-                    <a name="//apple_ref/swift/Property/slices" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel0C4ViewC6slicesSayAA5SliceVGvp">slices</a>
+                    <a name="/s:17SwiftFortuneWheel29PinImageViewCollisionAnimatorC09referenceF0So6UIViewCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/referenceView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel29PinImageViewCollisionAnimatorC09referenceF0So6UIViewCSgvp">referenceView</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -424,15 +423,14 @@ Required in order to draw properly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>List of Slice objects.
-Used to draw content.</p>
+                        <p>Reference view that will serves as the coordinate system</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">slices</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Slice.html">Slice</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">referenceView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -442,9 +440,9 @@ Used to draw content.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17SwiftFortuneWheel0C4ViewC5frame6slices11preferencesACSo6CGRectV_SayAA5SliceVGAA16SFWConfigurationV0C11PreferencesVSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(frame:slices:preferences:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel0C4ViewC5frame6slices11preferencesACSo6CGRectV_SayAA5SliceVGAA16SFWConfigurationV0C11PreferencesVSgtcfc">init(frame:<wbr>slices:<wbr>preferences:<wbr>)</a>
+                    <a name="/s:17SwiftFortuneWheel29PinImageViewCollisionAnimatorC03pineF0So6UIViewCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/pinImageView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel29PinImageViewCollisionAnimatorC03pineF0So6UIViewCSgvp">pinImageView</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -452,14 +450,42 @@ Used to draw content.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initiates without IB.</p>
+                        <p>Pin Image view</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">,</span> <span class="nv">slices</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Slice.html">Slice</a></span><span class="p">],</span> <span class="nv">preferences</span><span class="p">:</span> <span class="kt"><a href="../Structs/SFWConfiguration.html">SFWConfiguration</a></span><span class="o">.</span><span class="kt">WheelPreferences</span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">pinImageView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftFortuneWheel29PinImageViewCollisionAnimatorC7prepare09referenceF003pineF0ySo6UIViewC_AHtF"></a>
+                    <a name="//apple_ref/swift/Method/prepare(referenceView:pinImageView:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel29PinImageViewCollisionAnimatorC7prepare09referenceF003pineF0ySo6UIViewC_AHtF">prepare(referenceView:<wbr>pinImageView:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Prepares helper class with necessary parameters.
+<code>Prepare</code> method should be called before using <code>movePin</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="nv">referenceView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="nv">pinImageView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -470,36 +496,24 @@ Used to draw content.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>frame</em>
+                                <em>referenceView</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Frame</p>
+                                  <p>Reference view that will serves as the coordinate system</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>slices</em>
+                                <em>pinImageView</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>List of Slices</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>configuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Customizable configuration</p>
+                                  <p>Pin Image View</p>
                                 </div>
                               </td>
                             </tr>
@@ -512,9 +526,9 @@ Used to draw content.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SwiftFortuneWheel@objc(cs)WheelView(im)initWithCoder:"></a>
-                    <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SwiftFortuneWheel@objc(cs)WheelView(im)initWithCoder:">init(coder:<wbr>)</a>
+                    <a name="/s:17SwiftFortuneWheel29PinImageViewCollisionAnimatorC04moveD05force5angle8positionySd_12CoreGraphics7CGFloatVAA16SFWConfigurationV8PositionOtF"></a>
+                    <a name="//apple_ref/swift/Method/movePin(force:angle:position:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel29PinImageViewCollisionAnimatorC04moveD05force5angle8positionySd_12CoreGraphics7CGFloatVAA16SFWConfigurationV8PositionOtF">movePin(force:<wbr>angle:<wbr>position:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -522,34 +536,59 @@ Used to draw content.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Moves pin with animation and physics, simulating the collision effect</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">required</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">coder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">movePin</span><span class="p">(</span><span class="nv">force</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">angle</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Structs/SFWConfiguration.html">SFWConfiguration</a></span><span class="o">.</span><span class="kt">Position</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/layout()" class="dashAnchor"></a>
-                    <a class="token" href="#/">layout()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>force</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The force that will affect to collision effect, should be more than 0</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>angle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The angle which will be rotated the Pin Image View</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>position</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>PinImageView&rsquo;s position</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -557,9 +596,9 @@ Used to draw content.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SwiftFortuneWheel@objc(cs)WheelView(im)layoutSubviews"></a>
-                    <a name="//apple_ref/swift/Method/layoutSubviews()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SwiftFortuneWheel@objc(cs)WheelView(im)layoutSubviews">layoutSubviews()</a>
+                    <a name="/s:17SwiftFortuneWheel29PinImageViewCollisionAnimatorC04moveD8IfNeeded15collisionEffect8positionyAA0gM0VSg_AA16SFWConfigurationV8PositionOSgtF"></a>
+                    <a name="//apple_ref/swift/Method/movePinIfNeeded(collisionEffect:position:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftFortuneWheel29PinImageViewCollisionAnimatorC04moveD8IfNeeded15collisionEffect8positionyAA0gM0VSg_AA16SFWConfigurationV8PositionOSgtF">movePinIfNeeded(collisionEffect:<wbr>position:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -567,88 +606,47 @@ Used to draw content.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Moves pin with animation and physics, simulating the collision effect</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">layoutSubviews</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">movePinIfNeeded</span><span class="p">(</span><span class="nv">collisionEffect</span><span class="p">:</span> <span class="kt"><a href="../Structs/CollisionEffect.html">CollisionEffect</a></span><span class="p">?,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Structs/SFWConfiguration.html">SFWConfiguration</a></span><span class="o">.</span><span class="kt">Position</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@SwiftFortuneWheel@objc(cs)WheelView(im)drawRect:"></a>
-                    <a name="//apple_ref/swift/Method/draw(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SwiftFortuneWheel@objc(cs)WheelView(im)drawRect:">draw(_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">draw</span><span class="p">(</span><span class="n">_</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Property/wantsDefaultClipping" class="dashAnchor"></a>
-                    <a class="token" href="#/">wantsDefaultClipping</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17SwiftFortuneWheel0C4ViewC15setupAutoLayoutyyF"></a>
-                    <a name="//apple_ref/swift/Method/setupAutoLayout()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17SwiftFortuneWheel0C4ViewC15setupAutoLayoutyyF">setupAutoLayout()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Setups auto layouts</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setupAutoLayout</span><span class="p">()</span></code></pre>
-
-                        </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>collisionEffect</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Collision effect object</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>position</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>PinImageView&rsquo;s position</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
