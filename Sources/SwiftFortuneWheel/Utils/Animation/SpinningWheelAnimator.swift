@@ -75,15 +75,15 @@ class SpinningWheelAnimator: NSObject {
                                              onCenterCollision: onCenterCollision)
         
         let fillMode : String = CAMediaTimingFillMode.forwards.rawValue
-        let starTransformAnim      = CAKeyframeAnimation(keyPath:"transform.rotation.z")
-        starTransformAnim.values   = [0, fullRotationDegree * speed * speedAcceleration * CGFloat.pi/180 * rotationDirectionOffset]
-        starTransformAnim.keyTimes = [0, 1]
-        starTransformAnim.duration = 1
+        let transformAnim      = CAKeyframeAnimation(keyPath:"transform.rotation.z")
+        transformAnim.values   = [0, fullRotationDegree * speed * speedAcceleration * CGFloat.pi/180 * rotationDirectionOffset]
+        transformAnim.keyTimes = [0, 1]
+        transformAnim.duration = 1
         
-        let starRotationAnim : CAAnimationGroup = CAAnimationGroup(animations: [starTransformAnim], fillMode:fillMode)
-        starRotationAnim.repeatCount = Float.infinity
-        starRotationAnim.delegate = self
-        animationObject?.layerToAnimate?.add(starRotationAnim, forKey:"starRotationIndefiniteAnim")
+        let rotationAnim : CAAnimationGroup = CAAnimationGroup(animations: [transformAnim], fillMode:fillMode)
+        rotationAnim.repeatCount = Float.infinity
+        rotationAnim.delegate = self
+        animationObject?.layerToAnimate?.add(rotationAnim, forKey:"starRotationIndefiniteAnim")
         
         startedAnimationCount += 1
         startCollisionDetectorsIfNeeded()
@@ -112,20 +112,21 @@ class SpinningWheelAnimator: NSObject {
                                              onEdgeCollision: onEdgeCollision,
                                              onCenterCollision: onCenterCollision)
         
-        ////Star animation
-        let starTransformAnim            = CAKeyframeAnimation(keyPath:"transform.rotation.z")
-        starTransformAnim.values         = [0, rotation * rotationDirectionOffset * CGFloat.pi/180]
-        starTransformAnim.keyTimes       = [0, 1]
-        starTransformAnim.duration       = animationDuration
-        starTransformAnim.timingFunction = CAMediaTimingFunction(controlPoints: 0.0256, 0.874, 0.675, 1)
-        starTransformAnim.fillMode = CAMediaTimingFillMode.forwards
-        starTransformAnim.isRemovedOnCompletion = false
+        ////Start animation
+        let transformAnim            = CAKeyframeAnimation(keyPath:"transform.rotation.z")
+        transformAnim.values         = [0, rotation * rotationDirectionOffset * CGFloat.pi/180]
+        transformAnim.keyTimes       = [0, 1]
+        transformAnim.duration       = animationDuration
+        transformAnim.timingFunction = CAMediaTimingFunction(controlPoints: 0.0256, 0.874, 0.675, 1)
+        transformAnim.fillMode = CAMediaTimingFillMode.forwards
+        transformAnim.isRemovedOnCompletion = false
+        transformAnim.delegate = self
         if completionBlock != nil {
-            starTransformAnim.delegate = self
+            transformAnim.setValue("rotation", forKey:"animId")
             self.completionBlock = completionBlock
         }
         
-        animationObject?.layerToAnimate?.add(starTransformAnim, forKey:"starRotationAnim")
+        animationObject?.layerToAnimate?.add(transformAnim, forKey:"starRotationAnim")
         
         // to fix the problem of the layer's presentation becoming nil in detectors
         edgeCollisionDetector.animationObjectLayer = animationObject?.layerToAnimate
@@ -147,7 +148,8 @@ class SpinningWheelAnimator: NSObject {
 extension SpinningWheelAnimator: CAAnimationDelegate {
     
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool){
-        if let completionBlock = self.completionBlock {
+        if let completionBlock = self.completionBlock,
+           let animId = anim.value(forKey: "animId") as? String, animId == "rotation" {
             completionBlock(flag)
             self.completionBlock = nil
         }

@@ -1,5 +1,8 @@
 ## CHANGELOG
 
+### 1.3.1
+- [Issue #11](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/11): startRotationAnimation completion issue fix;
+
 ### 1.3.0
 - [Issue #6](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/6): `pinImageView` collision effect animation added;
 
