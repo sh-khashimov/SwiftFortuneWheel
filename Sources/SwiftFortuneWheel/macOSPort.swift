@@ -169,3 +169,8 @@ extension NSBezierPath {
     }
 }
 #endif
+
+
+#if os(macOS)
+typealias UITapGestureRecognizer = NSClickGestureRecognizer
+#endif
