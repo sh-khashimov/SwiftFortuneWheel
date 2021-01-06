@@ -14,6 +14,7 @@ typealias UIImageView = NSImageView
 typealias UIButton = NSButton
 typealias UIBezierPath = NSBezierPath
 typealias UIScreen = NSScreen
+typealias UITapGestureRecognizer = NSClickGestureRecognizer
 #endif
 
 #if os(macOS)
@@ -168,9 +169,4 @@ extension NSBezierPath {
         self.line(to: to)
     }
 }
-#endif
-
-
-#if os(macOS)
-typealias UITapGestureRecognizer = NSClickGestureRecognizer
 #endif
