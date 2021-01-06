@@ -331,77 +331,77 @@
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 117,
+      "line": 130,
       "symbol": "SwiftFortuneWheel.impactFeedbackgenerator",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 144,
+      "line": 157,
       "symbol": "SwiftFortuneWheel.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 256,
+      "line": 284,
       "symbol": "SwiftFortuneWheel.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 281,
+      "line": 338,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 286,
+      "line": 343,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 305,
+      "line": 362,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 325,
+      "line": 382,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 348,
+      "line": 405,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 489,
+      "line": 546,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 537,
+      "line": 594,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 149,
+      "line": 155,
       "symbol": "SpinningWheelAnimator.animationDidStop(_:finished:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -432,13 +432,6 @@
       "line": 22,
       "symbol": "ImpactFeedbackable.impactFeedbackgenerator",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Calculating/Calc.swift",
-      "line": 12,
-      "symbol": "Calc",
-      "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
