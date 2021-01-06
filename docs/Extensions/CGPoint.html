@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CAAnimationGroup Extension Reference</title>
+    <title>CGPoint Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Extension/CAAnimationGroup" class="dashAnchor"></a>
-    <a title="CAAnimationGroup Extension Reference"></a>
+    <a name="//apple_ref/swift/Extension/CGPoint" class="dashAnchor"></a>
+    <a title="CGPoint Extension Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">SwiftFortuneWheel 1.3.2 Docs</a> (81% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">SwiftFortuneWheel Reference</a>
         <img id="carat" src="../img/carat.png" />
-        CAAnimationGroup Extension Reference
+        CGPoint Extension Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -346,10 +346,10 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>CAAnimationGroup</h1>
+            <h1>CGPoint</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CAAnimationGroup</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGPoint</span></code></pre>
 
                 </div>
               </div>
@@ -361,9 +361,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16CAAnimationGroupC17SwiftFortuneWheelE10animations8fillMode14forEffectLayer14sublayersCountABSaySo0A0CG_SSSgSbSitcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(animations:fillMode:forEffectLayer:sublayersCount:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16CAAnimationGroupC17SwiftFortuneWheelE10animations8fillMode14forEffectLayer14sublayersCountABSaySo0A0CG_SSSgSbSitcfc">init(animations:<wbr>fillMode:<wbr>forEffectLayer:<wbr>sublayersCount:<wbr>)</a>
+                    <a name="/s:So7CGPointV17SwiftFortuneWheelE5angle2to24startPositionOffsetAngle12CoreGraphics7CGFloatVAB_AItF"></a>
+                    <a name="//apple_ref/swift/Method/angle(to:startPositionOffsetAngle:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7CGPointV17SwiftFortuneWheelE5angle2to24startPositionOffsetAngle12CoreGraphics7CGFloatVAB_AItF">angle(to:<wbr>startPositionOffsetAngle:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -371,16 +371,51 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Calculates angle between point and circle center point</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">animations</span><span class="p">:</span> <span class="p">[</span><span class="kt">CAAnimation</span><span class="p">],</span> <span class="nv">fillMode</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="nv">forEffectLayer</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">sublayersCount</span><span class="p">:</span> <span class="kt">NSInteger</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">angle</span><span class="p">(</span><span class="n">to</span> <span class="nv">comparisonPoint</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">,</span> <span class="nv">startPositionOffsetAngle</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparisonPoint</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Circle center point</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>startPositionOffsetAngle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Circle rotation offset angle</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Angle</p>
                       </div>
                     </section>
                   </div>

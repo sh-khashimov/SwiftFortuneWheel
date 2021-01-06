@@ -331,63 +331,70 @@
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 104,
+      "line": 117,
       "symbol": "SwiftFortuneWheel.impactFeedbackgenerator",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 132,
+      "line": 144,
       "symbol": "SwiftFortuneWheel.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 232,
+      "line": 256,
       "symbol": "SwiftFortuneWheel.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 256,
+      "line": 281,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 260,
+      "line": 286,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 287,
+      "line": 305,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 310,
+      "line": 325,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 451,
+      "line": 348,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 499,
+      "line": 489,
+      "symbol": "SwiftFortuneWheel",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
+      "line": 537,
       "symbol": "SwiftFortuneWheel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
@@ -401,28 +408,28 @@
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Audio/AudioPlayer.swift",
-      "line": 44,
+      "line": 47,
       "symbol": "AudioPlayer.Status.idle",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Audio/AudioPlayer.swift",
-      "line": 45,
+      "line": 48,
       "symbol": "AudioPlayer.Status.playing",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Audio/AudioPlayer.swift",
-      "line": 46,
+      "line": 49,
       "symbol": "AudioPlayer.Status.looping",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Audio/ImpactFeedbackable.swift",
-      "line": 21,
+      "line": 22,
       "symbol": "ImpactFeedbackable.impactFeedbackgenerator",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
