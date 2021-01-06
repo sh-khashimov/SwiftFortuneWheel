@@ -63,7 +63,7 @@ extension TextDrawing {
     /// - Parameter yPosition: Y position
     /// - Returns: new width
     private func width(forYPosition yPosition: CGFloat, sliceDegree: CGFloat, leftMargin: CGFloat, rightMargin: CGFloat) -> CGFloat {
-        let width = Calc.circularSegmentHeight(radius: -yPosition, from: sliceDegree) - leftMargin - rightMargin
+        let width = .circularSegmentHeight(radius: -yPosition, from: sliceDegree) - leftMargin - rightMargin
         return width
     }
 }
@@ -202,7 +202,7 @@ extension TextDrawing {
             context.translateBy(x: xPos, y: yPos)
             
             if !preferences.flipUpsideDown {
-                context.rotate(by: Calc.flipRotation)
+                context.rotate(by: .flipRotation)
                 context.translateBy(x: -textRect.width, y: -textRect.height)
             }
             
@@ -236,7 +236,7 @@ extension TextDrawing {
         let wordsCount = text.split(separator: " ".first!).count
         
         /// Maximum available width in slice
-        let maxWidth = Calc.circularSegmentHeight(radius: radius - preferences.verticalOffset - topOffset, from: sliceDegree)
+        let maxWidth: CGFloat = .circularSegmentHeight(radius: radius - preferences.verticalOffset - topOffset, from: sliceDegree)
         
         /// Maximum available lines in slice
         let maxLinesInSlice = (maxWidth / (preferences.font.pointSize + preferences.spacing)).rounded(.up)
@@ -254,7 +254,7 @@ extension TextDrawing {
             /// Maximum circular segment height (chord) for current line (rectangle)
             let _maxCircularSegmentHeight = _height - margins.top - margins.bottom
             /// Bottom radius offset
-            let _bottomRadiusOffset = max(margins.bottom, Calc.radius(circularSegmentHeight: _maxCircularSegmentHeight, from: sliceDegree))
+            let _bottomRadiusOffset = max(margins.bottom, .radius(circularSegmentHeight: _maxCircularSegmentHeight, from: sliceDegree))
             /// Available width in slice
             let _availableWidthInSlice = radius - preferences.verticalOffset - topOffset - _bottomRadiusOffset
             /// Current line space
@@ -265,7 +265,7 @@ extension TextDrawing {
             /// Maximum circular segment height (chord) for current line (rectangle)
             let _nextMaxCircularSegmentHeight = _nextHeight + spacing - margins.top - margins.bottom
             /// Bottom radius offset for next line
-            let _nextBottomRadiusOffset = max(margins.bottom, Calc.radius(circularSegmentHeight: _nextMaxCircularSegmentHeight, from: sliceDegree))
+            let _nextBottomRadiusOffset = max(margins.bottom, .radius(circularSegmentHeight: _nextMaxCircularSegmentHeight, from: sliceDegree))
             /// Available width in slice for next line
             let _nextAvailableWidthInSlice = radius - preferences.verticalOffset - topOffset - _nextBottomRadiusOffset
             /// Next line space
@@ -347,7 +347,7 @@ extension TextDrawing {
             context.rotate(by: 90 * CGFloat.pi/180)
             
             if preferences.flipUpsideDown {
-                context.rotate(by: Calc.flipRotation)
+                context.rotate(by: .flipRotation)
                 context.translateBy(x: -textRect.width, y: -textRect.height)
             }
             

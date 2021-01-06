@@ -49,6 +49,11 @@ class SpinningWheelAnimator: NSObject {
         #endif
     }
     
+    /// Is object layer is currently rotation
+    var isRotating: Bool {
+        return startedAnimationCount > 0
+    }
+    
     /// Counts started animations
     private var startedAnimationCount: Int = 0
     

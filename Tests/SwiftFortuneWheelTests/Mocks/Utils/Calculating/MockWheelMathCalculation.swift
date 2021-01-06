@@ -37,7 +37,7 @@ class MockWheelMathCalculation: WheelMathCalculating {
         let rotationOffset = (mainFrame.width) / 2 + abs(preferences?.layerInsets.top ?? 0)
         XCTAssertEqual(rotationOffset, self.rotationOffset)
         
-        let circularSegmentHeight = Calc.circularSegmentHeight(radius: radius, from: degree)
+        let circularSegmentHeight: CGFloat = .circularSegmentHeight(radius: radius, from: degree)
         XCTAssertEqual(circularSegmentHeight, self.circularSegmentHeight(from: degree))
     }
     

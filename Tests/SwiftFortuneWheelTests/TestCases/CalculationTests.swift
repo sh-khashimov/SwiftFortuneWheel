@@ -33,19 +33,19 @@ class CalculationTests: XCTestCase {
     
     
     func testCalculation() {
-        XCTAssertEqual(.pi, Calc.flipRotation)
+        XCTAssertEqual(.pi, CGFloat.flipRotation)
         
         let degree: CGFloat = -200
         let radius: CGFloat = 10
         
         let torad = degree * .pi / 180.0
-        XCTAssertEqual(torad, Calc.torad(degree))
+        XCTAssertEqual(torad, degree.torad)
         
         let circularSegmentHeight = 2 * radius * sin(degree / 2.0 * CGFloat.pi / 180)
-        XCTAssertEqual(circularSegmentHeight, Calc.circularSegmentHeight(radius: radius, from: degree))
+        XCTAssertEqual(circularSegmentHeight, .circularSegmentHeight(radius: radius, from: degree))
         
         let _radius = circularSegmentHeight / (2 * sin(degree / 2.0 * CGFloat.pi / 180))
-        XCTAssertEqual(_radius, Calc.radius(circularSegmentHeight: circularSegmentHeight, from: degree))
+        XCTAssertEqual(_radius, .radius(circularSegmentHeight: circularSegmentHeight, from: degree))
         
     }
     

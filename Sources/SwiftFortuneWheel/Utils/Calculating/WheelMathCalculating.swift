@@ -43,7 +43,7 @@ extension WheelMathCalculating {
     /// - Parameter degree: degree
     /// - Returns: height
     func circularSegmentHeight(from degree: CGFloat) -> CGFloat {
-        return Calc.circularSegmentHeight(radius: radius, from: degree)
+        return .circularSegmentHeight(radius: radius, from: degree)
     }
     
     /// Updates frame sizes

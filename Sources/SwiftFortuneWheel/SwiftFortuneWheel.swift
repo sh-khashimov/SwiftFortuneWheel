@@ -25,6 +25,16 @@ public class SwiftFortuneWheel: SFWControl {
     /// Callback for center collision
     public var onCenterCollision: ((_ progress: Double?) -> Void)?
     
+    /// Callback for `wheelView` tap, returns selected index
+    public var onWheelTap: ((_ index: Int) -> Void)?
+    
+    /// Turns on tap gesture recognizer for `wheelView`
+    public var wheelTapGestureOn: Bool = false {
+        didSet {
+            setupWheelTapGesture()
+        }
+    }
+    
     #if os(iOS)
     public var impactFeedbackOn: Bool = false {
         didSet {
@@ -108,6 +118,9 @@ public class SwiftFortuneWheel: SFWControl {
             spinButton?.backgroundImage(name: _spinButtonImageName)
         }
     }
+    
+    /// `wheelView` `Tap Gesture Recognizer
+    private var wheelViewTapGesture: UITapGestureRecognizer?
     
     /// Audio player manager, used for collision effects sound
     private(set) lazy var audioPlayerManager = AudioPlayerManager()
@@ -245,6 +258,21 @@ public class SwiftFortuneWheel: SFWControl {
         guard let wheelView = wheelView else { return }
         self.addSubview(wheelView)
         wheelView.setupAutoLayout()
+        setupWheelTapGesture()
+    }
+    
+    /// Adds or removes tap gesture to/from `wheelView`
+    private func setupWheelTapGesture() {
+        if wheelTapGestureOn {
+            if self.wheelViewTapGesture == nil {
+                self.wheelViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(wheelTap))
+                wheelView?.addGestureRecognizer(self.wheelViewTapGesture!)
+            }
+        } else {
+            guard let wheelTapGesture = self.wheelViewTapGesture else { return }
+            wheelView?.removeGestureRecognizer(wheelTapGesture)
+            self.wheelViewTapGesture = nil
+        }
     }
     
     #if os(macOS)
@@ -273,6 +301,35 @@ public class SwiftFortuneWheel: SFWControl {
         self.wheelView?.preferences = configuration?.wheelPreferences
         setupPinImageView()
         setupSpinButton()
+    }
+    
+    /// `wheelView` Tap gesture method
+    /// - Parameter gesture: Tap Gesture
+    @objc private func wheelTap(_ gesture: UITapGestureRecognizer) {
+        
+        guard let frame = wheelView?.frame else { return }
+        
+        guard !animator.isRotating else { return }
+        
+        /// Tap coordinates in `wheelView`
+        let coordinates = gesture.location(in: self.wheelView)
+        
+        /// `wheelView` center position
+        let center = CGPoint(x: frame.midX, y: frame.midY)
+        
+        /// `wheelView` start position offset angle
+        let startPositionOffsetAngle = self.configuration?.wheelPreferences.startPosition.startAngleOffset ?? 0
+        
+        /// `wheelView` rotated position offset angle
+        let stoppedOffsetPositionAngle = self.animator.currentRotationPosition ?? 0
+        
+        /// angle between tap point and `wheelView` center position
+        let angle = coordinates.angle(to: center, startPositionOffsetAngle: startPositionOffsetAngle + stoppedOffsetPositionAngle)
+        
+        /// slice index at tap point
+        let sliceIndex = index(fromAngle: angle)
+        
+        onWheelTap?(sliceIndex)
     }
 }
 

@@ -39,6 +39,8 @@
 		2722559924BCA4A400950563 /* NSView+AnchorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559824BCA4A400950563 /* NSView+AnchorPoint.swift */; };
 		2722559B24BCD7F400950563 /* NoClippingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722559A24BCD7F300950563 /* NoClippingLayer.swift */; };
 		2725A0342549386C00C6F7CF /* CollisionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725A0332549386C00C6F7CF /* CollisionType.swift */; };
+		274AD33D25A4817900DAD942 /* CGFloat+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274AD33C25A4817900DAD942 /* CGFloat+Math.swift */; };
+		274AD34125A4824E00DAD942 /* CGPoint+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274AD34025A4824E00DAD942 /* CGPoint+Math.swift */; };
 		275855A825628E8B009B69D0 /* CollisionEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275855A725628E8B009B69D0 /* CollisionEffect.swift */; };
 		275855AC25628ED9009B69D0 /* PinImageViewCollisionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275855AB25628ED9009B69D0 /* PinImageViewCollisionAnimator.swift */; };
 		277A6EBE249A9B450066C807 /* LinePreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A6EBD249A9B450066C807 /* LinePreferences.swift */; };
@@ -59,7 +61,6 @@
 		27F4807924AEE406005886F6 /* TextDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4807824AEE406005886F6 /* TextDrawing.swift */; };
 		27F4807B24AEE426005886F6 /* ShapeDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4807A24AEE426005886F6 /* ShapeDrawing.swift */; };
 		27F4807D24AEE431005886F6 /* ImageDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4807C24AEE431005886F6 /* ImageDrawing.swift */; };
-		27F4807F24AEE5C6005886F6 /* Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4807E24AEE5C6005886F6 /* Calc.swift */; };
 		27F7D5BD24A5CB6A004BEE19 /* String+Split.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7D5BC24A5CB6A004BEE19 /* String+Split.swift */; };
 		27F7D5BF24A5F6B0004BEE19 /* String+Dots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7D5BE24A5F6B0004BEE19 /* String+Dots.swift */; };
 		52D6D9871BEFF229002C0205 /* SwiftFortuneWheel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* SwiftFortuneWheel.framework */; };
@@ -110,6 +111,8 @@
 		2722559A24BCD7F300950563 /* NoClippingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoClippingLayer.swift; sourceTree = "<group>"; };
 		2725A0332549386C00C6F7CF /* CollisionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionType.swift; sourceTree = "<group>"; };
 		272B62C524A46FED00F19E41 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		274AD33C25A4817900DAD942 /* CGFloat+Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Math.swift"; sourceTree = "<group>"; };
+		274AD34025A4824E00DAD942 /* CGPoint+Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Math.swift"; sourceTree = "<group>"; };
 		275855A725628E8B009B69D0 /* CollisionEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionEffect.swift; sourceTree = "<group>"; };
 		275855AB25628ED9009B69D0 /* PinImageViewCollisionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinImageViewCollisionAnimator.swift; sourceTree = "<group>"; };
 		277A6EBD249A9B450066C807 /* LinePreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinePreferences.swift; sourceTree = "<group>"; };
@@ -286,6 +289,8 @@
 				27105669248D4C93006C0181 /* Array+Default.swift */,
 				2722559824BCA4A400950563 /* NSView+AnchorPoint.swift */,
 				277C4C2A24C85D25007580F4 /* CGRect+AspectFill.swift */,
+				274AD33C25A4817900DAD942 /* CGFloat+Math.swift */,
+				274AD34025A4824E00DAD942 /* CGPoint+Math.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -529,6 +534,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274AD34125A4824E00DAD942 /* CGPoint+Math.swift in Sources */,
 				277FCC70251DC3F600CC6590 /* CAAnimationGroup+Builder.swift in Sources */,
 				27A5742E253EB81200B060FF /* SynchronizedDictionary.swift in Sources */,
 				27105685248D4C93006C0181 /* WheelView.swift in Sources */,
@@ -540,6 +546,7 @@
 				277C4C2B24C85D25007580F4 /* CGRect+AspectFill.swift in Sources */,
 				27105675248D4C93006C0181 /* SpinningAnimatable.swift in Sources */,
 				27F7D5BF24A5F6B0004BEE19 /* String+Dots.swift in Sources */,
+				274AD33D25A4817900DAD942 /* CGFloat+Math.swift in Sources */,
 				27105684248D4C93006C0181 /* WheelLayer.swift in Sources */,
 				27105679248D4C93006C0181 /* WheelMathCalculating.swift in Sources */,
 				27105674248D4C93006C0181 /* CurveTextDrawing.swift in Sources */,
@@ -559,7 +566,6 @@
 				2787E56E24A728F900533AD4 /* String+Width.swift in Sources */,
 				2710567B248D4C93006C0181 /* UIFont+Size.swift in Sources */,
 				27A57422253EB46D00B060FF /* AudioPlayerManager.swift in Sources */,
-				27F4807F24AEE5C6005886F6 /* Calc.swift in Sources */,
 				27F4807924AEE406005886F6 /* TextDrawing.swift in Sources */,
 				2787E57024A7292F00533AD4 /* String+Lines.swift in Sources */,
 				27105680248D4C93006C0181 /* Array+Default.swift in Sources */,

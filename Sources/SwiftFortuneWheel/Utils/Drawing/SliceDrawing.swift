@@ -153,7 +153,7 @@ extension SliceDrawing {
         let path = CGMutablePath()
         let center = CGPoint(x: 0, y: 0)
         path.move(to: center)
-        path.addArc(center: center, radius: radius, startAngle: Calc.torad(start), endAngle: Calc.torad(end), clockwise: false)
+        path.addArc(center: center, radius: radius, startAngle: start.torad, endAngle: end.torad, clockwise: false)
         path.closeSubpath()
         context.setFillColor(pathBackgroundColor!.cgColor)
         context.addPath(path)

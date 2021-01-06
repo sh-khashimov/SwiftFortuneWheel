@@ -2,6 +2,7 @@
 
 - [Rotation API](#Rotation-API)
 - [pinImageView and spinButton API](#pinImageView-and-spinButton-API)
+- [Tap Gesture API](#Tap-Gesture-API)
 
 ---
 
@@ -104,4 +105,24 @@ There some variables that can be set via Interface Builder or through code. Howe
 
 ``` Swift
 @IBInspectable var isSpinEnabled: Bool
+```
+
+---
+
+### Tap Gesture API
+
+- Select Index via tap gesture.
+
+``` Swift
+@IBOutlet weak var fortuneWheel: SwiftFortuneWheel! {
+	didSet {
+		//turns on tap gesture recognizer
+		fortuneWheel.wheelTapGestureOn = true
+        
+		//selected index by tap
+		fortuneWheel.onWheelTap = { (index) in
+    		print("tap to index: \(index)")
+		}
+	}
+}
 ```

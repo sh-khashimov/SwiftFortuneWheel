@@ -82,7 +82,7 @@ class PinImageViewCollisionAnimator {
         guard let snapAnimator = self.snapAnimator else { return }
         snapAnimator.removeBehavior(snapBehavior)
         UIView.animate(withDuration: 1 / force) {
-            let theta = Calc.torad(angle * -1)
+            let theta = (angle * -1).torad
             pinImageView.transform = CGAffineTransform(rotationAngle: CGFloat(theta))
         } completion: { (success) in
             snapAnimator.addBehavior(snapBehavior)

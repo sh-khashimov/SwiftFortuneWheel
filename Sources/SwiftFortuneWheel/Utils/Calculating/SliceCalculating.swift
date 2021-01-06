@@ -36,6 +36,25 @@ extension SliceCalculating {
         return CGFloat(finishIndex) * sliceDegree
     }
     
+    /// Calculates index for selected angle
+    /// - Parameter angle: Angle degree
+    /// - Returns: Index
+    func index(fromAngle angle: CGFloat) -> Int {
+        guard sliceDegree > 0 else { return 0 }
+        
+        /// readjust angle for slice center position
+        var _angle = angle + sliceDegree / 2
+        
+        if _angle > 360 {
+            _angle -= 360
+        }
+        
+        /// Index for angle
+        let index = Int((_angle / sliceDegree).rounded(.down))
+        
+        return min(index, slices.count - 1)
+    }
+    
     /// Segment height
     /// - Parameter radius: Radius
     /// - Returns: Segment height

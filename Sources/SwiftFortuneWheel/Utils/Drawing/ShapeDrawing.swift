@@ -60,7 +60,7 @@ extension ShapeDrawing {
         let center = CGPoint(x: 0, y: 0)
         
         let path = CGMutablePath()
-        path.addArc(center: center, radius: -yPosition, startAngle: Calc.torad(start), endAngle: Calc.torad(end), clockwise: false)
+        path.addArc(center: center, radius: -yPosition, startAngle: start.torad, endAngle: end.torad, clockwise: false)
         context.setStrokeColor(strokeColor.cgColor)
         context.setFillColor(SFWColor.clear.cgColor)
         context.setLineWidth(strokeWidth)
