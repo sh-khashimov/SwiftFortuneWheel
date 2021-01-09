@@ -146,6 +146,10 @@ class SpinningWheelAnimator: NSObject {
         self.animationObject?.layerToAnimate?.removeAllAnimations()
         stopCollisionDetectorsIfNeeded()
     }
+    
+    func resetRotationPosition() {
+        currentRotationPosition = nil
+    }
 }
 
 // MARK: - CAAnimationDelegate

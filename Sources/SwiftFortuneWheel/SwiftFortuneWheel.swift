@@ -95,6 +95,7 @@ public class SwiftFortuneWheel: SFWControl {
     open var slices: [Slice] = [] {
         didSet {
             self.wheelView?.slices = slices
+            self.animator.resetRotationPosition()
         }
     }
     
@@ -307,7 +308,7 @@ public class SwiftFortuneWheel: SFWControl {
     /// - Parameter gesture: Tap Gesture
     @objc private func wheelTap(_ gesture: UITapGestureRecognizer) {
         
-        guard let frame = wheelView?.frame else { return }
+        guard let wheelViewBounds = wheelView?.bounds else { return }
         
         guard !animator.isRotating else { return }
         
@@ -315,16 +316,16 @@ public class SwiftFortuneWheel: SFWControl {
         let coordinates = gesture.location(in: self.wheelView)
         
         /// `wheelView` center position
-        let center = CGPoint(x: frame.midX, y: frame.midY)
+        let center = CGPoint(x: wheelViewBounds.midX, y: wheelViewBounds.midY)
         
         /// `wheelView` start position offset angle
         let startPositionOffsetAngle = self.configuration?.wheelPreferences.startPosition.startAngleOffset ?? 0
         
         /// `wheelView` rotated position offset angle
-        let stoppedOffsetPositionAngle = self.animator.currentRotationPosition ?? 0
+        let rotationOffsetAngle = self.animator.currentRotationPosition ?? 0
         
         /// angle between tap point and `wheelView` center position
-        let angle = coordinates.angle(to: center, startPositionOffsetAngle: startPositionOffsetAngle + stoppedOffsetPositionAngle)
+        let angle = coordinates.angle(to: center, startPositionOffsetAngle: startPositionOffsetAngle, rotationOffsetAngle: rotationOffsetAngle)
         
         /// slice index at tap point
         let sliceIndex = index(fromAngle: angle)

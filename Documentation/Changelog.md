@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.3.3
+- Fixed issue when the tap to slice can return incorrect slice index;
+- Tap gesture recognizer ported to macOS;
+
 ### 1.3.2
 - [Issue #10](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/10) added tap gesture API to detect selected slice index via tap. For more information see [**API Overview**](API_Overview.md);
 - Refactoring;

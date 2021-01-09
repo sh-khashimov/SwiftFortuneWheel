@@ -33,6 +33,11 @@ class ViewController: NSViewController {
         
         wheelControl.edgeCollisionDetectionOn = true
         
+        wheelControl.wheelTapGestureOn = true
+        wheelControl.onWheelTap = { index in
+            print("tapped index: \(index)")
+        }
+        
         return wheelControl
     }()
 

@@ -19,18 +19,27 @@ extension CGPoint {
     ///   - comparisonPoint: Circle center point
     ///   - startPositionOffsetAngle: Circle rotation offset angle
     /// - Returns: Angle
-    func angle(to comparisonPoint: CGPoint, startPositionOffsetAngle: CGFloat) -> CGFloat {
+    func angle(to comparisonPoint: CGPoint, startPositionOffsetAngle: CGFloat, rotationOffsetAngle: CGFloat) -> CGFloat {
+        
+        #if os(macOS)
+        // antiClockwise = -1
+        let circleDrawDirection: CGFloat = -1
+        #else
+        // Clockwise = 1
+        let circleDrawDirection: CGFloat = 1
+        #endif
         
         let originX = comparisonPoint.x - x
-        
-        let originY = comparisonPoint.y - y
+        let originY = circleDrawDirection * (comparisonPoint.y - y)
         
         let bearingRadians = atan2f(Float(originY), Float(originX))
         
-        let offsetDegreeForTop: CGFloat = 90
+        let offsetDegreeForTopPosition: CGFloat = 90
+        let _startPositionOffsetAngle = startPositionOffsetAngle * circleDrawDirection
+        let _rotationOffsetAngle = rotationOffsetAngle * circleDrawDirection
         
-        var bearingDegrees = CGFloat(bearingRadians).degrees - offsetDegreeForTop - startPositionOffsetAngle
-
+        var bearingDegrees = CGFloat(bearingRadians).degrees - offsetDegreeForTopPosition - _startPositionOffsetAngle + _rotationOffsetAngle
+        
         while bearingDegrees < 0 {
             bearingDegrees += 360
         }
