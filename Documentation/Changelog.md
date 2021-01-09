@@ -1,7 +1,7 @@
 ## CHANGELOG
 
 ### 1.3.3
-- Fixed issue when the tap to slice can return incorrect slice index;
+- Fixed issue when tap to slice can return incorrect slice index;
 - Tap gesture recognizer ported to macOS;
 
 ### 1.3.2
