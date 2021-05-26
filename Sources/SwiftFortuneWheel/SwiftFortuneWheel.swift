@@ -12,7 +12,6 @@ import AppKit
 import UIKit
 #endif
 
-@IBDesignable
 /// Customizable Fortune spinning wheel control written in Swift.
 public class SwiftFortuneWheel: SFWControl {
     
