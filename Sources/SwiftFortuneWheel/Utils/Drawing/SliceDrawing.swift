@@ -150,14 +150,39 @@ extension SliceDrawing {
         let strokeColor = preferences?.slicePreferences.strokeColor
         let strokeWidth = preferences?.slicePreferences.strokeWidth
         
+        //MARK: - Gradient Color START
+        let colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
+            
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        
+        let colorLocations: [CGFloat] = [0.0, 1.0]
+        
+        guard let gradient = CGGradient(
+            colorsSpace: colorSpace,
+            colors: colors as CFArray,
+            locations: colorLocations
+        ) else {
+            return
+        }
+        
         let path = CGMutablePath()
         let center = CGPoint(x: 0, y: 0)
         path.move(to: center)
         path.addArc(center: center, radius: radius, startAngle: start.torad, endAngle: end.torad, clockwise: false)
         path.closeSubpath()
-        context.setFillColor(pathBackgroundColor!.cgColor)
+        
+//        context.setFillColor(pathBackgroundColor!.cgColor)
         context.addPath(path)
-        context.drawPath(using: .fill)
+//        context.drawPath(using: .fill)
+        context.clip()
+        
+        context.drawLinearGradient(
+              gradient,
+            start: CGPoint(x: path.boundingBox.minX, y: path.boundingBox.minY),
+              end: CGPoint(x: path.boundingBox.maxX, y: path.boundingBox.maxY),
+            options: []
+            )
+        //MARK: - Gradient Color END
         
         if let backgroundImage = backgroundImage {
             self.draw(backgroundImage: backgroundImage, in: context, clipPath: path)
