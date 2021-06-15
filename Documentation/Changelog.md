@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### 1.4.0
+- [Issue #15](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/15)  removed @IBDesignable
+- [Issue #16](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/16)  added gradient color for a slice
+
+
 ### 1.3.3
 - Fixed issue when tap to slice can return incorrect slice index;
 - Tap gesture recognizer ported to macOS;
