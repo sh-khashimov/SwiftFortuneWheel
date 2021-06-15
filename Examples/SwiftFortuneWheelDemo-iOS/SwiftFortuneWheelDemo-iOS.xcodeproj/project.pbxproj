@@ -22,6 +22,8 @@
 		2710568F248D541B006C0181 /* Prize+SliceContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710568E248D541B006C0181 /* Prize+SliceContentType.swift */; };
 		276E7FFF24B378E5004E9D82 /* AnimatedRotationExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E7FFE24B378E5004E9D82 /* AnimatedRotationExampleViewController.swift */; };
 		276E800224B37954004E9D82 /* LayoutExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E800124B37954004E9D82 /* LayoutExamplesViewController.swift */; };
+		277D66B42678AA3E00AB1FAA /* GradientBackgroundExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D66B32678AA3E00AB1FAA /* GradientBackgroundExampleViewController.swift */; };
+		277D66B62678AD3C00AB1FAA /* SFWConfiguration+GradientBackgroundExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D66B52678AD3C00AB1FAA /* SFWConfiguration+GradientBackgroundExample.swift */; };
 		2794D29C24B3977B00379B6A /* SFWConfiguration+RotationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2794D29B24B3977B00379B6A /* SFWConfiguration+RotationExample.swift */; };
 		279BA971255AAF470088BFCF /* BackgroundImageExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BA970255AAF470088BFCF /* BackgroundImageExampleViewController.swift */; };
 		279BA974255AAF6B0088BFCF /* SoundExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BA973255AAF6B0088BFCF /* SoundExampleViewController.swift */; };
@@ -80,6 +82,8 @@
 		274E9E3524BBA05E00613A49 /* SwiftFortuneWheelDemo-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SwiftFortuneWheelDemo-iOS.entitlements"; sourceTree = "<group>"; };
 		276E7FFE24B378E5004E9D82 /* AnimatedRotationExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedRotationExampleViewController.swift; sourceTree = "<group>"; };
 		276E800124B37954004E9D82 /* LayoutExamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutExamplesViewController.swift; sourceTree = "<group>"; };
+		277D66B32678AA3E00AB1FAA /* GradientBackgroundExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundExampleViewController.swift; sourceTree = "<group>"; };
+		277D66B52678AD3C00AB1FAA /* SFWConfiguration+GradientBackgroundExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+GradientBackgroundExample.swift"; sourceTree = "<group>"; };
 		2794D29B24B3977B00379B6A /* SFWConfiguration+RotationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+RotationExample.swift"; sourceTree = "<group>"; };
 		279BA970255AAF470088BFCF /* BackgroundImageExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageExampleViewController.swift; sourceTree = "<group>"; };
 		279BA973255AAF6B0088BFCF /* SoundExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundExampleViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +205,15 @@
 			path = RotationExample;
 			sourceTree = "<group>";
 		};
+		277D66B22678A9A600AB1FAA /* GradientBackgroundExample */ = {
+			isa = PBXGroup;
+			children = (
+				277D66B32678AA3E00AB1FAA /* GradientBackgroundExampleViewController.swift */,
+				277D66B52678AD3C00AB1FAA /* SFWConfiguration+GradientBackgroundExample.swift */,
+			);
+			path = GradientBackgroundExample;
+			sourceTree = "<group>";
+		};
 		2780E80F24B36E1D007BDE7B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +237,7 @@
 			children = (
 				279BA972255AAF520088BFCF /* SoundExample */,
 				279BA96F255AAF070088BFCF /* BackgroundImageExample */,
+				277D66B22678A9A600AB1FAA /* GradientBackgroundExample */,
 				2720251E24A36F6300240E4E /* DynamicContentExample */,
 				276E7FFD24B378A0004E9D82 /* RotationExample */,
 				2794D29D24B39BDD00379B6A /* AnimatedRotationExample */,
@@ -410,11 +424,13 @@
 				276E7FFF24B378E5004E9D82 /* AnimatedRotationExampleViewController.swift in Sources */,
 				27105630248D3C9D006C0181 /* SceneDelegate.swift in Sources */,
 				2710568C248D53EF006C0181 /* SFWConfiguration+DynamicContentExample.swift in Sources */,
+				277D66B62678AD3C00AB1FAA /* SFWConfiguration+GradientBackgroundExample.swift in Sources */,
 				279EEF9424B5C31C00AD2AB2 /* VariousWheelSpikeViewController.swift in Sources */,
 				2794D29C24B3977B00379B6A /* SFWConfiguration+RotationExample.swift in Sources */,
 				27E8C96324B8DFEE0021205F /* VariousWheelPodiumViewController.swift in Sources */,
 				27E8C95724B8CF480021205F /* VariousWheelSimpleViewController.swift in Sources */,
 				27105689248D4EC8006C0181 /* DynamicContentViewExampleController.swift in Sources */,
+				277D66B42678AA3E00AB1FAA /* GradientBackgroundExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -62,6 +62,7 @@ extension SliceDrawing {
         //         Draws slice path and background
         self.drawPath(in: context,
                       backgroundColor: slice.backgroundColor,
+                      backgroundGradientColor: slice.gradientColor,
                       backgroundImage: slice.backgroundImage,
                       start: start,
                       and: end,
@@ -129,7 +130,7 @@ extension SliceDrawing {
     ///   - end: end degree
     ///   - rotation: rotation degree
     ///   - index: index
-    private func drawPath(in context: CGContext, backgroundColor: SFWColor?, backgroundImage: SFWImage?, start: CGFloat, and end: CGFloat, rotation:CGFloat, index: Int) {
+    private func drawPath(in context: CGContext, backgroundColor: SFWColor?, backgroundGradientColor: SFGradientColor?, backgroundImage: SFWImage?, start: CGFloat, and end: CGFloat, rotation:CGFloat, index: Int) {
         
         context.saveGState()
         context.rotate(by: (rotation + contextPositionCorrectionOffsetDegree) * CGFloat.pi/180)
@@ -149,21 +150,8 @@ extension SliceDrawing {
         
         let strokeColor = preferences?.slicePreferences.strokeColor
         let strokeWidth = preferences?.slicePreferences.strokeWidth
-        
-        //MARK: - Gradient Color START
-        let colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
-            
-        let colorSpace = CGColorSpaceCreateDeviceRGB()
-        
-        let colorLocations: [CGFloat] = [0.0, 1.0]
-        
-        guard let gradient = CGGradient(
-            colorsSpace: colorSpace,
-            colors: colors as CFArray,
-            locations: colorLocations
-        ) else {
-            return
-        }
+
+        let gradient = backgroundGradientColor?.gradient
         
         let path = CGMutablePath()
         let center = CGPoint(x: 0, y: 0)
@@ -171,18 +159,40 @@ extension SliceDrawing {
         path.addArc(center: center, radius: radius, startAngle: start.torad, endAngle: end.torad, clockwise: false)
         path.closeSubpath()
         
-//        context.setFillColor(pathBackgroundColor!.cgColor)
+        if gradient == nil {
+            context.setFillColor(pathBackgroundColor!.cgColor)
+        }
+        
         context.addPath(path)
-//        context.drawPath(using: .fill)
+        
+        if gradient == nil {
+            context.drawPath(using: .fill)
+        }
+        
         context.clip()
         
-        context.drawLinearGradient(
-              gradient,
-            start: CGPoint(x: path.boundingBox.minX, y: path.boundingBox.minY),
-              end: CGPoint(x: path.boundingBox.maxX, y: path.boundingBox.maxY),
-            options: []
-            )
-        //MARK: - Gradient Color END
+        if let gradientType = backgroundGradientColor?.type,
+           let _gradient = gradient {
+            switch gradientType {
+            case .linear:
+                let direction = backgroundGradientColor?.direction ?? .vertical
+                let start = direction == .vertical ? CGPoint(x: path.boundingBox.minX, y: path.boundingBox.midY) : CGPoint(x: path.boundingBox.minX, y: path.boundingBox.minY)
+                let end = direction == .vertical ? CGPoint(x: path.boundingBox.maxX, y: path.boundingBox.midY) : CGPoint(x: path.boundingBox.maxX, y: path.boundingBox.maxX)
+                context.drawLinearGradient(
+                    _gradient,
+                    start: start,
+                    end: end,
+                    options: []
+                )
+            case .radial:
+                context.drawRadialGradient(_gradient,
+                                           startCenter: center,
+                                           startRadius: 0,
+                                           endCenter: center,
+                                           endRadius: radius,
+                                           options: [])
+            }
+        }
         
         if let backgroundImage = backgroundImage {
             self.draw(backgroundImage: backgroundImage, in: context, clipPath: path)
