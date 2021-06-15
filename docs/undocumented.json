@@ -211,29 +211,57 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/SFGradientColor.swift",
+      "line": 53,
+      "symbol": "SFGradientColor.GradientType.linear",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/SFGradientColor.swift",
+      "line": 54,
+      "symbol": "SFGradientColor.GradientType.radial",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/SFGradientColor.swift",
+      "line": 62,
+      "symbol": "SFGradientColor.Direction.vertical",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/SFGradientColor.swift",
+      "line": 63,
+      "symbol": "SFGradientColor.Direction.horizontal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/Slice.swift",
-      "line": 44,
+      "line": 50,
       "symbol": "Slice.ContentType.assetImage(name:preferences:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/Slice.swift",
-      "line": 45,
+      "line": 51,
       "symbol": "Slice.ContentType.image(image:preferences:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/Slice.swift",
-      "line": 46,
+      "line": 52,
       "symbol": "Slice.ContentType.text(text:preferences:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Models/Slice.swift",
-      "line": 47,
+      "line": 53,
       "symbol": "Slice.ContentType.line(preferences:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
@@ -324,13 +352,6 @@
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 17,
-      "symbol": "SwiftFortuneWheel",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
       "line": 130,
       "symbol": "SwiftFortuneWheel.impactFeedbackgenerator",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -351,57 +372,15 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 338,
-      "symbol": "SwiftFortuneWheel",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 343,
-      "symbol": "SwiftFortuneWheel",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 362,
-      "symbol": "SwiftFortuneWheel",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 382,
-      "symbol": "SwiftFortuneWheel",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 405,
-      "symbol": "SwiftFortuneWheel",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 546,
-      "symbol": "SwiftFortuneWheel",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/SwiftFortuneWheel.swift",
-      "line": 594,
-      "symbol": "SwiftFortuneWheel",
-      "symbol_kind": "source.lang.swift.decl.extension",
+      "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
+      "line": 150,
+      "symbol": "SpinningWheelAnimator.resetRotationPosition()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/Utils/Animation/SpinningWheelAnimator.swift",
-      "line": 155,
+      "line": 159,
       "symbol": "SpinningWheelAnimator.animationDidStop(_:finished:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -541,35 +520,35 @@
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/macOSPort.swift",
-      "line": 28,
+      "line": 29,
       "symbol": "SFWControl",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/macOSPort.swift",
-      "line": 29,
+      "line": 30,
       "symbol": "SFWColor",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/macOSPort.swift",
-      "line": 30,
+      "line": 31,
       "symbol": "SFWImage",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/macOSPort.swift",
-      "line": 31,
+      "line": 32,
       "symbol": "SFWFont",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sherzod/Documents/Xcode/!opensourced/UI/SwiftFortuneWheel/Sources/SwiftFortuneWheel/macOSPort.swift",
-      "line": 32,
+      "line": 33,
       "symbol": "SFWEdgeInsets",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
