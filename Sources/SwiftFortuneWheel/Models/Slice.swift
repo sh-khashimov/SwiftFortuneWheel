@@ -25,16 +25,22 @@ public struct Slice {
     /// Background image, `optional`
     public var backgroundImage: SFWImage?
     
+    /// Background gradient color, `optional`
+    public var gradientColor: SFGradientColor?
+    
     /// Initiates a slice object
     /// - Parameter contents: Contents in vertical align order
     /// - Parameter backgroundColor: Background color, `optional`
+    /// - Parameter gradientColor: Background gradient color,, `optional`
     /// - Parameter backgroundImage: Background image, `optional`
     public init(contents: [ContentType],
                 backgroundColor: SFWColor? = nil,
+                gradientColor: SFGradientColor? = nil,
                 backgroundImage: SFWImage? = nil) {
         self.contents = contents
         self.backgroundColor = backgroundColor
         self.backgroundImage = backgroundImage
+        self.gradientColor = gradientColor
     }
 }
 
