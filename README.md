@@ -89,15 +89,10 @@ Documentation is generated with [jazzy](https://github.com/realm/jazzy) and host
 ## Requirements
 
 
-| App name | Swif | Xcode | Platforms |
+| App name | Swift | Xcode | Platforms |
 |---|---|---|---|
 | 1.1.x - current version | Swift 5.0 | Xcode 11 | iOS 9.0 / macOS 10.11 / tvOS 9.0 |
 | 0.x.x - 1.0.x | Swift 5.0 | Xcode 11 | iOS 9.0 |
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## Migration
 
@@ -110,6 +105,17 @@ Please make sure to update tests as appropriate.
 ## Changelog
 
 See [**changelog here**](/Documentation/Changelog.md)
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## Donation
+
+<span class="badge-buymeacoffee">
+<a href="https://www.buymeacoffee.com/sh.khashimov" title="Donate to this project using Buy Me A Coffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg" alt="Buy Me A Coffee donate button" /></a>
+</span>
 
 ## Author
 
