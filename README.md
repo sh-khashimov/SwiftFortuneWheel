@@ -113,6 +113,8 @@ Please make sure to update tests as appropriate.
 
 ## Donation
 
+Thank me with a cup of coffee for my work and time spent on supporting the project
+
 <span class="badge-buymeacoffee">
 <a href="https://www.buymeacoffee.com/sh.khashimov" title="Donate to this project using Buy Me A Coffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg" alt="Buy Me A Coffee donate button" /></a>
 </span>
