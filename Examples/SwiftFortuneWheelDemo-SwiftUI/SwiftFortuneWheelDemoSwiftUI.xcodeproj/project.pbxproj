@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2791260127883EE200A03078 /* SwiftFortuneWheelDemoSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279125F127883EE100A03078 /* SwiftFortuneWheelDemoSwiftUIApp.swift */; };
+		2791260327883EE200A03078 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279125F227883EE100A03078 /* ContentView.swift */; };
+		2791260527883EE200A03078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279125F327883EE200A03078 /* Assets.xcassets */; };
+		279126192788410900A03078 /* SFWView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279126182788410900A03078 /* SFWView.swift */; };
+		2791261D2788411B00A03078 /* SwiftFortuneWheel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2791261C2788411B00A03078 /* SwiftFortuneWheel.framework */; };
+		2791261E2788411B00A03078 /* SwiftFortuneWheel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2791261C2788411B00A03078 /* SwiftFortuneWheel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2791262B2788448A00A03078 /* SFWConfiguration+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791262A2788448A00A03078 /* SFWConfiguration+Example.swift */; };
+		27A1E27E2789817900ABBF4E /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A1E27D2789817900ABBF4E /* Prize.swift */; };
+		27A1E2812789818600ABBF4E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A1E2802789818600ABBF4E /* ViewModel.swift */; };
+		27A1E2842789835300ABBF4E /* Prize+toSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A1E2832789835300ABBF4E /* Prize+toSlice.swift */; };
+		27A1E2882789A80900ABBF4E /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A1E2872789A80900ABBF4E /* ButtonStyle.swift */; };
+		27A1E28C2789AE6100ABBF4E /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A1E28B2789AE6100ABBF4E /* HideKeyboard.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2791261F2788411B00A03078 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2791261E2788411B00A03078 /* SwiftFortuneWheel.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		279099C8278D63B400065A18 /* SwiftFortuneWheelDemoSwiftUI (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SwiftFortuneWheelDemoSwiftUI (iOS).entitlements"; sourceTree = "<group>"; };
+		279125F127883EE100A03078 /* SwiftFortuneWheelDemoSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFortuneWheelDemoSwiftUIApp.swift; sourceTree = "<group>"; };
+		279125F227883EE100A03078 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		279125F327883EE200A03078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		279125F827883EE200A03078 /* SwiftFortuneWheelDemoSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftFortuneWheelDemoSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2791260027883EE200A03078 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		279126182788410900A03078 /* SFWView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFWView.swift; sourceTree = "<group>"; };
+		2791261C2788411B00A03078 /* SwiftFortuneWheel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFortuneWheel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		279126202788412800A03078 /* SwiftFortuneWheelDemoSwiftUI--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftFortuneWheelDemoSwiftUI--macOS--Info.plist"; sourceTree = "<group>"; };
+		279126212788412E00A03078 /* SwiftFortuneWheel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFortuneWheel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2791262A2788448A00A03078 /* SFWConfiguration+Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SFWConfiguration+Example.swift"; sourceTree = "<group>"; };
+		27A1E27D2789817900ABBF4E /* Prize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
+		27A1E2802789818600ABBF4E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = Shared/ViewModel.swift; sourceTree = SOURCE_ROOT; };
+		27A1E2832789835300ABBF4E /* Prize+toSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Prize+toSlice.swift"; sourceTree = "<group>"; };
+		27A1E2872789A80900ABBF4E /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		27A1E28B2789AE6100ABBF4E /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		279125F527883EE200A03078 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2791261D2788411B00A03078 /* SwiftFortuneWheel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		279125EB27883EE100A03078 = {
+			isa = PBXGroup;
+			children = (
+				279099C8278D63B400065A18 /* SwiftFortuneWheelDemoSwiftUI (iOS).entitlements */,
+				279126202788412800A03078 /* SwiftFortuneWheelDemoSwiftUI--macOS--Info.plist */,
+				279125F027883EE100A03078 /* Shared */,
+				279125FF27883EE200A03078 /* macOS */,
+				279125F927883EE200A03078 /* Products */,
+				2791261B2788411B00A03078 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		279125F027883EE100A03078 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				27A1E28A2789AE5000ABBF4E /* Extensions */,
+				27A1E2862789A7FB00ABBF4E /* Styles */,
+				279126292788446000A03078 /* SFW */,
+				27912625278842A800A03078 /* Models */,
+				27A1E2802789818600ABBF4E /* ViewModel.swift */,
+				279125F127883EE100A03078 /* SwiftFortuneWheelDemoSwiftUIApp.swift */,
+				279125F227883EE100A03078 /* ContentView.swift */,
+				279125F327883EE200A03078 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		279125F927883EE200A03078 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				279125F827883EE200A03078 /* SwiftFortuneWheelDemoSwiftUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		279125FF27883EE200A03078 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				2791260027883EE200A03078 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		2791261B2788411B00A03078 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				279126212788412E00A03078 /* SwiftFortuneWheel.framework */,
+				2791261C2788411B00A03078 /* SwiftFortuneWheel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27912625278842A800A03078 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27A1E27D2789817900ABBF4E /* Prize.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		279126292788446000A03078 /* SFW */ = {
+			isa = PBXGroup;
+			children = (
+				279126182788410900A03078 /* SFWView.swift */,
+				2791262A2788448A00A03078 /* SFWConfiguration+Example.swift */,
+				27A1E2832789835300ABBF4E /* Prize+toSlice.swift */,
+			);
+			path = SFW;
+			sourceTree = "<group>";
+		};
+		27A1E2862789A7FB00ABBF4E /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				27A1E2872789A80900ABBF4E /* ButtonStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		27A1E28A2789AE5000ABBF4E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				27A1E28B2789AE6100ABBF4E /* HideKeyboard.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		279125F727883EE200A03078 /* SwiftFortuneWheelDemoSwiftUI (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2791260927883EE200A03078 /* Build configuration list for PBXNativeTarget "SwiftFortuneWheelDemoSwiftUI (iOS)" */;
+			buildPhases = (
+				279125F427883EE200A03078 /* Sources */,
+				279125F527883EE200A03078 /* Frameworks */,
+				279125F627883EE200A03078 /* Resources */,
+				2791261F2788411B00A03078 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftFortuneWheelDemoSwiftUI (iOS)";
+			productName = "SwiftFortuneWheelDemoSwiftUI (iOS)";
+			productReference = 279125F827883EE200A03078 /* SwiftFortuneWheelDemoSwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		279125EC27883EE100A03078 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					279125F727883EE200A03078 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 279125EF27883EE100A03078 /* Build configuration list for PBXProject "SwiftFortuneWheelDemoSwiftUI" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 279125EB27883EE100A03078;
+			productRefGroup = 279125F927883EE200A03078 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				279125F727883EE200A03078 /* SwiftFortuneWheelDemoSwiftUI (iOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		279125F627883EE200A03078 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2791260527883EE200A03078 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		279125F427883EE200A03078 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A1E28C2789AE6100ABBF4E /* HideKeyboard.swift in Sources */,
+				27A1E27E2789817900ABBF4E /* Prize.swift in Sources */,
+				2791260327883EE200A03078 /* ContentView.swift in Sources */,
+				2791262B2788448A00A03078 /* SFWConfiguration+Example.swift in Sources */,
+				279126192788410900A03078 /* SFWView.swift in Sources */,
+				2791260127883EE200A03078 /* SwiftFortuneWheelDemoSwiftUIApp.swift in Sources */,
+				27A1E2882789A80900ABBF4E /* ButtonStyle.swift in Sources */,
+				27A1E2842789835300ABBF4E /* Prize+toSlice.swift in Sources */,
+				27A1E2812789818600ABBF4E /* ViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2791260727883EE200A03078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2791260827883EE200A03078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		2791260A27883EE200A03078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SwiftFortuneWheelDemoSwiftUI (iOS).entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M626AUYJ9J;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shez.SwiftFortuneWheelDemoiOS.SwiftFortuneWheelDemoSwiftUI;
+				PRODUCT_NAME = SwiftFortuneWheelDemoSwiftUI;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+			};
+			name = Debug;
+		};
+		2791260B27883EE200A03078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SwiftFortuneWheelDemoSwiftUI (iOS).entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M626AUYJ9J;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shez.SwiftFortuneWheelDemoiOS.SwiftFortuneWheelDemoSwiftUI;
+				PRODUCT_NAME = SwiftFortuneWheelDemoSwiftUI;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		279125EF27883EE100A03078 /* Build configuration list for PBXProject "SwiftFortuneWheelDemoSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2791260727883EE200A03078 /* Debug */,
+				2791260827883EE200A03078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2791260927883EE200A03078 /* Build configuration list for PBXNativeTarget "SwiftFortuneWheelDemoSwiftUI (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2791260A27883EE200A03078 /* Debug */,
+				2791260B27883EE200A03078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 279125EC27883EE100A03078 /* Project object */;
+}
