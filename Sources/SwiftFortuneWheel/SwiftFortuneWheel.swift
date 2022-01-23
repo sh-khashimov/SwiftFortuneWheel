@@ -415,7 +415,9 @@ public extension SwiftFortuneWheel {
         self.animator.addRotationAnimation(fullRotationsCount: 0,
                                            animationDuration: animationDuration,
                                            rotationOffset: rotation,
-                                           completionBlock: nil)
+                                           completionBlock: { _ in
+            self.pauseAllSound()
+        })
     }
     
     
@@ -429,7 +431,9 @@ public extension SwiftFortuneWheel {
         self.animator.addRotationAnimation(fullRotationsCount: 0,
                                            animationDuration: animationDuration,
                                            rotationOffset: rotationOffset,
-                                           completionBlock: nil)
+                                           completionBlock: { _ in
+            self.pauseAllSound()
+        })
     }
     
     
@@ -443,7 +447,13 @@ public extension SwiftFortuneWheel {
         
         DispatchQueue.main.async {
             self.stopRotation()
-            self.animator.addRotationAnimation(fullRotationsCount: fullRotationsCount, animationDuration: animationDuration, rotationOffset: rotationOffset, completionBlock: completion, onEdgeCollision: { [weak self] progress in                        self?.impactIfNeeded(for: .edge)
+            self.animator.addRotationAnimation(fullRotationsCount: fullRotationsCount, animationDuration: animationDuration, rotationOffset: rotationOffset, completionBlock: { finished in
+                if finished {
+                    self.pauseAllSound()
+                }
+                completion?(finished)
+            }, onEdgeCollision: { [weak self] progress in
+                self?.impactIfNeeded(for: .edge)
                 self?.onEdgeCollision?(progress)
             })
             { [weak self] (progress) in
@@ -523,6 +533,7 @@ public extension SwiftFortuneWheel {
     /// Stops rotation animation
     func stopRotation() {
         self.animator.stop()
+        self.pauseAllSound()
     }
     
     /// Starts rotation animation and stops rotation at the specified index and rotation angle offset
