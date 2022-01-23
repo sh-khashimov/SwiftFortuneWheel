@@ -81,6 +81,14 @@ class AudioPlayerManager {
         }
     }
     
+    func pauseAll() {
+        // according to `AVAudioEngine` documentation: https://developer.apple.com/documentation/avfaudio/avaudioengine
+        // pause/stop needs to be done on player & engine both
+        // we will stop the player(s) but keep our engine paused, because it's highly likely that the engine is going to be used again in a moment 
+        players.synchronizedArray.forEach { $0.node.stop() }
+        engine.pause()
+    }
+    
     // MARK: - Internal Functions
     
     private func performSoundPlayback(_ sound: SoundIdentifier, allowOverlap: Bool) {

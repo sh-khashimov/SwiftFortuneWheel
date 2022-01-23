@@ -47,4 +47,9 @@ extension AudioPlayable {
         guard let _audioFile = audioFile else { return }
         playSound(audioFile: _audioFile)
     }
+    
+    /// Pause sound(s)
+    func pauseAllSound() {
+        audioPlayerManager.pauseAll()
+    }
 }
