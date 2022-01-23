@@ -40,12 +40,6 @@ class AudioPlayerManager {
         for _ in 0..<AudioPlayerManager.defaultStartingPlayerCount {
             players.append(createNewPlayerAttachedToEngine())
         }
-        
-        do {
-            try engine.start()
-        } catch {
-            handleNonFatalError(error)
-        }
     }
     
     // MARK: - Loading Sounds
@@ -101,8 +95,15 @@ class AudioPlayerManager {
         
         func performPlaybackOnFirstAvailablePlayer() {
             guard let player = firstAvailablePlayer() else { return }
-            
-            player.play(audio, identifier: sound)
+            do {
+                engine.connect(player.node, to: engine.mainMixerNode, format: nil)
+                if !engine.isRunning {
+                    try engine.start()
+                }
+                player.play(audio, identifier: sound)
+            } catch {
+                handleNonFatalError(error)
+            }
         }
         
         if allowOverlap {
@@ -144,7 +145,9 @@ class AudioPlayerManager {
     private func createNewPlayerAttachedToEngine() -> AudioPlayer {
         let player = AudioPlayer()
         engine.attach(player.node)
-        engine.connect(player.node, to: engine.mainMixerNode, format: nil)
+        // according to this: https://stackoverflow.com/a/55505717/3687801, we will defer connecting nodes to engine up until play command of player node
+        // connect is done in the performPlaybackOnFirstAvailablePlayer() function
+        // engine.connect(player.node, to: engine.mainMixerNode, format: nil)
         return player
     }
     
