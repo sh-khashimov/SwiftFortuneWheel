@@ -76,9 +76,9 @@ class AudioPlayerManager {
     ///   - sound: Sound's identifier
     ///   - allowOverlap: Allow overlap sound each other
     func play(_ sound: SoundIdentifier, allowOverlap: Bool = true) {
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-            self?.performSoundPlayback(sound, allowOverlap: allowOverlap)
-        }
+        // modified to run on the current queue (i.e. main queue) instead of global queue
+        // to prevent crash at the time of subsequent rotation of spin wheel
+        performSoundPlayback(sound, allowOverlap: allowOverlap)
     }
     
     func pauseAll() {
