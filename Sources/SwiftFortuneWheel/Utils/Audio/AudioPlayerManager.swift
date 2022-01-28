@@ -36,7 +36,11 @@ class AudioPlayerManager {
     public init() {
         
         do {
+            #if os(macOS)
+            /// No AVAudioSession on macOS
+            #else
             try AVAudioSession.sharedInstance().setCategory(.ambient, options: .mixWithOthers)
+            #endif
         } catch let error {
             print(error)
         }
