@@ -34,6 +34,14 @@ class AudioPlayerManager {
     
     /// Initializes the Audio Playe Manager
     public init() {
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.ambient, options: .mixWithOthers)
+        } catch let error {
+            print(error)
+        }
+        
+        
         assert(AudioPlayerManager.defaultStartingPlayerCount <= AudioPlayerManager.maximumTotalPlayers, "Invalid starting and max audio player counts.")
         assert(AudioPlayerManager.defaultStartingPlayerCount > 0, "Starting audio player count must be > 0.")
 
@@ -41,11 +49,7 @@ class AudioPlayerManager {
             players.append(createNewPlayerAttachedToEngine())
         }
         
-        do {
-            try engine.start()
-        } catch {
-            handleNonFatalError(error)
-        }
+        engine.prepare()
     }
     
     // MARK: - Loading Sounds
@@ -101,6 +105,14 @@ class AudioPlayerManager {
         
         func performPlaybackOnFirstAvailablePlayer() {
             guard let player = firstAvailablePlayer() else { return }
+            
+            if !engine.isRunning {
+                do {
+                    try engine.start()
+                } catch {
+                    handleNonFatalError(error)
+                }
+            }
             
             player.play(audio, identifier: sound)
         }
