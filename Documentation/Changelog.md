@@ -1,11 +1,14 @@
 ## CHANGELOG
 
+### 1.4.2
+- [Issue #33](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/33)  Cannot build on Xcode 14: Stored properties cannot be marked potentially unavailable with '@available' fixed;
+
 ### 1.4.1
-- [Issue #24](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/24)  External audio stops right after fortune wheel initialization
+- [Issue #24](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/24)  External audio stops right after fortune wheel initialization;
 
 ### 1.4.0
-- [Issue #15](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/15)  removed @IBDesignable
-- [Issue #16](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/16)  added gradient color for a slice
+- [Issue #15](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/15)  removed @IBDesignable;
+- [Issue #16](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/16)  added gradient color for a slice;
 
 
 ### 1.3.3
