@@ -1,5 +1,8 @@
 ## CHANGELOG
 
+### 1.4.3
+- [Issue #26](https://github.com/sh-khashimov/SwiftFortuneWheel/pull/26) Audio interruption crash fix
+
 ### 1.4.2
 - [Issue #33](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/33)  Cannot build on Xcode 14: Stored properties cannot be marked potentially unavailable with '@available' fixed;
 
