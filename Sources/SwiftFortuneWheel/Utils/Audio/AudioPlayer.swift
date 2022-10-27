@@ -17,25 +17,7 @@ class AudioPlayer {
     private(set) var isAudioInterrupted = false
     
     init() {
-        NotificationCenter.default.addObserver(self,
-                           selector: #selector(handleInterruption),
-                           name: AVAudioSession.interruptionNotification,
-                           object: AVAudioSession.sharedInstance())
-    }
-    
-    /// Stops audio when interrupted
-    @objc private func handleInterruption(notification: Notification) {
-        guard let userInfo = notification.userInfo,
-               let typeValue = userInfo[AVAudioSessionInterruptionTypeKey] as? UInt,
-               let type = AVAudioSession.InterruptionType(rawValue: typeValue) else {
-                   return
-           }
-        
-        isAudioInterrupted = type == .began
-        
-        if isAudioInterrupted {
-            node.stop()
-        }
+        enableHandleInterruption()
     }
     
     /// Plays `AVAudioFile` for sound identifier
@@ -67,6 +49,9 @@ class AudioPlayer {
         state = State.idle()
     }
 }
+
+// Enables handle interruption implementation
+extension AudioPlayer: AudioPersistencing {}
 
 extension AudioPlayer {
     /// Audio player's status type

@@ -16,7 +16,7 @@ import UIKit
 #endif
 
 /// Spinning animator protocol
-protocol SpinningAnimatorProtocol: class, CollisionProtocol  {
+protocol SpinningAnimatorProtocol: AnyObject, CollisionProtocol  {
     /// Layer that animates
     var layerToAnimate: SpinningAnimatable? { get }
 }

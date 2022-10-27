@@ -15,7 +15,7 @@ import UIKit
 #endif
 
 /// Wheel other math calculation protocol
-protocol WheelMathCalculating: class {
+protocol WheelMathCalculating: AnyObject {
     
     /// Wheel frame
     var frame: CGRect { get set }
