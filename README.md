@@ -91,7 +91,8 @@ Documentation is generated with [jazzy](https://github.com/realm/jazzy) and host
 
 | App name | Swift | Xcode | Platforms |
 |---|---|---|---|
-| 1.1.x - current version | Swift 5.0 | Xcode 11 | iOS 9.0 / macOS 10.11 / tvOS 9.0 |
+| 1.1.4 - current version | Swift 5.x | Xcode 14 | iOS 9.0 / macOS 10.13 / tvOS 9.0 |
+| 1.1.x - 1.4.3 | Swift 5.0 | Xcode 11 | iOS 9.0 / macOS 10.11 / tvOS 9.0 |
 | 0.x.x - 1.0.x | Swift 5.0 | Xcode 11 | iOS 9.0 |
 
 ## Migration
