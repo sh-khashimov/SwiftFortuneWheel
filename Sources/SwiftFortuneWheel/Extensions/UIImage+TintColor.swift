@@ -21,7 +21,7 @@ extension SFWImage {
         var image: SFWImage = self
         
         #if os(tvOS)
-        if #available(tvOSApplicationExtension 13.0, *) {
+        if #available(tvOS 13.0, *) {
             image = self.withTintColor(tintColor, renderingMode: .alwaysTemplate)
         } else {
             // Fallback on earlier versions
