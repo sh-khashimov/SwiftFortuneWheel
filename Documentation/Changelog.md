@@ -1,5 +1,8 @@
 ## CHANGELOG
 
+### 1.4.4
+- [Issue #35](https://github.com/sh-khashimov/SwiftFortuneWheel/issues/35) Fix tvOS build error fix
+
 ### 1.4.3
 - [Issue #26](https://github.com/sh-khashimov/SwiftFortuneWheel/pull/26) Audio interruption crash fix
 
