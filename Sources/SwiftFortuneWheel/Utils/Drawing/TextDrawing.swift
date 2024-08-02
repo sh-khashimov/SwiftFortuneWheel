@@ -244,6 +244,8 @@ extension TextDrawing {
         /// Available text rectangles
         var availableTextRects: [CGRect] = []
         
+        guard maxLinesInSlice >= 1 else { return 0 }
+
         /// Counts max available vertical lines and create for each line a max text rectangle
         for line in 1..<Int(maxLinesInSlice) {
             /// Spacing between lines
